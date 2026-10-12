@@ -1,4 +1,19 @@
 {
+ "start_here": {
+  "order_of_operations": "https://victoria-er-waits.github.io/blueprint-reading-library/guide/order-of-operations.md",
+  "steps": [
+   "https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-1-sort-the-set.md",
+   "https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-2-page-prep.md",
+   "https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-3-title-blocks.md",
+   "https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-4-notes-legend.md",
+   "https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-5-one-sheet-at-a-time.md",
+   "https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-6-sanity-check.md",
+   "https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-7-cross-checks.md",
+   "https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-8-questions-for-engineer.md",
+   "https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-9-final-readout.md"
+  ],
+  "note": "Follow the steps in order, one at a time; open a step page when stuck."
+ },
  "generated": "2026-10-12",
  "base": "https://victoria-er-waits.github.io/blueprint-reading-library/",
  "chunks": [
