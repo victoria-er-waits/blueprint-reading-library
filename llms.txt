@@ -41,6 +41,7 @@ External (link only): NASA-hosted Engineering Working Drawings Basics (Hijazi le
 External (not hosted, no licence stated): NCDOT Plan Reading Course SSC 030, https://connect.ncdot.gov/projects/Roadway/RoadwayDesignAdministrativeDocuments/Plan-Reading-Book-Final%20without%20Answers.pdf
 
 ## Local standards and civil references (added 2026-10-12)
+- guide/payment-structure.md: How BC municipal (MMCD-style) unit-price items are usually paid. READ BEFORE ANY QUANTITY TAKEOFF: measurement-for-payment clauses first, fittings/service pipe/hydrant valves often paid separately, C + NEEDS CHECK when payment basis is unconfirmed.
 - guide/local-standards.md: MMCD explained, links to BC city standard drawings (Victoria, Saanich, CRD, CVRD, Nanaimo, Langford, Kelowna, Vancouver, Surrey, Fernie), BC MoTI drafting/feature codes, past BC tender results and addenda. Links only; not hosted.
 - usace-aec-cad-standard-6-2 (Standards): A/E/C CAD Standard R6.2, USACE 2024, public release. Layers, sheet/file naming, symbols.
 - usace-aec-graphics-standard-2-2 (Standards): A/E/C Graphics Standard R2.2, USACE 2023, public release. Line types, symbols, abbreviations.

@@ -14,7 +14,7 @@ Compare the set against itself: metric vs imperial, sheet vs sheet, schedule vs 
 1. **Metric <-> imperial.** For every paired value convert (1 in = 25.4 mm) and compare. Tolerance: lengths within 1% or 10 mm, whichever is larger; nominal sizes (pipe, lumber) use a lookup table, not a conversion. Out of tolerance -> conflict.
 2. **Sheet vs sheet.** Same item on two sheets (plan vs elevation, plan vs profile, plan vs detail) must match in size, orientation (8x10 vs 10x8) and location.
 3. **Title block vs index** (from step 3) and **revisions** across sheets.
-4. **Schedule vs plan.** Count tags on the plan and compare to schedule quantities.
+4. **Schedule vs plan.** Count tags on the plan and compare to schedule quantities. Split counts the way the city pays them: read [How BC municipal unit-price items are usually paid](../payment-structure.md) and the specs' measurement-for-payment clauses first.
 5. **Split counts.** Never report one total. Split doors/windows/fittings by exterior vs interior, material, size and type. Count from component records (step 5), not from appearances.
 6. **Totals.** Areas and lengths: do the parts add up to the stated total? Is the rounding consistent?
 7. Write each conflict with both values and both sources. Do not decide which is right.

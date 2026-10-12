@@ -5048,6 +5048,7 @@
   }
  ],
  "local_standards": "https://victoria-er-waits.github.io/blueprint-reading-library/guide/local-standards.md",
+ "payment_structure": "https://victoria-er-waits.github.io/blueprint-reading-library/guide/payment-structure.md",
  "how_to_use": {
   "costin-basic-blueprint-reading": "https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/costin-basic-blueprint-reading.md",
   "navedtra-14040a": "https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/navedtra-14040a.md",

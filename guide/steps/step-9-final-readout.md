@@ -18,7 +18,7 @@ Produce a report a person can check quickly: what the set says, how sure we are,
    - **B** derived (calculated; show formula and inputs)
    - **C** inferred (plausible; needs human confirmation)
    - **D** unknown / ambiguous / conflicting
-4. Quantities from component records, split by type (step 7), with the count method stated.
+4. Quantities from component records, split by type (step 7), with the count method stated. Split by pay item per [payment-structure.md](../payment-structure.md); if payment basis is unconfirmed, give the count as C + NEEDS CHECK, never blank.
 5. Sanity flags (step 6) and conflicts (step 7).
 6. Questions-for-engineer list (step 8).
 7. Coverage: sheets read, regions OCR'd, sheets not read and why.
