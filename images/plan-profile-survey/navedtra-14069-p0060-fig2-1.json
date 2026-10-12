@@ -1,0 +1,31 @@
+{
+ "image": "images/plan-profile-survey/navedtra-14069-p0060-fig2-1.webp",
+ "topic": "plan-profile-survey",
+ "figure": "2-1",
+ "caption": "Grades of drafting pencils",
+ "shows": "Full PDF page 60 containing Figure 2-1: Grades of drafting pencils. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "BOARD",
+  "BRISTOL",
+  "CROSS",
+  "CROSS-SECTION",
+  "GRIDDED",
+  "ILLUSTRATION",
+  "MEDIA",
+  "PAPER",
+  "PLAN",
+  "PROFILE",
+  "SEABEE",
+  "SECTION",
+  "TRACING",
+  "VELLUM"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 60,
+ "dpi": 170,
+ "bytes": 241456,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

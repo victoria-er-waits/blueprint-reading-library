@@ -1,0 +1,30 @@
+{
+ "image": "images/structural-steel/navedtra-14069-p0208-fig6-19.webp",
+ "topic": "structural-steel",
+ "figure": "6-19",
+ "caption": "Typical floor framing with subflooring",
+ "shows": "Full PDF page 208 containing Figure 6-19: Typical floor framing with subflooring. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "BEARING",
+  "CAPS",
+  "CORNER",
+  "FRAMING",
+  "HEADERS",
+  "NONBEARING",
+  "PLATES",
+  "POSTS",
+  "SOLEPLATES",
+  "STUDS",
+  "T-POSTS",
+  "TOP",
+  "WALL"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 208,
+ "dpi": 170,
+ "bytes": 237074,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

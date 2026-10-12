@@ -1,0 +1,16 @@
+{
+ "image": "images/views-projections/navedtra-14040a-p0053-fig3-9.webp",
+ "topic": "views-projections",
+ "figure": "3-9",
+ "caption": "Third-angle orthographic projection brought into a single pane",
+ "shows": "Full PDF page 53 containing Figure 3-9: Third-angle orthographic projection brought into a single pane. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 53,
+ "dpi": 170,
+ "bytes": 85986,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

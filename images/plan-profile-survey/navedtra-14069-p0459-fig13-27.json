@@ -1,0 +1,21 @@
+{
+ "image": "images/plan-profile-survey/navedtra-14069-p0459-fig13-27.webp",
+ "topic": "plan-profile-survey",
+ "figure": "13-27",
+ "caption": "An example of a closed traverse with a perfect",
+ "shows": "Full PDF page 459 containing Figure 13-27: An example of a closed traverse with a perfect. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ANGULAR",
+  "CLOSURE",
+  "ERROR",
+  "MAXIMUM"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 459,
+ "dpi": 170,
+ "bytes": 142380,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

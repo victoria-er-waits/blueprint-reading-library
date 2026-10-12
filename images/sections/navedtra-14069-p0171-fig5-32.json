@@ -1,0 +1,27 @@
+{
+ "image": "images/sections/navedtra-14069-p0171-fig5-32.webp",
+ "topic": "sections",
+ "figure": "5-32",
+ "caption": "Use of half section",
+ "shows": "Full PDF page 171 containing Figure 5-32: Use of half section. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ANSI",
+  "BROKEN",
+  "FULL",
+  "HALF",
+  "LINE",
+  "PARTIAL",
+  "SECTION",
+  "SYMMETRY",
+  "VISIBLE",
+  "Y14"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 171,
+ "dpi": 170,
+ "bytes": 228694,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

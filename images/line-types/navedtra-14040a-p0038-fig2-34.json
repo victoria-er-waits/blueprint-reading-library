@@ -1,0 +1,16 @@
+{
+ "image": "images/line-types/navedtra-14040a-p0038-fig2-34.webp",
+ "topic": "line-types",
+ "figure": "2-34",
+ "caption": "Use of phantom lines",
+ "shows": "Full PDF page 38 containing Figure 2-34: Use of phantom lines. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 38,
+ "dpi": 170,
+ "bytes": 204948,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

@@ -1,0 +1,16 @@
+{
+ "image": "images/views-projections/navedtra-14040a-p0056-fig3-15.webp",
+ "topic": "views-projections",
+ "figure": "3-15",
+ "caption": "A non-isometric line",
+ "shows": "Full PDF page 56 containing Figure 3-15: A non-isometric line. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 56,
+ "dpi": 170,
+ "bytes": 188832,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

@@ -1,0 +1,21 @@
+{
+ "image": "images/plan-profile-survey/navedtra-14069-p0376-fig11-15.webp",
+ "topic": "plan-profile-survey",
+ "figure": "11-15",
+ "caption": "Three-screw leveling head",
+ "shows": "Full PDF page 376 containing Figure 11-15: Three-screw leveling head. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "CIRCLES",
+  "LEVEL",
+  "TELESCOPE",
+  "TRIBRACH"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 376,
+ "dpi": 170,
+ "bytes": 182776,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

@@ -1,0 +1,30 @@
+{
+ "image": "images/symbols-legends/navedtra-14040a-p0083-fig4-19.webp",
+ "topic": "symbols-legends",
+ "figure": "4-19",
+ "caption": "Typical examples of the surface roughness symbol use",
+ "shows": "Full PDF page 83 containing Figure 4-19: Typical examples of the surface roughness symbol use. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ALL",
+  "ANSI",
+  "ASME",
+  "B46",
+  "CAD",
+  "CAM",
+  "EXCEPT",
+  "FINISH",
+  "NOTED",
+  "OVER",
+  "OVER32",
+  "STANDARDS",
+  "Y14"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 83,
+ "dpi": 170,
+ "bytes": 174404,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

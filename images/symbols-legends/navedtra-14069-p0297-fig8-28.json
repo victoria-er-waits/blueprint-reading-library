@@ -1,0 +1,24 @@
+{
+ "image": "images/symbols-legends/navedtra-14069-p0297-fig8-28.webp",
+ "topic": "symbols-legends",
+ "figure": "8-28",
+ "caption": "Line symbols for piping",
+ "shows": "Full PDF page 297 containing Figure 8-28: Line symbols for piping. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ANSI",
+  "MECHANICAL",
+  "MIL",
+  "RISERS",
+  "STD-17-1",
+  "SYMBOLS",
+  "Y32"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 297,
+ "dpi": 170,
+ "bytes": 229026,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

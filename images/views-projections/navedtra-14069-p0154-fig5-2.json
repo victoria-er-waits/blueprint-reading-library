@@ -1,0 +1,24 @@
+{
+ "image": "images/views-projections/navedtra-14069-p0154-fig5-2.webp",
+ "topic": "views-projections",
+ "figure": "5-2",
+ "caption": "Types of projections",
+ "shows": "Full PDF page 154 containing Figure 5-2: Types of projections. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "IMAGE",
+  "PLANE",
+  "POINT",
+  "PROJEC",
+  "SIGHT",
+  "STATION",
+  "TION"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 154,
+ "dpi": 170,
+ "bytes": 160552,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

@@ -1,0 +1,18 @@
+{
+ "image": "images/sections/navedtra-14040a-p0139-fig7-2.webp",
+ "topic": "sections",
+ "figure": "7-2",
+ "caption": "Cross section view of the W-,",
+ "shows": "Full PDF page 139 containing Figure 7-2: Cross section view of the W-,. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "HP-"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 139,
+ "dpi": 170,
+ "bytes": 156322,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

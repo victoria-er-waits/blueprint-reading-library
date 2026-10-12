@@ -1,0 +1,20 @@
+{
+ "image": "images/piping-valves/navedtra-14251-p0089-fig3-10.webp",
+ "topic": "piping-valves",
+ "figure": "3-10",
+ "caption": "Girder span on pipe columns",
+ "shows": "Full PDF page 89 containing Figure 3-10: Girder span on pipe columns. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "CAP",
+  "GIRDERS",
+  "PLATES"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+ "book_id": "navedtra-14251",
+ "pdf_page": 89,
+ "dpi": 170,
+ "bytes": 152658,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf"
+}

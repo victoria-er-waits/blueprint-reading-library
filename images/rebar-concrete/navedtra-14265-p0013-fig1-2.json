@@ -1,0 +1,16 @@
+{
+ "image": "images/rebar-concrete/navedtra-14265-p0013-fig1-2.webp",
+ "topic": "rebar-concrete",
+ "figure": "1-2",
+ "caption": "Architectural or floor plan of concrete-masonry construction",
+ "shows": "Full PDF page 13 containing Figure 1-2: Architectural or floor plan of concrete-masonry construction. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 13,
+ "dpi": 170,
+ "bytes": 147606,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

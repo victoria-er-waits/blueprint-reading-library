@@ -1,0 +1,25 @@
+{
+ "image": "images/rebar-concrete/navedtra-14069-p0246-fig7-2.webp",
+ "topic": "rebar-concrete",
+ "figure": "7-2",
+ "caption": "Typical small footing",
+ "shows": "Full PDF page 246 containing Figure 7-2: Typical small footing. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "AND",
+  "BEAM",
+  "COLUMN",
+  "FOOTING",
+  "MENT",
+  "PEDESTAL",
+  "PIER",
+  "REINFORCE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 246,
+ "dpi": 170,
+ "bytes": 190636,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

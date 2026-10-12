@@ -1,0 +1,31 @@
+{
+ "image": "images/views-projections/navedtra-14265-p0022-fig1-15.webp",
+ "topic": "views-projections",
+ "figure": "1-15",
+ "caption": "Three orthographic views to be drawn isometrically",
+ "shows": "Full PDF page 22 containing Figure 1-15: Three orthographic views to be drawn isometrically. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "CONCRETE",
+  "CONDITIONS",
+  "GENERAL",
+  "LEARNING",
+  "MASONRY",
+  "NAVEDTRA",
+  "NAVFAC",
+  "OBJECTIVE",
+  "REQUIREMENTS",
+  "SITE",
+  "SPECIFIC",
+  "SPECIFICATIONS",
+  "SPECS",
+  "WORK"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 22,
+ "dpi": 170,
+ "bytes": 166204,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

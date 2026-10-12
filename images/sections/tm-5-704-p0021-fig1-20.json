@@ -1,0 +1,30 @@
+{
+ "image": "images/sections/tm-5-704-p0021-fig1-20.webp",
+ "topic": "sections",
+ "figure": "1-20",
+ "caption": "Full-and half-sectionul view8",
+ "shows": "Full PDF page 21 containing Figure 1-20: Full-and half-sectionul view8. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "A-A",
+  "AFM",
+  "ANE",
+  "CUTTANG",
+  "FULL",
+  "HALF-SECTIONAL",
+  "LINE",
+  "OFFSET",
+  "PLANE",
+  "SECT",
+  "SECTION",
+  "SECTIONAL",
+  "VIEW"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Construction Print Reading in the Field (TM 5-704)",
+ "book_id": "tm-5-704",
+ "pdf_page": 21,
+ "dpi": 170,
+ "bytes": 112046,
+ "licence": "US Government work (public domain). Scan from Internet Archive / Google Books",
+ "source_pdf": "pdf/03-TM-5-704-Construction-Print-Reading.pdf"
+}

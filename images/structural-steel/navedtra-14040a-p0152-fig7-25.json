@@ -1,0 +1,16 @@
+{
+ "image": "images/structural-steel/navedtra-14040a-p0152-fig7-25.webp",
+ "topic": "structural-steel",
+ "figure": "7-25",
+ "caption": "Riveted steel truss shop drawing",
+ "shows": "Full PDF page 152 containing Figure 7-25: Riveted steel truss shop drawing. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 152,
+ "dpi": 170,
+ "bytes": 227330,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

@@ -1,0 +1,19 @@
+{
+ "image": "images/plan-profile-survey/navedtra-14069-p0333-fig10-11.webp",
+ "topic": "plan-profile-survey",
+ "figure": "10-11",
+ "caption": "Example of a site plan with existing utilities",
+ "shows": "Full PDF page 333 containing Figure 10-11: Example of a site plan with existing utilities. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "PLAN",
+  "SITE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 333,
+ "dpi": 170,
+ "bytes": 184412,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

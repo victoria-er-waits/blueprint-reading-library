@@ -1,0 +1,23 @@
+{
+ "image": "images/piping-valves/navedtra-14265-p0065-fig2-27.webp",
+ "topic": "piping-valves",
+ "figure": "2-27",
+ "caption": "Valve positions",
+ "shows": "Full PDF page 65 containing Figure 2-27: Valve positions. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "CBR",
+  "FULL",
+  "GPH",
+  "LOAD",
+  "ROWPU",
+  "STOP"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 65,
+ "dpi": 170,
+ "bytes": 125498,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

@@ -1,0 +1,30 @@
+{
+ "image": "images/plan-profile-survey/navedtra-14069-p0463-fig13-29.webp",
+ "topic": "plan-profile-survey",
+ "figure": "13-29",
+ "caption": "Types of traverses",
+ "shows": "Full PDF page 463 containing Figure 13-29: Types of traverses. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ACCURACY",
+  "CLOSED",
+  "EA2",
+  "FIELD",
+  "NOTE",
+  "OPEN",
+  "OPERATIONS",
+  "ORGANIZING",
+  "PARTY",
+  "PROCEDURES",
+  "THE",
+  "TRAVERSE",
+  "TRAVERSING"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 463,
+ "dpi": 170,
+ "bytes": 230546,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

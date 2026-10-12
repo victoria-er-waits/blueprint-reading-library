@@ -1,0 +1,20 @@
+{
+ "image": "images/sections/navedtra-14069-p0108-fig3-37.webp",
+ "topic": "sections",
+ "figure": "3-37",
+ "caption": "Drawing of a plan view and a full section",
+ "shows": "Full PDF page 108 containing Figure 3-37: Drawing of a plan view and a full section. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "LINES",
+  "PHANTOM",
+  "SECTION"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 108,
+ "dpi": 170,
+ "bytes": 163596,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

@@ -1,0 +1,20 @@
+{
+ "image": "images/title-blocks-schedules/navedtra-14069-p0102-fig3-22.webp",
+ "topic": "title-blocks-schedules",
+ "figure": "3-22",
+ "caption": "Format used in preparing revision blocks",
+ "shows": "Full PDF page 102 containing Figure 3-22: Format used in preparing revision blocks. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "PREPARED",
+  "STD",
+  "STD-100C"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 102,
+ "dpi": 170,
+ "bytes": 169042,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

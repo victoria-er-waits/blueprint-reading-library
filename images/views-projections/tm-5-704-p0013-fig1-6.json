@@ -1,0 +1,30 @@
+{
+ "image": "images/views-projections/tm-5-704-p0013-fig1-6.webp",
+ "topic": "views-projections",
+ "figure": "1-6",
+ "caption": "Orthogruphic versus perspective projection",
+ "shows": "Full PDF page 13 containing Figure 1-6: Orthogruphic versus perspective projection. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "AFM",
+  "DRAWINGPLANE",
+  "EYE",
+  "HORIZON",
+  "LEFT",
+  "LEVEL",
+  "ORTHOGRAPHIC",
+  "PERSPECTIVE",
+  "PLANE",
+  "POINT",
+  "PROJECTION",
+  "RIGHT",
+  "VANISHING"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Construction Print Reading in the Field (TM 5-704)",
+ "book_id": "tm-5-704",
+ "pdf_page": 13,
+ "dpi": 170,
+ "bytes": 109774,
+ "licence": "US Government work (public domain). Scan from Internet Archive / Google Books",
+ "source_pdf": "pdf/03-TM-5-704-Construction-Print-Reading.pdf"
+}

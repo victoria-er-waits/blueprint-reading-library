@@ -1,0 +1,20 @@
+{
+ "image": "images/piping-valves/navedtra-14265-p0019-fig1-10.webp",
+ "topic": "piping-valves",
+ "figure": "1-10",
+ "caption": "Isometric plumbing pipe layout",
+ "shows": "Full PDF page 19 containing Figure 1-10: Isometric plumbing pipe layout. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "DIMENSIONING",
+  "DRAWING",
+  "ISOMETRIC"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 19,
+ "dpi": 170,
+ "bytes": 154426,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

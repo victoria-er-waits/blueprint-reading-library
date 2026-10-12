@@ -1,0 +1,16 @@
+{
+ "image": "images/symbols-legends/navedtra-14040a-p0151-fig7-23.webp",
+ "topic": "symbols-legends",
+ "figure": "7-23",
+ "caption": "Welding finish symbol",
+ "shows": "Full PDF page 151 containing Figure 7-23: Welding finish symbol. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 151,
+ "dpi": 170,
+ "bytes": 165924,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

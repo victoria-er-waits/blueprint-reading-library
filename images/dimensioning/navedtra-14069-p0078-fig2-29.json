@@ -1,0 +1,19 @@
+{
+ "image": "images/dimensioning/navedtra-14069-p0078-fig2-29.webp",
+ "topic": "dimensioning",
+ "figure": "2-29",
+ "caption": "Typical graphic scales",
+ "shows": "Full PDF page 78 containing Figure 2-29: Typical graphic scales. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "DRAFTING",
+  "TEMPLATES"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 78,
+ "dpi": 170,
+ "bytes": 189552,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

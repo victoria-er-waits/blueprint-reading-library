@@ -1,0 +1,19 @@
+{
+ "image": "images/structural-steel/navedtra-14069-p0071-fig2-21.webp",
+ "topic": "structural-steel",
+ "figure": "2-21",
+ "caption": "Beam compass",
+ "shows": "Full PDF page 71 containing Figure 2-21: Beam compass. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "BEAM",
+  "COMPASS"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 71,
+ "dpi": 170,
+ "bytes": 165712,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

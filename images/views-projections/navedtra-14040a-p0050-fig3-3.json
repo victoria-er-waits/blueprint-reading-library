@@ -1,0 +1,18 @@
+{
+ "image": "images/views-projections/navedtra-14040a-p0050-fig3-3.webp",
+ "topic": "views-projections",
+ "figure": "3-3",
+ "caption": "Types of projections",
+ "shows": "Full PDF page 50 containing Figure 3-3: Types of projections. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "PROJECTIONS"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 50,
+ "dpi": 170,
+ "bytes": 234422,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

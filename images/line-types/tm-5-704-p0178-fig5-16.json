@@ -1,0 +1,20 @@
+{
+ "image": "images/line-types/tm-5-704-p0178-fig5-16.webp",
+ "topic": "line-types",
+ "figure": "5-16",
+ "caption": "Single line representution of'springs",
+ "shows": "Full PDF page 178 containing Figure 5-16: Single line representution of'springs. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "AFM",
+  "DAGRAM",
+  "MOTION"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Construction Print Reading in the Field (TM 5-704)",
+ "book_id": "tm-5-704",
+ "pdf_page": 178,
+ "dpi": 170,
+ "bytes": 174114,
+ "licence": "US Government work (public domain). Scan from Internet Archive / Google Books",
+ "source_pdf": "pdf/03-TM-5-704-Construction-Print-Reading.pdf"
+}

@@ -1,0 +1,24 @@
+{
+ "image": "images/rebar-concrete/navedtra-14251-p0057-fig2-32.webp",
+ "topic": "rebar-concrete",
+ "figure": "2-32",
+ "caption": "Bar folder",
+ "shows": "Full PDF page 57 containing Figure 2-32: Bar folder. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "BAR",
+  "BRAKE",
+  "BRAKES",
+  "CLAMPING",
+  "CORNICE",
+  "JAW",
+  "UPPER"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+ "book_id": "navedtra-14251",
+ "pdf_page": 57,
+ "dpi": 170,
+ "bytes": 141782,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf"
+}

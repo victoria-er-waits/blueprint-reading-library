@@ -1,0 +1,22 @@
+{
+ "image": "images/title-blocks-schedules/navedtra-14069-p0097-fig3-16.webp",
+ "topic": "title-blocks-schedules",
+ "figure": "3-16",
+ "caption": "Preparing title block for D-, E-, F-, H-, J-, and K-size drawings",
+ "shows": "Full PDF page 97 containing Figure 3-16: Preparing title block for D-, E-, F-, H-, J-, and K-size drawings. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "BASIC",
+  "FACENGCOM",
+  "FORMAT",
+  "MIL-HDBK-1006",
+  "NAV"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 97,
+ "dpi": 170,
+ "bytes": 148998,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

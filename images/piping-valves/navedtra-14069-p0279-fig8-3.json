@@ -1,0 +1,25 @@
+{
+ "image": "images/piping-valves/navedtra-14069-p0279-fig8-3.webp",
+ "topic": "piping-valves",
+ "figure": "8-3",
+ "caption": "Plastic pipe fittings",
+ "shows": "Full PDF page 279 containing Figure 8-3: Plastic pipe fittings. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "CAST-IRON",
+  "CPVC",
+  "GALVANIZED",
+  "INSIDE",
+  "PIPE",
+  "PLASTIC",
+  "PVC",
+  "WATER"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 279,
+ "dpi": 170,
+ "bytes": 199730,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

@@ -1,0 +1,27 @@
+{
+ "image": "images/title-blocks-schedules/navedtra-14251-p0035-fig1-11.webp",
+ "topic": "title-blocks-schedules",
+ "figure": "1-11",
+ "caption": "Title block",
+ "shows": "Full PDF page 35 containing Figure 1-11: Title block. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ABFC",
+  "GENERAL",
+  "MUST",
+  "NAVFAC",
+  "NCR",
+  "NMCB",
+  "NOT",
+  "NOTES",
+  "PREPARED",
+  "SPECIFIC"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+ "book_id": "navedtra-14251",
+ "pdf_page": 35,
+ "dpi": 170,
+ "bytes": 185520,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf"
+}

@@ -1,0 +1,22 @@
+{
+ "image": "images/structural-steel/navedtra-14040a-p0146-fig7-14.webp",
+ "topic": "structural-steel",
+ "figure": "7-14",
+ "caption": "A truss rafter",
+ "shows": "Full PDF page 146 containing Figure 7-14: A truss rafter. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "AND",
+  "RIVETED",
+  "STEEL",
+  "STRUCTURES",
+  "WELDED"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 146,
+ "dpi": 170,
+ "bytes": 227072,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

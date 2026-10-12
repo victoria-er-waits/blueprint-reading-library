@@ -1,0 +1,16 @@
+{
+ "image": "images/views-projections/navedtra-14265-p0021-fig1-14.webp",
+ "topic": "views-projections",
+ "figure": "1-14",
+ "caption": "Three isometric views to be drawn orthographically",
+ "shows": "Full PDF page 21 containing Figure 1-14: Three isometric views to be drawn orthographically. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 21,
+ "dpi": 170,
+ "bytes": 146150,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

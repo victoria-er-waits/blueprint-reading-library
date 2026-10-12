@@ -1,0 +1,22 @@
+{
+ "image": "images/line-types/navedtra-14069-p0103-fig3-23.webp",
+ "topic": "line-types",
+ "figure": "3-23",
+ "caption": "Use of line characteristics and conventions",
+ "shows": "Full PDF page 103 containing Figure 3-23: Use of line characteristics and conventions. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "BILL",
+  "CONVENTIONS",
+  "LINE",
+  "MATERIALS",
+  "STD-100C"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 103,
+ "dpi": 170,
+ "bytes": 108484,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

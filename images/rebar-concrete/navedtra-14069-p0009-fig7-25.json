@@ -1,0 +1,20 @@
+{
+ "image": "images/rebar-concrete/navedtra-14069-p0009-fig7-25.webp",
+ "topic": "rebar-concrete",
+ "figure": "7-25",
+ "caption": "Expansion joint for a floor slab",
+ "shows": "Full PDF page 9 containing Figure 7-25: Expansion joint for a floor slab. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "CASTING",
+  "CONCRETE",
+  "FORMS"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 9,
+ "dpi": 170,
+ "bytes": 137520,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

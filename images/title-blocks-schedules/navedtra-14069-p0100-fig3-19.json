@@ -1,0 +1,25 @@
+{
+ "image": "images/title-blocks-schedules/navedtra-14069-p0100-fig3-19.webp",
+ "topic": "title-blocks-schedules",
+ "figure": "3-19",
+ "caption": "Examples of title blocks used on drawings prepared by Naval Construction Battalion and Naval Construction",
+ "shows": "Full PDF page 100 containing Figure 3-19: Examples of title blocks used on drawings prepared by Naval Construction Battalion and Naval Construction. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "APPROVED",
+  "FSCM",
+  "MIL-HDBK",
+  "NAVFAC",
+  "NAVFACENGCOM",
+  "SATISFAC",
+  "SATISFACTORY",
+  "TORY"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 100,
+ "dpi": 170,
+ "bytes": 187288,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

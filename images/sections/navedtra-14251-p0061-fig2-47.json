@@ -1,0 +1,26 @@
+{
+ "image": "images/sections/navedtra-14251-p0061-fig2-47.webp",
+ "topic": "sections",
+ "figure": "2-47",
+ "caption": "Making a double seam on a cylindrical section",
+ "shows": "Full PDF page 61 containing Figure 2-47: Making a double seam on a cylindrical section. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "BEADING",
+  "CRIMPING",
+  "DEVELOPMENT",
+  "LINE",
+  "PARALLEL",
+  "PATTERN",
+  "SCRATCHING",
+  "SHEET-METAL",
+  "TEMPLATE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+ "book_id": "navedtra-14251",
+ "pdf_page": 61,
+ "dpi": 170,
+ "bytes": 152520,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf"
+}

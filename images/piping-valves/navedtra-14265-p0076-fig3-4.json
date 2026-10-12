@@ -1,0 +1,19 @@
+{
+ "image": "images/piping-valves/navedtra-14265-p0076-fig3-4.webp",
+ "topic": "piping-valves",
+ "figure": "3-4",
+ "caption": "Supporting soil pipe for cutting",
+ "shows": "Full PDF page 76 containing Figure 3-4: Supporting soil pipe for cutting. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "CISP",
+  "CUTTING"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 76,
+ "dpi": 170,
+ "bytes": 177994,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

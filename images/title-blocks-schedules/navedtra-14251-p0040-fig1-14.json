@@ -1,0 +1,20 @@
+{
+ "image": "images/title-blocks-schedules/navedtra-14251-p0040-fig1-14.webp",
+ "topic": "title-blocks-schedules",
+ "figure": "1-14",
+ "caption": "Master Activity Summary Sheet",
+ "shows": "Full PDF page 40 containing Figure 1-14: Master Activity Summary Sheet. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "LEFT",
+  "RIGHT",
+  "SIDE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+ "book_id": "navedtra-14251",
+ "pdf_page": 40,
+ "dpi": 170,
+ "bytes": 96392,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf"
+}

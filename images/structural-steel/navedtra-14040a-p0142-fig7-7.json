@@ -1,0 +1,16 @@
+{
+ "image": "images/structural-steel/navedtra-14040a-p0142-fig7-7.webp",
+ "topic": "structural-steel",
+ "figure": "7-7",
+ "caption": "Built-up column section",
+ "shows": "Full PDF page 142 containing Figure 7-7: Built-up column section. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 142,
+ "dpi": 170,
+ "bytes": 141934,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

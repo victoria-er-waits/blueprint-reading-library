@@ -1,0 +1,26 @@
+{
+ "image": "images/structural-steel/navedtra-14069-p0203-fig6-10.webp",
+ "topic": "structural-steel",
+ "figure": "6-10",
+ "caption": "Wall framing used in balloon construction",
+ "shows": "Full PDF page 203 containing Figure 6-10: Wall framing used in balloon construction. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "BALLOON",
+  "ERN",
+  "FLOOR",
+  "FRAMING",
+  "PLATFORM",
+  "ROOF",
+  "STORY-BY-STORY",
+  "WALL",
+  "WEST"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 203,
+ "dpi": 170,
+ "bytes": 142752,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

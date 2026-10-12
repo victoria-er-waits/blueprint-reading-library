@@ -1,0 +1,26 @@
+# Blueprint Reading Library
+
+> Free, openly licensed manuals on reading construction, piping, utility and structural drawings, ordered beginner -> intermediate -> advanced. Machine-readable text is provided for AI tools and retrieval systems.
+
+Base URL: https://victoria-er-waits.github.io/blueprint-reading-library/
+
+## Layout
+- index.json: list of every text chunk. Fields: book, book_id, tier, chapter, pages [first,last] (PDF page numbers, not printed page numbers), url, path, pdf, licence.
+- text/<book_id>/NNN-pXXXX-YYYY.md: Markdown text for PDF pages XXXX-YYYY. Each file starts with a YAML header (book, tier, chapter, pdf_pages, source_pdf, licence, text_method). Page breaks are marked `<!-- pdf page N -->`. Files are kept under ~200 KB.
+- pdf/: the original PDFs, unchanged. Diagrams and drawings are only in the PDFs; the text files contain no images.
+- catalog.md: rights register with sources.
+- images.json + images/<topic>/*.webp: about 190 labelled example pages (symbols-legends, line-types, views-projections, sections, dimensioning, piping-valves, structural-steel, rebar-concrete, plan-profile-survey, title-blocks-schedules). Each .webp has a matching .json caption (figure no., caption, book, pdf_page, licence). These are whole-page renders, not crops. Topics were assigned by caption keywords, so a few may be in the wrong topic.
+- guide/reading-large-drawing-sets.md: step-by-step playbook for 100+ sheet sets (sheet map, then dictionary, then discipline by discipline, then sheet by sheet, with A/B/C/D findings and checkpoints). Read this first when you're given a drawing package.
+
+## Books (reading order)
+1. costin-basic-blueprint-reading (Beginner), CC BY 4.0, Ric Costin / Linn-Benton CC / Open Oregon
+2. navedtra-14040a (Beginner), Blueprint Reading and Sketching, US Navy 2015, public release
+3. tm-5-704 (Beginner), Construction Print Reading in the Field, US Army 1969. Text is OCR of a scan, so expect errors; check the PDF page
+4. navedtra-14069 (Intermediate), Engineering Aid 3, US Navy 1995
+5. navedtra-14265 (Intermediate), Utilitiesman Basic, US Navy 1998
+6. navedtra-14251 (Advanced), Steelworker Vol 2, US Navy 1996
+External (not hosted, no licence stated): NCDOT Plan Reading Course SSC 030, https://connect.ncdot.gov/projects/Roadway/RoadwayDesignAdministrativeDocuments/Plan-Reading-Book-Final%20without%20Answers.pdf
+
+## Notes for AI readers
+- Cite answers as book_id + PDF page range. Older US manuals use imperial units and US practice, so don't treat them as current Canadian/BC code.
+- This is reference material, not engineering approval or code certification.

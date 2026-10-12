@@ -1,0 +1,16 @@
+{
+ "image": "images/piping-valves/navedtra-14040a-p0090-fig5-2.webp",
+ "topic": "piping-valves",
+ "figure": "5-2",
+ "caption": "Double-line orthographic pipe drawing",
+ "shows": "Full PDF page 90 containing Figure 5-2: Double-line orthographic pipe drawing. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 90,
+ "dpi": 170,
+ "bytes": 88818,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

@@ -1,0 +1,21 @@
+{
+ "image": "images/dimensioning/navedtra-14069-p0094-fig3-13.webp",
+ "topic": "dimensioning",
+ "figure": "3-13",
+ "caption": "Use of the drafting scale",
+ "shows": "Full PDF page 94 containing Figure 3-13: Use of the drafting scale. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "DRAFTING",
+  "SCALE",
+  "THE",
+  "USE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 94,
+ "dpi": 170,
+ "bytes": 255036,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

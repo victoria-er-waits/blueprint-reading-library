@@ -1,0 +1,16 @@
+{
+ "image": "images/sections/navedtra-14040a-p0065-fig3-31.webp",
+ "topic": "sections",
+ "figure": "3-31",
+ "caption": "Use of a half section",
+ "shows": "Full PDF page 65 containing Figure 3-31: Use of a half section. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 65,
+ "dpi": 170,
+ "bytes": 159596,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

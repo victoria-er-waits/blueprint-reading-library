@@ -1,0 +1,16 @@
+{
+ "image": "images/views-projections/navedtra-14040a-p0052-fig3-6.webp",
+ "topic": "views-projections",
+ "figure": "3-6",
+ "caption": "First-angle projections",
+ "shows": "Full PDF page 52 containing Figure 3-6: First-angle projections. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 52,
+ "dpi": 170,
+ "bytes": 210890,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

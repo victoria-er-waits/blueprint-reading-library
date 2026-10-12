@@ -1,0 +1,29 @@
+{
+ "image": "images/plan-profile-survey/navedtra-14069-p0465-fig13-30.webp",
+ "topic": "plan-profile-survey",
+ "figure": "13-30",
+ "caption": "Traverse stations and angles",
+ "shows": "Full PDF page 465 containing Figure 13-30: Traverse stations and angles. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ANGULAR",
+  "DOUBLE",
+  "EDM",
+  "FORWARD",
+  "LINEAR",
+  "MEASUREMENT",
+  "MEASUREMENTS",
+  "OCCUPIED",
+  "PERFORMING",
+  "REAR",
+  "STATION",
+  "TAPING"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 465,
+ "dpi": 170,
+ "bytes": 191608,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

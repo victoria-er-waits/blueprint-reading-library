@@ -1,0 +1,26 @@
+{
+ "image": "images/rebar-concrete/navedtra-14069-p0252-fig7-13.webp",
+ "topic": "rebar-concrete",
+ "figure": "7-13",
+ "caption": "Expanded or diamond mesh steel reinforce-",
+ "shows": "Full PDF page 252 containing Figure 7-13: Expanded or diamond mesh steel reinforce-. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "AND",
+  "CONCRETE",
+  "EXPANDED",
+  "FABRIC",
+  "METAL",
+  "PRECAST",
+  "SPLICES",
+  "WELDED",
+  "WIRE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 252,
+ "dpi": 170,
+ "bytes": 239494,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

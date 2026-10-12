@@ -1,0 +1,16 @@
+{
+ "image": "images/plan-profile-survey/navedtra-14040a-p0023-fig2-1.webp",
+ "topic": "plan-profile-survey",
+ "figure": "2-1",
+ "caption": "Grades of drafting pencils",
+ "shows": "Full PDF page 23 containing Figure 2-1: Grades of drafting pencils. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 23,
+ "dpi": 170,
+ "bytes": 207244,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

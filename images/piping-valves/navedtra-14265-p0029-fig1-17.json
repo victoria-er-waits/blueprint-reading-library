@@ -1,0 +1,29 @@
+{
+ "image": "images/piping-valves/navedtra-14265-p0029-fig1-17.webp",
+ "topic": "piping-valves",
+ "figure": "1-17",
+ "caption": "Identification of piping system",
+ "shows": "Full PDF page 29 containing Figure 1-17: Identification of piping system. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ARROW",
+  "BAND",
+  "BANDS",
+  "COLOR",
+  "COMPRESSED",
+  "CYLINDERS",
+  "GAS",
+  "MARKING",
+  "NOT",
+  "ONLY",
+  "PRIMARY",
+  "WARNINGS"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 29,
+ "dpi": 170,
+ "bytes": 217840,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

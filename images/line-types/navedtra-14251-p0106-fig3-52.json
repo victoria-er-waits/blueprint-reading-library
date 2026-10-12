@@ -1,0 +1,19 @@
+{
+ "image": "images/line-types/navedtra-14251-p0106-fig3-52.webp",
+ "topic": "line-types",
+ "figure": "3-52",
+ "caption": "Line of cut is first marked on branch with this",
+ "shows": "Full PDF page 106 containing Figure 3-52: Line of cut is first marked on branch with this. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "CONNECTION",
+  "THREE-PIECE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+ "book_id": "navedtra-14251",
+ "pdf_page": 106,
+ "dpi": 170,
+ "bytes": 212946,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf"
+}

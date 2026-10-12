@@ -1,0 +1,21 @@
+{
+ "image": "images/sections/navedtra-14069-p0169-fig5-26.webp",
+ "topic": "sections",
+ "figure": "5-26",
+ "caption": "Use of an auxiliary section",
+ "shows": "Full PDF page 169 containing Figure 5-26: Use of an auxiliary section. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "REVOLU",
+  "REVOLUTIONS",
+  "TION",
+  "USE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 169,
+ "dpi": 170,
+ "bytes": 130794,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

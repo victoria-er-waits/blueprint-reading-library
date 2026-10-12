@@ -1,0 +1,25 @@
+{
+ "image": "images/views-projections/navedtra-14069-p0007-fig5-11.webp",
+ "topic": "views-projections",
+ "figure": "5-11",
+ "caption": "Alternative method of extending to top view projection lines",
+ "shows": "Full PDF page 7 containing Figure 5-11: Alternative method of extending to top view projection lines. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ELEVATION",
+  "FRONT",
+  "PLAN",
+  "RIGHT-SIDE",
+  "SPACING",
+  "TOP",
+  "VIEW",
+  "VIEWS"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 7,
+ "dpi": 170,
+ "bytes": 135232,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

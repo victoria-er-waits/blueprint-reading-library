@@ -1,0 +1,20 @@
+{
+ "image": "images/views-projections/navedtra-14265-p0018-fig1-7.webp",
+ "topic": "views-projections",
+ "figure": "1-7",
+ "caption": "Orthographic and isometric drawings",
+ "shows": "Full PDF page 18 containing Figure 1-7: Orthographic and isometric drawings. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "DRAWING",
+  "ISOMETRIC",
+  "VIEW"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 18,
+ "dpi": 170,
+ "bytes": 135796,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

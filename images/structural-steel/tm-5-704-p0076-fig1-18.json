@@ -1,0 +1,28 @@
+{
+ "image": "images/structural-steel/tm-5-704-p0076-fig1-18.webp",
+ "topic": "structural-steel",
+ "figure": "1-18",
+ "caption": "Com mon rolled-steel shupes lind sy m bols",
+ "shows": "Full PDF page 76 containing Figure 1-18: Com mon rolled-steel shupes lind sy m bols. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "AFM",
+  "ANGLE",
+  "BEAM",
+  "CHANNEL",
+  "FLANGE",
+  "LEG",
+  "PLATE",
+  "SHAPE",
+  "STANDARD",
+  "WEB",
+  "WIDE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Construction Print Reading in the Field (TM 5-704)",
+ "book_id": "tm-5-704",
+ "pdf_page": 76,
+ "dpi": 170,
+ "bytes": 296850,
+ "licence": "US Government work (public domain). Scan from Internet Archive / Google Books",
+ "source_pdf": "pdf/03-TM-5-704-Construction-Print-Reading.pdf"
+}

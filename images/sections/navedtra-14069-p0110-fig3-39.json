@@ -1,0 +1,27 @@
+{
+ "image": "images/sections/navedtra-14069-p0110-fig3-39.webp",
+ "topic": "sections",
+ "figure": "3-39",
+ "caption": "Use of an offset section",
+ "shows": "Full PDF page 110 containing Figure 3-39: Use of an offset section. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "A-A",
+  "B-B",
+  "DATUM",
+  "LINE",
+  "LINES",
+  "MATCH",
+  "ORDER",
+  "PENCILING",
+  "SECTION",
+  "STITCH"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 110,
+ "dpi": 170,
+ "bytes": 214710,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

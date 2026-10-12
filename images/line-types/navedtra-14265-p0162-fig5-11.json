@@ -1,0 +1,20 @@
+{
+ "image": "images/line-types/navedtra-14265-p0162-fig5-11.webp",
+ "topic": "line-types",
+ "figure": "5-11",
+ "caption": "Closet tank water-supply line",
+ "shows": "Full PDF page 162 containing Figure 5-11: Closet tank water-supply line. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "BIDETS",
+  "KITCHEN",
+  "SINKS"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 162,
+ "dpi": 170,
+ "bytes": 198642,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

@@ -1,0 +1,16 @@
+{
+ "image": "images/line-types/navedtra-14040a-p0036-fig2-28.webp",
+ "topic": "line-types",
+ "figure": "2-28",
+ "caption": "Use of extension lines",
+ "shows": "Full PDF page 36 containing Figure 2-28: Use of extension lines. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 36,
+ "dpi": 170,
+ "bytes": 193090,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

@@ -1,0 +1,16 @@
+{
+ "image": "images/plan-profile-survey/navedtra-14040a-p0158-fig7-31.webp",
+ "topic": "plan-profile-survey",
+ "figure": "7-31",
+ "caption": "Plot plan",
+ "shows": "Full PDF page 158 containing Figure 7-31: Plot plan. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 158,
+ "dpi": 170,
+ "bytes": 90532,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

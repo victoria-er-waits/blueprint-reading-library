@@ -1,0 +1,21 @@
+{
+ "image": "images/piping-valves/navedtra-14251-p0254-fig9-23.webp",
+ "topic": "piping-valves",
+ "figure": "9-23",
+ "caption": "Water drawoff valve installed on the outside of the tank",
+ "shows": "Full PDF page 254 containing Figure 9-23: Water drawoff valve installed on the outside of the tank. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "DRAWOFF",
+  "ELBOW",
+  "FLANGED",
+  "VALVE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+ "book_id": "navedtra-14251",
+ "pdf_page": 254,
+ "dpi": 170,
+ "bytes": 170124,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf"
+}

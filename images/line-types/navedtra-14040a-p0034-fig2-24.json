@@ -1,0 +1,16 @@
+{
+ "image": "images/line-types/navedtra-14040a-p0034-fig2-24.webp",
+ "topic": "line-types",
+ "figure": "2-24",
+ "caption": "Use of hidden edge lines",
+ "shows": "Full PDF page 34 containing Figure 2-24: Use of hidden edge lines. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 34,
+ "dpi": 170,
+ "bytes": 150824,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

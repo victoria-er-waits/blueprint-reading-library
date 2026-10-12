@@ -1,0 +1,22 @@
+{
+ "image": "images/sections/navedtra-14069-p0170-fig5-29.webp",
+ "topic": "sections",
+ "figure": "5-29",
+ "caption": "Use of a revolved section (A-A)",
+ "shows": "Full PDF page 170 containing Figure 5-29: Use of a revolved section (A-A). Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "A-A",
+  "REVOLVED",
+  "SECTIONING",
+  "SECTIONS",
+  "TECHNIQUES"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 170,
+ "dpi": 170,
+ "bytes": 147916,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

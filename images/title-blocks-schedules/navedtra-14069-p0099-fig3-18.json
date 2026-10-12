@@ -1,0 +1,29 @@
+{
+ "image": "images/title-blocks-schedules/navedtra-14069-p0099-fig3-18.webp",
+ "topic": "title-blocks-schedules",
+ "figure": "3-18",
+ "caption": "Use of continuation sheet title block and multiple sheet numbering",
+ "shows": "Full PDF page 99 containing Figure 3-18: Use of continuation sheet title block and multiple sheet numbering. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "DEFINITIVE",
+  "DEPART",
+  "DRAWING",
+  "FACILITIES",
+  "MENT",
+  "NAVFAC",
+  "NAVY",
+  "P-272",
+  "PARK",
+  "RESTROOM",
+  "SEABEE",
+  "THE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 99,
+ "dpi": 170,
+ "bytes": 134500,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

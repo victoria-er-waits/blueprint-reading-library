@@ -1,0 +1,20 @@
+{
+ "image": "images/sections/navedtra-14069-p0151-fig4-43.webp",
+ "topic": "sections",
+ "figure": "4-43",
+ "caption": "Conic sections: ellipse, parabola, and hyperbula (left to right)",
+ "shows": "Full PDF page 151 containing Figure 4-43: Conic sections: ellipse, parabola, and hyperbula (left to right). Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ELLIPSE",
+  "METHOD",
+  "PIN-AND-STRING"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 151,
+ "dpi": 170,
+ "bytes": 98532,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

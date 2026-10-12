@@ -1,0 +1,23 @@
+{
+ "image": "images/sections/navedtra-14265-p0015-fig1-4.webp",
+ "topic": "sections",
+ "figure": "1-4",
+ "caption": "Structural plan wall sections",
+ "shows": "Full PDF page 15 containing Figure 1-4: Structural plan wall sections. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "AND",
+  "COMPARISON",
+  "DRAWINGS",
+  "ISOMETRIC",
+  "NOT",
+  "ORTHOGRAPHIC"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 15,
+ "dpi": 170,
+ "bytes": 174218,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

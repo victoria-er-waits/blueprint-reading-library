@@ -1,0 +1,23 @@
+{
+ "image": "images/piping-valves/navedtra-14265-p0075-fig3-2.webp",
+ "topic": "piping-valves",
+ "figure": "3-2",
+ "caption": "Single-hub and double-hub cast-iron soil pipe",
+ "shows": "Full PDF page 75 containing Figure 3-2: Single-hub and double-hub cast-iron soil pipe. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "CISP",
+  "DRAINAGE",
+  "MEASURING",
+  "NOTE",
+  "PIPING",
+  "SANITARY"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 75,
+ "dpi": 170,
+ "bytes": 284068,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

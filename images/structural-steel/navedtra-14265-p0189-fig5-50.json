@@ -1,0 +1,18 @@
+{
+ "image": "images/structural-steel/navedtra-14265-p0189-fig5-50.webp",
+ "topic": "structural-steel",
+ "figure": "5-50",
+ "caption": "Root removal by steel rod and auger, manual",
+ "shows": "Full PDF page 189 containing Figure 5-50: Root removal by steel rod and auger, manual. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ROOTS"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 189,
+ "dpi": 170,
+ "bytes": 221224,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

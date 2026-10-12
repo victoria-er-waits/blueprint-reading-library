@@ -1,0 +1,22 @@
+{
+ "image": "images/line-types/navedtra-14069-p0105-fig3-25.webp",
+ "topic": "line-types",
+ "figure": "3-25",
+ "caption": "Use of visible edge lines",
+ "shows": "Full PDF page 105 containing Figure 3-25: Use of visible edge lines. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "CENTER",
+  "CONSTRUCTION",
+  "HIDDEN",
+  "LINES",
+  "VISIBLE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 105,
+ "dpi": 170,
+ "bytes": 166018,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

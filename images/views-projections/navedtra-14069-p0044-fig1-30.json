@@ -1,0 +1,19 @@
+{
+ "image": "images/views-projections/navedtra-14069-p0044-fig1-30.webp",
+ "topic": "views-projections",
+ "figure": "1-30",
+ "caption": "Oblique triangle with three sides given and",
+ "shows": "Full PDF page 44 containing Figure 1-30: Oblique triangle with three sides given and. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ACB",
+  "ADB"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 44,
+ "dpi": 170,
+ "bytes": 150986,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

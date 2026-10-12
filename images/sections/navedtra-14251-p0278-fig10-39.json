@@ -1,0 +1,25 @@
+{
+ "image": "images/sections/navedtra-14251-p0278-fig10-39.webp",
+ "topic": "sections",
+ "figure": "10-39",
+ "caption": "Types and positions of causeway sections in the ELCAS",
+ "shows": "Full PDF page 278 containing Figure 10-39: Types and positions of causeway sections in the ELCAS. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "BEACH",
+  "CONSTRUCTION",
+  "ELCAS",
+  "FENDER",
+  "PIERHEAD",
+  "RAMP",
+  "ROADWAY",
+  "SECTIONS"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+ "book_id": "navedtra-14251",
+ "pdf_page": 278,
+ "dpi": 170,
+ "bytes": 155444,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf"
+}

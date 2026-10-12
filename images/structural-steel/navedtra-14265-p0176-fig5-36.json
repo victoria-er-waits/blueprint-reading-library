@@ -1,0 +1,21 @@
+{
+ "image": "images/structural-steel/navedtra-14265-p0176-fig5-36.webp",
+ "topic": "structural-steel",
+ "figure": "5-36",
+ "caption": "Connection points for thawing frozen service lines",
+ "shows": "Full PDF page 176 containing Figure 5-36: Connection points for thawing frozen service lines. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ALTERNATING-CURRENT",
+  "CIRCUIT",
+  "DIRECT-CURRENT",
+  "GENERATOR"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 176,
+ "dpi": 170,
+ "bytes": 123830,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

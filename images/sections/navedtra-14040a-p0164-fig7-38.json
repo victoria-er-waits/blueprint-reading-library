@@ -1,0 +1,19 @@
+{
+ "image": "images/sections/navedtra-14040a-p0164-fig7-38.webp",
+ "topic": "sections",
+ "figure": "7-38",
+ "caption": "Typical section of a masonry",
+ "shows": "Full PDF page 164 containing Figure 7-38: Typical section of a masonry. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "A-A",
+  "B-B"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 164,
+ "dpi": 170,
+ "bytes": 231946,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

@@ -1,0 +1,19 @@
+{
+ "image": "images/title-blocks-schedules/navedtra-14040a-p0181-fig8-11.webp",
+ "topic": "title-blocks-schedules",
+ "figure": "8-11",
+ "caption": "Typical sheet metal development",
+ "shows": "Full PDF page 181 containing Figure 8-11: Typical sheet metal development. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "DEVELOPMENT",
+  "TYPES"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 181,
+ "dpi": 170,
+ "bytes": 143198,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

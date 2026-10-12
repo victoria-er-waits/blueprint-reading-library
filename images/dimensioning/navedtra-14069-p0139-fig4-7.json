@@ -1,0 +1,27 @@
+{
+ "image": "images/dimensioning/navedtra-14069-p0139-fig4-7.webp",
+ "topic": "dimensioning",
+ "figure": "4-7",
+ "caption": "Using a scale to lay off equal intervals on a",
+ "shows": "Full PDF page 139 containing Figure 4-7: Using a scale to lay off equal intervals on a. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ACCORDING",
+  "ANGLE",
+  "ANGLES",
+  "DIVISION",
+  "GIVEN",
+  "INTO",
+  "PARTS",
+  "PROPORTIONAL",
+  "RATIO",
+  "TRANSFER"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 139,
+ "dpi": 170,
+ "bytes": 148352,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

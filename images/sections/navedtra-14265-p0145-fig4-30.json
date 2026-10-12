@@ -1,0 +1,18 @@
+{
+ "image": "images/sections/navedtra-14265-p0145-fig4-30.webp",
+ "topic": "sections",
+ "figure": "4-30",
+ "caption": "Folding sections with fixed platforms, guard",
+ "shows": "Full PDF page 145 containing Figure 4-30: Folding sections with fixed platforms, guard. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "SCAFFOLDING"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+ "book_id": "navedtra-14265",
+ "pdf_page": 145,
+ "dpi": 170,
+ "bytes": 270352,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf"
+}

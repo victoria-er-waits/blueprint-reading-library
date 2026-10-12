@@ -1,0 +1,18 @@
+{
+ "image": "images/views-projections/navedtra-14069-p0042-fig1-25.webp",
+ "topic": "views-projections",
+ "figure": "1-25",
+ "caption": "Oblique triangle (law of cosines)",
+ "shows": "Full PDF page 42 containing Figure 1-25: Oblique triangle (law of cosines). Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "NAVPERS"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 42,
+ "dpi": 170,
+ "bytes": 156120,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

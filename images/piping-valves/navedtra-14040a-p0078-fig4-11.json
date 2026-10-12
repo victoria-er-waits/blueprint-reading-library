@@ -1,0 +1,20 @@
+{
+ "image": "images/piping-valves/navedtra-14040a-p0078-fig4-11.webp",
+ "topic": "piping-valves",
+ "figure": "4-11",
+ "caption": "Tapered pipe thread representation",
+ "shows": "Full PDF page 78 containing Figure 4-11: Tapered pipe thread representation. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "H-28",
+  "UNC",
+  "UNC-2"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 78,
+ "dpi": 170,
+ "bytes": 206114,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

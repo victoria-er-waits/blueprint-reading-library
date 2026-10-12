@@ -1,0 +1,25 @@
+{
+ "image": "images/views-projections/tm-5-704-p0017-fig1-12.webp",
+ "topic": "views-projections",
+ "figure": "1-12",
+ "caption": "Oblique druwings of' cube",
+ "shows": "Full PDF page 17 containing Figure 1-12: Oblique druwings of' cube. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "AFM",
+  "CABINET",
+  "CAVALIER",
+  "DRAWING",
+  "FULL",
+  "SCALE",
+  "SPECIAL",
+  "VIEWS"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Construction Print Reading in the Field (TM 5-704)",
+ "book_id": "tm-5-704",
+ "pdf_page": 17,
+ "dpi": 170,
+ "bytes": 188192,
+ "licence": "US Government work (public domain). Scan from Internet Archive / Google Books",
+ "source_pdf": "pdf/03-TM-5-704-Construction-Print-Reading.pdf"
+}

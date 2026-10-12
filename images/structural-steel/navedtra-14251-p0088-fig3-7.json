@@ -1,0 +1,19 @@
+{
+ "image": "images/structural-steel/navedtra-14251-p0088-fig3-7.webp",
+ "topic": "structural-steel",
+ "figure": "3-7",
+ "caption": "Column bearing plate",
+ "shows": "Full PDF page 88 containing Figure 3-7: Column bearing plate. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "COLUMNS",
+  "GROUT"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+ "book_id": "navedtra-14251",
+ "pdf_page": 88,
+ "dpi": 170,
+ "bytes": 210492,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf"
+}

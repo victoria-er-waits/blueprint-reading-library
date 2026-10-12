@@ -1,0 +1,21 @@
+{
+ "image": "images/structural-steel/navedtra-14069-p0204-fig6-11.webp",
+ "topic": "structural-steel",
+ "figure": "6-11",
+ "caption": "Box-sill assembly for platform framing",
+ "shows": "Full PDF page 204 containing Figure 6-11: Box-sill assembly for platform framing. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "AND",
+  "FRAMING",
+  "LAYOUT",
+  "SILL"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 204,
+ "dpi": 170,
+ "bytes": 165796,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

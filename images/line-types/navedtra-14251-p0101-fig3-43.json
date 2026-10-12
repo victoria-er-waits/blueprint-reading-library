@@ -1,0 +1,23 @@
+{
+ "image": "images/line-types/navedtra-14251-p0101-fig3-43.webp",
+ "topic": "line-types",
+ "figure": "3-43",
+ "caption": "Locating the top and the bottom center lines",
+ "shows": "Full PDF page 101 containing Figure 3-43: Locating the top and the bottom center lines. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "FOR",
+  "MITER",
+  "SIMPLE",
+  "TEMPLATE",
+  "TURN",
+  "TWO-PIECE"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+ "book_id": "navedtra-14251",
+ "pdf_page": 101,
+ "dpi": 170,
+ "bytes": 242974,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf"
+}

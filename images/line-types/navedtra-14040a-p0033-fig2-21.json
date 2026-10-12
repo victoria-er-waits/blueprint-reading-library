@@ -1,0 +1,16 @@
+{
+ "image": "images/line-types/navedtra-14040a-p0033-fig2-21.webp",
+ "topic": "line-types",
+ "figure": "2-21",
+ "caption": "Line characteristics and conventions",
+ "shows": "Full PDF page 33 containing Figure 2-21: Line characteristics and conventions. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 33,
+ "dpi": 170,
+ "bytes": 94918,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

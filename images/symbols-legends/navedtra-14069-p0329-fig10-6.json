@@ -1,0 +1,31 @@
+{
+ "image": "images/symbols-legends/navedtra-14069-p0329-fig10-6.webp",
+ "topic": "symbols-legends",
+ "figure": "10-6",
+ "caption": "Symbols used to identjfy sections, elevations,",
+ "shows": "Full PDF page 329 containing Figure 10-6: Symbols used to identjfy sections, elevations,. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "ANSI",
+  "AWS",
+  "DRAWING",
+  "FACENGCOM",
+  "GENERAL",
+  "MIL-STD",
+  "MIL-STD-14",
+  "MIL-STD-17-1",
+  "MIL-STD-18",
+  "NAV",
+  "NOTES",
+  "SPECIFIC",
+  "SYMBOLS",
+  "Y32"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+ "book_id": "navedtra-14069",
+ "pdf_page": 329,
+ "dpi": 170,
+ "bytes": 212128,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf"
+}

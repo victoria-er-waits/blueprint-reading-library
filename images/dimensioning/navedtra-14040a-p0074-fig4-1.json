@@ -1,0 +1,26 @@
+{
+ "image": "images/dimensioning/navedtra-14040a-p0074-fig4-1.webp",
+ "topic": "dimensioning",
+ "figure": "4-1",
+ "caption": "Methods of indicating tolerances",
+ "shows": "Full PDF page 74 containing Figure 4-1: Methods of indicating tolerances. Whole-page render; not cropped to the figure.",
+ "labels_text_layer": [
+  "AND",
+  "CHAPTER",
+  "COMMON",
+  "DRAWINGS",
+  "LEARNING",
+  "MACHINE",
+  "OBJECTIVES",
+  "SYMBOLS",
+  "TERMINOLOGY"
+ ],
+ "labels_note": "Uppercase words from the page text layer (OCR for TM 5-704). Not visually verified label by label.",
+ "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+ "book_id": "navedtra-14040a",
+ "pdf_page": 74,
+ "dpi": 170,
+ "bytes": 178128,
+ "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited",
+ "source_pdf": "pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf"
+}

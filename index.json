@@ -1,0 +1,3506 @@
+{
+ "generated": "2026-10-12",
+ "base": "https://victoria-er-waits.github.io/blueprint-reading-library/",
+ "chunks": [
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Basic Blueprint Reading",
+   "pages": [
+    1,
+    2
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/001-p0001-0002.md",
+   "path": "text/costin-basic-blueprint-reading/001-p0001-0002.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Basic Blueprint Reading",
+   "pages": [
+    3,
+    4
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/002-p0003-0004.md",
+   "path": "text/costin-basic-blueprint-reading/002-p0003-0004.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Contents",
+   "pages": [
+    5,
+    6
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/003-p0005-0006.md",
+   "path": "text/costin-basic-blueprint-reading/003-p0005-0006.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Introduction",
+   "pages": [
+    7,
+    8
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/004-p0007-0008.md",
+   "path": "text/costin-basic-blueprint-reading/004-p0007-0008.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Cover",
+   "pages": [
+    9,
+    9
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/005-p0009-0009.md",
+   "path": "text/costin-basic-blueprint-reading/005-p0009-0009.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "The Language of Lines",
+   "pages": [
+    10,
+    20
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/006-p0010-0020.md",
+   "path": "text/costin-basic-blueprint-reading/006-p0010-0020.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Visualization",
+   "pages": [
+    21,
+    32
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/007-p0021-0032.md",
+   "path": "text/costin-basic-blueprint-reading/007-p0021-0032.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Visualization",
+   "pages": [
+    33,
+    43
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/008-p0033-0043.md",
+   "path": "text/costin-basic-blueprint-reading/008-p0033-0043.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Technical Sketching",
+   "pages": [
+    44,
+    55
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/009-p0044-0055.md",
+   "path": "text/costin-basic-blueprint-reading/009-p0044-0055.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Technical Sketching",
+   "pages": [
+    56,
+    64
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/010-p0056-0064.md",
+   "path": "text/costin-basic-blueprint-reading/010-p0056-0064.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Scaling",
+   "pages": [
+    65,
+    70
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/011-p0065-0070.md",
+   "path": "text/costin-basic-blueprint-reading/011-p0065-0070.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Dimensioning",
+   "pages": [
+    71,
+    82
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/012-p0071-0082.md",
+   "path": "text/costin-basic-blueprint-reading/012-p0071-0082.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Dimensioning",
+   "pages": [
+    83,
+    92
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/013-p0083-0092.md",
+   "path": "text/costin-basic-blueprint-reading/013-p0083-0092.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Auxiliary Views",
+   "pages": [
+    93,
+    101
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/014-p0093-0101.md",
+   "path": "text/costin-basic-blueprint-reading/014-p0093-0101.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Sectional Views",
+   "pages": [
+    102,
+    113
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/015-p0102-0113.md",
+   "path": "text/costin-basic-blueprint-reading/015-p0102-0113.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Sectional Views",
+   "pages": [
+    114,
+    115
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/016-p0114-0115.md",
+   "path": "text/costin-basic-blueprint-reading/016-p0114-0115.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Machined Features",
+   "pages": [
+    116,
+    127
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/017-p0116-0127.md",
+   "path": "text/costin-basic-blueprint-reading/017-p0116-0127.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Machined Features",
+   "pages": [
+    128,
+    131
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/018-p0128-0131.md",
+   "path": "text/costin-basic-blueprint-reading/018-p0128-0131.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Basic Blueprint Reading",
+   "book_id": "costin-basic-blueprint-reading",
+   "tier": "Beginner",
+   "chapter": "Print Interpretation",
+   "pages": [
+    132,
+    137
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/costin-basic-blueprint-reading/019-p0132-0137.md",
+   "path": "text/costin-basic-blueprint-reading/019-p0132-0137.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/01-Costin-Basic-Blueprint-Reading.pdf",
+   "licence": "CC BY 4.0, Basic Blueprint Reading by Ric Costin, Linn-Benton Community College (Open Oregon Educational Resources)"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Blueprint RTM Front Matter",
+   "pages": [
+    1,
+    1
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/001-p0001-0001.md",
+   "path": "text/navedtra-14040a/001-p0001-0001.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "PREFACE",
+   "pages": [
+    2,
+    5
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/002-p0002-0005.md",
+   "path": "text/navedtra-14040a/002-p0002-0005.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 1 - Blueprints",
+   "pages": [
+    6,
+    17
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/003-p0006-0017.md",
+   "path": "text/navedtra-14040a/003-p0006-0017.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 1 - Blueprints",
+   "pages": [
+    18,
+    21
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/004-p0018-0021.md",
+   "path": "text/navedtra-14040a/004-p0018-0021.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 2 - Technical Sketching",
+   "pages": [
+    22,
+    33
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/005-p0022-0033.md",
+   "path": "text/navedtra-14040a/005-p0022-0033.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 2 - Technical Sketching",
+   "pages": [
+    34,
+    45
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/006-p0034-0045.md",
+   "path": "text/navedtra-14040a/006-p0034-0045.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 2 - Technical Sketching",
+   "pages": [
+    46,
+    48
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/007-p0046-0048.md",
+   "path": "text/navedtra-14040a/007-p0046-0048.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 3 - Projections and Views",
+   "pages": [
+    49,
+    60
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/008-p0049-0060.md",
+   "path": "text/navedtra-14040a/008-p0049-0060.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 3 - Projections and Views",
+   "pages": [
+    61,
+    72
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/009-p0061-0072.md",
+   "path": "text/navedtra-14040a/009-p0061-0072.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 3 - Projections and Views",
+   "pages": [
+    73,
+    73
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/010-p0073-0073.md",
+   "path": "text/navedtra-14040a/010-p0073-0073.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 4 - Machine Drawings",
+   "pages": [
+    74,
+    85
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/011-p0074-0085.md",
+   "path": "text/navedtra-14040a/011-p0074-0085.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 4 - Machine Drawings",
+   "pages": [
+    86,
+    88
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/012-p0086-0088.md",
+   "path": "text/navedtra-14040a/012-p0086-0088.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 5 - Piping Systems",
+   "pages": [
+    89,
+    100
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/013-p0089-0100.md",
+   "path": "text/navedtra-14040a/013-p0089-0100.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 5 - Piping Systems",
+   "pages": [
+    101,
+    107
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/014-p0101-0107.md",
+   "path": "text/navedtra-14040a/014-p0101-0107.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 6 - Electrical and Electronics Prints",
+   "pages": [
+    108,
+    119
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/015-p0108-0119.md",
+   "path": "text/navedtra-14040a/015-p0108-0119.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 6 - Electrical and Electronics Prints",
+   "pages": [
+    120,
+    131
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/016-p0120-0131.md",
+   "path": "text/navedtra-14040a/016-p0120-0131.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 6 - Electrical and Electronics Prints",
+   "pages": [
+    132,
+    137
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/017-p0132-0137.md",
+   "path": "text/navedtra-14040a/017-p0132-0137.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 7 - Architectural and Structural Steel Drawings",
+   "pages": [
+    138,
+    149
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/018-p0138-0149.md",
+   "path": "text/navedtra-14040a/018-p0138-0149.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 7 - Architectural and Structural Steel Drawings",
+   "pages": [
+    150,
+    161
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/019-p0150-0161.md",
+   "path": "text/navedtra-14040a/019-p0150-0161.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 7 - Architectural and Structural Steel Drawings",
+   "pages": [
+    162,
+    173
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/020-p0162-0173.md",
+   "path": "text/navedtra-14040a/020-p0162-0173.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 7 - Architectural and Structural Steel Drawings",
+   "pages": [
+    174,
+    174
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/021-p0174-0174.md",
+   "path": "text/navedtra-14040a/021-p0174-0174.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 8 - Developments and Intersections",
+   "pages": [
+    175,
+    186
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/022-p0175-0186.md",
+   "path": "text/navedtra-14040a/022-p0175-0186.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Chapter 8 - Developments and Intersections",
+   "pages": [
+    187,
+    197
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/023-p0187-0197.md",
+   "path": "text/navedtra-14040a/023-p0187-0197.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Blueprint RTM Index",
+   "pages": [
+    198,
+    208
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/024-p0198-0208.md",
+   "path": "text/navedtra-14040a/024-p0198-0208.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Blueprint RTM Appendix I Glossary",
+   "pages": [
+    209,
+    215
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/025-p0209-0215.md",
+   "path": "text/navedtra-14040a/025-p0209-0215.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Blueprint RTM Appendix II Graphic Symbols for Aircraft Hydraulic and Pneumatic Systems",
+   "pages": [
+    216,
+    221
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/026-p0216-0221.md",
+   "path": "text/navedtra-14040a/026-p0216-0221.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Blueprint RTM Appendix III Graphic Symbols for Electrical and Electronics Diagrams",
+   "pages": [
+    222,
+    231
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/027-p0222-0231.md",
+   "path": "text/navedtra-14040a/027-p0222-0231.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Blueprint RTM Appendix IV References",
+   "pages": [
+    232,
+    234
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/028-p0232-0234.md",
+   "path": "text/navedtra-14040a/028-p0232-0234.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "Blueprint RTM Appendix V Answers Key End of Chapter Questions",
+   "pages": [
+    235,
+    237
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/029-p0235-0237.md",
+   "path": "text/navedtra-14040a/029-p0235-0237.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "14040A CH 1 ASN",
+   "pages": [
+    238,
+    241
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/030-p0238-0241.md",
+   "path": "text/navedtra-14040a/030-p0238-0241.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "14040A CH 2 ASN",
+   "pages": [
+    242,
+    245
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/031-p0242-0245.md",
+   "path": "text/navedtra-14040a/031-p0242-0245.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "14040A CH 3 ASN",
+   "pages": [
+    246,
+    248
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/032-p0246-0248.md",
+   "path": "text/navedtra-14040a/032-p0246-0248.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "14040A CH 4 ASN",
+   "pages": [
+    249,
+    252
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/033-p0249-0252.md",
+   "path": "text/navedtra-14040a/033-p0249-0252.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "14040A CH 5 ASN",
+   "pages": [
+    253,
+    255
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/034-p0253-0255.md",
+   "path": "text/navedtra-14040a/034-p0253-0255.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "14040A CH 6 ASN",
+   "pages": [
+    256,
+    258
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/035-p0256-0258.md",
+   "path": "text/navedtra-14040a/035-p0256-0258.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "14040A CH 7 ASN",
+   "pages": [
+    259,
+    262
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/036-p0259-0262.md",
+   "path": "text/navedtra-14040a/036-p0259-0262.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Blueprint Reading and Sketching (NAVEDTRA 14040A)",
+   "book_id": "navedtra-14040a",
+   "tier": "Beginner",
+   "chapter": "14040A CH 8 ASN",
+   "pages": [
+    263,
+    265
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14040a/037-p0263-0265.md",
+   "path": "text/navedtra-14040a/037-p0263-0265.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/02-NAVEDTRA-14040A-Blueprint-Reading-and-Sketching.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    1,
+    12
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/001-p0001-0012.md",
+   "path": "text/tm-5-704/001-p0001-0012.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    13,
+    24
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/002-p0013-0024.md",
+   "path": "text/tm-5-704/002-p0013-0024.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    25,
+    36
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/003-p0025-0036.md",
+   "path": "text/tm-5-704/003-p0025-0036.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    37,
+    48
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/004-p0037-0048.md",
+   "path": "text/tm-5-704/004-p0037-0048.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    49,
+    60
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/005-p0049-0060.md",
+   "path": "text/tm-5-704/005-p0049-0060.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    61,
+    72
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/006-p0061-0072.md",
+   "path": "text/tm-5-704/006-p0061-0072.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    73,
+    84
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/007-p0073-0084.md",
+   "path": "text/tm-5-704/007-p0073-0084.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    85,
+    96
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/008-p0085-0096.md",
+   "path": "text/tm-5-704/008-p0085-0096.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    97,
+    108
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/009-p0097-0108.md",
+   "path": "text/tm-5-704/009-p0097-0108.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    109,
+    120
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/010-p0109-0120.md",
+   "path": "text/tm-5-704/010-p0109-0120.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    121,
+    132
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/011-p0121-0132.md",
+   "path": "text/tm-5-704/011-p0121-0132.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    133,
+    144
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/012-p0133-0144.md",
+   "path": "text/tm-5-704/012-p0133-0144.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    145,
+    156
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/013-p0145-0156.md",
+   "path": "text/tm-5-704/013-p0145-0156.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    157,
+    168
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/014-p0157-0168.md",
+   "path": "text/tm-5-704/014-p0157-0168.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    169,
+    180
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/015-p0169-0180.md",
+   "path": "text/tm-5-704/015-p0169-0180.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    181,
+    192
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/016-p0181-0192.md",
+   "path": "text/tm-5-704/016-p0181-0192.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    193,
+    204
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/017-p0193-0204.md",
+   "path": "text/tm-5-704/017-p0193-0204.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    205,
+    216
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/018-p0205-0216.md",
+   "path": "text/tm-5-704/018-p0205-0216.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    217,
+    228
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/019-p0217-0228.md",
+   "path": "text/tm-5-704/019-p0217-0228.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    229,
+    240
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/020-p0229-0240.md",
+   "path": "text/tm-5-704/020-p0229-0240.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    241,
+    252
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/021-p0241-0252.md",
+   "path": "text/tm-5-704/021-p0241-0252.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    253,
+    264
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/022-p0253-0264.md",
+   "path": "text/tm-5-704/022-p0253-0264.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Construction Print Reading in the Field (TM 5-704)",
+   "book_id": "tm-5-704",
+   "tier": "Beginner",
+   "chapter": "Front matter",
+   "pages": [
+    265,
+    269
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/tm-5-704/023-p0265-0269.md",
+   "path": "text/tm-5-704/023-p0265-0269.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/03-TM-5-704-Construction-Print-Reading.pdf",
+   "licence": "US Government work (public domain). Scan from Internet Archive / Google Books"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Front matter",
+   "pages": [
+    1,
+    2
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/001-p0001-0002.md",
+   "path": "text/navedtra-14069/001-p0001-0002.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ERRATA #2",
+   "pages": [
+    3,
+    12
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/002-p0003-0012.md",
+   "path": "text/navedtra-14069/002-p0003-0012.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "CONTENTS",
+   "pages": [
+    13,
+    20
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/003-p0013-0020.md",
+   "path": "text/navedtra-14069/003-p0013-0020.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 1 Mathematics And Units Of",
+   "pages": [
+    21,
+    32
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/004-p0021-0032.md",
+   "path": "text/navedtra-14069/004-p0021-0032.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 1 Mathematics And Units Of",
+   "pages": [
+    33,
+    44
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/005-p0033-0044.md",
+   "path": "text/navedtra-14069/005-p0033-0044.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 1 Mathematics And Units Of",
+   "pages": [
+    45,
+    56
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/006-p0045-0056.md",
+   "path": "text/navedtra-14069/006-p0045-0056.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 2 Drafting",
+   "pages": [
+    57,
+    68
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/007-p0057-0068.md",
+   "path": "text/navedtra-14069/007-p0057-0068.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 2 Drafting",
+   "pages": [
+    69,
+    80
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/008-p0069-0080.md",
+   "path": "text/navedtra-14069/008-p0069-0080.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 2 Drafting",
+   "pages": [
+    81,
+    84
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/009-p0081-0084.md",
+   "path": "text/navedtra-14069/009-p0081-0084.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 3 Drafting: Fundamentals And Techniques; Reproduction",
+   "pages": [
+    85,
+    96
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/010-p0085-0096.md",
+   "path": "text/navedtra-14069/010-p0085-0096.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 3 Drafting: Fundamentals And Techniques; Reproduction",
+   "pages": [
+    97,
+    108
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/011-p0097-0108.md",
+   "path": "text/navedtra-14069/011-p0097-0108.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 3 Drafting: Fundamentals And Techniques; Reproduction",
+   "pages": [
+    109,
+    120
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/012-p0109-0120.md",
+   "path": "text/navedtra-14069/012-p0109-0120.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 3 Drafting: Fundamentals And Techniques; Reproduction",
+   "pages": [
+    121,
+    132
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/013-p0121-0132.md",
+   "path": "text/navedtra-14069/013-p0121-0132.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 3 Drafting: Fundamentals And Techniques; Reproduction",
+   "pages": [
+    133,
+    136
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/014-p0133-0136.md",
+   "path": "text/navedtra-14069/014-p0133-0136.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 4 Drafting: Geometric",
+   "pages": [
+    137,
+    148
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/015-p0137-0148.md",
+   "path": "text/navedtra-14069/015-p0137-0148.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 4 Drafting: Geometric",
+   "pages": [
+    149,
+    152
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/016-p0149-0152.md",
+   "path": "text/navedtra-14069/016-p0149-0152.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 5 Drafting: Projections And",
+   "pages": [
+    153,
+    164
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/017-p0153-0164.md",
+   "path": "text/navedtra-14069/017-p0153-0164.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 5 Drafting: Projections And",
+   "pages": [
+    165,
+    176
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/018-p0165-0176.md",
+   "path": "text/navedtra-14069/018-p0165-0176.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 5 Drafting: Projections And",
+   "pages": [
+    177,
+    188
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/019-p0177-0188.md",
+   "path": "text/navedtra-14069/019-p0177-0188.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 5 Drafting: Projections And",
+   "pages": [
+    189,
+    190
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/020-p0189-0190.md",
+   "path": "text/navedtra-14069/020-p0189-0190.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 6 Wood And Light Frame",
+   "pages": [
+    191,
+    202
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/021-p0191-0202.md",
+   "path": "text/navedtra-14069/021-p0191-0202.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 6 Wood And Light Frame",
+   "pages": [
+    203,
+    214
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/022-p0203-0214.md",
+   "path": "text/navedtra-14069/022-p0203-0214.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 6 Wood And Light Frame",
+   "pages": [
+    215,
+    226
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/023-p0215-0226.md",
+   "path": "text/navedtra-14069/023-p0215-0226.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 6 Wood And Light Frame",
+   "pages": [
+    227,
+    238
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/024-p0227-0238.md",
+   "path": "text/navedtra-14069/024-p0227-0238.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 6 Wood And Light Frame",
+   "pages": [
+    239,
+    242
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/025-p0239-0242.md",
+   "path": "text/navedtra-14069/025-p0239-0242.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 7 Concrete And",
+   "pages": [
+    243,
+    254
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/026-p0243-0254.md",
+   "path": "text/navedtra-14069/026-p0243-0254.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 7 Concrete And",
+   "pages": [
+    255,
+    266
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/027-p0255-0266.md",
+   "path": "text/navedtra-14069/027-p0255-0266.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 7 Concrete And",
+   "pages": [
+    267,
+    276
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/028-p0267-0276.md",
+   "path": "text/navedtra-14069/028-p0267-0276.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Mechanical",
+   "pages": [
+    277,
+    288
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/029-p0277-0288.md",
+   "path": "text/navedtra-14069/029-p0277-0288.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Mechanical",
+   "pages": [
+    289,
+    300
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/030-p0289-0300.md",
+   "path": "text/navedtra-14069/030-p0289-0300.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 9 Electrical Systems And",
+   "pages": [
+    301,
+    312
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/031-p0301-0312.md",
+   "path": "text/navedtra-14069/031-p0301-0312.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 9 Electrical Systems And",
+   "pages": [
+    313,
+    320
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/032-p0313-0320.md",
+   "path": "text/navedtra-14069/032-p0313-0320.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter Construction 10",
+   "pages": [
+    321,
+    332
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/033-p0321-0332.md",
+   "path": "text/navedtra-14069/033-p0321-0332.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter Construction 10",
+   "pages": [
+    333,
+    344
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/034-p0333-0344.md",
+   "path": "text/navedtra-14069/034-p0333-0344.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter Construction 10",
+   "pages": [
+    345,
+    354
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/035-p0345-0354.md",
+   "path": "text/navedtra-14069/035-p0345-0354.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 11 Elements Of Surveying And Surveying",
+   "pages": [
+    355,
+    366
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/036-p0355-0366.md",
+   "path": "text/navedtra-14069/036-p0355-0366.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 11 Elements Of Surveying And Surveying",
+   "pages": [
+    367,
+    378
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/037-p0367-0378.md",
+   "path": "text/navedtra-14069/037-p0367-0378.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 11 Elements Of Surveying And Surveying",
+   "pages": [
+    379,
+    390
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/038-p0379-0390.md",
+   "path": "text/navedtra-14069/038-p0379-0390.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 11 Elements Of Surveying And Surveying",
+   "pages": [
+    391,
+    402
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/039-p0391-0402.md",
+   "path": "text/navedtra-14069/039-p0391-0402.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 11 Elements Of Surveying And Surveying",
+   "pages": [
+    403,
+    404
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/040-p0403-0404.md",
+   "path": "text/navedtra-14069/040-p0403-0404.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 12 Direct Linear Measurements And Field Survey",
+   "pages": [
+    405,
+    416
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/041-p0405-0416.md",
+   "path": "text/navedtra-14069/041-p0405-0416.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 12 Direct Linear Measurements And Field Survey",
+   "pages": [
+    417,
+    428
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/042-p0417-0428.md",
+   "path": "text/navedtra-14069/042-p0417-0428.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 12 Direct Linear Measurements And Field Survey",
+   "pages": [
+    429,
+    436
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/043-p0429-0436.md",
+   "path": "text/navedtra-14069/043-p0429-0436.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 13 Horizontal Control",
+   "pages": [
+    437,
+    448
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/044-p0437-0448.md",
+   "path": "text/navedtra-14069/044-p0437-0448.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 13 Horizontal Control",
+   "pages": [
+    449,
+    460
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/045-p0449-0460.md",
+   "path": "text/navedtra-14069/045-p0449-0460.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 13 Horizontal Control",
+   "pages": [
+    461,
+    466
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/046-p0461-0466.md",
+   "path": "text/navedtra-14069/046-p0461-0466.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 14 Direct Leveling And Basic Engineering",
+   "pages": [
+    467,
+    478
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/047-p0467-0478.md",
+   "path": "text/navedtra-14069/047-p0467-0478.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 14 Direct Leveling And Basic Engineering",
+   "pages": [
+    479,
+    490
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/048-p0479-0490.md",
+   "path": "text/navedtra-14069/048-p0479-0490.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 14 Direct Leveling And Basic Engineering",
+   "pages": [
+    491,
+    502
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/049-p0491-0502.md",
+   "path": "text/navedtra-14069/049-p0491-0502.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 14 Direct Leveling And Basic Engineering",
+   "pages": [
+    503,
+    514
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/050-p0503-0514.md",
+   "path": "text/navedtra-14069/050-p0503-0514.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 15 Materials Testing: Soil And",
+   "pages": [
+    515,
+    526
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/051-p0515-0526.md",
+   "path": "text/navedtra-14069/051-p0515-0526.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 15 Materials Testing: Soil And",
+   "pages": [
+    527,
+    538
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/052-p0527-0538.md",
+   "path": "text/navedtra-14069/052-p0527-0538.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 15 Materials Testing: Soil And",
+   "pages": [
+    539,
+    550
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/053-p0539-0550.md",
+   "path": "text/navedtra-14069/053-p0539-0550.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 15 Materials Testing: Soil And",
+   "pages": [
+    551,
+    554
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/054-p0551-0554.md",
+   "path": "text/navedtra-14069/054-p0551-0554.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 16",
+   "pages": [
+    555,
+    566
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/055-p0555-0566.md",
+   "path": "text/navedtra-14069/055-p0555-0566.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "Chapter 16",
+   "pages": [
+    567,
+    568
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/056-p0567-0568.md",
+   "path": "text/navedtra-14069/056-p0567-0568.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "APPENDIX I",
+   "pages": [
+    569,
+    580
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/057-p0569-0580.md",
+   "path": "text/navedtra-14069/057-p0569-0580.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "APPENDIX I",
+   "pages": [
+    581,
+    582
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/058-p0581-0582.md",
+   "path": "text/navedtra-14069/058-p0581-0582.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "APPENDIX II",
+   "pages": [
+    583,
+    584
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/059-p0583-0584.md",
+   "path": "text/navedtra-14069/059-p0583-0584.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "APPENDIX III",
+   "pages": [
+    585,
+    596
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/060-p0585-0596.md",
+   "path": "text/navedtra-14069/060-p0585-0596.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "APPENDIX III",
+   "pages": [
+    597,
+    608
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/061-p0597-0608.md",
+   "path": "text/navedtra-14069/061-p0597-0608.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "APPENDIX III",
+   "pages": [
+    609,
+    618
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/062-p0609-0618.md",
+   "path": "text/navedtra-14069/062-p0609-0618.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "APPENDIX IV",
+   "pages": [
+    619,
+    630
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/063-p0619-0630.md",
+   "path": "text/navedtra-14069/063-p0619-0630.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "APPENDIX IV",
+   "pages": [
+    631,
+    638
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/064-p0631-0638.md",
+   "path": "text/navedtra-14069/064-p0631-0638.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "APPENDIX V",
+   "pages": [
+    639,
+    648
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/065-p0639-0648.md",
+   "path": "text/navedtra-14069/065-p0639-0648.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "APPENDIX VI",
+   "pages": [
+    649,
+    654
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/066-p0649-0654.md",
+   "path": "text/navedtra-14069/066-p0649-0654.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "INDEX",
+   "pages": [
+    655,
+    666
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/067-p0655-0666.md",
+   "path": "text/navedtra-14069/067-p0655-0666.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "INDEX",
+   "pages": [
+    667,
+    672
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/068-p0667-0672.md",
+   "path": "text/navedtra-14069/068-p0667-0672.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 1",
+   "pages": [
+    673,
+    680
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/069-p0673-0680.md",
+   "path": "text/navedtra-14069/069-p0673-0680.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 2",
+   "pages": [
+    681,
+    686
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/070-p0681-0686.md",
+   "path": "text/navedtra-14069/070-p0681-0686.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 3",
+   "pages": [
+    687,
+    693
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/071-p0687-0693.md",
+   "path": "text/navedtra-14069/071-p0687-0693.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 4",
+   "pages": [
+    694,
+    702
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/072-p0694-0702.md",
+   "path": "text/navedtra-14069/072-p0694-0702.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 5",
+   "pages": [
+    703,
+    708
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/073-p0703-0708.md",
+   "path": "text/navedtra-14069/073-p0703-0708.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 6",
+   "pages": [
+    709,
+    714
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/074-p0709-0714.md",
+   "path": "text/navedtra-14069/074-p0709-0714.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 7",
+   "pages": [
+    715,
+    722
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/075-p0715-0722.md",
+   "path": "text/navedtra-14069/075-p0715-0722.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 8",
+   "pages": [
+    723,
+    729
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/076-p0723-0729.md",
+   "path": "text/navedtra-14069/076-p0723-0729.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 9",
+   "pages": [
+    730,
+    736
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/077-p0730-0736.md",
+   "path": "text/navedtra-14069/077-p0730-0736.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 10",
+   "pages": [
+    737,
+    746
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/078-p0737-0746.md",
+   "path": "text/navedtra-14069/078-p0737-0746.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 11",
+   "pages": [
+    747,
+    753
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/079-p0747-0753.md",
+   "path": "text/navedtra-14069/079-p0747-0753.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 12",
+   "pages": [
+    754,
+    759
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/080-p0754-0759.md",
+   "path": "text/navedtra-14069/080-p0754-0759.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 13",
+   "pages": [
+    760,
+    771
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/081-p0760-0771.md",
+   "path": "text/navedtra-14069/081-p0760-0771.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Engineering Aid 3 (NAVEDTRA 14069)",
+   "book_id": "navedtra-14069",
+   "tier": "Intermediate",
+   "chapter": "ASSIGNMENT 13",
+   "pages": [
+    772,
+    772
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14069/082-p0772-0772.md",
+   "path": "text/navedtra-14069/082-p0772-0772.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/04-NAVEDTRA-14069-Engineering-Aid-3.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Front matter",
+   "pages": [
+    1,
+    10
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/001-p0001-0010.md",
+   "path": "text/navedtra-14265/001-p0001-0010.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 1 Plans, Specifications, And Color Coding",
+   "pages": [
+    11,
+    22
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/002-p0011-0022.md",
+   "path": "text/navedtra-14265/002-p0011-0022.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 1 Plans, Specifications, And Color Coding",
+   "pages": [
+    23,
+    32
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/003-p0023-0032.md",
+   "path": "text/navedtra-14265/003-p0023-0032.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 2 Advanced Based Functional Components",
+   "pages": [
+    33,
+    44
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/004-p0033-0044.md",
+   "path": "text/navedtra-14265/004-p0033-0044.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 2 Advanced Based Functional Components",
+   "pages": [
+    45,
+    56
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/005-p0045-0056.md",
+   "path": "text/navedtra-14265/005-p0045-0056.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 2 Advanced Based Functional Components",
+   "pages": [
+    57,
+    68
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/006-p0057-0068.md",
+   "path": "text/navedtra-14265/006-p0057-0068.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 2 Advanced Based Functional Components",
+   "pages": [
+    69,
+    70
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/007-p0069-0070.md",
+   "path": "text/navedtra-14265/007-p0069-0070.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 3 Plumbing",
+   "pages": [
+    71,
+    82
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/008-p0071-0082.md",
+   "path": "text/navedtra-14265/008-p0071-0082.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 3 Plumbing",
+   "pages": [
+    83,
+    94
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/009-p0083-0094.md",
+   "path": "text/navedtra-14265/009-p0083-0094.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 3 Plumbing",
+   "pages": [
+    95,
+    106
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/010-p0095-0106.md",
+   "path": "text/navedtra-14265/010-p0095-0106.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 3 Plumbing",
+   "pages": [
+    107,
+    118
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/011-p0107-0118.md",
+   "path": "text/navedtra-14265/011-p0107-0118.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 3 Plumbing",
+   "pages": [
+    119,
+    122
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/012-p0119-0122.md",
+   "path": "text/navedtra-14265/012-p0119-0122.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 4 Plumbing Valves And Accessories",
+   "pages": [
+    123,
+    134
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/013-p0123-0134.md",
+   "path": "text/navedtra-14265/013-p0123-0134.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 4 Plumbing Valves And Accessories",
+   "pages": [
+    135,
+    146
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/014-p0135-0146.md",
+   "path": "text/navedtra-14265/014-p0135-0146.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 4 Plumbing Valves And Accessories",
+   "pages": [
+    147,
+    154
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/015-p0147-0154.md",
+   "path": "text/navedtra-14265/015-p0147-0154.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 5 Plumbing Fixtures And Plumbing Repairs",
+   "pages": [
+    155,
+    166
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/016-p0155-0166.md",
+   "path": "text/navedtra-14265/016-p0155-0166.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 5 Plumbing Fixtures And Plumbing Repairs",
+   "pages": [
+    167,
+    178
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/017-p0167-0178.md",
+   "path": "text/navedtra-14265/017-p0167-0178.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 5 Plumbing Fixtures And Plumbing Repairs",
+   "pages": [
+    179,
+    190
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/018-p0179-0190.md",
+   "path": "text/navedtra-14265/018-p0179-0190.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 5 Plumbing Fixtures And Plumbing Repairs",
+   "pages": [
+    191,
+    196
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/019-p0191-0196.md",
+   "path": "text/navedtra-14265/019-p0191-0196.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 6 Prime Movers, Pumps, And Air Compressors",
+   "pages": [
+    197,
+    208
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/020-p0197-0208.md",
+   "path": "text/navedtra-14265/020-p0197-0208.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 6 Prime Movers, Pumps, And Air Compressors",
+   "pages": [
+    209,
+    220
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/021-p0209-0220.md",
+   "path": "text/navedtra-14265/021-p0209-0220.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 6 Prime Movers, Pumps, And Air Compressors",
+   "pages": [
+    221,
+    232
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/022-p0221-0232.md",
+   "path": "text/navedtra-14265/022-p0221-0232.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 6 Prime Movers, Pumps, And Air Compressors",
+   "pages": [
+    233,
+    244
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/023-p0233-0244.md",
+   "path": "text/navedtra-14265/023-p0233-0244.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 6 Prime Movers, Pumps, And Air Compressors",
+   "pages": [
+    245,
+    250
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/024-p0245-0250.md",
+   "path": "text/navedtra-14265/024-p0245-0250.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 7 Water Treatment",
+   "pages": [
+    251,
+    262
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/025-p0251-0262.md",
+   "path": "text/navedtra-14265/025-p0251-0262.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 7 Water Treatment",
+   "pages": [
+    263,
+    274
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/026-p0263-0274.md",
+   "path": "text/navedtra-14265/026-p0263-0274.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 7 Water Treatment",
+   "pages": [
+    275,
+    278
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/027-p0275-0278.md",
+   "path": "text/navedtra-14265/027-p0275-0278.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    279,
+    290
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/028-p0279-0290.md",
+   "path": "text/navedtra-14265/028-p0279-0290.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    291,
+    302
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/029-p0291-0302.md",
+   "path": "text/navedtra-14265/029-p0291-0302.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    303,
+    314
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/030-p0303-0314.md",
+   "path": "text/navedtra-14265/030-p0303-0314.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    315,
+    326
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/031-p0315-0326.md",
+   "path": "text/navedtra-14265/031-p0315-0326.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    327,
+    338
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/032-p0327-0338.md",
+   "path": "text/navedtra-14265/032-p0327-0338.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    339,
+    350
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/033-p0339-0350.md",
+   "path": "text/navedtra-14265/033-p0339-0350.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    351,
+    362
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/034-p0351-0362.md",
+   "path": "text/navedtra-14265/034-p0351-0362.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    363,
+    374
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/035-p0363-0374.md",
+   "path": "text/navedtra-14265/035-p0363-0374.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    375,
+    386
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/036-p0375-0386.md",
+   "path": "text/navedtra-14265/036-p0375-0386.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    387,
+    398
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/037-p0387-0398.md",
+   "path": "text/navedtra-14265/037-p0387-0398.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    399,
+    410
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/038-p0399-0410.md",
+   "path": "text/navedtra-14265/038-p0399-0410.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    411,
+    422
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/039-p0411-0422.md",
+   "path": "text/navedtra-14265/039-p0411-0422.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    423,
+    434
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/040-p0423-0434.md",
+   "path": "text/navedtra-14265/040-p0423-0434.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Utilitiesman Basic (NAVEDTRA 14265)",
+   "book_id": "navedtra-14265",
+   "tier": "Intermediate",
+   "chapter": "Chapter 8 Equipment Maintenance",
+   "pages": [
+    435,
+    436
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14265/041-p0435-0436.md",
+   "path": "text/navedtra-14265/041-p0435-0436.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/05-NAVEDTRA-14265-Utilitiesman-Basic.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Front matter",
+   "pages": [
+    1,
+    6
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/001-p0001-0006.md",
+   "path": "text/navedtra-14251/001-p0001-0006.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "CONTENTS",
+   "pages": [
+    7,
+    14
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/002-p0007-0014.md",
+   "path": "text/navedtra-14251/002-p0007-0014.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 1 Technical",
+   "pages": [
+    15,
+    26
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/003-p0015-0026.md",
+   "path": "text/navedtra-14251/003-p0015-0026.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 1 Technical",
+   "pages": [
+    27,
+    38
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/004-p0027-0038.md",
+   "path": "text/navedtra-14251/004-p0027-0038.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 1 Technical",
+   "pages": [
+    39,
+    44
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/005-p0039-0044.md",
+   "path": "text/navedtra-14251/005-p0039-0044.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 2 Layout And Fabrication Of Sheet-Metal And Fiber-Glass",
+   "pages": [
+    45,
+    56
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/006-p0045-0056.md",
+   "path": "text/navedtra-14251/006-p0045-0056.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 2 Layout And Fabrication Of Sheet-Metal And Fiber-Glass",
+   "pages": [
+    57,
+    68
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/007-p0057-0068.md",
+   "path": "text/navedtra-14251/007-p0057-0068.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 2 Layout And Fabrication Of Sheet-Metal And Fiber-Glass",
+   "pages": [
+    69,
+    80
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/008-p0069-0080.md",
+   "path": "text/navedtra-14251/008-p0069-0080.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 2 Layout And Fabrication Of Sheet-Metal And Fiber-Glass",
+   "pages": [
+    81,
+    84
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/009-p0081-0084.md",
+   "path": "text/navedtra-14251/009-p0081-0084.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 3 Structural Steel Terms / Layout And Fabrication Of Steel And",
+   "pages": [
+    85,
+    96
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/010-p0085-0096.md",
+   "path": "text/navedtra-14251/010-p0085-0096.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 3 Structural Steel Terms / Layout And Fabrication Of Steel And",
+   "pages": [
+    97,
+    108
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/011-p0097-0108.md",
+   "path": "text/navedtra-14251/011-p0097-0108.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 3 Structural Steel Terms / Layout And Fabrication Of Steel And",
+   "pages": [
+    109,
+    120
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/012-p0109-0120.md",
+   "path": "text/navedtra-14251/012-p0109-0120.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 3 Structural Steel Terms / Layout And Fabrication Of Steel And",
+   "pages": [
+    121,
+    132
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/013-p0121-0132.md",
+   "path": "text/navedtra-14251/013-p0121-0132.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 5 Wire",
+   "pages": [
+    133,
+    144
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/014-p0133-0144.md",
+   "path": "text/navedtra-14251/014-p0133-0144.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 5 Wire",
+   "pages": [
+    145,
+    148
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/015-p0145-0148.md",
+   "path": "text/navedtra-14251/015-p0145-0148.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 6",
+   "pages": [
+    149,
+    160
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/016-p0149-0160.md",
+   "path": "text/navedtra-14251/016-p0149-0160.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 6",
+   "pages": [
+    161,
+    172
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/017-p0161-0172.md",
+   "path": "text/navedtra-14251/017-p0161-0172.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 6",
+   "pages": [
+    173,
+    184
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/018-p0173-0184.md",
+   "path": "text/navedtra-14251/018-p0173-0184.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 6",
+   "pages": [
+    185,
+    186
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/019-p0185-0186.md",
+   "path": "text/navedtra-14251/019-p0185-0186.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 7 Reinforcing",
+   "pages": [
+    187,
+    198
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/020-p0187-0198.md",
+   "path": "text/navedtra-14251/020-p0187-0198.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 7 Reinforcing",
+   "pages": [
+    199,
+    204
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/021-p0199-0204.md",
+   "path": "text/navedtra-14251/021-p0199-0204.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 8 Pre-Engineered Structures: Buildings, K-Spans, Towers, And",
+   "pages": [
+    205,
+    216
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/022-p0205-0216.md",
+   "path": "text/navedtra-14251/022-p0205-0216.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 8 Pre-Engineered Structures: Buildings, K-Spans, Towers, And",
+   "pages": [
+    217,
+    228
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/023-p0217-0228.md",
+   "path": "text/navedtra-14251/023-p0217-0228.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 8 Pre-Engineered Structures: Buildings, K-Spans, Towers, And",
+   "pages": [
+    229,
+    240
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/024-p0229-0240.md",
+   "path": "text/navedtra-14251/024-p0229-0240.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 9 Pre-Engineered Storage",
+   "pages": [
+    241,
+    252
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/025-p0241-0252.md",
+   "path": "text/navedtra-14251/025-p0241-0252.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 9 Pre-Engineered Storage",
+   "pages": [
+    253,
+    256
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/026-p0253-0256.md",
+   "path": "text/navedtra-14251/026-p0253-0256.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 10",
+   "pages": [
+    257,
+    268
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/027-p0257-0268.md",
+   "path": "text/navedtra-14251/027-p0257-0268.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 10",
+   "pages": [
+    269,
+    280
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/028-p0269-0280.md",
+   "path": "text/navedtra-14251/028-p0269-0280.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 11 Pre-Engineered Structures: Short Airfield For Tactical",
+   "pages": [
+    281,
+    292
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/029-p0281-0292.md",
+   "path": "text/navedtra-14251/029-p0281-0292.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 11 Pre-Engineered Structures: Short Airfield For Tactical",
+   "pages": [
+    293,
+    304
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/030-p0293-0304.md",
+   "path": "text/navedtra-14251/030-p0293-0304.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 11 Pre-Engineered Structures: Short Airfield For Tactical",
+   "pages": [
+    305,
+    308
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/031-p0305-0308.md",
+   "path": "text/navedtra-14251/031-p0305-0308.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 1 2 Steelworker Tools And",
+   "pages": [
+    309,
+    320
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/032-p0309-0320.md",
+   "path": "text/navedtra-14251/032-p0309-0320.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "Chapter 1 2 Steelworker Tools And",
+   "pages": [
+    321,
+    322
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/033-p0321-0322.md",
+   "path": "text/navedtra-14251/033-p0321-0322.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "APPENDIX I",
+   "pages": [
+    323,
+    324
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/034-p0323-0324.md",
+   "path": "text/navedtra-14251/034-p0323-0324.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "APPENDIX II",
+   "pages": [
+    325,
+    336
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/035-p0325-0336.md",
+   "path": "text/navedtra-14251/035-p0325-0336.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "APPENDIX II",
+   "pages": [
+    337,
+    348
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/036-p0337-0348.md",
+   "path": "text/navedtra-14251/036-p0337-0348.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "APPENDIX III",
+   "pages": [
+    349,
+    350
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/037-p0349-0350.md",
+   "path": "text/navedtra-14251/037-p0349-0350.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "APPENDIX IV",
+   "pages": [
+    351,
+    356
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/038-p0351-0356.md",
+   "path": "text/navedtra-14251/038-p0351-0356.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "APPENDIX V",
+   "pages": [
+    357,
+    360
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/039-p0357-0360.md",
+   "path": "text/navedtra-14251/039-p0357-0360.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "INDEX",
+   "pages": [
+    361,
+    366
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/040-p0361-0366.md",
+   "path": "text/navedtra-14251/040-p0361-0366.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "ASSIGNMENT 1",
+   "pages": [
+    367,
+    372
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/041-p0367-0372.md",
+   "path": "text/navedtra-14251/041-p0367-0372.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "ASSIGNMENT 2",
+   "pages": [
+    373,
+    380
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/042-p0373-0380.md",
+   "path": "text/navedtra-14251/042-p0373-0380.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "ASSIGNMENT 3",
+   "pages": [
+    381,
+    386
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/043-p0381-0386.md",
+   "path": "text/navedtra-14251/043-p0381-0386.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "ASSIGNMENT 4",
+   "pages": [
+    387,
+    392
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/044-p0387-0392.md",
+   "path": "text/navedtra-14251/044-p0387-0392.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "ASSIGNMENT 5",
+   "pages": [
+    393,
+    399
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/045-p0393-0399.md",
+   "path": "text/navedtra-14251/045-p0393-0399.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "ASSIGNMENT 6",
+   "pages": [
+    400,
+    405
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/046-p0400-0405.md",
+   "path": "text/navedtra-14251/046-p0400-0405.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "ASSIGNMENT 7",
+   "pages": [
+    406,
+    411
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/047-p0406-0411.md",
+   "path": "text/navedtra-14251/047-p0406-0411.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Steelworker, Volume 2 (NAVEDTRA 14251)",
+   "book_id": "navedtra-14251",
+   "tier": "Advanced",
+   "chapter": "ASSIGNMENT 8",
+   "pages": [
+    412,
+    416
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/navedtra-14251/048-p0412-0416.md",
+   "path": "text/navedtra-14251/048-p0412-0416.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  }
+ ]
+}
