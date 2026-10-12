@@ -30,3 +30,15 @@ US National CAD Standard, AWWA manuals, CRSI Manual of Standard Practice, ACI 31
 | Survey | pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf | EM 1110-1-1005, USACE, 1 Jan 2007 | 498 | "This publication is approved for public release; distribution is unlimited." | https://www.publications.usace.army.mil/Portals/76/Publications/EngineerManuals/EM_1110-1-1005.pdf |
 
 MMCD: checked 2026-10-12. Paid, DRM-locked, "may not be shared" (https://mmcd.net/license-agreement/). Not hosted. Link-only items: guide/local-standards.md.
+
+## Added 2026-10-12: Kyle's suggested resources
+| Tier | File | Title / publisher / year | Pages | Rights status (quoted) | Source URL |
+|---|---|---|---|---|---|
+| Advanced | pdf/11-Mechanical-Drawing-Self-Instruction-1908.pdf | Mechanical Drawing: A Practical Manual of Self-Instruction, American School of Correspondence, Chicago, 1908 | 184 | Published 1908 in the US (public domain). Internet Archive / Library of Congress: "The Library of Congress is unaware of any copyright restrictions for this item." | https://archive.org/details/mechanicaldrawin00amer |
+| Intermediate | (not hosted, link only) | Engineering Working Drawings Basics, lecture notes by Dr. Ala Hijazi (MENG 204), hosted on NASA SSRI Knowledge Base | 22 | **Not a NASA work**: every page says "Lecture Notes by: Dr. Ala Hijazi". No licence stated. Link only. | https://s3vi.ndc.nasa.gov/ssri-kb/static/resources/Engineering+Working+Drawing+Basics.pdf |
+| Advanced | (not hosted, link only) | GaugeHow, Learn GD&T and Engineering Graphics (free course, e-books, quizzes) | n/a | Free but behind account signup. No redistribution licence. Link only; bots must not create accounts. | https://gaugehow.com/course/gd-t-geometric-dimension-and-tolerancing |
+- NAVEDTRA 14040 Blueprint Reading and Sketching: already hosted as NAVEDTRA 14040A (pdf/02), the 2015 revision. Not added again.
+- "How to Read a Blueprint" free PDF guide: no identifiable publisher or official source found. Search hits were SEO/aggregator PDFs with no author or licence. Skipped. Costin and NAVEDTRA 14040A cover the same beginner topics.
+
+## How-to-use guides
+Every resource has a guide for the Blueprint Reader: https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/README.md

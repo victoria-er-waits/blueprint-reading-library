@@ -35,3 +35,9 @@ FAIL: any page with no sheet number, or you started reading values before the ta
 
 ---
 Examples come from our own test runs on public municipal tenders and a copyrighted house-plan set used only as a private test. Values are short paraphrases for illustration; no drawings are reproduced. Reference material only, not engineering approval.
+
+## Which books help with this step
+Read the how-to-use guide first; it says which chapter to open.
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/american-farmhouse.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-aec-cad-standard-6-2.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/ncdot-plan-reading-ssc030.md

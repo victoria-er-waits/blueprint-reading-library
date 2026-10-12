@@ -40,3 +40,6 @@ read_first: true
 
 ## Large sets
 For 100+ sheet packages, also use [reading-large-drawing-sets.md](reading-large-drawing-sets.md) to plan the work in batches. This order of operations still applies to every sheet.
+
+## How-to-use guides for every book
+Before opening any book, read its guide: https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/README.md . Each step page lists the books that help with it.

@@ -35,3 +35,11 @@ FAIL: a field filled with text from the wrong cell; a firm name used as the titl
 
 ---
 Examples come from our own test runs on public municipal tenders and a copyrighted house-plan set used only as a private test. Values are short paraphrases for illustration; no drawings are reproduced. Reference material only, not engineering approval.
+
+## Which books help with this step
+Read the how-to-use guide first; it says which chapter to open.
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/navedtra-14040a.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/american-farmhouse.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-aec-cad-standard-6-2.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-aec-graphics-standard-2-2.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/nasa-engineering-working-drawing-basics.md

@@ -37,3 +37,12 @@ FAIL: metric and imperial treated as "matching" without converting; a single "7 
 
 ---
 Examples come from our own test runs on public municipal tenders and a copyrighted house-plan set used only as a private test. Values are short paraphrases for illustration; no drawings are reproduced. Reference material only, not engineering approval.
+
+## Which books help with this step
+Read the how-to-use guide first; it says which chapter to open.
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/tm-5-704.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/navedtra-14069.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/navedtra-14251.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/american-farmhouse.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-em-1110-1-1005.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/ncdot-plan-reading-ssc030.md

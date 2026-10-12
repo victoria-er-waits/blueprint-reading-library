@@ -6,6 +6,7 @@ Base URL: https://victoria-er-waits.github.io/blueprint-reading-library/
 
 ## START HERE (bots reading a drawing set)
 Follow guide/order-of-operations.md step by step, one step at a time: https://victoria-er-waits.github.io/blueprint-reading-library/guide/order-of-operations.md
+Before using any book, read its how-to-use guide (what to read for which task, what to skip, pitfalls): https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/README.md
 If stuck on a step, open its help page in guide/steps/:
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-1-sort-the-set.md
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-2-page-prep.md
@@ -35,6 +36,8 @@ If stuck on a step, open its help page in guide/steps/:
 5. navedtra-14265 (Intermediate), Utilitiesman Basic, US Navy 1998
 6. navedtra-14251 (Advanced), Steelworker Vol 2, US Navy 1996
 7. american-farmhouse (Residential example), American Farmhouse: A Design, Jay Osborne 2020, CC BY-SA 3.0 (share-alike)
+8. mechanical-drawing-1908 (Advanced), Mechanical Drawing: A Practical Manual of Self-Instruction, 1908, public domain. OCR text; outdated conventions
+External (link only): NASA-hosted Engineering Working Drawings Basics (Hijazi lecture notes, no licence): https://s3vi.ndc.nasa.gov/ssri-kb/static/resources/Engineering+Working+Drawing+Basics.pdf ; GaugeHow GD&T course (signup required, humans only): https://gaugehow.com/course/gd-t-geometric-dimension-and-tolerancing
 External (not hosted, no licence stated): NCDOT Plan Reading Course SSC 030, https://connect.ncdot.gov/projects/Roadway/RoadwayDesignAdministrativeDocuments/Plan-Reading-Book-Final%20without%20Answers.pdf
 
 ## Local standards and civil references (added 2026-10-12)
@@ -42,6 +45,22 @@ External (not hosted, no licence stated): NCDOT Plan Reading Course SSC 030, htt
 - usace-aec-cad-standard-6-2 (Standards): A/E/C CAD Standard R6.2, USACE 2024, public release. Layers, sheet/file naming, symbols.
 - usace-aec-graphics-standard-2-2 (Standards): A/E/C Graphics Standard R2.2, USACE 2023, public release. Line types, symbols, abbreviations.
 - usace-em-1110-1-1005 (Survey): Control and Topographic Surveying, USACE 2007, public release. Stations, elevations, grades.
+
+## How-to-use guides
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/costin-basic-blueprint-reading.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/navedtra-14040a.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/tm-5-704.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/navedtra-14069.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/navedtra-14265.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/navedtra-14251.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/american-farmhouse.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-aec-cad-standard-6-2.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-aec-graphics-standard-2-2.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-em-1110-1-1005.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/mechanical-drawing-1908.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/ncdot-plan-reading-ssc030.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/nasa-engineering-working-drawing-basics.md
+- https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/gaugehow-gdt.md
 
 ## Notes for AI readers
 - Cite answers as book_id + PDF page range. Older US manuals use imperial units and US practice, so don't treat them as current Canadian/BC code.
