@@ -56,3 +56,5 @@ Read the how-to-use guide first; it says which chapter to open.
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/gaugehow-gdt.md
 
 **Takeoff rules:** a cross or tee = one connection; count every instance a blanket note covers. See [takeoff-rules.md](../takeoff-rules.md).
+
+**Lengths, risers, depth bands, bends:** measure pipe MH centre to centre two ways and include stubs/connector pieces (Rule 5); read rim and invert at every MH for risers (Rule 6) and depth bands (Rule 7); count bends in plan AND profile (Rule 9). See [takeoff-rules.md](../takeoff-rules.md).
