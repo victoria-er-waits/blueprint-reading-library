@@ -18,3 +18,8 @@ Every file below was downloaded and opened with pdfinfo. Statements in quotes we
 
 ## Not checked or not open
 US National CAD Standard, AWWA manuals, CRSI Manual of Standard Practice, ACI 315/SP-66 (rebar detailing), CSA, and MMCD Platinum Edition are all paid or copyrighted. MMCD licence not checked.
+
+## American Farmhouse: A Design (residential example)
+- Author: Jay Osborne, https://www.freefarmhouse.com/ (PDF dated 12-25-2020, DraftSight CAD export)
+- Licence: CC BY-SA 3.0. Wording on every sheet: "THESE DRAWINGS ARE FREE FOR YOU TO SHARE, MODIFY, AND DUPLICATE. ... THIS WORK IS AVAILABLE UNDER A CREATIVE COMMONS ATTRIBUTION SHARE-ALIKE LICENSE. SOME RIGHTS RESERVED." Title block: "This work is openly licensed under ... licenses/by-sa/3.0".
+- Hosted: 17-sheet excerpt, renders and text (adapted; same licence). 8 sheets withheld for internal testing.

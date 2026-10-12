@@ -3501,6 +3501,261 @@
    "path": "text/navedtra-14251/048-p0412-0416.md",
    "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/06-NAVEDTRA-14251-Steelworker-Vol2.pdf",
    "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A0.0 COVER PAGE",
+   "pages": [
+    1,
+    1
+   ],
+   "source_pdf_page": 1,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/001-A0.0.md",
+   "path": "text/american-farmhouse/001-A0.0.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A0.1 PROJECT INFORMATION / SITE SURVEY",
+   "pages": [
+    2,
+    2
+   ],
+   "source_pdf_page": 2,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/002-A0.1.md",
+   "path": "text/american-farmhouse/002-A0.1.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A0.2 GENERAL NOTES",
+   "pages": [
+    3,
+    3
+   ],
+   "source_pdf_page": 3,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/003-A0.2.md",
+   "path": "text/american-farmhouse/003-A0.2.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A1.0 SITE PLAN",
+   "pages": [
+    4,
+    4
+   ],
+   "source_pdf_page": 4,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/004-A1.0.md",
+   "path": "text/american-farmhouse/004-A1.0.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A1.2 1ST FLOOR PLAN",
+   "pages": [
+    5,
+    5
+   ],
+   "source_pdf_page": 6,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/005-A1.2.md",
+   "path": "text/american-farmhouse/005-A1.2.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A1.3 2ND FLOOR PLAN",
+   "pages": [
+    6,
+    6
+   ],
+   "source_pdf_page": 7,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/006-A1.3.md",
+   "path": "text/american-farmhouse/006-A1.3.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A1.5 1ST RCP/ELECTRICAL",
+   "pages": [
+    7,
+    7
+   ],
+   "source_pdf_page": 9,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/007-A1.5.md",
+   "path": "text/american-farmhouse/007-A1.5.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A1.7 DETAIL PLANS",
+   "pages": [
+    8,
+    8
+   ],
+   "source_pdf_page": 11,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/008-A1.7.md",
+   "path": "text/american-farmhouse/008-A1.7.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A2.0 SOUTH ELEVATION",
+   "pages": [
+    9,
+    9
+   ],
+   "source_pdf_page": 12,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/009-A2.0.md",
+   "path": "text/american-farmhouse/009-A2.0.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A2.1 WEST ELEVATION",
+   "pages": [
+    10,
+    10
+   ],
+   "source_pdf_page": 13,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/010-A2.1.md",
+   "path": "text/american-farmhouse/010-A2.1.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A2.3 EAST ELEVATION",
+   "pages": [
+    11,
+    11
+   ],
+   "source_pdf_page": 15,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/011-A2.3.md",
+   "path": "text/american-farmhouse/011-A2.3.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A2.4 INTERIOR ELEVATIONS",
+   "pages": [
+    12,
+    12
+   ],
+   "source_pdf_page": 16,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/012-A2.4.md",
+   "path": "text/american-farmhouse/012-A2.4.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A3.0 LONGITUDINAL SECTION",
+   "pages": [
+    13,
+    13
+   ],
+   "source_pdf_page": 18,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/013-A3.0.md",
+   "path": "text/american-farmhouse/013-A3.0.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A3.2 TRANSVERSE SECTION",
+   "pages": [
+    14,
+    14
+   ],
+   "source_pdf_page": 20,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/014-A3.2.md",
+   "path": "text/american-farmhouse/014-A3.2.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A4.0 TYPICAL DETAILS",
+   "pages": [
+    15,
+    15
+   ],
+   "source_pdf_page": 21,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/015-A4.0.md",
+   "path": "text/american-farmhouse/015-A4.0.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A4.2 EXTERIOR DETAILS",
+   "pages": [
+    16,
+    16
+   ],
+   "source_pdf_page": 23,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/016-A4.2.md",
+   "path": "text/american-farmhouse/016-A4.2.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "American Farmhouse: A Design (residential example plan set)",
+   "book_id": "american-farmhouse",
+   "tier": "Residential example",
+   "chapter": "A5.0 SCHEDULES",
+   "pages": [
+    17,
+    17
+   ],
+   "source_pdf_page": 25,
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/american-farmhouse/017-A5.0.md",
+   "path": "text/american-farmhouse/017-A5.0.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
+   "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
   }
  ]
 }
