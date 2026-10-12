@@ -47,3 +47,5 @@ Examples come from our own test runs on public municipal tenders and a copyright
 Read the how-to-use guide first; it says which chapter to open.
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/american-farmhouse.md
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-aec-graphics-standard-2-2.md
+
+**Labels and required sections:** apply the A/B/C/D rules in [takeoff-rules.md](../takeoff-rules.md) Rule 3 (any item you raise a payment/scope question on is C). The report must include "Not on drawings: get from owner" and "Document conflicts: ask before close" (Rule 4).

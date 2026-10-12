@@ -6,7 +6,7 @@ used_in: [guide/steps/step-7-cross-checks.md, guide/steps/step-9-final-readout.m
 
 # How BC municipal (MMCD-style) unit-price items are usually paid
 
-[Back to the checklist](order-of-operations.md) · [Local standards (MMCD explained)](local-standards.md)
+[Back to the checklist](order-of-operations.md) · [Local standards (MMCD explained)](local-standards.md) · [Takeoff rules (blanket notes, connections, labels, report sections)](takeoff-rules.md)
 
 Most BC municipal civil tenders are **unit-price contracts** in the MMCD style: the city lists items in a Schedule of Quantities and Prices, and the contractor is paid quantity x unit rate. A takeoff is only useful if each count is split the **same way the city pays**. Counting the right things but folding them into the wrong pay item looks like a miss.
 
@@ -40,13 +40,14 @@ Before counting, open the specs (MMCD Supplementary/Special Provisions, or the c
 - If you counted something but **the payment basis is not confirmed** by a spec clause: **still give the number.** Label it **C** and add **NEEDS CHECK: payment basis**, with the reason (e.g. "counted 6 tees; unclear if paid each or included in pipe").
 - **Never withhold a counted number** because you're unsure how it's paid. A counted number with C is useful; a blank is not.
 - **Never use A or B** for a quantity whose payment basis is unconfirmed. A/B only when both the count *and* the way it is paid are backed by a sheet + spec cite.
-- If drawings and the schedule/estimate disagree on a count (e.g. plan shows one more valve than the schedule), report the drawing count, label D, and add an engineer question.
+- For the full A/B/C/D rules, blanket "typical" notes, cross/tee connections, and the two required report sections, see [takeoff-rules.md](takeoff-rules.md).
+- If drawings and the schedule/estimate disagree on a count (e.g. plan shows one more valve than the schedule), report the drawing count, label D, add an engineer question, and list it under "Document conflicts: ask before close".
 
 ## Quick procedure
 1. Find every Measurement for Payment clause; build a small "how paid" table with cites.
 2. For each pay item, count from the drawings the way that table says.
 3. Where the table is silent, use the defaults above, label C, NEEDS CHECK.
-4. List items the drawings can't give (restoration, provisional items, lump sums) as "not on drawings - ask".
+4. List items the drawings can't give (restoration, provisional items, lump sums) under "Not on drawings: get from owner" (see [takeoff-rules.md](takeoff-rules.md)).
 5. Cross-check totals against any schedule in the tender documents (step 7), never copy from it.
 
 ---

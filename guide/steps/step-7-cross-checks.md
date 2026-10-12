@@ -46,3 +46,5 @@ Read the how-to-use guide first; it says which chapter to open.
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/american-farmhouse.md
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-em-1110-1-1005.md
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/ncdot-plan-reading-ssc030.md
+
+**Conflicts:** every spec vs schedule vs drawing disagreement goes in "Document conflicts: ask before close"; see [takeoff-rules.md](../takeoff-rules.md) Rule 4.

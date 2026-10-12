@@ -47,3 +47,5 @@ Read the how-to-use guide first; it says which chapter to open.
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-em-1110-1-1005.md
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/mechanical-drawing-1908.md
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/nasa-engineering-working-drawing-basics.md
+
+**Blanket notes:** for any "typical" or "all" note (e.g. close all abandoned valves), list every instance it covers; see [takeoff-rules.md](../takeoff-rules.md) Rule 1.

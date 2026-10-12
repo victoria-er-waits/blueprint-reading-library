@@ -54,3 +54,5 @@ Read the how-to-use guide first; it says which chapter to open.
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/ncdot-plan-reading-ssc030.md
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/nasa-engineering-working-drawing-basics.md
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/gaugehow-gdt.md
+
+**Takeoff rules:** a cross or tee = one connection; count every instance a blanket note covers. See [takeoff-rules.md](../takeoff-rules.md).
