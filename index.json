@@ -3771,6 +3771,1015 @@
    "path": "text/american-farmhouse/017-A5.0.md",
    "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/07-American-Farmhouse-reference-excerpt.pdf",
    "licence": "CC BY-SA 3.0, \"American Farmhouse: A Design\" by Jay Osborne (freefarmhouse.com). Excerpt of 17 of 25 sheets, rendered/extracted; share-alike applies to these files."
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 1-10",
+   "pages": [
+    1,
+    10
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/001-p0001-0010.md",
+   "path": "text/usace-aec-cad-standard-6-2/001-p0001-0010.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 11-20",
+   "pages": [
+    11,
+    20
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/002-p0011-0020.md",
+   "path": "text/usace-aec-cad-standard-6-2/002-p0011-0020.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 21-30",
+   "pages": [
+    21,
+    30
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/003-p0021-0030.md",
+   "path": "text/usace-aec-cad-standard-6-2/003-p0021-0030.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 31-40",
+   "pages": [
+    31,
+    40
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/004-p0031-0040.md",
+   "path": "text/usace-aec-cad-standard-6-2/004-p0031-0040.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 41-50",
+   "pages": [
+    41,
+    50
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/005-p0041-0050.md",
+   "path": "text/usace-aec-cad-standard-6-2/005-p0041-0050.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 51-60",
+   "pages": [
+    51,
+    60
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/006-p0051-0060.md",
+   "path": "text/usace-aec-cad-standard-6-2/006-p0051-0060.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 61-70",
+   "pages": [
+    61,
+    70
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/007-p0061-0070.md",
+   "path": "text/usace-aec-cad-standard-6-2/007-p0061-0070.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 71-80",
+   "pages": [
+    71,
+    80
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/008-p0071-0080.md",
+   "path": "text/usace-aec-cad-standard-6-2/008-p0071-0080.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 81-90",
+   "pages": [
+    81,
+    90
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/009-p0081-0090.md",
+   "path": "text/usace-aec-cad-standard-6-2/009-p0081-0090.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 91-100",
+   "pages": [
+    91,
+    100
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/010-p0091-0100.md",
+   "path": "text/usace-aec-cad-standard-6-2/010-p0091-0100.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 101-110",
+   "pages": [
+    101,
+    110
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/011-p0101-0110.md",
+   "path": "text/usace-aec-cad-standard-6-2/011-p0101-0110.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C CAD Standard Release 6.2 (ERDC/ITL SR-24-3, USACE 2024)",
+   "book_id": "usace-aec-cad-standard-6-2",
+   "tier": "Standards (symbols, layers, sheet naming)",
+   "chapter": "PDF pages 111-117",
+   "pages": [
+    111,
+    117
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-cad-standard-6-2/012-p0111-0117.md",
+   "path": "text/usace-aec-cad-standard-6-2/012-p0111-0117.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C Graphics Standard Release 2.2 (ERDC/ITL SR-23-1, USACE 2023)",
+   "book_id": "usace-aec-graphics-standard-2-2",
+   "tier": "Standards (symbols, line types, sheet layout)",
+   "chapter": "PDF pages 1-10",
+   "pages": [
+    1,
+    10
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-graphics-standard-2-2/001-p0001-0010.md",
+   "path": "text/usace-aec-graphics-standard-2-2/001-p0001-0010.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/09-USACE-AEC-Graphics-Standard-R2.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C Graphics Standard Release 2.2 (ERDC/ITL SR-23-1, USACE 2023)",
+   "book_id": "usace-aec-graphics-standard-2-2",
+   "tier": "Standards (symbols, line types, sheet layout)",
+   "chapter": "PDF pages 11-20",
+   "pages": [
+    11,
+    20
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-graphics-standard-2-2/002-p0011-0020.md",
+   "path": "text/usace-aec-graphics-standard-2-2/002-p0011-0020.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/09-USACE-AEC-Graphics-Standard-R2.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C Graphics Standard Release 2.2 (ERDC/ITL SR-23-1, USACE 2023)",
+   "book_id": "usace-aec-graphics-standard-2-2",
+   "tier": "Standards (symbols, line types, sheet layout)",
+   "chapter": "PDF pages 21-30",
+   "pages": [
+    21,
+    30
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-graphics-standard-2-2/003-p0021-0030.md",
+   "path": "text/usace-aec-graphics-standard-2-2/003-p0021-0030.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/09-USACE-AEC-Graphics-Standard-R2.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C Graphics Standard Release 2.2 (ERDC/ITL SR-23-1, USACE 2023)",
+   "book_id": "usace-aec-graphics-standard-2-2",
+   "tier": "Standards (symbols, line types, sheet layout)",
+   "chapter": "PDF pages 31-40",
+   "pages": [
+    31,
+    40
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-graphics-standard-2-2/004-p0031-0040.md",
+   "path": "text/usace-aec-graphics-standard-2-2/004-p0031-0040.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/09-USACE-AEC-Graphics-Standard-R2.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C Graphics Standard Release 2.2 (ERDC/ITL SR-23-1, USACE 2023)",
+   "book_id": "usace-aec-graphics-standard-2-2",
+   "tier": "Standards (symbols, line types, sheet layout)",
+   "chapter": "PDF pages 41-50",
+   "pages": [
+    41,
+    50
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-graphics-standard-2-2/005-p0041-0050.md",
+   "path": "text/usace-aec-graphics-standard-2-2/005-p0041-0050.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/09-USACE-AEC-Graphics-Standard-R2.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C Graphics Standard Release 2.2 (ERDC/ITL SR-23-1, USACE 2023)",
+   "book_id": "usace-aec-graphics-standard-2-2",
+   "tier": "Standards (symbols, line types, sheet layout)",
+   "chapter": "PDF pages 51-60",
+   "pages": [
+    51,
+    60
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-graphics-standard-2-2/006-p0051-0060.md",
+   "path": "text/usace-aec-graphics-standard-2-2/006-p0051-0060.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/09-USACE-AEC-Graphics-Standard-R2.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C Graphics Standard Release 2.2 (ERDC/ITL SR-23-1, USACE 2023)",
+   "book_id": "usace-aec-graphics-standard-2-2",
+   "tier": "Standards (symbols, line types, sheet layout)",
+   "chapter": "PDF pages 61-70",
+   "pages": [
+    61,
+    70
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-graphics-standard-2-2/007-p0061-0070.md",
+   "path": "text/usace-aec-graphics-standard-2-2/007-p0061-0070.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/09-USACE-AEC-Graphics-Standard-R2.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C Graphics Standard Release 2.2 (ERDC/ITL SR-23-1, USACE 2023)",
+   "book_id": "usace-aec-graphics-standard-2-2",
+   "tier": "Standards (symbols, line types, sheet layout)",
+   "chapter": "PDF pages 71-80",
+   "pages": [
+    71,
+    80
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-graphics-standard-2-2/008-p0071-0080.md",
+   "path": "text/usace-aec-graphics-standard-2-2/008-p0071-0080.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/09-USACE-AEC-Graphics-Standard-R2.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C Graphics Standard Release 2.2 (ERDC/ITL SR-23-1, USACE 2023)",
+   "book_id": "usace-aec-graphics-standard-2-2",
+   "tier": "Standards (symbols, line types, sheet layout)",
+   "chapter": "PDF pages 81-90",
+   "pages": [
+    81,
+    90
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-graphics-standard-2-2/009-p0081-0090.md",
+   "path": "text/usace-aec-graphics-standard-2-2/009-p0081-0090.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/09-USACE-AEC-Graphics-Standard-R2.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "A/E/C Graphics Standard Release 2.2 (ERDC/ITL SR-23-1, USACE 2023)",
+   "book_id": "usace-aec-graphics-standard-2-2",
+   "tier": "Standards (symbols, line types, sheet layout)",
+   "chapter": "PDF pages 91-96",
+   "pages": [
+    91,
+    96
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-aec-graphics-standard-2-2/010-p0091-0096.md",
+   "path": "text/usace-aec-graphics-standard-2-2/010-p0091-0096.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/09-USACE-AEC-Graphics-Standard-R2.2.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 1-10",
+   "pages": [
+    1,
+    10
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/001-p0001-0010.md",
+   "path": "text/usace-em-1110-1-1005/001-p0001-0010.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 11-20",
+   "pages": [
+    11,
+    20
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/002-p0011-0020.md",
+   "path": "text/usace-em-1110-1-1005/002-p0011-0020.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 21-30",
+   "pages": [
+    21,
+    30
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/003-p0021-0030.md",
+   "path": "text/usace-em-1110-1-1005/003-p0021-0030.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 31-40",
+   "pages": [
+    31,
+    40
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/004-p0031-0040.md",
+   "path": "text/usace-em-1110-1-1005/004-p0031-0040.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 41-50",
+   "pages": [
+    41,
+    50
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/005-p0041-0050.md",
+   "path": "text/usace-em-1110-1-1005/005-p0041-0050.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 51-60",
+   "pages": [
+    51,
+    60
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/006-p0051-0060.md",
+   "path": "text/usace-em-1110-1-1005/006-p0051-0060.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 61-70",
+   "pages": [
+    61,
+    70
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/007-p0061-0070.md",
+   "path": "text/usace-em-1110-1-1005/007-p0061-0070.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 71-80",
+   "pages": [
+    71,
+    80
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/008-p0071-0080.md",
+   "path": "text/usace-em-1110-1-1005/008-p0071-0080.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 81-90",
+   "pages": [
+    81,
+    90
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/009-p0081-0090.md",
+   "path": "text/usace-em-1110-1-1005/009-p0081-0090.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 91-100",
+   "pages": [
+    91,
+    100
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/010-p0091-0100.md",
+   "path": "text/usace-em-1110-1-1005/010-p0091-0100.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 101-110",
+   "pages": [
+    101,
+    110
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/011-p0101-0110.md",
+   "path": "text/usace-em-1110-1-1005/011-p0101-0110.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 111-120",
+   "pages": [
+    111,
+    120
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/012-p0111-0120.md",
+   "path": "text/usace-em-1110-1-1005/012-p0111-0120.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 121-130",
+   "pages": [
+    121,
+    130
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/013-p0121-0130.md",
+   "path": "text/usace-em-1110-1-1005/013-p0121-0130.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 131-140",
+   "pages": [
+    131,
+    140
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/014-p0131-0140.md",
+   "path": "text/usace-em-1110-1-1005/014-p0131-0140.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 141-150",
+   "pages": [
+    141,
+    150
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/015-p0141-0150.md",
+   "path": "text/usace-em-1110-1-1005/015-p0141-0150.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 151-160",
+   "pages": [
+    151,
+    160
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/016-p0151-0160.md",
+   "path": "text/usace-em-1110-1-1005/016-p0151-0160.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 161-170",
+   "pages": [
+    161,
+    170
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/017-p0161-0170.md",
+   "path": "text/usace-em-1110-1-1005/017-p0161-0170.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 171-180",
+   "pages": [
+    171,
+    180
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/018-p0171-0180.md",
+   "path": "text/usace-em-1110-1-1005/018-p0171-0180.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 181-190",
+   "pages": [
+    181,
+    190
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/019-p0181-0190.md",
+   "path": "text/usace-em-1110-1-1005/019-p0181-0190.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 191-200",
+   "pages": [
+    191,
+    200
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/020-p0191-0200.md",
+   "path": "text/usace-em-1110-1-1005/020-p0191-0200.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 201-210",
+   "pages": [
+    201,
+    210
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/021-p0201-0210.md",
+   "path": "text/usace-em-1110-1-1005/021-p0201-0210.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 211-220",
+   "pages": [
+    211,
+    220
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/022-p0211-0220.md",
+   "path": "text/usace-em-1110-1-1005/022-p0211-0220.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 221-230",
+   "pages": [
+    221,
+    230
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/023-p0221-0230.md",
+   "path": "text/usace-em-1110-1-1005/023-p0221-0230.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 231-240",
+   "pages": [
+    231,
+    240
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/024-p0231-0240.md",
+   "path": "text/usace-em-1110-1-1005/024-p0231-0240.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 241-250",
+   "pages": [
+    241,
+    250
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/025-p0241-0250.md",
+   "path": "text/usace-em-1110-1-1005/025-p0241-0250.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 251-260",
+   "pages": [
+    251,
+    260
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/026-p0251-0260.md",
+   "path": "text/usace-em-1110-1-1005/026-p0251-0260.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 261-270",
+   "pages": [
+    261,
+    270
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/027-p0261-0270.md",
+   "path": "text/usace-em-1110-1-1005/027-p0261-0270.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 271-280",
+   "pages": [
+    271,
+    280
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/028-p0271-0280.md",
+   "path": "text/usace-em-1110-1-1005/028-p0271-0280.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 281-290",
+   "pages": [
+    281,
+    290
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/029-p0281-0290.md",
+   "path": "text/usace-em-1110-1-1005/029-p0281-0290.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 291-300",
+   "pages": [
+    291,
+    300
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/030-p0291-0300.md",
+   "path": "text/usace-em-1110-1-1005/030-p0291-0300.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 301-310",
+   "pages": [
+    301,
+    310
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/031-p0301-0310.md",
+   "path": "text/usace-em-1110-1-1005/031-p0301-0310.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 311-320",
+   "pages": [
+    311,
+    320
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/032-p0311-0320.md",
+   "path": "text/usace-em-1110-1-1005/032-p0311-0320.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 321-330",
+   "pages": [
+    321,
+    330
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/033-p0321-0330.md",
+   "path": "text/usace-em-1110-1-1005/033-p0321-0330.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 331-340",
+   "pages": [
+    331,
+    340
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/034-p0331-0340.md",
+   "path": "text/usace-em-1110-1-1005/034-p0331-0340.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 341-350",
+   "pages": [
+    341,
+    350
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/035-p0341-0350.md",
+   "path": "text/usace-em-1110-1-1005/035-p0341-0350.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 351-360",
+   "pages": [
+    351,
+    360
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/036-p0351-0360.md",
+   "path": "text/usace-em-1110-1-1005/036-p0351-0360.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 361-370",
+   "pages": [
+    361,
+    370
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/037-p0361-0370.md",
+   "path": "text/usace-em-1110-1-1005/037-p0361-0370.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 371-380",
+   "pages": [
+    371,
+    380
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/038-p0371-0380.md",
+   "path": "text/usace-em-1110-1-1005/038-p0371-0380.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 381-390",
+   "pages": [
+    381,
+    390
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/039-p0381-0390.md",
+   "path": "text/usace-em-1110-1-1005/039-p0381-0390.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 391-400",
+   "pages": [
+    391,
+    400
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/040-p0391-0400.md",
+   "path": "text/usace-em-1110-1-1005/040-p0391-0400.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 401-410",
+   "pages": [
+    401,
+    410
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/041-p0401-0410.md",
+   "path": "text/usace-em-1110-1-1005/041-p0401-0410.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 411-420",
+   "pages": [
+    411,
+    420
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/042-p0411-0420.md",
+   "path": "text/usace-em-1110-1-1005/042-p0411-0420.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 421-430",
+   "pages": [
+    421,
+    430
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/043-p0421-0430.md",
+   "path": "text/usace-em-1110-1-1005/043-p0421-0430.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 431-440",
+   "pages": [
+    431,
+    440
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/044-p0431-0440.md",
+   "path": "text/usace-em-1110-1-1005/044-p0431-0440.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 441-450",
+   "pages": [
+    441,
+    450
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/045-p0441-0450.md",
+   "path": "text/usace-em-1110-1-1005/045-p0441-0450.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 451-460",
+   "pages": [
+    451,
+    460
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/046-p0451-0460.md",
+   "path": "text/usace-em-1110-1-1005/046-p0451-0460.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 461-470",
+   "pages": [
+    461,
+    470
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/047-p0461-0470.md",
+   "path": "text/usace-em-1110-1-1005/047-p0461-0470.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 471-480",
+   "pages": [
+    471,
+    480
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/048-p0471-0480.md",
+   "path": "text/usace-em-1110-1-1005/048-p0471-0480.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 481-490",
+   "pages": [
+    481,
+    490
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/049-p0481-0490.md",
+   "path": "text/usace-em-1110-1-1005/049-p0481-0490.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
+  },
+  {
+   "book": "Control and Topographic Surveying (EM 1110-1-1005, USACE 2007)",
+   "book_id": "usace-em-1110-1-1005",
+   "tier": "Survey (stations, grades, elevations, topo)",
+   "chapter": "PDF pages 491-498",
+   "pages": [
+    491,
+    498
+   ],
+   "url": "https://victoria-er-waits.github.io/blueprint-reading-library/text/usace-em-1110-1-1005/050-p0491-0498.md",
+   "path": "text/usace-em-1110-1-1005/050-p0491-0498.md",
+   "pdf": "https://victoria-er-waits.github.io/blueprint-reading-library/pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf",
+   "licence": "US Government work. Distribution Statement A: approved for public release; distribution is unlimited"
   }
- ]
+ ],
+ "local_standards": "https://victoria-er-waits.github.io/blueprint-reading-library/guide/local-standards.md"
 }

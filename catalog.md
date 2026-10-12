@@ -23,3 +23,10 @@ US National CAD Standard, AWWA manuals, CRSI Manual of Standard Practice, ACI 31
 - Author: Jay Osborne, https://www.freefarmhouse.com/ (PDF dated 12-25-2020, DraftSight CAD export)
 - Licence: CC BY-SA 3.0. Wording on every sheet: "THESE DRAWINGS ARE FREE FOR YOU TO SHARE, MODIFY, AND DUPLICATE. ... THIS WORK IS AVAILABLE UNDER A CREATIVE COMMONS ATTRIBUTION SHARE-ALIKE LICENSE. SOME RIGHTS RESERVED." Title block: "This work is openly licensed under ... licenses/by-sa/3.0".
 - Hosted: 17-sheet excerpt, renders and text (adapted; same licence). 8 sheets withheld for internal testing.
+
+## Added 2026-10-12: standards and survey (hosted)
+| Standards | pdf/08-USACE-AEC-CAD-Standard-R6.2.pdf | A/E/C CAD Standard R6.2, ERDC/ITL SR-24-3, Jul 2024 | 117 | "Distribution Statement A. Approved for public release: distribution is unlimited." | https://erdc-library.erdc.dren.mil/server/api/core/bitstreams/451ab298-c17b-4154-8047-20fab3d2b4c0/content |
+| Standards | pdf/09-USACE-AEC-Graphics-Standard-R2.2.pdf | A/E/C Graphics Standard R2.2, ERDC/ITL SR-23-1, 2023 | 96 | "DISTRIBUTION STATEMENT A. Approved for public release; distribution is unlimited." | https://www.wbdg.org/FFC/AECCAD/ERDC_ITL_SR_23_1_2023.pdf |
+| Survey | pdf/10-USACE-EM-1110-1-1005-Control-Topographic-Surveying.pdf | EM 1110-1-1005, USACE, 1 Jan 2007 | 498 | "This publication is approved for public release; distribution is unlimited." | https://www.publications.usace.army.mil/Portals/76/Publications/EngineerManuals/EM_1110-1-1005.pdf |
+
+MMCD: checked 2026-10-12. Paid, DRM-locked, "may not be shared" (https://mmcd.net/license-agreement/). Not hosted. Link-only items: guide/local-standards.md.

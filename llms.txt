@@ -37,6 +37,12 @@ If stuck on a step, open its help page in guide/steps/:
 7. american-farmhouse (Residential example), American Farmhouse: A Design, Jay Osborne 2020, CC BY-SA 3.0 (share-alike)
 External (not hosted, no licence stated): NCDOT Plan Reading Course SSC 030, https://connect.ncdot.gov/projects/Roadway/RoadwayDesignAdministrativeDocuments/Plan-Reading-Book-Final%20without%20Answers.pdf
 
+## Local standards and civil references (added 2026-10-12)
+- guide/local-standards.md: MMCD explained, links to BC city standard drawings (Victoria, Saanich, CRD, CVRD, Nanaimo, Langford, Kelowna, Vancouver, Surrey, Fernie), BC MoTI drafting/feature codes, past BC tender results and addenda. Links only; not hosted.
+- usace-aec-cad-standard-6-2 (Standards): A/E/C CAD Standard R6.2, USACE 2024, public release. Layers, sheet/file naming, symbols.
+- usace-aec-graphics-standard-2-2 (Standards): A/E/C Graphics Standard R2.2, USACE 2023, public release. Line types, symbols, abbreviations.
+- usace-em-1110-1-1005 (Survey): Control and Topographic Surveying, USACE 2007, public release. Stations, elevations, grades.
+
 ## Notes for AI readers
 - Cite answers as book_id + PDF page range. Older US manuals use imperial units and US practice, so don't treat them as current Canadian/BC code.
 - This is reference material, not engineering approval or code certification.
