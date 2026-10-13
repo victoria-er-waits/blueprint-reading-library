@@ -41,13 +41,17 @@ schedule from any site. Never invent a value. Do not forward to the Checker.
 - `symbol_counts[] {sheet, view, type, size, angle_deg, count, tile, source}`.
 - `coverage[] {sheet, regions[{name, inspected, evidence|tile}], categories{…}}`.
 - `observations[] {view, sheet, station, size, type, angle_deg, plane, tile}`.
+- `callout_census[] {text, components, per_sheet: {sheet: marker count}, searched}` (Rule 1).
+- `tag_series {PREFIX: {number: {component} | {excluded: reason}}}` (Rule 39).
+- `junctions[] {components, junction_resolved}` (Rule 31).
+- `evidence[].station_source`: `drawn_item | printed_on_callout | profile` (Rule 38).
 
 **payment-ledger.json**
 - `allocations[] {component_id, pay_item, treatment, clause, clause_quote, payment_basis: explicit|category|inferred|none, split_basis, portion}`.
-- `reconciliation[] {pay_item, status, value, source, confidence, drawing_number, claim, search, basis}`.
+- `reconciliation[] {pay_item, status, value, source, confidence, drawing_number, claim, search, basis, not_drawn_reason}`. A drawn item is never `unresolved` or `get_from_owner` (Rule 30).
 - `measurement_basis[] {pay_items, basis: plan|slope|profile_band|station, clause}`. No default; cite the tender.
 - `risers[] {pay_item, base_height_m, rounding_m, sizes, clause}`.
 - `depth_bands {definition, bands[], clause}`.
 - `questions[]`: strings, or `{items, kind: payment|scope|drawing, text}`.
 
-**Checker round:** the Checker answers `verifier-tasks.md` blind into `checker-answers.json [{id, answer: yes|no|cant_tell}]`, then the engine is re-run. **Grading:** the grader alone writes `grades.json` and runs `bpr4.cli calibrate`.
+**Checker round:** the ledgers are frozen (Rule 40). The Checker answers `verifier-tasks.json` blind, using `zoom_crop` or the listed `tiles`, into `verifier-answers.json [{id, answer: yes|no|cant_tell|<number for count tasks>}]`. Then the engine is re-run. **Grading:** the grader alone writes `grades.json` and runs `bpr4.cli calibrate`.

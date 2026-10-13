@@ -23,8 +23,8 @@ An **independent check** compares the value with a *different* source:
 - a blind Checker "yes" on a verifier task;
 - a schedule or table against a count.
 
-Checks that are **not independent** are **consistency checks**. They can support B but never A:
-- re-reading the same label (text layer vs image, OCR vs text, the same callout found again);
+Checks that are **not independent** are **consistency checks**. They can support B but never A. All of them together count as **one** check, however many times the label is re-read. For a **counted fitting** (bend, valve, tee, hydrant, reducer, cap, service) they never give B on their own; see Rule 31:
+- re-reading the same label (text layer vs image, OCR vs text, the same callout found again, the same label repeated at a match line on the next sheet);
 - station arithmetic on the same labels;
 - adding up your own numbers twice.
 

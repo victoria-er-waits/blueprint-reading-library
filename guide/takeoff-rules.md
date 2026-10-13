@@ -6,10 +6,10 @@ used_in: [guide/steps/step-4-notes-legend.md, guide/steps/step-5-one-sheet-at-a-
 
 > **Feeds into [three-stage-takeoff.md](three-stage-takeoff.md)**, the takeoff method. **Labels:** the only A–D definition is [confidence-labels.md](confidence-labels.md).
 >
-> **Stage map (Rules 1–38):**
-> - Stage 1, drawing inventory: 1, 5, 6, 7, 9, 19, 22, 23, 24, 25, 27, 28, 30, 31, 33, 35, 37, 38.
+> **Stage map (Rules 1–40):**
+> - Stage 1, drawing inventory: 1, 5, 6, 7, 9, 19, 22, 23, 24, 25, 27, 28, 30, 31, 33, 35, 37, 38, 39.
 > - Stage 2, payment allocation: 2, 8, 11, 12, 14, 20, 21, 36.
-> - Stage 3, reconciliation: 4, 10, 13, 15, 26, 32.
+> - Stage 3, reconciliation: 4, 10, 13, 15, 26, 32, 40.
 > - Every stage: 3, 16, 17, 18, 29, 34.
 >
 > Which rules code enforces: see the rule-split table in [reader-v4-design.md](reader-v4-design.md).
@@ -27,6 +27,7 @@ Some notes cover many items without drawing each one, for example "close all aba
 - Labels per [confidence-labels.md](confidence-labels.md). If the note's scope is unclear (which sheets, which items), the count is C with a question.
 - Never report a blanket note as "1" or as "included". Never skip it because nothing is drawn individually.
 - If the instances can't be found at all but the note prints a number, Rule 33 applies.
+- **Callout census (engine gate).** A plural or blanket callout ("SERVICE(S)", TYP, ALL, EACH) is never one item, even if you found it on only one sheet. Search the text of **every** sheet for the same wording. On each sheet where it appears, count the **markers** that point to it (keynote tags, hexagons, leaders), not the legend entry. Record this as `callout_census: [{text, components, per_sheet: {sheet: n}}]`. The engine blocks the report if the wording appears on a sheet with no count, or if the per-sheet total differs from the ledger.
 
 ## Rule 2: Connections and tie-ins
 - A **cross** fitting where a new main meets existing pipe is **one connection / tie-in**, not three (or four). Same for a **tee**: one connection, not two or three.
@@ -188,11 +189,15 @@ Method tags (code enum): `measured`, `station_derived`, `label_sum`, `symbol_cou
 - The report is not finished while any Rule 24 area ledger or drawn length list (curbs, swales, letdowns, root barrier, tactile strips, railings) is undone (`ledgers[].complete: false` blocks).
 - Measure drawn linear features from the vector drawings first. On a DO NOT SCALE set they are capped at C (Rule 37), but they are still measured.
 - If a list truly can't be completed, each affected item says which sheets weren't measured and why. "Get from owner" is not allowed for a drawn length.
+- **A drawn item can never be unresolved or get-from-owner.** If your own search finds the item drawn (extents, brackets, details, spools "to suit" or "as required"), measure it from the geometry, mark it scaled (C on a DO NOT SCALE set, Rule 37), list the pieces, and add an engineer question asking for figured lengths. For "as required" pieces, count them per tie-in from the details and give a stated length per piece as a provisional reading. Unresolved is only for things that are not drawn; a search hit you judge irrelevant needs a `not_drawn_reason`. The engine blocks the report otherwise.
 
 ## Rule 31: Second pass = symbol count by sheet and view (single home for Rules 9, 25, 35)
 - Count the actual symbols on every sheet tile, on **plans and profiles**, per symbol type, size and angle. Ledger: `symbol_counts[] {sheet, view, type, size, angle_deg, count, tile}`. Code reconciles each row against the ledger; a mismatch caps those items at C and raises a Checker task.
 - Legend counts, "typ. of N" notes and schedules are sources to check against, never the second pass itself.
 - Reconcile bends plan vs profile instance by instance (Rule 35).
+- **B for a counted fitting needs one of:** both plan and profile showing it, a plan-vs-profile / other-view / Checker check, or a per-sheet symbol count that matches the ledger. Re-reading the label (text layer, the same callout re-found, or the same label repeated at a match line on the next sheet) counts once at most and never lifts a counted fitting to B.
+- **Junction clusters.** Where two alignments meet (alignment ends, connection details, tees), list each fitting once and say which alignment owns it. The engine flags same-type, same-size fittings at the ends of two alignments on one sheet as possible double counts until `junctions: [{components, junction_resolved: "<why>"}]` explains them.
+- **Per-sheet count tasks.** The engine issues the Checker one "count every X on sheet S, view V" task per fitting group. A numeric answer becomes a symbol count. A mismatch caps the fittings at C and creates a recount.
 
 ## Rule 32: Payment and unit questions go under engineer questions
 - The conflicts table (Rule 18) is for document conflicts that change a physical quantity or its allocation.
@@ -233,6 +238,13 @@ Apply in this order and stop at the first that decides:
 - Follow the leader to its arrowhead and read the station there. Use the nearest printed station tick or a figured station. If the callout prints its own station ("STA 1+045.5 45° BEND"), use that and check it against the symbol.
 - Record where the station came from: `station_source` on the evidence (`drawn_item`, `printed_on_callout`, `profile`). Writing `callout`, `leader_label` or `keynote` there raises an engine warning. If the station was read off the label, go back and read it at the symbol.
 - Why: the station is the join key for plan/profile matching (Rule 35), graph checks and the Checker's zoomed crops. A label-position station puts the crop on the wrong spot and makes one fitting look like two.
+- **Splits follow the leader too.** When one kind of item is split across pay lines by which note or detail applies (for example two assembly types), assign each instance by following the leader from the note to the symbol, never by which note sits nearest. Record a split check whose detail says the leader was followed. The engine caps split instances at C until that check, or a Checker "yes" on the per-instance split task, is recorded.
+
+## Rule 39: Numbered tag series are listed in full
+- A numbered tag (MH 2, CB 4, V 7) implies a series. Before committing a count, search every sheet for all tags with that prefix. List each tag in `tag_series.<PREFIX>`, with the component it is, or `excluded` with the reason (existing, other contract, other utility). The engine blocks the report when a tag found in the drawing text is missing from the list.
+
+## Rule 40: Freeze the ledger while the Checker works
+- Once the Checker tasks are issued, do not edit the ledgers until the Checker's answers are in and the engine has applied them. The engine records a hash of the ledgers when it builds the tasks. If the ledgers change before the answers are applied, it blocks the report and applies nothing. Run `bpr4.cli rebuild-tasks RUNDIR` to archive the old answers and issue fresh tasks.
 
 ---
 Reference material only, not engineering approval. Always follow the issued contract documents.
