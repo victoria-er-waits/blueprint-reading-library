@@ -17,14 +17,8 @@ v3 (AI only, Rules 1–36) scored 70–77% drawn-items exact on blind tests. Tha
 | 7 Recheck list for the Checker (flags + seeded random A/B audit) | code | `bpr4/recheck.py` | built |
 | 8 Report: Markdown + mobile HTML | code | `bpr4/report.py` | built |
 
-## Confidence gate (code, applied after the AI's drawing confidence)
-- A needs a printed value plus an independent check (a second sheet or view, or an agreeing check). Station math does not count. (Rules 16/29)
-- B needs a second check or two independent sources; otherwise C. (Rule 29)
-- An open conflict caps every affected component and pay item at C. (Rule 34)
-- A split between pay items for the same type and size is capped at C unless `split_checked` and `split_basis` are both set.
-- L×W or an assumption is D. Partial or lower bound is C. An area without a piece list is D. (Rule 24)
-- A number scaled on a sheet set marked DO NOT SCALE is capped at C.
-- An unresolved graph flag or unresolved payment is capped at C. An incomplete length or area ledger caps at C and blocks the report. (Rules 24/30)
+## Confidence gate
+Defined only in [confidence-labels.md](confidence-labels.md); enforced by `quantity.py` and `gates.py`.
 
 ## Blocking (report marked NOT FINISHED)
 A schema error, an unallocated component, a double allocation, a unit mismatch, a pay item with neither an allocation nor a reconciliation entry, or an incomplete ledger.
@@ -80,52 +74,6 @@ Bug fixes:
 - **Calibration** follows grading-method-v2: tables by drawing, payment and headline label; confidently wrong = A/B on either label with a WRONG grade; CLOSE at A/B listed separately; over-caution count; calibration-log CSV rows.
 - New Rule 37 (DO NOT SCALE). Rule 17 is merged into 34. Single homes: Rule 21 (lump sum), 12 (N per X), 18 (conflicts), 10 (sweep), 31 (second pass).
 
-## Rule split (Rules 1–37: code gate vs agent guidance)
+## Rule split (code gate vs guidance)
+Single home: `bpr-v4/docs/RULE-SPLIT.md` (copied into muse-rules.md for reviewers).
 
-
-This sorts each takeoff rule into one of three kinds:
-- **GATE**: enforced by code. A failure blocks the report, caps confidence, or raises a flag.
-- **PARTIAL**: code checks the part that is visible in the ledger; the rest stays guidance.
-- **GUIDE**: reading method the AI Reader must follow. Code can't verify it from the ledgers.
-
-Rule of thumb: any rule worded "never", "always", "must", "blocks" or "not finished" is a gate wherever the ledger exposes the fact. Nothing here hardcodes MMCD, Surrey or other municipal precedence or measurement conventions. Measurement basis, riser base height and depth definition always come from a clause the Reader cites in the payment ledger.
-
-| # | Rule | Kind | Where in code / what is checked |
-|---|---|---|---|
-| 1 | Typical / blanket notes: count every instance, never "1" | GATE | `gates.py`: a `blanket_note` needs `instances` whose number equals `count`, or it blocks |
-| 2 | Connections counted by location | GUIDE | (a tie-in is one component per location by ID design) |
-| 3 | Labels defined in confidence-labels.md; a payment or scope question means payment C | GATE | `gates.py`: questions (strings with ID ranges, or `{items, kind}`) cap **payment** C, or drawing C for `kind: drawing` |
-| 4 | Get-from-owner and conflicts sections; never invent a number | GATE | `gates.py`: `get_from_owner` with a value blocks; the report always prints both sections |
-| 5 | Raw lengths logged; cited clause picks the basis; band vs station disagreement is C + question | PARTIAL | `rawmath.chosen_length`: C plus an auto engineer question; no default basis. "Never inflate" is GUIDE |
-| 6 | Risers = rim − lowest invert − base | GATE | `rawmath.riser_table`: code does the maths from raw rim and inverts. No base height in the clause means unresolved, capped at C |
-| 7 | Depth bands, interpolated, by the spec's definition | GATE | `rawmath.depth_band_split`: needs a cited `definition`. Missing ground or invert means "not derivable", capped at C |
-| 8 | Service tie-ins as their own items | GUIDE | |
-| 9 | Bends in plan AND profile | PARTIAL | `graph.py`: a vertical missing-bend from inverts; profile symbol counts via Rule 35 |
-| 10 | Final completeness sweep | GATE | `payment.py`: every pay item needs an allocation, a reconciliation entry, or a riser or band configuration, or it blocks |
-| 11 | Tie-in vs through-run fittings | GUIDE | (amended by 21) |
-| 12 | Never "N per X" in the quantity column | GATE | `gates.py`: `basis: n_per_x` with a value blocks. N-per-X wording in a document_value source warns |
-| 13 | Lower bound only when every area is included | GATE | `gates.py`: a `lower_bound` without a full pieces list, or with exclusions, blocks |
-| 14 | Named tie-ins get payment label B | GUIDE | |
-| 15 | Search before claiming something is omitted | GATE | `gates.py`: a reconciliation `claim: omitted` without `search` blocks |
-| 16 | Confidence gate per confidence-labels.md; L×W always D; conflict caps C; no "X or Y" | GATE | `quantity.component_confidence` / `payment_confidence` |
-| 17 | Merged into Rule 34 | — | — |
-| 18 | Conflicts table format | GATE | Schema requires the fields; the report prints the table |
-| 19 | Instance ledger, ID counted once | GATE | `schema.validate_parts`: ID = station+size+type and no duplicates; graph flags possible match-line duplicates |
-| 20 | Conservation; anything unassigned blocks | GATE | `payment.check_payment` |
-| 21 | Specific pay line beats lump sum; included only when the clause says so | PARTIAL | `gates.py`: `included` without `clause_quote` warns and goes on the recheck list. The meaning of the clause stays GUIDE |
-| 22 | Typical details = contents × sites, never folded in silently | GATE | `gates.py`: `typical.per_site × len(sites)` must equal `count` |
-| 23 | Topology; a gap is flagged, never filled | GATE | `graph.py`: loose end, dead end without cap, branch without tee, missing bend (plan or vertical), angle mismatch, size change without reducer. All cap at C and go to the recheck list |
-| 24 | Area summand ledger; no B until complete; L×W is D | GATE | Schema: an area needs pieces. Incomplete ledger caps at C and blocks |
-| 25 | Mandatory second pass | PARTIAL | B needs a recorded check with detail (`counted_checks`) |
-| 26 | Method tag and cite on every number; blank is not zero | GATE | Schema: method enum and evidence required. Unresolved prints "unresolved, not zero" |
-| 27 | Check inclusion first; show the maths; tile the sheets | PARTIAL | Code does all maths. Missing crops reduce verifier task quality (GUIDE) |
-| 28 | Contract limits; pieces outside are not summed | GATE | `gates.py`: `in_limits: false` with a separate allocation blocks |
-| 29 | A needs an independent recorded check; same-label re-reads and station maths are consistency only | GATE | `schema.independent_checks`, `component_confidence` |
-| 30 | Unfinished length or area lists block | GATE | `ledgers[].complete: false` blocks |
-| 31 | Second pass = actual symbol count, never a legend | GATE | `gates.py`: legend, note or schedule counts are not accepted. A typed symbol count is reconciled with the ledger per sheet and view; a mismatch caps at C and is flagged |
-| 32 | Payment and unit questions go to engineer questions | GUIDE | |
-| 33 | Commit visible numbers at C, never "get from owner" | GATE | `gates.py`: `get_from_owner` with `drawing_number` blocks |
-| 34 | Ranked precedence committed at C; never "X or Y" | GATE | Numeric quantities only; open conflict caps at C; `fallback: plan_over_profile` is provisional and capped at C |
-| 35 | Symbol count covers profiles; each ID counted once | GATE | Rule 31 reconciliation works per view (plan and profile) |
-| 36 | Count only new caps with a pay line | GATE | `gates.py`: an existing or removed cap or plug allocated separately blocks |
-| 37 | DO NOT SCALE: scaled quantities capped at C | GATE | ingest detects the note; `component_confidence` caps scaled lengths, areas and `scaled_quantity` |

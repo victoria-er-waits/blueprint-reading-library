@@ -18,3 +18,15 @@ Purpose (Muse, after round 4): Port Hardy has been read five times, so it is no 
 | v4.11 | 30 | variants: total first, spec/standard/addendum default, else assumption + sensitivity | PH-motivated, GEN wording (Muse fix 3) |
 | v4.11 | 23, 29, 36 | junction audit + 2x re-crop; new/existing status evidence; bend angle from geometry | GEN (Muse fix 4) |
 | v4.11 | 15 | reading-order note reconstruction (replaces stacked search); negative claims need visual check | GEN (Muse fix 5) |
+| v4.12 | 31 | C-01 view registry (view_id required, per-view Checker counts, view_additions confirmed) replaces the per-sheet/view bullets and the inset bullet | GEN (Muse audit) |
+| v4.12 | 5 | C-02 required inputs per method block + Reader read tasks; replaces the v4.11 "no inverts = C" sentence | GEN |
+| v4.12 | labels | C-03 payment ≤ drawing for counted/length items; struck "drawing doubt never lowers payment confidence" | GEN |
+| v4.12 | 4, 15, 30 | C-04 locator on citations; mandatory drawn_status; replaces the Rule 30/15 owner-status gate and the v4.11 negative-claim cap | GEN |
+| v4.12 | 30 | C-05 category-only pay-line assignment caps payment C until per-instance variant_cite | PH-motivated, GEN wording |
+| v4.12 | 4 | C-06 provisional items go to "Not on drawings" only when not drawn | PH-motivated, GEN wording |
+| v4.12 | 34 | C-07 rank 3 vs rank 5 boundary at a referenced detail | GEN |
+| v4.12 | 19, 38 | C-08 -D1/-D2 detail suffix replaces count+instances inside one detail | GEN |
+| v4.12 | 27, 31 | C-09 per-view coverage, 80% tile floor | PH-motivated (overview-only sheets), GEN wording |
+| v4.12 | 36 | C-10 structures need status; blind new/existing/misclassified Checker task | PH-motivated, GEN wording |
+| v4.12 | 3, 16, 25, 29 | C-11 duplicates shrunk to pointers; Rule 25 body deleted (tombstone) | GEN |
+| v4.12 | step 9, reader-v4-design | Outdated text: old A–D list in step 9, stale confidence-gate list (bare split_checked) and duplicate rule-split table in reader-v4-design replaced by pointers; RULE-SPLIT title 1–36 → 1–40 | GEN (found during this change; Muse's D1–D5 text not available to the implementer) |

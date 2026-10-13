@@ -15,11 +15,7 @@ Produce a report a person can check quickly: what the set says, how sure we are,
 ## Procedure
 1. Header: project, set name, sheets read, addenda included, date of read, tools used (text layer, OCR).
 2. Sheet table from step 1 with status.
-3. Findings by sheet, each with value, meaning, sheet + location, label:
-   - **A** directly extracted (printed on the sheet)
-   - **B** derived (calculated; show formula and inputs)
-   - **C** inferred (plausible; needs human confirmation)
-   - **D** unknown / ambiguous / conflicting
+3. Findings by sheet, each with value, meaning, sheet + location, and its two labels (drawing, payment) as defined in [confidence-labels.md](../confidence-labels.md).
 4. Quantities from component records, split by type (step 7), with the count method stated. Split by pay item per [payment-structure.md](../payment-structure.md); if payment basis is unconfirmed, give the count as C + NEEDS CHECK, never blank.
 5. Sanity flags (step 6) and conflicts (step 7).
 6. Questions-for-engineer list (step 8).
