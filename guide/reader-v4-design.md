@@ -44,3 +44,78 @@ Re-run Selous, Port Hardy and Nelson blind. The bar: drawn-items exact at least 
 3. **Confidence comes only from recorded checks.** A check counts only with `result: agree` and a `detail`/`sheet`/`evidence`. `checked`/`verified` flags are ignored with a warning. `split_checked: true` only counts alongside a recorded check of kind `split…` plus `split_basis` on the allocation.
 4. **Plan-over-profile fallback** (`fallback: "plan_over_profile"` on a component or conflict). The pay-item row shows "(provisional)" / PROVISIONAL, is listed in a Provisional section, and is capped at C.
 5. **Multi-allocation.** One component may go to several pay items only if every allocation has a `portion` and its own clause. Linear portions are station ranges that must not overlap or leave gaps and must cover the run. Count and area portions must sum to the whole. Anything else blocks the report as a double count.
+
+## v4.2 additions
+1. **Graph angle check** (`graph.py`). Deflection where two pipe edges meet is computed from `bearing_deg`, `xy_from`/`xy_to` (vector geometry), `offset_from`/`offset_to` (station/offset), or the profile grade from `invert_from`/`invert_to`.
+   - A deflection over 2° in plan, or 3° vertically, with no bend logged raises `missing_bend`. A logged plan bend whose angle is more than 3° off the geometry raises `bend_angle_mismatch`.
+   - A degree-1 node that is not a cap, plug, tie-in, structure, hydrant or blowoff raises `dead_end_no_cap`. A node with 3+ legs and no tee or cross raises `branch_no_tee`.
+   - Bare pipe-to-pipe joints are now legal nodes, so splitting runs at match lines no longer creates loose ends. A smaller valve or bend at a main station is treated as being on the lead, not on the main.
+   - Every flag carries its sheets, station and crop. It caps all affected components (node and pipes) at C and goes on the recheck list.
+2. **Raw-value math** (`rawmath.py`). The Reader logs raw values only:
+   - pipes: `plan_length_m`, `profile_length_m`, `slope_length_m`, `invert_from/to`, `ground_from/to`, `outside_diameter_m`;
+   - structures: `rim_elev`, `inverts[]`.
+
+   Code keeps station, plan, profile-band and slope lengths separately per segment. The length that counts comes from `payment-ledger.measurement_basis[] {pay_items, basis: plan|slope|profile_band|station, clause}`. There is no built-in convention: if lengths differ and no basis is cited, the item is capped at C.
+   - Risers come from `risers[] {pay_item, base_height_m, rounding_m, sizes, clause}`.
+   - Depth bands come from `depth_bands {definition: ground_to_invert|ground_to_obvert, bands[], clause}`, using linear interpolation.
+3. **Yes/no verifier tasks** (`verify.py`). The recheck list becomes `verifier-tasks.json/.md`. Each task is one binary question with sheet, crop and xy, for example "Is the symbol at C104 plan crop C104-t03.png at [812, 440] (STA …) a 300 mm 45 degree bend?". Tasks never include totals, confidence or pay items.
+   - The Checker writes `checker-answers.json [{id, answer: yes|no|cant_tell}]`. Task IDs hash the question, so stale answers are ignored.
+   - A component "yes" is recorded as an independent `checker_verify` check, so it counts toward B or A. A component "no" is recorded as a disagreeing check plus an auto conflict.
+   - On flag tasks, "yes" (the ledger is missing something) creates a conflict. "No" clears the flag, except for open ends, missing tees and missing reducers, which stay open as engineer questions.
+4. **Rule split**: see `docs/RULE-SPLIT.md` (in the bpr-v4 repo). New cheap gates in `gates.py` cover Rules 1, 3, 4, 12, 13, 15, 21 (warning), 22, 28, 31/35 and 33.
+5. **Calibration** (`calibrate.py`, `bpr4.cli calibrate RUN grades.json`, or `grades.json` in the run folder). The headline is **B correct %** first, then drawn-items exact %, then confident wrongs. Grades come from the grader, and code never reads answer keys.
+
+Bug fixes:
+- `make_id` now writes 90° as `BEND90` (legacy `BEND9` IDs are accepted with a warning).
+- Stations accept 3 decimals.
+- `engine-output.coverage.network_certified` is false while any graph flag is open; the register-only result is in `coverage_register_certified`.
+- DO NOT SCALE caps only quantities that rest on scaling (lengths, areas, `measured`, or `scaled_quantity: true`), not counted fittings whose station was located by scale.
+
+## Rule split (Rules 1–36: code gate vs agent guidance)
+
+
+This sorts each takeoff rule into one of three kinds:
+- **GATE**: enforced by code. A failure blocks the report, caps confidence, or raises a flag.
+- **PARTIAL**: code checks the part that is visible in the ledger; the rest stays guidance.
+- **GUIDE**: reading method the AI Reader must follow. Code can't verify it from the ledgers.
+
+Rule of thumb: any rule worded "never", "always", "must", "blocks" or "not finished" is a gate wherever the ledger exposes the fact. Nothing here hardcodes MMCD, Surrey or other municipal precedence or measurement conventions. Measurement basis, riser base height and depth definition always come from a clause the Reader cites in the payment ledger.
+
+| # | Rule | Kind | Where in code / what is checked |
+|---|---|---|---|
+| 1 | Typical / blanket notes: count every instance, never "1" | GATE | `gates.py`: a `blanket_note` needs `instances` whose number equals `count`, or it blocks |
+| 2 | Connections counted by location | GUIDE | (a tie-in is one component per location by ID design) |
+| 3 | Confidence labels; a payment or scope question means C | GATE | `gates.py`: any pay item named in `questions` is capped at C. The rest is replaced by the confidence gate |
+| 4 | Get-from-owner and conflicts sections; never invent a number | GATE | `gates.py`: `get_from_owner` with a value blocks; the report always prints both sections |
+| 5 | Pipe measured two ways; band vs station disagreement is D; never inflate | PARTIAL | `rawmath.chosen_length`: band vs station > 0.05 m caps at D. The basis comes from the cited clause, with no default. "Don't inflate" can't be checked (GUIDE) |
+| 6 | Risers = rim − lowest invert − base | GATE | `rawmath.riser_table`: code does the maths from raw rim and inverts. No base height in the clause means unresolved, capped at C |
+| 7 | Depth bands, interpolated, by the spec's definition | GATE | `rawmath.depth_band_split`: needs a cited `definition`. Missing ground or invert means "not derivable", capped at C |
+| 8 | Service tie-ins as their own items | GUIDE | |
+| 9 | Bends in plan AND profile | PARTIAL | `graph.py`: a vertical missing-bend from inverts; profile symbol counts via Rule 35 |
+| 10 | Final completeness sweep | GATE | `payment.py`: every pay item needs an allocation, a reconciliation entry, or a riser or band configuration, or it blocks |
+| 11 | Tie-in vs through-run fittings | GUIDE | (amended by 21) |
+| 12 | Never "N per X" in the quantity column | GATE | `gates.py`: `basis: n_per_x` with a value blocks. N-per-X wording in a document_value source warns |
+| 13 | Lower bound only when every area is included | GATE | `gates.py`: a `lower_bound` without a full pieces list, or with exclusions, blocks |
+| 14 | Named tie-ins get payment label B | GUIDE | |
+| 15 | Search before claiming something is omitted | GATE | `gates.py`: a reconciliation `claim: omitted` without `search` blocks |
+| 16 | Confidence gate; L×W always D; conflict caps C | GATE | `quantity.component_confidence` |
+| 17 | Precedence never upgrades a label | GATE | The conflict cap at C (as amended by 34) |
+| 18 | Conflicts table format | GATE | Schema requires the fields; the report prints the table |
+| 19 | Instance ledger, ID counted once | GATE | `schema.validate_parts`: ID = station+size+type and no duplicates; graph flags possible match-line duplicates |
+| 20 | Conservation; anything unassigned blocks | GATE | `payment.check_payment` |
+| 21 | Specific pay line beats lump sum; included only when the clause says so | PARTIAL | `gates.py`: `included` without `clause_quote` warns and goes on the recheck list. The meaning of the clause stays GUIDE |
+| 22 | Typical details = contents × sites, never folded in silently | GATE | `gates.py`: `typical.per_site × len(sites)` must equal `count` |
+| 23 | Topology; a gap is flagged, never filled | GATE | `graph.py`: loose end, dead end without cap, branch without tee, missing bend (plan or vertical), angle mismatch, size change without reducer. All cap at C and go to the recheck list |
+| 24 | Area summand ledger; no B until complete; L×W is D | GATE | Schema: an area needs pieces. Incomplete ledger caps at C and blocks |
+| 25 | Mandatory second pass | PARTIAL | B needs a recorded check with detail (`counted_checks`) |
+| 26 | Method tag and cite on every number; blank is not zero | GATE | Schema: method enum and evidence required. Unresolved prints "unresolved, not zero" |
+| 27 | Check inclusion first; show the maths; tile the sheets | PARTIAL | Code does all maths. Missing crops reduce verifier task quality (GUIDE) |
+| 28 | Contract limits; pieces outside are not summed | GATE | `gates.py`: `in_limits: false` with a separate allocation blocks |
+| 29 | A needs two independent sources; station maths is not independent | GATE | `component_confidence` |
+| 30 | Unfinished length or area lists block | GATE | `ledgers[].complete: false` blocks |
+| 31 | Second pass = actual symbol count, never a legend | GATE | `gates.py`: legend, note or schedule counts are not accepted. A typed symbol count is reconciled with the ledger per sheet and view; a mismatch caps at C and is flagged |
+| 32 | Payment and unit questions go to engineer questions | GUIDE | |
+| 33 | Commit visible numbers at C, never "get from owner" | GATE | `gates.py`: `get_from_owner` with `drawing_number` blocks |
+| 34 | Ranked precedence committed at C; never "X or Y" | GATE | Numeric quantities only; open conflict caps at C; `fallback: plan_over_profile` is provisional and capped at C |
+| 35 | Symbol count covers profiles; each ID counted once | GATE | Rule 31 reconciliation works per view (plan and profile) |
+| 36 | Count only new caps with a pay line | GATE | `gates.py`: an existing or removed cap or plug allocated separately blocks |
