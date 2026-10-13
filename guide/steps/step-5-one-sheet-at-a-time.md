@@ -15,14 +15,14 @@ Extract values from one sheet at a time. Every value carries its evidence, or it
 ## Procedure
 1. Pick the next sheet in the step-1 reading order. Finish it before opening the next.
 2. Read in this order: title block (done), sheet notes, then the drawing area region by region (left to right, top to bottom).
-3. For each value record: value as printed (exact text, units, typos included), meaning (pipe size, elevation, thickness, length...), sheet, location (grid, station, region or bounding box), source (text/OCR), label A/B/C/D.
-4. If the meaning is unclear (is 150 a pipe size, a thickness or a length?), label it D. Don't force a meaning.
+3. For each value record: value as printed (exact text, units, typos included), meaning (pipe size, elevation, thickness, length...), sheet, location (grid, station, region or bounding box), source (text/OCR), label A/B/C/D per [confidence-labels.md](../confidence-labels.md).
+4. If the meaning is unclear (is 150 a pipe size, a thickness or a length?), record it as NEEDS CHECK with label C (inferred). Don't force a meaning.
 5. Record each physical item once (component record): tag, location, sheet refs, and whether it is installed or only shown in a typical/standard detail.
 6. If you can't read or find something: write `NEEDS CHECK: <what> (sheet, region)`. Do not write what is "normal" or "usually".
 7. Write a short sheet summary and checkpoint before moving on.
 
 ## Pass / fail check
-PASS: every value has sheet + location; no value is stated without a source; unclear items are D or NEEDS CHECK; the sheet is closed before the next is opened.
+PASS: every value has sheet + location; no value is stated without a source; unclear items are C + NEEDS CHECK; the sheet is closed before the next is opened.
 FAIL: any sentence like "at least", "typically", "standard is" without a citation; a total that counts a typical detail as installed.
 
 ## Common failures (from real test runs)
@@ -59,4 +59,4 @@ Read the how-to-use guide first; it says which chapter to open.
 
 **Takeoff rules:** a cross or tee = one connection; count every instance a blanket note covers. See [takeoff-rules.md](../takeoff-rules.md).
 
-**Lengths, risers, depth bands, bends:** measure pipe MH centre to centre two ways and include stubs/connector pieces (Rule 5); read rim and invert at every MH for risers (Rule 6) and depth bands (Rule 7); count bends in plan AND profile (Rule 9). See [takeoff-rules.md](../takeoff-rules.md).
+**Lengths, risers, depth bands, bends:** log raw pipe lengths and inverts per segment, including stubs and connector pieces; the cited clause decides the basis (Rule 5); read rim and invert at every MH for risers (Rule 6) and depth bands (Rule 7); count bends in plan AND profile (Rule 9). See [takeoff-rules.md](../takeoff-rules.md).

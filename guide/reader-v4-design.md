@@ -1,6 +1,6 @@
 # Blueprint Reader v4: hybrid design
 
-Code: local repo `/workspace/bpr-v4` (not published). Reading rules: [takeoff-rules.md](takeoff-rules.md) Rules 1–36, [three-stage-takeoff.md](three-stage-takeoff.md).
+Code: local repo `/workspace/bpr-v4` (not published). Labels: [confidence-labels.md](confidence-labels.md). Reading rules: [takeoff-rules.md](takeoff-rules.md) Rules 1–37, [three-stage-takeoff.md](three-stage-takeoff.md).
 
 **The AI reads. Code checks, totals and grades.**
 
@@ -71,7 +71,16 @@ Bug fixes:
 - `engine-output.coverage.network_certified` is false while any graph flag is open; the register-only result is in `coverage_register_certified`.
 - DO NOT SCALE caps only quantities that rest on scaling (lengths, areas, `measured`, or `scaled_quantity: true`), not counted fittings whose station was located by scale.
 
-## Rule split (Rules 1–36: code gate vs agent guidance)
+## v4.3 (rule audit fixes)
+- **One label definition:** `guide/confidence-labels.md`. Every guide page points to it.
+- **Two labels per pay item:** `drawing_confidence` (from components) and `payment_confidence` (from allocations: `payment_basis` explicit+quote = A, cited clause = B, inferred, included-without-quote or a payment/scope question = C, unresolved = D). `confidence` = the lower of the two. Payment doubt no longer lowers drawing confidence; unresolved payment is payment D, not a drawing cap.
+- **Independence:** only checks against a different source count toward A (`schema.independent_checks`: kinds such as `plan_vs_profile`, `symbol_count`, `other_sheet`, `checker_verify`, or `independent: true`). Same-label re-reads (text layer, OCR, "re-found") and station maths never count toward A, even if marked independent; they support B.
+- **Rule 5:** a band vs station disagreement is C plus an auto engineer question (was D).
+- **Rule 34 fallbacks:** `plan_over_profile`, `profile_over_plan` and `detail_over_plan` are all provisional, capped at C.
+- **Calibration** follows grading-method-v2: tables by drawing, payment and headline label; confidently wrong = A/B on either label with a WRONG grade; CLOSE at A/B listed separately; over-caution count; calibration-log CSV rows.
+- New Rule 37 (DO NOT SCALE). Rule 17 is merged into 34. Single homes: Rule 21 (lump sum), 12 (N per X), 18 (conflicts), 10 (sweep), 31 (second pass).
+
+## Rule split (Rules 1–37: code gate vs agent guidance)
 
 
 This sorts each takeoff rule into one of three kinds:
@@ -85,9 +94,9 @@ Rule of thumb: any rule worded "never", "always", "must", "blocks" or "not finis
 |---|---|---|---|
 | 1 | Typical / blanket notes: count every instance, never "1" | GATE | `gates.py`: a `blanket_note` needs `instances` whose number equals `count`, or it blocks |
 | 2 | Connections counted by location | GUIDE | (a tie-in is one component per location by ID design) |
-| 3 | Confidence labels; a payment or scope question means C | GATE | `gates.py`: any pay item named in `questions` is capped at C. The rest is replaced by the confidence gate |
+| 3 | Labels defined in confidence-labels.md; a payment or scope question means payment C | GATE | `gates.py`: questions (strings with ID ranges, or `{items, kind}`) cap **payment** C, or drawing C for `kind: drawing` |
 | 4 | Get-from-owner and conflicts sections; never invent a number | GATE | `gates.py`: `get_from_owner` with a value blocks; the report always prints both sections |
-| 5 | Pipe measured two ways; band vs station disagreement is D; never inflate | PARTIAL | `rawmath.chosen_length`: band vs station > 0.05 m caps at D. The basis comes from the cited clause, with no default. "Don't inflate" can't be checked (GUIDE) |
+| 5 | Raw lengths logged; cited clause picks the basis; band vs station disagreement is C + question | PARTIAL | `rawmath.chosen_length`: C plus an auto engineer question; no default basis. "Never inflate" is GUIDE |
 | 6 | Risers = rim − lowest invert − base | GATE | `rawmath.riser_table`: code does the maths from raw rim and inverts. No base height in the clause means unresolved, capped at C |
 | 7 | Depth bands, interpolated, by the spec's definition | GATE | `rawmath.depth_band_split`: needs a cited `definition`. Missing ground or invert means "not derivable", capped at C |
 | 8 | Service tie-ins as their own items | GUIDE | |
@@ -98,8 +107,8 @@ Rule of thumb: any rule worded "never", "always", "must", "blocks" or "not finis
 | 13 | Lower bound only when every area is included | GATE | `gates.py`: a `lower_bound` without a full pieces list, or with exclusions, blocks |
 | 14 | Named tie-ins get payment label B | GUIDE | |
 | 15 | Search before claiming something is omitted | GATE | `gates.py`: a reconciliation `claim: omitted` without `search` blocks |
-| 16 | Confidence gate; L×W always D; conflict caps C | GATE | `quantity.component_confidence` |
-| 17 | Precedence never upgrades a label | GATE | The conflict cap at C (as amended by 34) |
+| 16 | Confidence gate per confidence-labels.md; L×W always D; conflict caps C; no "X or Y" | GATE | `quantity.component_confidence` / `payment_confidence` |
+| 17 | Merged into Rule 34 | — | — |
 | 18 | Conflicts table format | GATE | Schema requires the fields; the report prints the table |
 | 19 | Instance ledger, ID counted once | GATE | `schema.validate_parts`: ID = station+size+type and no duplicates; graph flags possible match-line duplicates |
 | 20 | Conservation; anything unassigned blocks | GATE | `payment.check_payment` |
@@ -111,7 +120,7 @@ Rule of thumb: any rule worded "never", "always", "must", "blocks" or "not finis
 | 26 | Method tag and cite on every number; blank is not zero | GATE | Schema: method enum and evidence required. Unresolved prints "unresolved, not zero" |
 | 27 | Check inclusion first; show the maths; tile the sheets | PARTIAL | Code does all maths. Missing crops reduce verifier task quality (GUIDE) |
 | 28 | Contract limits; pieces outside are not summed | GATE | `gates.py`: `in_limits: false` with a separate allocation blocks |
-| 29 | A needs two independent sources; station maths is not independent | GATE | `component_confidence` |
+| 29 | A needs an independent recorded check; same-label re-reads and station maths are consistency only | GATE | `schema.independent_checks`, `component_confidence` |
 | 30 | Unfinished length or area lists block | GATE | `ledgers[].complete: false` blocks |
 | 31 | Second pass = actual symbol count, never a legend | GATE | `gates.py`: legend, note or schedule counts are not accepted. A typed symbol count is reconciled with the ledger per sheet and view; a mismatch caps at C and is flagged |
 | 32 | Payment and unit questions go to engineer questions | GUIDE | |
@@ -119,3 +128,4 @@ Rule of thumb: any rule worded "never", "always", "must", "blocks" or "not finis
 | 34 | Ranked precedence committed at C; never "X or Y" | GATE | Numeric quantities only; open conflict caps at C; `fallback: plan_over_profile` is provisional and capped at C |
 | 35 | Symbol count covers profiles; each ID counted once | GATE | Rule 31 reconciliation works per view (plan and profile) |
 | 36 | Count only new caps with a pay line | GATE | `gates.py`: an existing or removed cap or plug allocated separately blocks |
+| 37 | DO NOT SCALE: scaled quantities capped at C | GATE | ingest detects the note; `component_confidence` caps scaled lengths, areas and `scaled_quantity` |

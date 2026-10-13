@@ -9,14 +9,10 @@ sources: book pages are cited as book_id + PDF page (see /index.json). Points ma
 The goal is to avoid getting overwhelmed. Never try to "read the whole set" in one pass. Build a map first, then work one sheet at a time and write things down as you go.
 
 ## 0. Ground rules
-- Work from the documents only. Every finding gets a label:
-  - **A, Directly extracted.** Printed on the sheet.
-  - **B, Derived.** Calculated from documented values. Record the formula, inputs and units.
-  - **C, Inferred.** Plausible but needs human confirmation.
-  - **D, Unresolved.** Conflicting, unreadable or missing.
+- Work from the documents only. Every finding gets a label per [confidence-labels.md](confidence-labels.md) (the only A–D definition).
 - Every finding needs evidence: drawing number, revision, sheet, the region (grid/zone or detail callout), and the RFQ/spec clause if one applies.
 - An A label means it was read correctly, not that it's correct for construction. Never claim engineering approval or code compliance.
-- Don't scale off a drawing unless the scale is stated and the sheet is printed or rendered at a known size. Prefer written dimensions [practice; 14040A shows the scale block, navedtra-14040a PDF pp. 8-9].
+- Don't scale off a drawing unless the scale is stated and the sheet is printed or rendered at a known size. On a DO NOT SCALE set, scaled quantities are capped at C (takeoff-rules Rule 37). Prefer written dimensions [practice; 14040A shows the scale block, navedtra-14040a PDF pp. 8-9].
 
 ## 1. Build the sheet map first (cover + drawing index)
 1. Open the cover/title sheet and the **index of drawings**. Large projects put a title sheet with an index first, then the other sheet groups in a fixed order (navedtra-14069 PDF p. 325).

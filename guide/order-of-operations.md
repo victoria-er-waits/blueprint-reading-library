@@ -10,10 +10,10 @@ read_first: true
 **Quantity takeoffs:** use [three-stage-takeoff.md](three-stage-takeoff.md) as the takeoff method. Step 5 = Stage 1 (drawing inventory), step 7 = Stage 1 cross-checks + Stage 2 (payment allocation), step 9 = Stage 3 (bid-item reconciliation and output).
 
 ## Rules for every step
-1. **No proof, no answer.** Every value needs a sheet and a location. If you can't find it, write `NEEDS CHECK`. Never fill in a "typical" or "at least" value.
+1. **No proof, no answer.** Every value needs a sheet and a location. If you can't find it, write `NEEDS CHECK`. Never fill in a "typical" or "at least" value (except a complete Rule 13 bound).
 2. **Copy exactly as printed**, typos included. Flag; don't fix silently.
-3. **Label everything A/B/C/D** (A printed, B derived, C inferred, D unknown/conflict).
-4. **Conflicts are questions**, not choices. They go to the step-8 list.
+3. **Label everything A/B/C/D** per [confidence-labels.md](confidence-labels.md) (the only definition).
+4. **Conflicts become questions.** For quantities, commit the Rule 34 ranked reading at C (provisional, alternative shown) and put the question on the step-8 list. Never "X or Y".
 5. **Never claim engineering approval** or code compliance.
 
 ## The 9 steps
@@ -38,7 +38,7 @@ read_first: true
 - [ ] 6 Values range-checked; possible typos flagged
 - [ ] 7 Metric/imperial, sheet/sheet, schedule/plan cross-checks done; counts split by type
 - [ ] 8 Questions-for-engineer list complete
-- [ ] 9 Final read-out with A/B/C/D labels, questions and the no-approval disclaimer
+- [ ] 9 Final read-out with A/B/C/D labels (confidence-labels.md), questions and the no-approval disclaimer
 
 ## Large sets
 For 100+ sheet packages, also use [reading-large-drawing-sets.md](reading-large-drawing-sets.md) to plan the work in batches. This order of operations still applies to every sheet.

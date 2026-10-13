@@ -1,12 +1,12 @@
 ---
-title: "How BC municipal (MMCD-style) unit-price items are usually paid"
+title: "Reading measurement-for-payment clauses (BC municipal unit-price tenders)"
 part_of: guide/order-of-operations.md
 used_in: [guide/steps/step-7-cross-checks.md, guide/steps/step-9-final-readout.md]
 ---
 
-> **Feeds into Stage 2 of [three-stage-takeoff.md](three-stage-takeoff.md)**, the takeoff method. These are defaults; the tender's own clauses override them.
+> **Feeds into Stage 2 of [three-stage-takeoff.md](three-stage-takeoff.md).** Labels: [confidence-labels.md](confidence-labels.md). **Nothing on this page is a default quantity or payment rule.** The tender's cited clause decides. The patterns table only helps you know what to look for and what to ask.
 
-# How BC municipal (MMCD-style) unit-price items are usually paid
+# Reading measurement-for-payment clauses
 
 [Back to the checklist](order-of-operations.md) · [Local standards (MMCD explained)](local-standards.md) · [Takeoff rules (blanket notes, connections, labels, report sections)](takeoff-rules.md)
 
@@ -20,10 +20,10 @@ Before counting, open the specs (MMCD Supplementary/Special Provisions, or the c
 **The specs override every default below.** If a clause says fittings are included in pipe, then they are included. Cite the clause (document, section, page) next to each item.
 
 ## Rule 0a: specific pay line beats lump sum
-Bundle a component into a tie-in or lump-sum item only when that item's measurement clause explicitly includes it. If the schedule has a specific line for it (cap, short pipe, valve, fitting, restraint), it goes on that line, including caps or fittings on existing pipe. If unclear: both readings, payment C, owner question (takeoff-rules Rules 11, 21).
-Before measuring any quantity (sawcut, restoration, traffic control), check whether a clause already makes it incidental (Rule 27).
+See takeoff-rules **Rule 21** (single home). Incidental check before measuring: Rule 21, last bullet.
 
-## Common defaults when the specs are silent or unclear
+## Common patterns to look for (not defaults)
+Use these only to know which clause to search for and what to ask. If the tender's clause is silent, the allocation is `unresolved` (payment D) with an engineer question. Never fill it from this table.
 | Work | Common way it's paid | What to count from drawings |
 |---|---|---|
 | Watermain pipe | per l.m, by size and material, measured along the centreline (often through fittings) | length per size; note any "measured through fittings/valves" wording |
@@ -42,17 +42,13 @@ Before measuring any quantity (sawcut, restoration, traffic control), check whet
 | Traffic management, mobilization, bonds | lump sum | from specs, not drawings |
 | Provisional / contingency items (rock excavation, extra granular, unsuitable material) | cu.m / tonne, provisional | from the schedule/specs; drawings rarely give these |
 
-## Labelling rule (strict)
-- If you counted something but **the payment basis is not confirmed** by a spec clause: **still give the number.** Label it **C** and add **NEEDS CHECK: payment basis**, with the reason (e.g. "counted 6 tees; unclear if paid each or included in pipe").
-- **Never withhold a counted number** because you're unsure how it's paid. A counted number with C is useful; a blank is not.
-- **Never use A or B** for a quantity whose payment basis is unconfirmed. A/B only when both the count *and* the way it is paid are backed by a sheet + spec cite.
-- For the full A/B/C/D rules, blanket "typical" notes, cross/tee connections, and the two required report sections, see [takeoff-rules.md](takeoff-rules.md).
-- If drawings and the schedule/estimate disagree on a count (e.g. plan shows one more valve than the schedule), report the drawing count, label D, add an engineer question, and list it under "Document conflicts: ask before close".
+## Labels
+Per [confidence-labels.md](confidence-labels.md). Payment basis unconfirmed means payment C (or D if no basis at all), never a blank. A drawing vs schedule count disagreement is a Rule 18 conflict (C), with the drawing count committed.
 
 ## Quick procedure
 1. Find every Measurement for Payment clause; build a small "how paid" table with cites.
 2. For each pay item, count from the drawings the way that table says.
-3. Where the table is silent, use the defaults above, label C, NEEDS CHECK.
+3. Where the clauses are silent, the allocation is `unresolved` (payment D) with an engineer question (Rule 32).
 4. List items the drawings can't give (restoration, provisional items, lump sums) under "Not on drawings: get from owner" (see [takeoff-rules.md](takeoff-rules.md)).
 5. Cross-check totals against any schedule in the tender documents (step 7), never copy from it.
 

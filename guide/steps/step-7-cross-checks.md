@@ -49,6 +49,6 @@ Read the how-to-use guide first; it says which chapter to open.
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-em-1110-1-1005.md
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/ncdot-plan-reading-ssc030.md
 
-**Conflicts:** every spec vs schedule vs drawing disagreement goes in "Document conflicts: ask before close"; see [takeoff-rules.md](../takeoff-rules.md) Rule 4.
+**Conflicts:** disagreements that change a physical quantity or allocation go in the Rule 18 conflicts table (ranked per Rule 34). Payment, unit and wording questions go to Questions for the engineer (Rule 32). See [takeoff-rules.md](../takeoff-rules.md).
 
 **Services:** count tie-ins at the main, tie-ins to MHs, service pipe, inspection chambers and transfers as separate lines and reconcile them (takeoff-rules.md Rule 8).

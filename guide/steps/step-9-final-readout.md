@@ -50,6 +50,6 @@ Read the how-to-use guide first; it says which chapter to open.
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/american-farmhouse.md
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/usace-aec-graphics-standard-2-2.md
 
-**Labels and required sections:** apply the A/B/C/D rules in [takeoff-rules.md](../takeoff-rules.md) Rule 3 (any item you raise a payment/scope question on is C). The report must include "Not on drawings: get from owner" and "Document conflicts: ask before close" (Rule 4).
+**Labels and required sections:** apply [confidence-labels.md](../confidence-labels.md) (drawing and payment labels; a payment or scope question makes payment C, Rule 3). The report must include "Not on drawings: get from owner" and "Document conflicts: ask before close" (Rule 4).
 
-**Completeness sweep (mandatory, last):** every spec section with a payment clause, per site, must map to a takeoff line or a "get from owner" entry; include the table in the report ([takeoff-rules.md](../takeoff-rules.md) Rule 10). Include the per-manhole riser table and per-segment depth-band table (Rules 6-7).
+**Completeness sweep:** [takeoff-rules.md](../takeoff-rules.md) Rule 10 (single home). Include the per-manhole riser table and per-segment depth-band table (Rules 6-7).
