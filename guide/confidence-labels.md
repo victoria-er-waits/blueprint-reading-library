@@ -39,7 +39,7 @@ Checks that are **not independent** are **consistency checks**. They can support
 ## Payment confidence
 | Label | Needs |
 |---|---|
-| **A** | A cited clause that explicitly names this component (or its pay line) and how it is paid, with the clause wording quoted. |
+| **A** | A cited clause that explicitly names this component (or its pay line) and how it is paid, with the clause wording quoted. For a length paid by the metre, the length itself must also be printed (profile band, figured length): an inferred length (station math, measured, scaled) or a portion cut from a shared segment is B at best. |
 | **B** | A cited clause that clearly covers it by category or location (e.g. a tie-in named by location, Rule 14), with no payment question open. |
 | **C** | Allocation inferred from general wording, or any payment or scope question raised about the item (Rule 3), or "included" without the quoted clause (Rule 21), or a ranked reading of a payment conflict. |
 | **D** | No basis found, or clauses that conflict and can't be ranked: allocation `unresolved`. |
