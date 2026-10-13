@@ -6,8 +6,8 @@ used_in: [guide/steps/step-4-notes-legend.md, guide/steps/step-5-one-sheet-at-a-
 
 > **Feeds into [three-stage-takeoff.md](three-stage-takeoff.md)**, the takeoff method. **Labels:** the only A–D definition is [confidence-labels.md](confidence-labels.md).
 >
-> **Stage map (Rules 1–37):**
-> - Stage 1, drawing inventory: 1, 5, 6, 7, 9, 19, 22, 23, 24, 25, 27, 28, 30, 31, 33, 35, 37.
+> **Stage map (Rules 1–38):**
+> - Stage 1, drawing inventory: 1, 5, 6, 7, 9, 19, 22, 23, 24, 25, 27, 28, 30, 31, 33, 35, 37, 38.
 > - Stage 2, payment allocation: 2, 8, 11, 12, 14, 20, 21, 36.
 > - Stage 3, reconciliation: 4, 10, 13, 15, 26, 32.
 > - Every stage: 3, 16, 17, 18, 29, 34.
@@ -227,6 +227,12 @@ Apply in this order and stop at the first that decides:
 - Ingest searches every sheet and document for "DO NOT SCALE" / "do not scale drawings" / "written dimensions govern". If found, the whole set is DO NOT SCALE.
 - On such a set, any quantity that rests on scaling (a length, an area, method `measured`, or `scaled_quantity: true`) is capped at C, with the note cited. A counted fitting whose *station* was located by scale keeps its label; only the location is approximate.
 - Prefer printed stations, figured dimensions and profile band lengths. Where only scaling is possible (drawn curbs, Rule 30), still measure it, mark it scaled, and ask the engineer for figured lengths.
+
+## Rule 38: Station at the drawn item, not at its label
+- A component's station is where the **symbol or pipe end is drawn**: the bend vertex, valve or tee symbol, cap end or hydrant. It is never where the callout text, keynote number or the tail of a leader sits. Callouts are often placed 5–20 m away so they stay readable.
+- Follow the leader to its arrowhead and read the station there. Use the nearest printed station tick or a figured station. If the callout prints its own station ("STA 1+045.5 45° BEND"), use that and check it against the symbol.
+- Record where the station came from: `station_source` on the evidence (`drawn_item`, `printed_on_callout`, `profile`). Writing `callout`, `leader_label` or `keynote` there raises an engine warning. If the station was read off the label, go back and read it at the symbol.
+- Why: the station is the join key for plan/profile matching (Rule 35), graph checks and the Checker's zoomed crops. A label-position station puts the crop on the wrong spot and makes one fitting look like two.
 
 ---
 Reference material only, not engineering approval. Always follow the issued contract documents.
