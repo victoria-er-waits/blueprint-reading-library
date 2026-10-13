@@ -17,7 +17,7 @@ The headline label on a pay item is the lower of the two. Payment doubt never lo
 A check counts only if it is **recorded** in the ledger: `{kind, result: agree|disagree, detail}` with a detail saying what was compared, or a sheet or evidence ref. Flags like `checked: true`, `verified`, or a bare `split_checked: true` never count.
 
 An **independent check** compares the value with a *different* source:
-- another view or sheet (plan vs profile, plan vs detail);
+- another view or sheet (plan vs profile, plan vs a separate connection detail; an inset or enlargement of the same plan area is not another view, Rule 31);
 - an actual symbol count on the tiles (Rule 31);
 - a measurement against a printed label (vector or station geometry vs the profile band);
 - a blind Checker "yes" on a verifier task;
