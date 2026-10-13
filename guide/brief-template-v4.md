@@ -35,14 +35,15 @@ schedule from any site. Never invent a value. Do not forward to the Checker.
   - **checks:** `checks[] {kind, result, detail, independent}`. Only checks against a different source count as independent (confidence-labels.md); a same-label re-read never does;
   - **raw values:** `plan_length_m`, `profile_length_m`, `slope_length_m`, `invert_from/to`, `ground_from/to`, `outside_diameter_m`, `rim_elev`, `inverts[]`;
   - **geometry:** `bearing_deg`, `xy_from/to`, `offset_from/to`, `deflections[]`, `branch_of`;
-  - **rule fields:** `blanket_note` + `instances[]` (Rule 1), `typical {detail, per_site, sites[]}` (Rule 22), `in_limits` (Rule 28), `pieces[]` (Rule 24).
+  - **rule fields:** `blanket_note` + `instances[]` (Rule 1), `typical {detail, per_site, sites[]}` (Rule 22), `in_limits` (Rule 28), `pieces[]` (Rule 24), `parent` (assembly member, Rule 31), `variant` (Rule 30), `to_suit` + `gap {from, to, lay_m}` (Rule 30), `scale_source` + `cross_check {method, value, tolerance}` (Rule 37).
 - `conflicts[] {id, location, readings, affects, rule, ranked_reading, question, fallback, resolved}`.
 - `ledgers[] {name, complete, pay_items}`.
-- `symbol_counts[] {sheet, view, type, size, angle_deg, count, tile, source}`.
+- `symbol_counts[] {sheet, view, type, size, angle_deg, count, tile, source}`: one row per counted category on every plan/profile sheet, `count: 0` included (Rule 31).
+- `runs[] {id, alignment, station_from, station_to, segments}` (Rule 5).
 - `coverage[] {sheet, regions[{name, inspected, evidence|tile}], categories{…}}`.
 - `observations[] {view, sheet, station, size, type, angle_deg, plane, tile}`.
 - `callout_census[] {text, components, per_sheet: {sheet: marker count}, searched}` (Rule 1).
-- `tag_series {PREFIX: {number: {component} | {excluded: reason}}}` (Rule 39).
+- `tag_series {PREFIX: {number: {component} | {excluded: reason, evidence {sheet, text}, checked_pay_items {item: why}}}}` (Rule 39).
 - `junctions[] {components, junction_resolved}` (Rule 31).
 - `evidence[].station_source`: `drawn_item | printed_on_callout | profile` (Rule 38).
 
@@ -54,4 +55,4 @@ schedule from any site. Never invent a value. Do not forward to the Checker.
 - `depth_bands {definition, bands[], clause}`.
 - `questions[]`: strings, or `{items, kind: payment|scope|drawing, text}`.
 
-**Checker round:** the ledgers are frozen (Rule 40). The Checker answers `verifier-tasks.json` blind, using `zoom_crop` or the listed `tiles`, into `verifier-answers.json [{id, answer: yes|no|cant_tell|<number for count tasks>}]`. Then the engine is re-run. **Grading:** the grader alone writes `grades.json` and runs `bpr4.cli calibrate`.
+**Checker round:** the ledgers are frozen (Rule 40). The Checker answers `verifier-tasks.json` blind, using `zoom_crop` or the listed `tiles`, into `verifier-answers.json [{id, answer: yes|no|cant_tell|<number for count and assembly_count tasks>}]`. Then the engine is re-run. **Grading:** the grader alone writes `grades.json` and runs `bpr4.cli calibrate`.

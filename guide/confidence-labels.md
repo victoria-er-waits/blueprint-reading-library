@@ -33,7 +33,7 @@ Checks that are **not independent** are **consistency checks**. They can support
 |---|---|
 | **A** | A printed value (figured dimension, label, schedule row), **and** at least one recorded **independent** check that agrees, **and** none of the C caps below. |
 | **B** | One unambiguous source, a complete count or sum (every summand present), and at least one recorded second check that agrees (independent or consistency). No C cap applies. |
-| **C** | Any of these caps: an open conflict touching it; a ranked-precedence reading (Rule 34, shown as *provisional*); a length that disagrees between two methods (with an engineer question, never "X or Y"); a shared leader or unclear note scope; incomplete coverage of its sheets or categories; an open network flag (Rule 23); a quantity resting on scaling when the set says DO NOT SCALE (Rule 37); a split between two pay items not checked instance by instance; a `partial` quantity; a visible number committed under Rule 33; an inferred value; no recorded second check. |
+| **C** | Any of these caps: an open conflict touching it; a ranked-precedence reading (Rule 34, shown as *provisional*); a length that disagrees between two methods (with an engineer question, never "X or Y"); a shared leader or unclear note scope; incomplete coverage of its sheets or categories (a counted category with no per-sheet record, zeros included, Rule 31); a scaled quantity without `scale_source` and a second-method `cross_check` (Rule 37); a missing `variant` where the schedule has more than one line for the item (Rule 30); a run that does not cross-foot (Rule 5); an open network flag (Rule 23); a quantity resting on scaling when the set says DO NOT SCALE (Rule 37); a split between two pay items not checked instance by instance; a `partial` quantity; a visible number committed under Rule 33; an inferred value; no recorded second check. |
 | **D** | An assumption: length × typical width (`lxw`), an area with no piece list, or a value with no drawing basis. |
 
 ## Payment confidence
@@ -41,7 +41,7 @@ Checks that are **not independent** are **consistency checks**. They can support
 |---|---|
 | **A** | A cited clause that explicitly names this component (or its pay line) and how it is paid, with the clause wording quoted. For a length paid by the metre, the length itself must also be printed (profile band, figured length): an inferred length (station math, measured, scaled) or a portion cut from a shared segment is B at best. |
 | **B** | A cited clause that clearly covers it by category or location (e.g. a tie-in named by location, Rule 14), with no payment question open. |
-| **C** | Allocation inferred from general wording, or any payment or scope question raised about the item (Rule 3), or "included" without the quoted clause (Rule 21), or a ranked reading of a payment conflict. |
+| **C** | Allocation inferred from general wording, or any payment or scope question raised about the item (Rule 3), or "included" without the quoted clause (Rule 21), or a ranked reading of a payment conflict, or a paid quantity that rests on scaling without calibration and cross-check (Rule 37). |
 | **D** | No basis found, or clauses that conflict and can't be ranked: allocation `unresolved`. |
 
 ## Never
