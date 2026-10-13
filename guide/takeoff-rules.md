@@ -130,6 +130,7 @@ Labels are earned by evidence, not by feel. Apply to drawing and payment confide
 1. First find the tender's own discrepancy / order-of-precedence clause (instructions to tenderers, general or supplementary conditions) and **quote it with its cite**.
 2. Only if it is silent, use these fallback defaults, and label them "default, not tender-stated": latest addendum over base; figured / labelled over scaled; **plan governs horizontal items** (valves, horizontal bends, hydrants, tees); **profile governs vertical items** (vertical bends, inverts, depths); a larger-scale detail governs its own component.
 3. The primary reading follows the hierarchy, but the item **stays C** and gets an RFI question. The hierarchy chooses the number to show first; it never upgrades the label.
+4. **Amended by Rule 34:** the defaults are ranked, and the ranked reading is committed as the quantity (at C) with the alternative shown. Do not leave "X or Y" as the quantity.
 
 ## Rule 18: Conflicts table format
 Every conflict is one row: | # | Location (sheet + station/callout) | Reading 1 (source) | Reading 2 (source) | Affected pay items | Quantity delta | Precedence applied (Rule 17) | Suggested question |
@@ -194,6 +195,27 @@ Each quantity carries a method tag: `measured`, `station-derived`, `label sum`, 
 ## Rule 33: Commit visible numbers at C
 - If a number is visible on the drawings ("TYP. 3", "x4", "6 REQ'D", a legend count), enter it as the quantity with drawing confidence C (method tag `document value`) and cite it.
 - Never write "get from owner" when the drawings show a number. Add a question if it is doubtful.
+
+## Rule 34: Ranked precedence, committed at C (amends Rules 16 and 17)
+Apply in this order and stop at the first that decides:
+1. The tender's own discrepancy / order-of-precedence clause (quote it).
+2. The latest addendum over earlier documents.
+3. **The plan governs horizontal fittings, bend angles and valve end types** (HxH / FxH / FxF), including over a detail.
+4. A detail governs only its **own dimensions and internal parts** (e.g. the parts inside a tie-in assembly, thrust-block size).
+5. Printed / figured over scaled.
+- Commit the ranked reading as **the quantity, at drawing confidence C**. Show the alternative in Notes ("alt. 5 if Det 8 governs") and add an RFI question. Never leave "X or Y" in the quantity column.
+- The conflict-free total is still reported (Rule 16), e.g. "Items 30+31 total 8 (B); split 4/4 per Rule 34 (C), alt. 5/3".
+- Worked example (generic MMCD): the plan labels a bend 11.25°; the tie-in detail shows 22.5° FxH. Rank 3 applies: 11.25° HxH = 1 (C), alt. 22.5° FxH, question to the engineer.
+
+## Rule 35: Symbol-count pass covers profiles (extends Rule 31)
+- The second-pass symbol count is done on plans **and profiles**, sheet by sheet.
+- Reconcile bends **instance by instance** between plan and profile: give each bend an ID (station + angle + plane), mark it plan-only, profile-only or both, and count each ID once.
+- Combined horizontal and vertical deflections at one station are one fitting unless the drawings show two. Every unmatched instance is listed, not dropped.
+
+## Rule 36: Caps
+- Count only **new** caps or plugs that have a pay line.
+- A cap that the tie-in replaces or removes (e.g. the existing cap on the old main at the connection) is **not** added. Flag it as a question: "Existing cap at X is removed by tie-in Y. Is it paid anywhere?"
+- Caps on abandoned or disused pipe are counted only if a pay line or clause covers them; otherwise, ask.
 
 ---
 Reference material only, not engineering approval. Always follow the issued contract documents.
