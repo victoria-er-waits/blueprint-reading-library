@@ -14,7 +14,7 @@ read_first_for_quantities: true
 | 3 Bid-item reconciliation | What quantity goes on each pay item? | Pay-item table, conflicts as owner questions, "get from owner" list |
 
 Supporting pages that feed this method:
-- [takeoff-rules.md](takeoff-rules.md): Rules 1-15 (blanket notes, cross/tee, pipe length, risers, depth bands, services, bends, completeness sweep, tie-in vs through-run fittings, N-per-X, bounds vs partial, named tie-ins, search-before-omission). Rules 1, 5, 6, 7, 9 apply in Stage 1; Rules 2, 8, 11, 12, 14 in Stage 2; Rules 4, 10, 12, 13, 15 in Stage 3. Rule 3's single A/B/C/D label is replaced here by two separate labels.
+- [takeoff-rules.md](takeoff-rules.md): Rules 1-27 (blanket notes, cross/tee, pipe length, risers, depth bands, services, bends, completeness sweep, tie-in vs through-run fittings, N-per-X, bounds vs partial, named tie-ins, search-before-omission). Rules 1, 5, 6, 7, 9 apply in Stage 1; Rules 2, 8, 11, 12, 14 in Stage 2; Rules 4, 10, 12, 13, 15 in Stage 3. Rule 3's single A/B/C/D label is replaced here by two separate labels.
 - [payment-structure.md](payment-structure.md): how BC (MMCD-style) unit-price items are usually paid. These are defaults for Stage 2 only; the tender's own specs and addenda override them.
 - [order-of-operations.md](order-of-operations.md): steps 1-4 prepare the set; step 5 = Stage 1; step 7 = Stage 1 cross-checks + Stage 2; step 9 = Stage 3 output.
 
@@ -43,6 +43,14 @@ Record what is physically drawn **before considering payment**. Do not ask "is t
 
 Payment doubt never lowers drawing confidence. Seven clearly drawn tees are B for drawings even if their payment is unknown.
 
+### Stage 1 additions (Rules 19, 22, 23, 24, 25, 27)
+- Build the instance ledger (IDs = station + size + type; same ID across sheets counts once; record leader count K).
+- Typical details: contents x sites, written out.
+- Topology walk: every end, turn, size change and branch has a fitting, or it is flagged.
+- Area summand ledger, with per-sheet scale calibration.
+- A mandatory second pass over profiles and details by a different method; reconcile the passes.
+- Read sheets in high-resolution overlapping tiles.
+
 ## Stage 2: Payment allocation
 
 First build the "how each item is paid" table from every Measurement for Payment / Basis of Payment clause in the specs, supplementary specs and addenda (document + section + page). Then assign **every Stage 1 component exactly one destination**:
@@ -70,6 +78,9 @@ Rules:
 - **N per X (Rule 12):** never put a spec-derived N x X in the quantity column. Give the physical X count, quantity = unknown, payment C, owner question.
 - **Named tie-ins (Rule 14):** tie-ins named by location on the pay-item list that match drawn locations get payment B.
 
+- Rule 20 conservation: unassigned components = 0, or the report is not finished. Print inventoried / allocated / flagged totals.
+- Rule 21: a specific pay line beats a lump sum unless the clause explicitly includes the component.
+
 ## Stage 3: Bid-item reconciliation
 
 Before Stage 3 output: **bounds (Rule 13)** - "upper/lower bound" only if every contributing area is included, otherwise `partial` with what's missing; **search before claiming omission (Rule 15)** - pdftotext -layout and -raw over every document, cite the search.
@@ -93,7 +104,11 @@ Before Stage 3 output: **bounds (Rule 13)** - "upper/lower bound" only if every 
 
 Also keep the Stage 1 component table and Stage 2 allocation table in the report (or an appendix), so every pay quantity can be traced back to physical components.
 
+### Confidence and method (Rules 16, 17, 26)
+Apply the confidence gate (Rule 16). An open conflict caps every dependent item at C, shows both values, and gives the total with the split open. Resolve the primary reading with the tender's precedence clause, else the labelled defaults (Rule 17). Every number carries a method tag and a cite (Rule 26).
+
 ### Document conflicts (ask before close)
+Use the Rule 18 table: location, both readings, affected items, quantity delta, precedence applied, suggested question.
 Each conflict is written as a draft question to the owner:
 > Sheet X shows N; Schedule/spec section Y says M. Please clarify.
 

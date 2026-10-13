@@ -91,7 +91,8 @@ The four groups must reconcile: number of services = tie-ins at main + tie-ins a
 
 ## Rule 11: Tie-in assembly vs through-run fittings (Stage 2)
 - A tee or valve on the **new main's through-run** is paid on its own pay line (fittings / valves, each), **even if it sits near a tie-in**.
-- Only the fittings that are **part of the tie-in assembly connecting to the existing main** (the cut-in tee/cross on the existing pipe, its isolation valve(s), couplers, reducers, the closure piece) go inside a lump-sum or each-priced tie-in item, and only when the payment clause says the tie-in includes them.
+- Only the fittings that are **part of the tie-in assembly connecting to the existing main** (the cut-in tee/cross on the existing pipe, its isolation valve(s), couplers, reducers, the closure piece) go inside a lump-sum or each-priced tie-in item, and only when the payment clause **explicitly** says the tie-in includes them.
+- **Amended (Rule 21):** a specific pay line beats a lump sum. If the pay-item list has a line for the component (e.g. "cap, each", "250 mm pipe, l.m.", "gate valve, each"), it goes on that line unless the tie-in clause names it as included. Caps, plugs and fittings placed on the *existing* pipe follow the same test.
 - If the drawings or clauses do not make the split clear, **list both readings** (A: in tie-in, B: separate) with the component IDs, pick neither as fact, give payment confidence C, and add an owner question.
 - Worked example (generic MMCD): a new 200 mm main ties into an existing 150 mm main with a 200x150 cut-in tee and a 150 mm gate valve; 15 m downstream on the new main there is a 200x150 tee and 150 mm valve feeding a hydrant lead. The spec says "connection to existing main, lump sum, includes all fittings, valves and couplings required to make the connection". The cut-in tee + 150 mm valve go to the tie-in item. The downstream tee + valve are on the new main's through-run: they go to "200x150 tee, each" and "150 mm gate valve, each".
 
@@ -115,6 +116,57 @@ The four groups must reconcile: number of services = tie-ins at main + tie-ins a
 - Scanned pages with no text layer must be OCRed or read visually; say which.
 - **Cite the search** in the report: files, commands/terms, hit count. Example: "Searched all 4 PDFs (-layout and -raw) for 'sawcut|saw cut|saw-cut': 0 hits; drawings are scanned, sheets read visually."
 - Worked example (generic MMCD): a report claims "no restraint spec". A raw-text search finds "Restrained joints ... Section 33 11 01 cl. 3.9" split across two columns in -layout output. The claim is withdrawn.
+
+## Rule 16: Confidence gate (Stages 1-3)
+Labels are earned by evidence, not by feel. Apply to drawing and payment confidence separately.
+- **A**: the value is directly labelled (printed number, figured dimension, schedule row) AND an independent check agrees (e.g. station math matches a printed length; the profile count matches the plan count).
+- **B**: one unambiguous source, NO open conflict touching it, a complete sum or measurement (every summand present), and one second check passed.
+- **C**: any open conflict, a shared leader line, incomplete coverage, or an inferred/interpreted value.
+- **D**: an assumption. Length x typical width is **always D**, whatever the source of the length.
+- **Conflict cap:** an open conflict caps every dependent quantity at C. Show both values ("4 or 5, conflict 2"), and report the conflict-free total with the split left open (e.g. "Items 30+31 = 8; split 4/4 or 5/3").
+- Worked example (generic MMCD): plan shows 3 valves HxH, detail shows one of them FxH. Report "GV HxH 2 or 3 (C)", "GV FxH 0 or 1 (C)", "total 3 (B)".
+
+## Rule 17: Conflict precedence (Stage 1/3)
+1. First find the tender's own discrepancy / order-of-precedence clause (instructions to tenderers, general or supplementary conditions) and **quote it with its cite**.
+2. Only if it is silent, use these fallback defaults, and label them "default, not tender-stated": latest addendum over base; figured / labelled over scaled; **plan governs horizontal items** (valves, horizontal bends, hydrants, tees); **profile governs vertical items** (vertical bends, inverts, depths); a larger-scale detail governs its own component.
+3. The primary reading follows the hierarchy, but the item **stays C** and gets an RFI question. The hierarchy chooses the number to show first; it never upgrades the label.
+
+## Rule 18: Conflicts table format
+Every conflict is one row: | # | Location (sheet + station/callout) | Reading 1 (source) | Reading 2 (source) | Affected pay items | Quantity delta | Precedence applied (Rule 17) | Suggested question |
+Do not list as conflicts things an addendum already resolves, or plain payment questions (those go to Questions for the engineer).
+
+## Rule 19: Instance ledger (Stage 1)
+- Every pipe segment (station range + sheet), bend, tee, cap, plug, valve, reducer, coupler and fitting gets an ID = station + size + type (e.g. `1+722-400-B22.5`).
+- The same ID on two sheets (match lines, plan vs profile, plan vs detail) counts **once**; record every sheet where it appears.
+- Follow every leader line to its end. Record the termination count K for each callout ("22.5° bend, K=3 leaders"). A callout with K > 1 means K instances unless the text says otherwise; if the leaders are ambiguous, the count is C.
+
+## Rule 20: Conservation (Stage 2)
+Every ledger component goes to exactly one destination: a pay item, "included in item N (cite)", "not paid (cite)", or a visible flag. An unassigned component is a **blocking error**: the report is not finished until the count of unassigned = 0. Print the totals: components inventoried / allocated / flagged.
+
+## Rule 21: Specific pay line beats lump sum (Stage 2)
+Bundle a component into a tie-in or lump sum only when the measurement clause explicitly includes it. If a specific pay line exists for it (cap, short pipe, valve, fitting, restraint), it goes there. Otherwise list both readings with the conflict cap (Rule 16). Amends Rule 11.
+
+## Rule 22: Typical details = contents x sites
+When a typical detail applies at several sites, show the multiplication: "Det 7 (1 tee + 1 GV + 2 bends) x 4 sites (IDs ...) = 4 tees, 4 GV, 8 bends". Never fold typical contents in silently.
+
+## Rule 23: Topology check (Stage 1)
+Walk the main end to end: every pipe end has a cap, plug, tie-in or structure; every direction change (plan or profile) has a bend or deflection note; every size change has a reducer or tee; every branch has a tee or cross. A gap is flagged ("missing fitting at 2+195?"), not filled by assumption.
+
+## Rule 24: Area summand ledger (Stage 1/3)
+- Decompose every area into summands: main area + each extra (tie-in pits, valve pits, service trenches, approaches, laybys, turnarounds, overlaps) minus exclusions, each with its source.
+- Calibrate the scale per sheet from a figured dimension before scaling anything; state the check.
+- No B until the ledger is complete (all summand types searched); length x typical width alone is D (Rule 16).
+
+## Rule 25: Mandatory second pass (Stage 1)
+After the first inventory, do a dedicated fittings and appurtenances pass over the **profiles and details** using a different method (e.g. first pass by plan callouts, second pass by walking profile grade breaks and detail contents). Reconcile the two passes; every difference becomes a ledger note or a conflict.
+
+## Rule 26: Method tag and cite on every number
+Each quantity carries a method tag: `measured`, `station-derived`, `label sum`, `partial`, `lower bound`, `assumption`, or `document value`. It also cites the document/addendum/revision and the unit. "null/blank = unresolved, not zero."
+
+## Rule 27: Check inclusion first; show the math; tile the sheets
+- Before measuring a quantity (sawcut, restoration, dewatering, traffic control), check whether a clause already includes it in another item; if so, it is incidental (cite).
+- Show the arithmetic for every derived number.
+- Read each sheet in high-resolution overlapping tiles (e.g. 300 dpi, 2x3 grid, 10% overlap). Note the tile where each callout was found.
 
 ---
 Reference material only, not engineering approval. Always follow the issued contract documents.

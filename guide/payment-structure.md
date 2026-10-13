@@ -19,6 +19,10 @@ Before counting, open the specs (MMCD Supplementary/Special Provisions, or the c
 
 **The specs override every default below.** If a clause says fittings are included in pipe, then they are included. Cite the clause (document, section, page) next to each item.
 
+## Rule 0a: specific pay line beats lump sum
+Bundle a component into a tie-in or lump-sum item only when that item's measurement clause explicitly includes it. If the schedule has a specific line for it (cap, short pipe, valve, fitting, restraint), it goes on that line, including caps or fittings on existing pipe. If unclear: both readings, payment C, owner question (takeoff-rules Rules 11, 21).
+Before measuring any quantity (sawcut, restoration, traffic control), check whether a clause already makes it incidental (Rule 27).
+
 ## Common defaults when the specs are silent or unclear
 | Work | Common way it's paid | What to count from drawings |
 |---|---|---|
