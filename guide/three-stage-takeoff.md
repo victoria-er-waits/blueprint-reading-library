@@ -14,7 +14,7 @@ read_first_for_quantities: true
 | 3 Bid-item reconciliation | What quantity goes on each pay item? | Pay-item table, conflicts as owner questions, "get from owner" list |
 
 Supporting pages that feed this method:
-- [takeoff-rules.md](takeoff-rules.md): Rules 1-27 (blanket notes, cross/tee, pipe length, risers, depth bands, services, bends, completeness sweep, tie-in vs through-run fittings, N-per-X, bounds vs partial, named tie-ins, search-before-omission). Rules 1, 5, 6, 7, 9 apply in Stage 1; Rules 2, 8, 11, 12, 14 in Stage 2; Rules 4, 10, 12, 13, 15 in Stage 3. Rule 3's single A/B/C/D label is replaced here by two separate labels.
+- [takeoff-rules.md](takeoff-rules.md): Rules 1-33 (blanket notes, cross/tee, pipe length, risers, depth bands, services, bends, completeness sweep, tie-in vs through-run fittings, N-per-X, bounds vs partial, named tie-ins, search-before-omission). Rules 1, 5, 6, 7, 9 apply in Stage 1; Rules 2, 8, 11, 12, 14 in Stage 2; Rules 4, 10, 12, 13, 15 in Stage 3. Rule 3's single A/B/C/D label is replaced here by two separate labels.
 - [payment-structure.md](payment-structure.md): how BC (MMCD-style) unit-price items are usually paid. These are defaults for Stage 2 only; the tender's own specs and addenda override them.
 - [order-of-operations.md](order-of-operations.md): steps 1-4 prepare the set; step 5 = Stage 1; step 7 = Stage 1 cross-checks + Stage 2; step 9 = Stage 3 output.
 
@@ -50,6 +50,11 @@ Payment doubt never lowers drawing confidence. Seven clearly drawn tees are B fo
 - Area summand ledger, with per-sheet scale calibration.
 - A mandatory second pass over profiles and details by a different method; reconcile the passes.
 - Read sheets in high-resolution overlapping tiles.
+- Rule 28: check the contract and phase limits before summing pipe; every run starts and ends inside the limits at a structure or match line.
+- Rule 29: A needs two independent sources; station maths on the same labels is B at best.
+- Rule 30: measure curbs, letdowns and linear streetscape from vector drawings first. An unfinished length or area list blocks the report.
+- Rule 31: the second pass is a symbol count by sheet tile, not legend counts.
+- Rule 33: commit visible numbers ("TYP. 3") at C; never write "get from owner" for them.
 
 ## Stage 2: Payment allocation
 
@@ -108,7 +113,7 @@ Also keep the Stage 1 component table and Stage 2 allocation table in the report
 Apply the confidence gate (Rule 16). An open conflict caps every dependent item at C, shows both values, and gives the total with the split open. Resolve the primary reading with the tender's precedence clause, else the labelled defaults (Rule 17). Every number carries a method tag and a cite (Rule 26).
 
 ### Document conflicts (ask before close)
-Use the Rule 18 table: location, both readings, affected items, quantity delta, precedence applied, suggested question.
+Use the Rule 18 table: location, both readings, affected items, quantity delta, precedence applied, suggested question. Payment, unit and wording questions go under Questions for the engineer (Rule 32).
 Each conflict is written as a draft question to the owner:
 > Sheet X shows N; Schedule/spec section Y says M. Please clarify.
 

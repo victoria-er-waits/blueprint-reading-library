@@ -168,5 +168,32 @@ Each quantity carries a method tag: `measured`, `station-derived`, `label sum`, 
 - Show the arithmetic for every derived number.
 - Read each sheet in high-resolution overlapping tiles (e.g. 300 dpi, 2x3 grid, 10% overlap). Note the tile where each callout was found.
 
+## Rule 28: Contract and phase limits before summing pipe (Stage 1)
+- Before adding up any pipe lengths, find the contract and phase limits (match lines, "limit of contract", "by others", phase boundaries) and cite them.
+- Each counted run must start and end **inside the limits**, at a structure (MH, CB, valve, tee, tie-in) or a match line. Pieces outside the limits are listed but not summed.
+- A "partial" larger than plausible (e.g. longer than the in-limit plan length scaled along the alignment) is a red flag: re-check scope and duplicates before reporting it.
+- Worked example (generic MMCD): profile labels add up to 57 m of sanitary, but the plan shows 25 m of it east of the Phase 2C match line. Report 32 m (in limits) and list the 25 m as outside scope.
+
+## Rule 29: A needs two independent sources
+- Drawing confidence A requires two **independent** sources that agree, e.g. profile segment labels plus plan scaling, or a schedule plus a symbol count.
+- Station arithmetic on the same labels (start/end stations of the labelled segments) is **not** independent. It is a consistency check only: B at best.
+
+## Rule 30: Unfinished length or area lists block the report
+- The report is not finished while any Rule 24 area ledger or any drawn length list (curbs, swales, letdowns, root barrier, tactile strips, railings) is undone.
+- Measure linear streetscape (curb and gutter, letdowns, swales, linear features) from vector drawings **first**: it is cheap and drawn.
+- If a list truly cannot be completed, each affected item must say exactly which sheets were not measured and why. "Get from owner" is not allowed for a drawn length.
+
+## Rule 31: Second pass = symbol count by sheet
+- The Rule 25 second pass counts the actual symbols on each sheet tile (CBs, MHs, valves, hydrants, bollards, grates, boulders), with a tally per sheet.
+- Legend counts, "typ. of N" notes and schedules are **sources to check against**, never the second pass itself. Any difference becomes a conflict (Rule 18).
+
+## Rule 32: Payment and unit questions go under engineer questions
+- The conflicts table (Rule 18) is for document conflicts that change a physical quantity or its allocation.
+- Unit mismatches (LS vs sq.m), clause wording, possible double pay and typos go under **Questions for the engineer**, with the item number.
+
+## Rule 33: Commit visible numbers at C
+- If a number is visible on the drawings ("TYP. 3", "x4", "6 REQ'D", a legend count), enter it as the quantity with drawing confidence C (method tag `document value`) and cite it.
+- Never write "get from owner" when the drawings show a number. Add a question if it is doubtful.
+
 ---
 Reference material only, not engineering approval. Always follow the issued contract documents.
