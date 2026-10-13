@@ -4,7 +4,7 @@ part_of: guide/order-of-operations.md
 used_in: [guide/steps/step-4-notes-legend.md, guide/steps/step-5-one-sheet-at-a-time.md, guide/steps/step-7-cross-checks.md, guide/steps/step-9-final-readout.md]
 ---
 
-> **Feeds into [three-stage-takeoff.md](three-stage-takeoff.md)**, the takeoff method. Rules 1, 5, 6, 7, 9 apply in Stage 1; Rules 2, 8 in Stage 2; Rules 4, 10 in Stage 3. Rule 3's single label is replaced there by separate drawing and payment confidence.
+> **Feeds into [three-stage-takeoff.md](three-stage-takeoff.md)**, the takeoff method. Rules 1, 5, 6, 7, 9 apply in Stage 1; Rules 2, 8, 11, 12, 14 in Stage 2; Rules 4, 10, 12, 13, 15 in Stage 3. Rule 3's single label is replaced there by separate drawing and payment confidence.
 
 # Takeoff rules
 
@@ -88,6 +88,33 @@ The four groups must reconcile: number of services = tie-ins at main + tie-ins a
 3. Every row must point to a takeoff line or a "get from owner" line. A paying section with neither is a miss: add it now. Typical misses: **concrete curb, sidewalk and driveway at every site that has trenching** (not just the site where the drawings mention concrete), traffic detection loops, MH frame-and-cover replacement, riser v.m, tie-ins at MHs, vertical bends.
 4. If an item applies to more than one site, it gets a line (or owner entry) **at each site**.
 5. Put this table in the report under "Completeness sweep".
+
+## Rule 11: Tie-in assembly vs through-run fittings (Stage 2)
+- A tee or valve on the **new main's through-run** is paid on its own pay line (fittings / valves, each), **even if it sits near a tie-in**.
+- Only the fittings that are **part of the tie-in assembly connecting to the existing main** (the cut-in tee/cross on the existing pipe, its isolation valve(s), couplers, reducers, the closure piece) go inside a lump-sum or each-priced tie-in item, and only when the payment clause says the tie-in includes them.
+- If the drawings or clauses do not make the split clear, **list both readings** (A: in tie-in, B: separate) with the component IDs, pick neither as fact, give payment confidence C, and add an owner question.
+- Worked example (generic MMCD): a new 200 mm main ties into an existing 150 mm main with a 200x150 cut-in tee and a 150 mm gate valve; 15 m downstream on the new main there is a 200x150 tee and 150 mm valve feeding a hydrant lead. The spec says "connection to existing main, lump sum, includes all fittings, valves and couplings required to make the connection". The cut-in tee + 150 mm valve go to the tie-in item. The downstream tee + valve are on the new main's through-run: they go to "200x150 tee, each" and "150 mm gate valve, each".
+
+## Rule 12: "N per X" spec wording never goes in the quantity column (Stage 2/3)
+- A spec line like "provide 2 restraints per bend" or "one marker post per valve" is a **physical requirement**, not a pay count.
+- In the quantity column, do **not** write N x X. Write the **physical count of the X items** (e.g. bends counted, with IDs) in Notes, set quantity = `unknown`, payment confidence C, and add an owner question: "Spec section Y requires N per X; there are K X items drawn. Is item Z paid per X, per N, or included?"
+- Worked example (generic MMCD): spec says "thrust restraint, 2 per bend, paid each". 8 bends are drawn. Report: Restraints - quantity unknown (C); Notes: 8 bends drawn (IDs B1-B8); question to owner about the counting basis. Do not report 16.
+
+## Rule 13: Bounds vs partial quantities (Stage 3)
+- Call a derived quantity (paving, sawcut, restoration, excavation) an **upper bound** or **lower bound** only if **every contributing area is included**: main trench, service trenches, ramps, bump-outs, driveway let-downs, tie-in and valve pits, hydrant leads.
+- If any contributing area is left out or not measurable, label it **`partial`** and list what was left out.
+- Worked example (generic MMCD): asphalt restoration measured along the main trench only (trench length x spec width) = "partial: excludes 12 service trenches and 2 tie-in pits", not "lower bound".
+
+## Rule 14: Tie-ins named by location get payment label B (Stage 2)
+- When the pay-item list names tie-ins individually by location (e.g. "Tie-in at Main St / 1st Ave, L.S.") and each named location matches a drawn tie-in, the allocation is clear by location: **payment confidence B** (A if a clause also explicitly defines what the tie-in includes).
+- A named tie-in with no matching drawn location, or a drawn tie-in with no named item, goes to Document conflicts.
+- Worked example (generic MMCD): pay items 3.1 "Connect to existing at Sta 0+000" and 3.2 "Connect to existing at Sta 0+412"; both stations show tie-in details on the plan. Both get quantity 1 L.S., payment B.
+
+## Rule 15: Search before claiming something is missing
+- Before writing "the documents do not say X" / "X is omitted" / "no detail for X", **search the full text of every document**: `pdftotext -layout` AND `pdftotext -raw` (layout breaks words across columns; raw catches them), searching key words, synonyms and section numbers (e.g. `grep -i -n "restrain\|thrust\|anchor"`).
+- Scanned pages with no text layer must be OCRed or read visually; say which.
+- **Cite the search** in the report: files, commands/terms, hit count. Example: "Searched all 4 PDFs (-layout and -raw) for 'sawcut|saw cut|saw-cut': 0 hits; drawings are scanned, sheets read visually."
+- Worked example (generic MMCD): a report claims "no restraint spec". A raw-text search finds "Restrained joints ... Section 33 11 01 cl. 3.9" split across two columns in -layout output. The claim is withdrawn.
 
 ---
 Reference material only, not engineering approval. Always follow the issued contract documents.

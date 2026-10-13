@@ -14,7 +14,7 @@ read_first_for_quantities: true
 | 3 Bid-item reconciliation | What quantity goes on each pay item? | Pay-item table, conflicts as owner questions, "get from owner" list |
 
 Supporting pages that feed this method:
-- [takeoff-rules.md](takeoff-rules.md): Rules 1-10 (blanket notes, cross/tee, pipe length, risers, depth bands, services, bends, completeness sweep). Rules 1, 5, 6, 7, 9 apply in Stage 1; Rules 2, 8 in Stage 2; Rules 4, 10 in Stage 3. Rule 3's single A/B/C/D label is replaced here by two separate labels.
+- [takeoff-rules.md](takeoff-rules.md): Rules 1-15 (blanket notes, cross/tee, pipe length, risers, depth bands, services, bends, completeness sweep, tie-in vs through-run fittings, N-per-X, bounds vs partial, named tie-ins, search-before-omission). Rules 1, 5, 6, 7, 9 apply in Stage 1; Rules 2, 8, 11, 12, 14 in Stage 2; Rules 4, 10, 12, 13, 15 in Stage 3. Rule 3's single A/B/C/D label is replaced here by two separate labels.
 - [payment-structure.md](payment-structure.md): how BC (MMCD-style) unit-price items are usually paid. These are defaults for Stage 2 only; the tender's own specs and addenda override them.
 - [order-of-operations.md](order-of-operations.md): steps 1-4 prepare the set; step 5 = Stage 1; step 7 = Stage 1 cross-checks + Stage 2; step 9 = Stage 3 output.
 
@@ -65,7 +65,15 @@ Rules:
    - C: allocation inferred from defaults (payment-structure.md) or general wording.
    - D: clauses conflict, or no basis found (= Unknown).
 
+### Stage 2 rules added after testing
+- **Tie-in vs through-run (Rule 11):** fittings on the new main's through-run are paid on their own lines even near a tie-in; only the tie-in assembly connecting to the existing main goes inside a tie-in item. Unclear split: list both readings + owner question.
+- **N per X (Rule 12):** never put a spec-derived N x X in the quantity column. Give the physical X count, quantity = unknown, payment C, owner question.
+- **Named tie-ins (Rule 14):** tie-ins named by location on the pay-item list that match drawn locations get payment B.
+
 ## Stage 3: Bid-item reconciliation
+
+Before Stage 3 output: **bounds (Rule 13)** - "upper/lower bound" only if every contributing area is included, otherwise `partial` with what's missing; **search before claiming omission (Rule 15)** - pdftotext -layout and -raw over every document, cite the search.
+
 
 1. **Checklist.** If the pay-item list is provided (item no., description, unit; quantities blank), it is the checklist. Every item must end with exactly one of:
    - a quantity (from Stage 2 allocations), or
