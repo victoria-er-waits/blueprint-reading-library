@@ -7,6 +7,8 @@ part_of: guide/order-of-operations.md
 
 [Previous: step 6](step-6-sanity-check.md) · [Back to the checklist](../order-of-operations.md) · [Next: step 8](step-8-questions-for-engineer.md)
 
+**Takeoffs:** finish Stage 1 cross-checks here, then do Stage 2 of [three-stage-takeoff.md](../three-stage-takeoff.md): allocate each component to exactly one destination with a clause cite and payment confidence.
+
 ## Goal
 Compare the set against itself: metric vs imperial, sheet vs sheet, schedule vs plan, and counts split by type.
 

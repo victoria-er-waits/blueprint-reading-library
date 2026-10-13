@@ -4,6 +4,8 @@ part_of: guide/order-of-operations.md
 used_in: [guide/steps/step-7-cross-checks.md, guide/steps/step-9-final-readout.md]
 ---
 
+> **Feeds into Stage 2 of [three-stage-takeoff.md](three-stage-takeoff.md)**, the takeoff method. These are defaults; the tender's own clauses override them.
+
 # How BC municipal (MMCD-style) unit-price items are usually paid
 
 [Back to the checklist](order-of-operations.md) · [Local standards (MMCD explained)](local-standards.md) · [Takeoff rules (blanket notes, connections, labels, report sections)](takeoff-rules.md)

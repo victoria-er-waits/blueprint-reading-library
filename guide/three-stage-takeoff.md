@@ -1,0 +1,100 @@
+---
+title: Three-stage takeoff method (the takeoff method)
+read_first_for_quantities: true
+---
+
+# Three-stage takeoff method
+
+**Bots: this is THE quantity takeoff method.** An owner's quantity list is not a straight count of the drawings. It is the drawings, filtered through that contract's payment rules, plus the engineer's own estimate. Do not jump from drawings straight to pay items. Work in three separate stages and keep their outputs separate.
+
+| Stage | Question it answers | Output |
+|---|---|---|
+| 1 Drawing inventory | What physically exists on the drawings? | Component table (IDs, size, type, length, location, cite, drawing confidence) |
+| 2 Payment allocation | How does THIS contract pay for each component? | Allocation table (component ID -> one destination, clause cite, payment confidence) |
+| 3 Bid-item reconciliation | What quantity goes on each pay item? | Pay-item table, conflicts as owner questions, "get from owner" list |
+
+Supporting pages that feed this method:
+- [takeoff-rules.md](takeoff-rules.md): Rules 1-10 (blanket notes, cross/tee, pipe length, risers, depth bands, services, bends, completeness sweep). Rules 1, 5, 6, 7, 9 apply in Stage 1; Rules 2, 8 in Stage 2; Rules 4, 10 in Stage 3. Rule 3's single A/B/C/D label is replaced here by two separate labels.
+- [payment-structure.md](payment-structure.md): how BC (MMCD-style) unit-price items are usually paid. These are defaults for Stage 2 only; the tender's own specs and addenda override them.
+- [order-of-operations.md](order-of-operations.md): steps 1-4 prepare the set; step 5 = Stage 1; step 7 = Stage 1 cross-checks + Stage 2; step 9 = Stage 3 output.
+
+All rules from the order of operations still apply: no proof, no answer; copy as printed; conflicts are questions; never invent a value; addenda override what they correct (list each correction applied).
+
+---
+
+## Stage 1: Drawing inventory (physical only)
+
+Record what is physically drawn **before considering payment**. Do not ask "is this paid?" yet. If the drawings show 7 tees, Stage 1 lists 7 tees, each with its own location, even if you suspect some are paid inside another item.
+
+1. Give every physical component an ID (e.g. `P-01` pipe segment, `F-01` fitting, `V-01` valve, `S-01` service, `MH-01` structure, `X-01` existing-works item such as a cap or abandonment).
+2. For each component record: type, size/material as printed, quantity (count or length), location (sheet + station/offset or callout), source view (plan / profile / detail / note), and whether it is installed new or existing/removed.
+3. **Pipe:** measure each segment two ways (printed length and station difference), horizontal, per the measurement clause you will cite in Stage 2 (default centre to centre). Include stubs, spools, connecting pieces at tie-ins, and pieces of other sizes. Sum per size. Never round up to match an estimate (takeoff-rules Rule 5).
+4. **Fittings:** count bends in plan AND in profile and details, by angle and size; tees, crosses, reducers, caps, couplings, valves, hydrants, by size (Rule 9). A fitting that only appears in a detail or profile is still a component.
+5. **Typical / blanket notes:** create one component per instance the note covers, citing the note (Rule 1).
+6. **Structures:** where a vertical-metre item could exist, give a per-structure rim minus invert table (Rule 6). Give depths at key points; build a depth-band table if any spec clause pays by depth (Rule 7).
+7. **Services:** one record per service, with what is drawn at each (saddle/corp at main, curb stop, connection to existing, disconnect/cap) (Rule 8).
+8. **Surface works crossed:** record trench length by surface type (existing asphalt, concrete sidewalk, curb, boulevard) from the plan, with stations. Stage 3 needs this for spec-only items.
+
+**Drawing confidence (A/B/C/D), for the physical count only:**
+- A: printed value, or counted and confirmed two independent ways (e.g. printed length = station difference).
+- B: clearly drawn and counted/measured once, or derived by stated arithmetic.
+- C: inferred (partly hidden, scale-measured, or implied by a note).
+- D: conflict between drawing views/sheets, or unreadable.
+
+Payment doubt never lowers drawing confidence. Seven clearly drawn tees are B for drawings even if their payment is unknown.
+
+## Stage 2: Payment allocation
+
+First build the "how each item is paid" table from every Measurement for Payment / Basis of Payment clause in the specs, supplementary specs and addenda (document + section + page). Then assign **every Stage 1 component exactly one destination**:
+
+| Destination | Meaning |
+|---|---|
+| Standalone pay item | Paid on its own item (name the item or the clause that creates it). |
+| Included in item X | Paid inside another named item (e.g. a lump-sum tie-in, the pipe price, a structure price). Name item X. |
+| Not paid | Incidental / no payment per a cited clause. |
+| Unknown | Clause unclear or missing. Add an engineer question. |
+
+Rules:
+1. **Never both.** A component allocated to a lump-sum or inclusive item (e.g. valves and tees inside a tie-in) is not also counted on the standalone fitting/valve item. Read the inclusive item's clause to see which components it covers, by location.
+2. **Read item-specific clauses before assuming inclusion.** Fittings, service pipe, hydrant valves and restraints are often paid separately (see payment-structure.md); in other contracts they are included. The tender's clause decides.
+3. **"N per X" spec phrases are physical requirements, not pay quantities.** A phrase like "2 restraints per bend" says what to build. Check whether a separate pay item exists for it and how the owner counts it (per fitting, per joint, per location, extra over another item). If that is not clear, mark Unknown and write an engineer question. Do not multiply N by X to get a pay quantity.
+4. Cite the clause (document, section/para, page) for every allocation. Addendum clauses override the specs they change.
+5. **Payment confidence (A/B/C/D)**, separate from drawing confidence:
+   - A: a clause explicitly names this component and its payment.
+   - B: a clause clearly covers it by category or location.
+   - C: allocation inferred from defaults (payment-structure.md) or general wording.
+   - D: clauses conflict, or no basis found (= Unknown).
+
+## Stage 3: Bid-item reconciliation
+
+1. **Checklist.** If the pay-item list is provided (item no., description, unit; quantities blank), it is the checklist. Every item must end with exactly one of:
+   - a quantity (from Stage 2 allocations), or
+   - `get from owner` (not determinable from the documents), or
+   - `lump sum / allowance (value from documents)` (state the published value if the documents give one, e.g. a fixed contingency amount).
+   No item left blank. Any Stage 1 component allocated to an item not on the list goes to Document conflicts.
+   If no pay-item list is provided, build the item list from the payment clauses (takeoff-rules Rule 10) and state that you did.
+2. **Spec-only items** (not drawn): derive from Stage 1 geometry where a method exists, and state the method. Example: sawcut = trench length crossing existing asphalt/concrete x number of cut lines (usually 2 per trench edge), from the Stage 1 surface table. Removal/restoration areas = length crossed x trench or restoration width stated in the specs or details. If no width/method is given in the documents, do not assume one: flag `get from owner` with what is missing.
+3. **Owner's estimate.** If the owner's approximate quantities are known (e.g. in the invitation to tender), report the variance per item. **Never adjust your quantity to match.** A difference between measured and estimated is a finding for the bidder, not an error to hide.
+4. Run the completeness sweep (takeoff-rules Rule 10): every payment clause maps to a pay-item line or a `get from owner` entry.
+
+## Required output format
+
+### Pay-item table
+| Item no. | Description | Unit | Quantity | Drawing conf. | Payment conf. | Stage 1 component IDs | Cites (sheet/station + clause) | Notes |
+|---|---|---|---|---|---|---|---|---|
+
+Also keep the Stage 1 component table and Stage 2 allocation table in the report (or an appendix), so every pay quantity can be traced back to physical components.
+
+### Document conflicts (ask before close)
+Each conflict is written as a draft question to the owner:
+> Sheet X shows N; Schedule/spec section Y says M. Please clarify.
+
+Include drawing vs drawing, drawing vs spec, spec vs addendum, and measured vs owner's estimate variances.
+
+### Not on drawings: get from owner
+Items that cannot be derived from the documents, with what information is missing.
+
+### Questions for the engineer
+Every Unknown allocation, every "N per X" requirement with no clear pay basis, and every NEEDS CHECK.
+
+Footer, always: "This is a document read for estimating support. It is not engineering review, approval or code certification. Verify against the issued drawings and addenda."

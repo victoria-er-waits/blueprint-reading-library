@@ -5048,6 +5048,8 @@
   }
  ],
  "local_standards": "https://victoria-er-waits.github.io/blueprint-reading-library/guide/local-standards.md",
+ "three_stage_takeoff": "https://victoria-er-waits.github.io/blueprint-reading-library/guide/three-stage-takeoff.md",
+ "takeoff_method": "three_stage_takeoff",
  "payment_structure": "https://victoria-er-waits.github.io/blueprint-reading-library/guide/payment-structure.md",
  "takeoff_rules": "https://victoria-er-waits.github.io/blueprint-reading-library/guide/takeoff-rules.md",
  "how_to_use": {

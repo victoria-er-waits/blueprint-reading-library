@@ -7,6 +7,8 @@ read_first: true
 
 **Bots: read this first.** Do the steps in order, one at a time. Don't start a step until the previous step's pass check is met. If you get stuck on a step, open that step's help page, follow its procedure and examples, then try again.
 
+**Quantity takeoffs:** use [three-stage-takeoff.md](three-stage-takeoff.md) as the takeoff method. Step 5 = Stage 1 (drawing inventory), step 7 = Stage 1 cross-checks + Stage 2 (payment allocation), step 9 = Stage 3 (bid-item reconciliation and output).
+
 ## Rules for every step
 1. **No proof, no answer.** Every value needs a sheet and a location. If you can't find it, write `NEEDS CHECK`. Never fill in a "typical" or "at least" value.
 2. **Copy exactly as printed**, typos included. Flag; don't fix silently.

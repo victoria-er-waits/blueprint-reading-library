@@ -7,6 +7,8 @@ part_of: guide/order-of-operations.md
 
 [Previous: step 8](step-8-questions-for-engineer.md) · [Back to the checklist](../order-of-operations.md)
 
+**Takeoffs:** write quantities per Stage 3 of [three-stage-takeoff.md](../three-stage-takeoff.md): pay-item table with both confidences and component IDs, conflicts as owner questions, 'Not on drawings: get from owner'.
+
 ## Goal
 Produce a report a person can check quickly: what the set says, how sure we are, what's missing, and what to ask. Never claim engineering approval.
 

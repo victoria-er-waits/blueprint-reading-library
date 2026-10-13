@@ -4,6 +4,8 @@ part_of: guide/order-of-operations.md
 used_in: [guide/steps/step-4-notes-legend.md, guide/steps/step-5-one-sheet-at-a-time.md, guide/steps/step-7-cross-checks.md, guide/steps/step-9-final-readout.md]
 ---
 
+> **Feeds into [three-stage-takeoff.md](three-stage-takeoff.md)**, the takeoff method. Rules 1, 5, 6, 7, 9 apply in Stage 1; Rules 2, 8 in Stage 2; Rules 4, 10 in Stage 3. Rule 3's single label is replaced there by separate drawing and payment confidence.
+
 # Takeoff rules
 
 [Back to the checklist](order-of-operations.md) · [How unit-price items are paid](payment-structure.md)

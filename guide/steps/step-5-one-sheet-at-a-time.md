@@ -7,6 +7,8 @@ part_of: guide/order-of-operations.md
 
 [Previous: step 4](step-4-notes-legend.md) · [Back to the checklist](../order-of-operations.md) · [Next: step 6](step-6-sanity-check.md)
 
+**Takeoffs:** this step is Stage 1 of [three-stage-takeoff.md](../three-stage-takeoff.md). Record physical components with IDs and cites before considering payment; give drawing confidence only.
+
 ## Goal
 Extract values from one sheet at a time. Every value carries its evidence, or it is marked NEEDS CHECK. Never fill a gap with a typical value.
 
