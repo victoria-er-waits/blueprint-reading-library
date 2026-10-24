@@ -114,3 +114,7 @@ Scope rules (Kyle, 2026-10-24):
 - SCOPE-MAIN-TIE-IN-NOT-HYDRANT: watermain tie-ins not linked to a hydrant are outside hydrant scope. Tie-in detection is not widened to general watermain work; run18 Durham St tie-ins deprioritized.
 
 Known open: run18 p10 HYD label; run17 p7 survey hydrant; root cause of run18 4123 s OCR page (capped, not reproduced); symbol-only and raster hydrants.
+
+### hydrants v0.9 package record (2026-10-24)
+Package: combined-blueprint-reader-dev-v9-2026-10-24.zip sha256 38677002e383cee8d9a4f8e8bf1e91bdb2d18cb4df52d72e05cbf29babccce71 (rules pinned at f313c88, hydrants.json sha256 e77ede54...a786).
+Non-blind re-run deltas vs v8: run17 5/5 in scope (was 2/5), no remove duplicate; run18 both remove+new pairs found (was 0/4; HR1 has no station, HR2 at 1+937 vs key 1+950), 10/11 out-of-scope HYD. existing (was 0/11); run19 4 duplicates suppressed. Runs 07-13, 15, 16 unchanged. NON-BLIND only, not independent validation.
