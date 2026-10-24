@@ -79,3 +79,18 @@ Package: combined-blueprint-reader-dev-v7-2026-10-24.zip sha256 408f8aa3568d728c
 | 2026-10-24 | BR11-02 | hydrant | rotated multi-line call-outs; insets take no main-plan station | Run 11 |
 | 2026-10-24 | BR11-03 | hydrant | hydrant-lead tie-in = existing in scope; tie_in_items per item | Run 11 |
 | 2026-10-24 | BR12-01 | hydrant | legend blocks by layout (rotated, no heading) | Run 12 |
+
+## Component rules: hydrants v0.8 (2026-10-24)
+Status: regression tests on NON-BLIND extracts + NON-BLIND re-runs of Runs 03-16; not blind-validated yet (blind runs 17-19 pending).
+Package: combined-blueprint-reader-dev-v8-2026-10-24.zip sha256 181ae2e39b80151ee58290ecdfa210891ccd7887588d129eef2d0d2205d610ac (rules pinned at 2eb1e16, hydrants.json sha256 f8eb4b7e...a8).
+
+| Date | Id | Component | Change | Origin |
+|---|---|---|---|---|
+| 2026-10-24 | BR13-01 | hydrant | cross-sheet dedupe of similar call-outs (>=0.85) within 25 m | Run 13 |
+| 2026-10-24 | BR13-02 | hydrant | stations interpolated between tick labels (no nearest-tick snap) | Run 13 |
+| 2026-10-24 | BR13-03 | hydrant | action-verb plan call-outs are not legend blocks | Run 13 |
+| 2026-10-24 | BR13-04 | tie-in | general main tie-ins reported in tie_in_items, cross-sheet deduped; water-pipe noun required, sewer/storm/manhole/curb/asphalt/gas excluded (2eb1e16) | Run 13; non-blind 03/05 FPs |
+| 2026-10-24 | BR15-01 | hydrant | numbered spec-list rows + scope statement count hydrants | Run 15 |
+| 2026-10-24 | BR15-L1 / BR16-L1 | limits | raster-map dots and symbol-only hydrants on rotated sheets remain unsupported | Runs 15, 16 |
+
+Non-blind re-run deltas vs v7: run13 H2 found (remove), H1 single-counted at 0+185, 3 unique tie-ins; run15 10/10 hydrants from the spec list; run03 +1 ungraded main tie-in (existing tee 2+259); run11 hydrant-lead tie-in now cross-sheet deduped. Runs 04-12 hydrant instances unchanged; run16 still misses the symbol-only hydrant.
