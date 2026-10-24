@@ -341,12 +341,11 @@
    "original_mistake": "duplicate",
    "mistake_description": "Counted the same physical hydrant more than once",
    "root_cause": "No dedup between plan and plan/profile sheets",
-   "correct_interpretation": "BR13-01: classify as duplicate. BR13-04: classify as tie_in_record.",
+   "correct_interpretation": "BR13-01: classify as duplicate.",
    "applicable_rule_ids": [
-    "BR13-01",
-    "BR13-04"
+    "BR13-01"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": null,
    "regression_test_ids": [],
    "validation_status": "fixed_nonblind_validated",
@@ -358,13 +357,11 @@
    "original_mistake": "station_error",
    "mistake_description": "Reported a station that does not match the drawing position of the hydrant",
    "root_cause": "Snapped to the [station] tick label instead of measuring (ticks every 100 m, 5.67 pt/m)",
-   "correct_interpretation": "BR13-01: classify as duplicate. BR13-02: classify as station. BR13-04: classify as tie_in_record.",
+   "correct_interpretation": "BR13-02: classify as station.",
    "applicable_rule_ids": [
-    "BR13-01",
-    "BR13-02",
-    "BR13-04"
+    "BR13-02"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": null,
    "regression_test_ids": [],
    "validation_status": "fixed_nonblind_validated",
@@ -380,7 +377,7 @@
    "applicable_rule_ids": [
     "BR13-03"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": null,
    "regression_test_ids": [],
    "validation_status": "fixed_nonblind_validated",
@@ -392,16 +389,12 @@
    "original_mistake": "tie_in_miss",
    "mistake_description": "Missed a watermain tie-in",
    "root_cause": "Tie-in extractor did not fire on the text layer",
-   "correct_interpretation": "BR13-01: classify as duplicate. BR13-02: classify as station. BR13-04: classify as tie_in_record.",
-   "applicable_rule_ids": [
-    "BR13-01",
-    "BR13-02",
-    "BR13-04"
-   ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "correct_interpretation": "Out of hydrant scope: watermain tie-ins not linked to a hydrant are not hydrant items.",
+   "applicable_rule_ids": [],
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": null,
    "regression_test_ids": [],
-   "validation_status": "fixed_nonblind_validated",
+   "validation_status": "out_of_scope",
    "known_limitations": []
   },
   {
@@ -410,16 +403,12 @@
    "original_mistake": "tie_in_miss",
    "mistake_description": "Missed a watermain tie-in",
    "root_cause": "Same as #4",
-   "correct_interpretation": "BR13-01: classify as duplicate. BR13-02: classify as station. BR13-04: classify as tie_in_record.",
-   "applicable_rule_ids": [
-    "BR13-01",
-    "BR13-02",
-    "BR13-04"
-   ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "correct_interpretation": "Out of hydrant scope: watermain tie-ins not linked to a hydrant are not hydrant items.",
+   "applicable_rule_ids": [],
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": null,
    "regression_test_ids": [],
-   "validation_status": "fixed_nonblind_validated",
+   "validation_status": "out_of_scope",
    "known_limitations": []
   },
   {
@@ -428,14 +417,15 @@
    "original_mistake": "miss",
    "mistake_description": "Missed a hydrant item that the drawing shows",
    "root_cause": "Raster map; numbered dots not counted. Text list on p2/p3 (\"for hydrant # 1\", \"hydrants # 2 ... 5\", \"# 6\", \"# 7\") filed as general notes",
-   "correct_interpretation": "Known limitation: report as unresolved for human review (BR15-L1).",
+   "correct_interpretation": "BR15-01: classify as count.",
    "applicable_rule_ids": [
+    "BR15-01",
     "BR15-L1"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": null,
    "regression_test_ids": [],
-   "validation_status": "confirmed_unfixed",
+   "validation_status": "fixed_nonblind_validated",
    "known_limitations": []
   },
   {
@@ -448,7 +438,7 @@
    "applicable_rule_ids": [
     "BR15-L1"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": null,
    "regression_test_ids": [],
    "validation_status": "confirmed_unfixed",
@@ -464,7 +454,7 @@
    "applicable_rule_ids": [
     "BR15-L1"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": null,
    "regression_test_ids": [],
    "validation_status": "confirmed_unfixed",
@@ -480,7 +470,7 @@
    "applicable_rule_ids": [
     "BR16-L1"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": null,
    "regression_test_ids": [],
    "validation_status": "confirmed_unfixed",
@@ -496,7 +486,7 @@
    "applicable_rule_ids": [
     "BR17-01"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": "hydrants.py v0.9",
    "regression_test_ids": [
     "test_br17_01_insulation_around_hydrant_is_existing_work",
@@ -513,25 +503,22 @@
    "original_mistake": "miss",
    "mistake_description": "Missed a hydrant item that the drawing shows",
    "root_cause": "Short action callout treated as a note",
-   "correct_interpretation": "BR17-01: classify as status:existing (work_on_existing). BR17-02: classify as instance. BR17-05: classify as station_kind:interpolated_chainage.",
+   "correct_interpretation": "BR17-01: classify as status:existing (work_on_existing). BR17-02: classify as instance.",
    "applicable_rule_ids": [
     "BR17-01",
-    "BR17-02",
-    "BR17-05"
+    "BR17-02"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": "hydrants.py v0.9",
    "regression_test_ids": [
     "test_br17_01_insulation_around_hydrant_is_existing_work",
     "test_br17_02_raise_hydrant_under_notes_heading_is_counted",
     "test_br17_03_second_identical_callout_with_leader_counted",
-    "test_br17_05_station_from_polyline_leader_end",
     "test_syn_action_callout_with_leader_escapes_notes_heading",
     "test_syn_guard_note_without_leader_still_gated"
    ],
    "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
-    "Leaders made of separate unconnected paths are still not chained.",
     "Needs a vector leader within 8-12 pt of the hydrant line.",
     "Scope (in vs out) is reported via work_on_existing only; grader keeps separate scores."
    ]
@@ -542,24 +529,18 @@
    "original_mistake": "miss",
    "mistake_description": "Missed a hydrant item that the drawing shows",
    "root_cause": "Identical text to the [expected item] callout; second copy suppressed",
-   "correct_interpretation": "BR17-02: classify as instance. BR17-04: classify as status:relocate.",
+   "correct_interpretation": "BR17-03: classify as separate instance (not duplicate).",
    "applicable_rule_ids": [
-    "BR17-02",
-    "BR17-04"
+    "BR17-03"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": "hydrants.py v0.9",
    "regression_test_ids": [
-    "test_br17_03_second_identical_callout_with_leader_counted",
-    "test_br17_04_remove_and_relocate_is_relocate_only",
-    "test_syn_action_callout_with_leader_escapes_notes_heading",
-    "test_syn_guard_note_without_leader_still_gated",
-    "test_syn_remove_and_relocate_one_status"
+    "test_br17_03_second_identical_callout_with_leader_counted"
    ],
    "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
-    "Needs a vector leader within 8-12 pt of the hydrant line.",
-    "Only within one call-out; a separate REMOVE call-out still counts."
+    "Needs a resolvable leader or distinct station; identical call-outs with no leader and no station are still treated as repeats."
    ]
   },
   {
@@ -568,23 +549,18 @@
    "original_mistake": "duplicate",
    "mistake_description": "Counted the same physical hydrant more than once",
    "root_cause": "One callout produced two statuses (seen before in run 06)",
-   "correct_interpretation": "BR17-02: classify as instance. BR17-04: classify as status:relocate.",
+   "correct_interpretation": "BR17-04: classify as status:relocate.",
    "applicable_rule_ids": [
-    "BR17-02",
     "BR17-04"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": "hydrants.py v0.9",
    "regression_test_ids": [
-    "test_br17_03_second_identical_callout_with_leader_counted",
     "test_br17_04_remove_and_relocate_is_relocate_only",
-    "test_syn_action_callout_with_leader_escapes_notes_heading",
-    "test_syn_guard_note_without_leader_still_gated",
     "test_syn_remove_and_relocate_one_status"
    ],
    "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
-    "Needs a vector leader within 8-12 pt of the hydrant line.",
     "Only within one call-out; a separate REMOVE call-out still counts."
    ]
   },
@@ -594,27 +570,18 @@
    "original_mistake": "station_error",
    "mistake_description": "Reported a station that does not match the drawing position of the hydrant",
    "root_cause": "Station taken from text box, not leader end",
-   "correct_interpretation": "BR17-01: classify as status:existing (work_on_existing). BR17-02: classify as instance. BR17-05: classify as station_kind:interpolated_chainage.",
+   "correct_interpretation": "BR17-05: classify as station_kind:interpolated_chainage.",
    "applicable_rule_ids": [
-    "BR17-01",
-    "BR17-02",
     "BR17-05"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": "hydrants.py v0.9",
    "regression_test_ids": [
-    "test_br17_01_insulation_around_hydrant_is_existing_work",
-    "test_br17_02_raise_hydrant_under_notes_heading_is_counted",
-    "test_br17_03_second_identical_callout_with_leader_counted",
-    "test_br17_05_station_from_polyline_leader_end",
-    "test_syn_action_callout_with_leader_escapes_notes_heading",
-    "test_syn_guard_note_without_leader_still_gated"
+    "test_br17_05_station_from_polyline_leader_end"
    ],
    "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
-    "Leaders made of separate unconnected paths are still not chained.",
-    "Needs a vector leader within 8-12 pt of the hydrant line.",
-    "Scope (in vs out) is reported via work_on_existing only; grader keeps separate scores."
+    "Leaders made of separate unconnected paths are still not chained."
    ]
   },
   {
@@ -623,22 +590,18 @@
    "original_mistake": "miss",
    "mistake_description": "Missed a hydrant item that the drawing shows",
    "root_cause": "Vector-outline text; OCR did not pick it up",
-   "correct_interpretation": "BR18-01: classify as ocr. BR18-03: classify as status:existing (via survey_abbrev_label, low confidence).",
+   "correct_interpretation": "BR18-01: classify as ocr.",
    "applicable_rule_ids": [
-    "BR18-01",
-    "BR18-03"
+    "BR18-01"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": "hydrants.py v0.9",
    "regression_test_ids": [
-    "test_br18_vector_labels_via_ocr",
-    "test_syn_guard_hydro_not_abbrev",
-    "test_syn_lone_hyd_label_is_existing"
+    "test_br18_vector_labels_via_ocr"
    ],
    "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
-    "Root cause of the 4123 s page not reproduced (same page took ~20 s in dev); cap is a guard, not a diagnosis.",
-    "Vector-outlined labels need OCR; OCR noise like 'HYD.9 a LPD' stays unresolved. p10 two-line OCR box not recovered."
+    "Root cause of the 4123 s page not reproduced (same page took ~20 s in dev); cap is a guard, not a diagnosis."
    ]
   },
   {
@@ -647,22 +610,18 @@
    "original_mistake": "miss",
    "mistake_description": "Missed a hydrant item that the drawing shows",
    "root_cause": "Same as #6",
-   "correct_interpretation": "BR18-01: classify as ocr. BR18-03: classify as status:existing (via survey_abbrev_label, low confidence).",
+   "correct_interpretation": "BR18-01: classify as ocr.",
    "applicable_rule_ids": [
-    "BR18-01",
-    "BR18-03"
+    "BR18-01"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": "hydrants.py v0.9",
    "regression_test_ids": [
-    "test_br18_vector_labels_via_ocr",
-    "test_syn_guard_hydro_not_abbrev",
-    "test_syn_lone_hyd_label_is_existing"
+    "test_br18_vector_labels_via_ocr"
    ],
    "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
-    "Root cause of the 4123 s page not reproduced (same page took ~20 s in dev); cap is a guard, not a diagnosis.",
-    "Vector-outlined labels need OCR; OCR noise like 'HYD.9 a LPD' stays unresolved. p10 two-line OCR box not recovered."
+    "Root cause of the 4123 s page not reproduced (same page took ~20 s in dev); cap is a guard, not a diagnosis."
    ]
   },
   {
@@ -676,7 +635,7 @@
     "BR18-01",
     "BR18-03"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": "hydrants.py v0.9",
    "regression_test_ids": [
     "test_br18_vector_labels_via_ocr",
@@ -696,22 +655,12 @@
    "mistake_description": "Missed a watermain tie-in",
    "root_cause": "Vector text",
    "correct_interpretation": "Out of hydrant scope: watermain tie-ins not linked to a hydrant are not hydrant items.",
-   "applicable_rule_ids": [
-    "BR18-01",
-    "BR18-03"
-   ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
-   "implemented_fix": "hydrants.py v0.9",
-   "regression_test_ids": [
-    "test_br18_vector_labels_via_ocr",
-    "test_syn_guard_hydro_not_abbrev",
-    "test_syn_lone_hyd_label_is_existing"
-   ],
+   "applicable_rule_ids": [],
+   "rule_link_method": "checker_reviewed_exact",
+   "implemented_fix": null,
+   "regression_test_ids": [],
    "validation_status": "out_of_scope",
-   "known_limitations": [
-    "Root cause of the 4123 s page not reproduced (same page took ~20 s in dev); cap is a guard, not a diagnosis.",
-    "Vector-outlined labels need OCR; OCR noise like 'HYD.9 a LPD' stays unresolved. p10 two-line OCR box not recovered."
-   ]
+   "known_limitations": []
   },
   {
    "error_id": "ERR-R19-10",
@@ -723,7 +672,7 @@
    "applicable_rule_ids": [
     "BR19-01"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": "hydrants.py v0.9",
    "regression_test_ids": [
     "test_br19_01_02_stationless_repeats_are_duplicates",
@@ -744,7 +693,7 @@
    "applicable_rule_ids": [
     "BR19-01"
    ],
-   "rule_link_method": "run_and_page_match_needs_checker_review",
+   "rule_link_method": "checker_reviewed_exact",
    "implemented_fix": "hydrants.py v0.9",
    "regression_test_ids": [
     "test_br19_01_02_stationless_repeats_are_duplicates",

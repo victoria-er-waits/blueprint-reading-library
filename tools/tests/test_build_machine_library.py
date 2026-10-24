@@ -141,3 +141,50 @@ def test_deterministic(tmp_path):
     assert B.main(["--out", str(out)]) == 0
     for f in ("rules/hydrants.rules.json", "error-memory/hydrant-errors.json", "manifest.json"):
         assert (out / f).read_bytes() == open(os.path.join(OUT, f), "rb").read()
+
+
+def test_checker_review_exact_links():
+    e = {x["error_id"]: x for x in load("error-memory/hydrant-errors.json")["records"]}
+    for eid, want in B.CHECKER_LINKS.items():
+        assert e[eid]["applicable_rule_ids"] == sorted(want), eid
+        assert e[eid]["rule_link_method"] == "checker_reviewed_exact"
+    assert all(x["rule_link_method"] != "run_and_page_match_needs_checker_review" for x in e.values())
+
+
+def test_main_tie_ins_out_of_scope_without_rules():
+    e = {x["error_id"]: x for x in load("error-memory/hydrant-errors.json")["records"]}
+    for eid in ("ERR-R13-04", "ERR-R13-05", "ERR-R18-09"):
+        assert e[eid]["validation_status"] == "out_of_scope" and e[eid]["applicable_rule_ids"] == []
+
+
+def test_br17_03_rule_exists_and_linked():
+    rules = {r["rule_id"]: r for r in load("rules/hydrants.rules.json")["records"]}
+    assert "test_br17_03_second_identical_callout_with_leader_counted" in rules["BR17-03"]["regression_tests"]
+    assert "ERR-R17-03" in rules["BR17-03"]["related_error_ids"]
+
+
+# Kyle v10 acceptance (e): all 20 Checker-reviewed error->rule links asserted literally (independent of the builder's
+# own table), so a wrong lesson can't reach the public rule pack / Gemini.
+CHECKER_REVIEW_EXPECTED = {
+    "ERR-R13-01": ["BR13-01"], "ERR-R13-02": ["BR13-02"], "ERR-R13-03": ["BR13-03"], "ERR-R13-04": [], "ERR-R13-05": [],
+    "ERR-R15-06": ["BR15-01", "BR15-L1"], "ERR-R15-07": ["BR15-L1"], "ERR-R15-08": ["BR15-L1"], "ERR-R16-09": ["BR16-L1"],
+    "ERR-R17-01": ["BR17-01"], "ERR-R17-02": ["BR17-01", "BR17-02"], "ERR-R17-03": ["BR17-03"], "ERR-R17-04": ["BR17-04"],
+    "ERR-R17-05": ["BR17-05"], "ERR-R18-06": ["BR18-01"], "ERR-R18-07": ["BR18-01"], "ERR-R18-08": ["BR18-01", "BR18-03"],
+    "ERR-R18-09": [], "ERR-R19-10": ["BR19-01"], "ERR-R19-11": ["BR19-01"],
+}
+
+
+def test_all_20_checker_links_exact_literal():
+    assert len(CHECKER_REVIEW_EXPECTED) == 20 and B.CHECKER_LINKS == CHECKER_REVIEW_EXPECTED
+    e = {x["error_id"]: x for x in load("error-memory/hydrant-errors.json")["records"]}
+    rules = {r["rule_id"]: r for r in load("rules/hydrants.rules.json")["records"]}
+    for eid, want in CHECKER_REVIEW_EXPECTED.items():
+        assert e[eid]["applicable_rule_ids"] == want, eid
+        assert e[eid]["rule_link_method"] == "checker_reviewed_exact", eid
+        for rid in want:
+            assert eid in rules[rid]["related_error_ids"], (eid, rid)
+    # reverse direction: no rule claims a reviewed error the Checker did not link to it
+    for rid, r in rules.items():
+        for eid in r.get("related_error_ids", []):
+            if eid in CHECKER_REVIEW_EXPECTED:
+                assert rid in CHECKER_REVIEW_EXPECTED[eid], (rid, eid)

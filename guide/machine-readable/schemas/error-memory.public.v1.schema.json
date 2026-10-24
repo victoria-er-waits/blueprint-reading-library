@@ -60,7 +60,7 @@
   "rule_link_method": {
    "enum": [
     "regression_test_name",
-    "run_and_page_match_needs_checker_review",
+    "checker_reviewed_exact",
     "none"
    ]
   },

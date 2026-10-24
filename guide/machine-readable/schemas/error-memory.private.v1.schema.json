@@ -66,7 +66,7 @@
   "fix_link_method": {
    "enum": [
     "regression_test_name",
-    "run_and_page_match",
+    "checker_reviewed_exact",
     "none"
    ]
   },

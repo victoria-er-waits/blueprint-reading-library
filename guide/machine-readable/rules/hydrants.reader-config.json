@@ -215,6 +215,13 @@
      "IGNORECASE"
     ],
     "meaning": "v9 (BR19-01/02): standard-drawing reference used to tie a station-less repeat (profile label / servicing plan) to the stationed plan call-out"
+   },
+   "hydrant_tee_assembly": {
+    "regex": "\\bTEE\\b(?:\\s*(?:&|AND)\\s*(?:GATE\\s+)?VALVE)?\\s*W/?\\s*(?:FIRE\\s+)?HYD(?:RANT|\\.)",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v0.10 (BR20-01): 'TEE & GATE VALVE w/FIRE HYDRANT' / 'TEE w/ FIRE HYDRANT' plan call-out = new hydrant assembly"
    }
   },
   "base_rules": [

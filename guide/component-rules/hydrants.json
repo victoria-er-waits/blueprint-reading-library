@@ -950,6 +950,45 @@
    ]
   },
   {
+   "id": "BR17-03",
+   "code_rule_id": "act_leader exemption + _cross_sheet position/station proximity",
+   "component": "hydrant",
+   "category": "dedupe",
+   "rule": "A second call-out with identical wording that has its own leader to a different hydrant position is a separate hydrant. Identical text alone is never grounds for suppression or cross-sheet merging; duplicates need matching position or station.",
+   "classify_as": "separate instance (not duplicate)",
+   "positive_examples": [
+    "two 'REMOVE AND RELOCATE HYDRANT 0.3m FROM PROPERTY LINE. RAISE HYDRANT 0.3m WITH RISER.' call-outs on one sheet, leaders to two hydrants ~100 m apart"
+   ],
+   "negative_examples": [
+    "the same call-out repeated on a plan/profile or overlap sheet at the same station (still a duplicate)"
+   ],
+   "why": {
+    "run": "Blind Run 17",
+    "project": "North Bay Wallace (run17)",
+    "page": "6",
+    "error": "second identical call-out filed as general note / suppressed"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-17-19.md + error-memory-review.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.9",
+    "package": "combined-blueprint-reader-dev-v9-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br17_03_second_identical_callout_with_leader_counted"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated. Rule record written retroactively in v10 (code shipped in v9)."
+   },
+   "limits": [
+    "Needs a resolvable leader or distinct station; identical call-outs with no leader and no station are still treated as repeats."
+   ]
+  },
+  {
    "id": "BR17-05",
    "code_rule_id": "_leader_target polyline (v0.9)",
    "component": "hydrant",
@@ -1108,6 +1147,228 @@
    "limits": [
     "If every sheet is station-less nothing is deduped; a genuinely separate station-less hydrant citing the same standard would be dropped."
    ]
+  },
+  {
+   "id": "BR21-01",
+   "code_rule_id": "PROFILE_FITTING hydrant_tee_label + pending_tee",
+   "component": "hydrant",
+   "category": "positive_pattern",
+   "rule": "A plan call-out 'HYDRANT TEE' is a new hydrant ONLY when its leader ties it to a drawn hydrant symbol; a bare mention with no leader is logged as a mention, not counted. Counted only when the page has no other counted new call-out for it; a doubled text-layer copy within 12 pt is one hydrant. Legend entries, table rows (e.g. storm flow table 'HYDRANT 2-6') and detail/typical sheets are never counted.",
+   "classify_as": "new",
+   "positive_examples": [
+    "'HYDRANT TEE' at a plan station on a street plan/profile sheet"
+   ],
+   "negative_examples": [
+    "legend column 'HYDRANT'",
+    "storm flow table row 'HYDRANT 2-6'",
+    "TYPICAL RURAL HYDRANT INSTALLATION detail sheet",
+    "bare 'HYDRANT TEE' text with no leader to a symbol"
+   ],
+   "why": {
+    "run": "Blind Run 21",
+    "project": "East Hants (run21)",
+    "page": "5-7",
+    "error": "HN1-HN6 missed / abstained"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-20.md + confirmed-errors-21.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.10",
+    "package": "combined-blueprint-reader-dev-v10-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br21_01_hydrant_tee_labels_counted_once_each",
+     "test_br21_01_traps_storm_table_and_detail_sheet_not_counted",
+     "test_br21_01_profile_label_still_corroborates_when_plan_callout_counted",
+     "test_br21_01_lone_hydrant_tee_counts_and_doubled_copy_is_one",
+     "test_br21_01_detail_sheet_hydrant_tee_not_counted",
+     "test_br21_01_bare_hydrant_tee_without_symbol_not_counted",
+     "test_br21_01_real_hydrant_tees_have_leader_to_symbol",
+     "test_br21_storm_table_hydrant_2_6_trap_excluded"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated."
+   },
+   "limits": [
+    "A 'HYDRANT TEE' label on a page that already has another counted new call-out is treated as corroboration only."
+   ]
+  },
+  {
+   "id": "BR21-02",
+   "code_rule_id": "_interp_station tick direction filter",
+   "component": "hydrant",
+   "category": "station",
+   "rule": "Station interpolation uses chainage ticks from one alignment only: a tick pair whose text directions disagree (|dot|<0.9) is skipped unless both are axis-aligned.",
+   "classify_as": "station",
+   "positive_examples": [
+    "0+080 / 0+100 ticks along Street I bracket the HYDRANT TEE"
+   ],
+   "negative_examples": [
+    "ticks of a crossing street at another angle"
+   ],
+   "why": {
+    "run": "Blind Run 21",
+    "page": "6",
+    "error": "HN2 station 100 outside key tolerance"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-20.md + confirmed-errors-21.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.10",
+    "package": "combined-blueprint-reader-dev-v10-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br21_02_stations_use_ticks_of_one_alignment"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated."
+   },
+   "limits": [
+    "Non-blind rerun: run21 HN6 still ~20 m off the key; stations remain approximate."
+   ]
+  },
+  {
+   "id": "BR20-01",
+   "code_rule_id": "hydrant_tee_assembly gating regex + matchline_continuation",
+   "component": "hydrant",
+   "category": "positive_pattern",
+   "rule": "'TEE & GATE VALVE w/FIRE HYDRANT' (or 'TEE w/HYD') is a new hydrant assembly even without the word NEW resolving status; a call-out split over a matchline (adjacent pages, same sheet size, opposite ends of the axis) is one hydrant.",
+   "classify_as": "new",
+   "positive_examples": [
+    "NEW 250mmøx150mmø TEE & GATE VALVE w/FIRE HYDRANT"
+   ],
+   "negative_examples": [
+    "the same assembly repeated on both sides of a matchline (one hydrant)"
+   ],
+   "why": {
+    "run": "Blind Run 20",
+    "project": "Summerside (run20)",
+    "page": "2-4",
+    "error": "HN2 missed; HN1 abstained across p2/p3"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-20.md + confirmed-errors-21.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.10",
+    "package": "combined-blueprint-reader-dev-v10-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br20_01_tee_gate_valve_with_hydrant_counted_across_matchlines",
+     "test_br20_01_tee_w_hydrant_without_new_word"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated."
+   },
+   "limits": [
+    "Matchline pairing needs station-less instances near opposite sheet ends; otherwise they stay separate."
+   ]
+  },
+  {
+   "id": "BR20-02",
+   "code_rule_id": "_cross_sheet compat (station<=25 / centre<=150pt)",
+   "component": "hydrant",
+   "category": "dedupe",
+   "rule": "Cross-sheet dedupe never merges on identical text alone: both instances must share a station (within 25 m) or position (centres within 150 pt), or be a matchline continuation.",
+   "classify_as": "separate instance (not duplicate)",
+   "positive_examples": [
+    "two 'REMOVE EXISTING FIRE HYDRANT AND VALVE.' call-outs at different corners"
+   ],
+   "negative_examples": [
+    "a repeat sheet showing the same call-out at the same spot"
+   ],
+   "why": {
+    "run": "Blind Run 20",
+    "page": "6/7",
+    "error": "HR3 dropped as duplicate of p2 HR1"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-20.md + confirmed-errors-21.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.10",
+    "package": "combined-blueprint-reader-dev-v10-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br20_02_identical_text_different_location_not_merged",
+     "test_br20_02_synthetic_far_apart_kept",
+     "test_br20_02_synthetic_repeat_sheet_same_spot_merged"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated."
+   },
+   "limits": [
+    "Rows without a bbox (spec rows) keep the v0.9 text-based behaviour."
+   ]
+  },
+  {
+   "id": "BR20-03",
+   "code_rule_id": "supplementary_ocr_vector_text",
+   "component": "hydrant",
+   "category": "positive_pattern",
+   "rule": "On a page that already has counted text call-outs and many grey vector glyphs (>=300), a supplementary OCR pass may add remove/relocate call-outs drawn as vector text, if >150 pt from existing instances; low confidence.",
+   "classify_as": "remove (low confidence)",
+   "positive_examples": [
+    "vector-only grey 'REMOVE EXISTING FIRE HYDRANT AND VALVE.'"
+   ],
+   "negative_examples": [
+    "any OCR-only 'new' or 'existing' text (not added)"
+   ],
+   "why": {
+    "run": "Blind Run 20",
+    "page": "7",
+    "error": "HR4 missed (vector-only callout)"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-20.md + confirmed-errors-21.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.10",
+    "package": "combined-blueprint-reader-dev-v10-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br20_03_vector_only_remove_callout_ocr"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated."
+   },
+   "limits": [
+    "Needs OCR enabled (TI_HYD_OCR=1) and OCR budget; grey-glyph count is a weak signal."
+   ]
+  },
+  {
+   "id": "BR20-L1",
+   "code_rule_id": "not implemented (v0.10 known limit)",
+   "category": "known_limit",
+   "rule": "KNOWN LIMIT: hydrant symbols drawn as vector FH glyphs with no call-out text, on sheets with no text-layer legend, are not recognised (no legend anchor to match). Affects out-of-scope existing hydrants.",
+   "classify_as": "unresolved",
+   "why": {
+    "run": "Blind Run 20",
+    "page": "2,4,5",
+    "error": "HE1-HE3 missed (existing, out of scope)"
+   },
+   "component": "hydrant",
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-20.md + confirmed-errors-21.md (Blueprint Checker)"
+   ],
+   "validation": "not implemented; legend_signatures empty for run20"
   }
  ],
  "reader_config": {
@@ -1323,6 +1584,13 @@
      "IGNORECASE"
     ],
     "meaning": "v9 (BR19-01/02): standard-drawing reference used to tie a station-less repeat (profile label / servicing plan) to the stationed plan call-out"
+   },
+   "hydrant_tee_assembly": {
+    "regex": "\\bTEE\\b(?:\\s*(?:&|AND)\\s*(?:GATE\\s+)?VALVE)?\\s*W/?\\s*(?:FIRE\\s+)?HYD(?:RANT|\\.)",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v0.10 (BR20-01): 'TEE & GATE VALVE w/FIRE HYDRANT' / 'TEE w/ FIRE HYDRANT' plan call-out = new hydrant assembly"
    }
   },
   "base_rules": [

@@ -118,3 +118,19 @@ Known open: run18 p10 HYD label; run17 p7 survey hydrant; root cause of run18 41
 ### hydrants v0.9 package record (2026-10-24)
 Package: combined-blueprint-reader-dev-v9-2026-10-24.zip sha256 38677002e383cee8d9a4f8e8bf1e91bdb2d18cb4df52d72e05cbf29babccce71 (rules pinned at f313c88, hydrants.json sha256 e77ede54...a786).
 Non-blind re-run deltas vs v8: run17 5/5 in scope (was 2/5), no remove duplicate; run18 both remove+new pairs found (was 0/4; HR1 has no station, HR2 at 1+937 vs key 1+950), 10/11 out-of-scope HYD. existing (was 0/11); run19 4 duplicates suppressed. Runs 07-13, 15, 16 unchanged. NON-BLIND only, not independent validation.
+
+## Component rules: hydrants v0.10 (2026-10-24)
+Status: fixes for Checker-confirmed errors from blind runs 20-21 plus Checker's error-memory link review. Validated only by regression tests on NON-BLIND extracts and NON-BLIND re-runs of Runs 07-21 (20-21 are no longer blind for this code); not independently validated.
+Package: combined-blueprint-reader-dev-v10-2026-10-24.zip (sha256 recorded in the follow-up entry below once packaged).
+
+| Date | Id | Component | Change | Origin |
+|---|---|---|---|---|
+| 2026-10-24 | BR21-01 | hydrant | plan 'HYDRANT TEE' = new hydrant only when its leader ties it to a drawn symbol; bare mentions, legend, tables (p10 'HYDRANT 2-6') and detail/typical sheets never count; doubled text copies are one | Run 21 p5-7 (Kyle acceptance a/c) |
+| 2026-10-24 | BR21-02 | hydrant | station interpolation uses ticks of one alignment (direction filter) | Run 21 p6 |
+| 2026-10-24 | BR20-01 | hydrant | 'TEE & GATE VALVE w/FIRE HYDRANT' = new; matchline continuation counted once | Run 20 p2-4 |
+| 2026-10-24 | BR20-02 | hydrant | cross-sheet dedupe by physical location (station <=25 m or centre <=150 pt or matchline); identical text alone never merges | Run 20 p6/p7 (Kyle acceptance b) |
+| 2026-10-24 | BR20-03 | hydrant | supplementary OCR for vector-only remove/relocate call-outs (low confidence, OCR on only) | Run 20 p7 |
+| 2026-10-24 | BR20-L1 | hydrant | KNOWN LIMIT: symbol-only FH with no text legend not recognised | Run 20 HE1-3 |
+| 2026-10-24 | BR17-03 | hydrant | rule record added retroactively (code + test shipped in v9) | Checker review |
+
+Error memory: all 20 Checker-reviewed error->rule links are exact (method checker_reviewed_exact; run/page matching removed); ERR-R13-04, ERR-R13-05, ERR-R18-09 out_of_scope (main tie-ins not linked to a hydrant). A literal test asserts every link both ways. Run 20/21 confirmed-errors files use a different table layout and are not yet parsed into error memory (rules cite them directly).

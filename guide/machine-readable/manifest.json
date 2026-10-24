@@ -6,30 +6,30 @@
  "sources": [
   {
    "path": "guide/component-rules/hydrants.json",
-   "sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786"
+   "sha256": "425948495a9566d793cfdef625bddbb1d0d09114105c6f1f151f3f594c9112d8"
   }
  ],
  "error_sources_note": "Checker confirmed-errors tables and run grading hashes are recorded only in the private evidence manifest",
  "outputs": [
   {
    "path": "error-memory/hydrant-errors.json",
-   "sha256": "a1c562ac5e735f3de071ee144ff4c8418aa042998e032e388f6fa4611a2e8287"
+   "sha256": "09c7461cbf75ee29b0523ca1f308977c610daabdff94f2e72925354d07e30852"
   },
   {
    "path": "rules/hydrants.reader-config.json",
-   "sha256": "c0f216082df616a2b90b28a04bd48081789db679397f79dcf680a888019448cd"
+   "sha256": "6a6417355a784e728e0fb484efef1bbdcf6e23a075109df7398d45f3ff628752"
   },
   {
    "path": "rules/hydrants.rules.json",
-   "sha256": "b9a052e4025d5a68dd2a8d5a4d1d63ed6f3b8b478618a57f38b49ce7a2768879"
+   "sha256": "2891db5018d9a07f17bc297b0e27b3182cd33ee822d5afd29f62648aa7ee63c6"
   },
   {
    "path": "schemas/error-memory.private.v1.schema.json",
-   "sha256": "02f25059374cc06364b8a9123ca5bc7f4be6deb9a67f614f84098cf895f903ba"
+   "sha256": "a2e9a0608fd550101986849a91e534569a0954375cbdd81a59149050f44d93c2"
   },
   {
    "path": "schemas/error-memory.public.v1.schema.json",
-   "sha256": "0adae8f23dbc426177e038fb8718b8fc73b1271473dc352ee731d796828ed87d"
+   "sha256": "32a6c350557b90ac004ce9f56318406303e9e9dce94fdc78ead6821ba7930859"
   },
   {
    "path": "schemas/gemini-detection.v1.schema.json",
@@ -45,17 +45,17 @@
   }
  ],
  "counts": {
-  "rules": 30,
+  "rules": 37,
   "rules_by_verification": {
    "blind_validated": 1,
-   "nonblind_validated": 28,
-   "synthetic_only": 1
+   "nonblind_validated": 34,
+   "synthetic_only": 2
   },
   "errors": 35,
   "errors_by_status": {
-   "confirmed_unfixed": 4,
-   "fixed_nonblind_validated": 30,
-   "out_of_scope": 1
+   "confirmed_unfixed": 3,
+   "fixed_nonblind_validated": 29,
+   "out_of_scope": 3
   }
  }
 }

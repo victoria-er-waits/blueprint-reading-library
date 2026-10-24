@@ -120,6 +120,24 @@ def parse_confirmed(path):
     return rows
 
 
+# Checker error-memory-review.md (2026-10-24): exact error -> rule links. These replace
+# run/page matching, which attached a run's whole rule set to each error.
+CHECKER_LINKS = {
+    "ERR-R13-01": ["BR13-01"], "ERR-R13-02": ["BR13-02"], "ERR-R13-03": ["BR13-03"],
+    "ERR-R13-04": [], "ERR-R13-05": [],
+    "ERR-R15-06": ["BR15-01", "BR15-L1"], "ERR-R15-07": ["BR15-L1"], "ERR-R15-08": ["BR15-L1"],
+    "ERR-R16-09": ["BR16-L1"],
+    "ERR-R17-01": ["BR17-01"], "ERR-R17-02": ["BR17-01", "BR17-02"], "ERR-R17-03": ["BR17-03"],
+    "ERR-R17-04": ["BR17-04"], "ERR-R17-05": ["BR17-05"],
+    "ERR-R18-06": ["BR18-01"], "ERR-R18-07": ["BR18-01"], "ERR-R18-08": ["BR18-01", "BR18-03"],
+    "ERR-R18-09": [],
+    "ERR-R19-10": ["BR19-01"], "ERR-R19-11": ["BR19-01"],
+}
+# Watermain tie-ins not linked to a hydrant: out of hydrant scope (Kyle, 2026-10-24).
+OUT_OF_SCOPE = {"ERR-R13-04", "ERR-R13-05", "ERR-R18-09"}
+OOS_NOTE = "Not hydrant-linked watermain tie-in: out of hydrant scope (Kyle 2026-10-24; Checker error-memory review)"
+
+
 def build_errors(errors_dir, rules):
     if FORBIDDEN_DIR in os.path.abspath(errors_dir):
         sys.exit("refusing: sealed-keys is never read")
@@ -135,16 +153,18 @@ def build_errors(errors_dir, rules):
         text = open(path, encoding="utf-8").read()
         sources.append({"path": os.path.basename(path), "sha256": fsha})
         hdr = re.search(r"\(Reader (v\d+)\)", text)
-        r18_tie_ins_oos = "Not hydrant-linked" in text and "run 18 Durham St tie-ins" in text
         for num, run, page, loc, wording, err, cause in parse_confirmed(path):
             n, rn = int(num), int(run)
-            linked, how = by_test.get((rn, n)), "regression_test_name"
-            if not linked:
-                pg = page_numbers(page)
-                linked = {r["rule_id"] for r in rules
-                          if rn in run_numbers(r["origin"].get("run"))
-                          and (not pg or not r["origin"].get("page") or pg & page_numbers(r["origin"].get("page")))}
-                how = "run_and_page_match" if linked else "none"
+            eid = f"ERR-R{rn:02d}-{n:02d}"
+            known = {r["rule_id"] for r in rules}
+            if eid in CHECKER_LINKS:
+                linked, how = set(CHECKER_LINKS[eid]) & known, "checker_reviewed_exact"
+                missing = set(CHECKER_LINKS[eid]) - known
+                if missing:
+                    sys.exit(f"refusing: {eid} links unknown rules {sorted(missing)}")
+            else:
+                linked = by_test.get((rn, n))
+                how = "regression_test_name" if linked else "none"
             linked = sorted(linked or [])
             statuses = {r["rule_id"]: r["verification_status"] for r in rules}
             lim = [x for x in linked if "-L" in x]
@@ -170,9 +190,9 @@ def build_errors(errors_dir, rules):
                 "contains_graded_run_info": True,
                 "gemini_policy": GEMINI_POLICY,
             }
-            if rn == 18 and rec["original_mistake"] == "tie_in_miss" and r18_tie_ins_oos:
+            if eid in OUT_OF_SCOPE:
                 rec["validation_status"] = "out_of_scope"
-                rec["scope_note"] = "Checker addendum 2026-10-24: Durham St tie-ins are not hydrant-linked; scope watermain_tie_in (future fittings skill)"
+                rec["scope_note"] = OOS_NOTE
             recs.append(rec)
     # grading.json: provenance hash only, never content
     for g in sorted(glob.glob(os.path.join(errors_dir, "run*/grading.json"))):
@@ -232,7 +252,7 @@ def make_public(full, rules):
             "root_cause": public_clean(e["root_cause"]),
             "correct_interpretation": public_clean(interp),
             "applicable_rule_ids": e["fix_rule_ids"],
-            "rule_link_method": {"run_and_page_match": "run_and_page_match_needs_checker_review"}.get(e["fix_link_method"], e["fix_link_method"]),
+            "rule_link_method": e["fix_link_method"],
             "implemented_fix": "; ".join(sorted({r["implemented_in"] for r in fixes if r["implemented_in"]})) or None,
             "regression_test_ids": sorted({t for r in fixes for t in r["regression_tests"]}),
             "validation_status": e["validation_status"],
