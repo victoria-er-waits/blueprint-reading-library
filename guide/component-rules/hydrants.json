@@ -1,0 +1,185 @@
+{
+ "schema": "component-rule/v1",
+ "schema_file": "component-rule.schema.json",
+ "component": "hydrant",
+ "updated": "2026-10-24",
+ "note": "Lessons from Blueprint Reader blind runs. Sealed answer keys are never included.",
+ "rules": [
+  {
+   "id": "BR02-FP-01",
+   "code_rule_id": "R-GENERAL-NOTE-NOT-INSTANCE",
+   "component": "hydrant",
+   "category": "gating",
+   "rule": "General notes and specification text about hydrants are never a physical hydrant instance. A project-wide plural rule (e.g. 'ALL NEW FIRE HYDRANTS ...', 'HYDRANTS ... AS PER ... STANDARDS') or text sitting under a WATERMAIN NOTES / GENERAL NOTES / NOTES: / SPECIFICATIONS heading is logged as a general_note_or_spec mention, not counted.",
+   "classify_as": "mention:general_note_or_spec",
+   "positive_examples": [
+    "ALL NEW FIRE HYDRANTS TO BE AS PER CITY OF COQUITLAM STANDARDS",
+    "ALL NEW FIRE HYDRANT ASSEMBLIES ..."
+   ],
+   "negative_examples": [
+    "INSTALL NEW FIRE HYDRANT FROM EXISTING 200Ø WATERMAIN"
+   ],
+   "negative_examples_meaning": "still a physical 'new' instance",
+   "why": {
+    "run": "Blind Run 02",
+    "project": "Coquitlam Cedar Drive 81832",
+    "page": 2,
+    "error": "false positive: page 2 WATERMAIN NOTES rule counted as a new hydrant"
+   },
+   "evidence_sources": [
+    "Blind Run 02 grading report, Coquitlam Cedar Drive Phase 2, Contract 81832 (PDF sha256 76531477...)",
+    "BR02 fix brief (Muse), Kyle authorization 2026-10-23"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.3 (also in v0.4)",
+    "package": "combined-blueprint-reader-dev-v3-2026-10-23.zip sha256 b1095dc290baedea21e2dcfa4da7816a9d586d7eaf54fed353a591c66b135884",
+    "tests": [
+     "test_br02_fp01_general_note_rule_is_not_a_new_instance",
+     "test_br02_plan_sheet_notes_heading_does_not_swallow_site_callout"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "GPT-6 Run 02 grading"
+    ],
+    "fix_validation": "real-drawing: general note correctly excluded in Blind Run 03 (Cumberland, v3, GPT-6 graded); Cedar Drive pages themselves not re-run"
+   },
+   "limits": [
+    "Notes gating is geometric (x -40..+600 pt, y 0..600 pt below heading): a real site callout directly under a NOTES heading would be suppressed (kept as a mention)."
+   ]
+  },
+  {
+   "id": "BR02-FP-02",
+   "code_rule_id": "R-TYPICAL-SECTION-NOT-INSTANCE",
+   "component": "hydrant",
+   "category": "gating",
+   "rule": "On a page with TYPICAL SECTION(S) / TYPICAL CROSS SECTION / TYPICAL DETAIL(S) / TYP. SECTION, a hydrant label with no site-action verb (INSTALL, SUPPLY, REPLACE, RELOCATE, REMOVE, ABANDON, DECOMMISSION, SALVAGE, TIE, CONNECT) is an illustration, never a physical instance.",
+   "classify_as": "mention:typical_section_reference",
+   "positive_examples": [
+    "Hydrant label inside a TYPICAL SECTIONS illustration with no action verb (e.g. 'PR. HYDRANT')"
+   ],
+   "negative_examples": [
+    "INSTALL NEW FIRE HYDRANT ... (plan-sheet callout with action verb)"
+   ],
+   "negative_examples_meaning": "still a physical instance",
+   "why": {
+    "run": "Blind Run 02",
+    "project": "Coquitlam Cedar Drive 81832",
+    "page": 4,
+    "error": "false positive: TYPICAL SECTIONS illustration label counted as a new hydrant"
+   },
+   "evidence_sources": [
+    "Blind Run 02 grading report, Coquitlam Cedar Drive Phase 2, Contract 81832 (PDF sha256 76531477...)",
+    "BR02 fix brief (Muse), Kyle authorization 2026-10-23"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.3 (also in v0.4)",
+    "package": "combined-blueprint-reader-dev-v3-2026-10-23.zip sha256 b1095dc290baedea21e2dcfa4da7816a9d586d7eaf54fed353a591c66b135884",
+    "tests": [
+     "test_br02_fp02_typical_section_label_is_not_a_new_instance",
+     "test_br02_unaffected_statuses_on_plan_sheet"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "GPT-6 Run 02 grading"
+    ],
+    "fix_validation": "synthetic-only (no typical-section hydrant case exercised on real drawings yet)"
+   },
+   "limits": [
+    "Page-level: on a mixed plan + typical-section sheet, verb-less plan labels like 'PR. HYDRANT' would be suppressed."
+   ]
+  },
+  {
+   "id": "BR03-01",
+   "code_rule_id": "tie_in pattern (hydrants.py v0.4)",
+   "component": "hydrant",
+   "category": "status_typing",
+   "rule": "A callout 'TIE IN AT/TO/INTO [EXISTING] HYDRANT' is a tie-in action, not a hydrant body. A tie-in with no hydrant word (main-only tie-in) is not a hydrant tie-in.",
+   "classify_as": "status:tie_in",
+   "positive_examples": [
+    "ULVERTSTON AVENUE & FIFTH STREET TIE IN AT HYDRANT"
+   ],
+   "negative_examples": [
+    "ULVERTSTON AVENUE & MILL STREET TIE IN",
+    "TIE-IN AT EXISTING TEE"
+   ],
+   "negative_examples_meaning": "main tie-ins, not hydrant tie-ins",
+   "why": {
+    "run": "Blind Run 03",
+    "project": "Cumberland 34277",
+    "page": 8,
+    "error": "tie-in left 'unresolved'; Checker: no hydrant body drawn, detail shows cap, coupler, 2x 45° bends, profile 'TIE-IN TO EXISTING' STA 2+003.500. Page 9 claimed 2nd hydrant tie-in rejected by Checker (main tie-in near 2+259.438)"
+   },
+   "evidence_sources": [
+    "Blind Run 03 grading.json + Blueprint Checker verdict, Cumberland 34277 (PDF sha256 b3c47c1a...)",
+    "/workspace/blind-runs/run03/checker-verdict.md items 1 and 3"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.4",
+    "package": "combined-blueprint-reader-dev-v4-2026-10-24.zip sha256 b1d79c194a5204f04f78b335e683aa1f38a6cabd4bbd5556b0d55f01a9efcd9e",
+    "tests": [
+     "test_br03_01_tie_in_at_hydrant_title_is_tie_in",
+     "test_br03_01_guard_main_only_tie_ins_are_not_hydrant_tie_ins"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker",
+     "GPT-6 Run 03 grading (p8)"
+    ],
+    "dispute": "Page 9 second hydrant tie-in: GPT-6 says yes, Checker says none; Kyle to decide",
+    "fix_validation": "synthetic tests + NON-BLIND Cumberland diagnostic agrees with Checker; awaiting fresh blind run"
+   },
+   "limits": [
+    "'AT HYDRANT' may be a location reference rather than a hydrant connection (Checker's uncertainty)."
+   ]
+  },
+  {
+   "id": "BR03-02",
+   "code_rule_id": "_profile_stations (hydrants.py v0.4)",
+   "component": "hydrant",
+   "category": "station",
+   "rule": "A hydrant's station comes from a matching profile label with its printed STA (e.g. 'HYDRANT TEE AND VALVE CLUSTER' at STA 2+170.745) before the nearest chainage label. Fall back to nearest chainage only when no matching profile label exists.",
+   "classify_as": "station_kind:profile_label",
+   "positive_examples": [
+    "HYDRANT TEE AND VALVE CLUSTER  STA 2+170.745"
+   ],
+   "negative_examples": [
+    "Nearest chainage tick '2+200' near the plan callout",
+    "Non-hydrant profile labels"
+   ],
+   "negative_examples_meaning": "not used as the hydrant station when a matching profile label exists",
+   "why": {
+    "run": "Blind Run 03",
+    "project": "Cumberland 34277",
+    "page": 9,
+    "error": "station reported 2+200 (nearest chainage); profile prints 2+170.745, plan leaders hit main at ~2+171"
+   },
+   "evidence_sources": [
+    "Blind Run 03 grading.json + Blueprint Checker verdict, Cumberland 34277 (PDF sha256 b3c47c1a...)",
+    "/workspace/blind-runs/run03/checker-verdict.md item 2"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.4",
+    "package": "combined-blueprint-reader-dev-v4-2026-10-24.zip sha256 b1d79c194a5204f04f78b335e683aa1f38a6cabd4bbd5556b0d55f01a9efcd9e",
+    "tests": [
+     "test_br03_02_profile_label_station_preferred_over_nearest_chainage",
+     "test_br03_02_guard_falls_back_to_nearest_chainage_without_profile",
+     "test_br03_02_guard_non_hydrant_profile_label_not_used"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker",
+     "GPT-6 Run 03 grading"
+    ],
+    "fix_validation": "synthetic tests + NON-BLIND Cumberland diagnostic; side effect unchecked: p8 new hydrant now gets STA 2+009.015"
+   },
+   "limits": [
+    "Geometric pairing assumes the STA label sits beside the profile label (<=20 pt).",
+    "One matching profile label per page assumed; multi-hydrant sheets without chainage stay on fallback."
+   ]
+  }
+ ]
+}

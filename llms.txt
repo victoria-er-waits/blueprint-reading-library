@@ -7,6 +7,7 @@ Base URL: https://victoria-er-waits.github.io/blueprint-reading-library/
 ## START HERE (bots reading a drawing set)
 Follow guide/order-of-operations.md step by step, one step at a time: https://victoria-er-waits.github.io/blueprint-reading-library/guide/order-of-operations.md
 Before using any book, read its how-to-use guide (what to read for which task, what to skip, pitfalls): https://victoria-er-waits.github.io/blueprint-reading-library/guide/how-to-use/README.md
+Component rules (machine-readable JSON, one file per component, schema + README): https://victoria-er-waits.github.io/blueprint-reading-library/guide/component-rules/README.md
 If stuck on a step, open its help page in guide/steps/:
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-1-sort-the-set.md
 - https://victoria-er-waits.github.io/blueprint-reading-library/guide/steps/step-2-page-prep.md

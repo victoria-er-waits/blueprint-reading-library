@@ -41,3 +41,13 @@ Conflict check (v4.13): grep for "Two ways", "Splits follow", "status task", "va
 
 **v4.13 walkthrough (round-6b ledgers, /tmp copy, engine 6579b18):** (1) Spool, rule A: measured zero-span pieces now reach the totals. `run_totals` shows, for example, BH|150 span 2.47 m + measured 58.1 m. The 150, 250 and 300 pipe lines rose by the logged spool lengths, and the crash is gone (657 answers applied). (2) Split, rule B: the combined-trench and single-350 allocations have no `split_cite`/`split_geometry`, so they now carry payment D, keep their drawing label, and get a Checker split task; the ledger also has no `cross_sums`. (3) Note-only curb, rule C: the curb line marked `from_ledger` with no allocation now blocks, along with 5 provisional lines in the same state, and the missing `sweeps` record blocks. The notes sweep is where the curb would be logged. Result: 7 blocking.
 Next blind tender: Coquitlam 89044 (round 1, brief tender-tests/coquitlam-89044/round1-brief.md).
+
+## Component rules: hydrants (2026-10-24)
+New AI-readable store `guide/component-rules/` (schema `component-rule.schema.json`, README). Reader-code lessons, separate from takeoff Rules 1–40.
+
+| Date | Id | Component | Change | Reader | Origin |
+|---|---|---|---|---|---|
+| 2026-10-23 | BR02-FP-01 | hydrant | general notes/spec text never a physical instance | hydrants.py v0.3 | Blind Run 02 Cedar Drive p2 (GPT-6) |
+| 2026-10-23 | BR02-FP-02 | hydrant | verb-less labels in typical sections/details never a physical instance | hydrants.py v0.3 | Blind Run 02 Cedar Drive p4 (GPT-6) |
+| 2026-10-24 | BR03-01 | hydrant | 'TIE IN AT HYDRANT' = tie-in; main-only tie-ins are not hydrant tie-ins | hydrants.py v0.4 | Blind Run 03 Cumberland p8/p9 (Checker) |
+| 2026-10-24 | BR03-02 | hydrant | station from matching profile label before nearest chainage | hydrants.py v0.4 | Blind Run 03 Cumberland p9 (Checker) |

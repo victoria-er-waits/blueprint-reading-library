@@ -1,0 +1,116 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "component-rule/v1",
+ "type": "object",
+ "required": [
+  "schema",
+  "component",
+  "rules"
+ ],
+ "properties": {
+  "rules": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "component",
+     "category",
+     "rule",
+     "classify_as",
+     "positive_examples",
+     "negative_examples",
+     "why",
+     "evidence_sources",
+     "implemented_in",
+     "status",
+     "limits"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "description": "Lesson id, e.g. BR03-02 (run 03, item 02)"
+     },
+     "code_rule_id": {
+      "type": "string",
+      "description": "Rule id/function in reader code"
+     },
+     "component": {
+      "type": "string",
+      "description": "hydrant, valve, tee, ..."
+     },
+     "category": {
+      "enum": [
+       "gating",
+       "status_typing",
+       "station",
+       "symbol",
+       "dedupe",
+       "quantity"
+      ]
+     },
+     "rule": {
+      "type": "string",
+      "description": "Plain-words rule an AI can apply"
+     },
+     "classify_as": {
+      "type": "string",
+      "description": "Output: mention:<kind> | status:<s> | station_kind:<k>"
+     },
+     "positive_examples": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "Drawing text the rule applies to"
+     },
+     "negative_examples": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "Look-alike text the rule must NOT catch"
+     },
+     "negative_examples_meaning": {
+      "type": "string"
+     },
+     "why": {
+      "type": "object",
+      "required": [
+       "run",
+       "project",
+       "page",
+       "error"
+      ]
+     },
+     "evidence_sources": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "implemented_in": {
+      "type": "object",
+      "required": [
+       "reader_version",
+       "tests"
+      ]
+     },
+     "status": {
+      "type": "object",
+      "required": [
+       "error_confirmed_by",
+       "fix_validation"
+      ]
+     },
+     "limits": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  }
+ }
+}
