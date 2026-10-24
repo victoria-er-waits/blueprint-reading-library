@@ -1,0 +1,274 @@
+{
+ "schema": "reader-config/v1 (verbatim copy)",
+ "derived_from": "guide/component-rules/hydrants.json#reader_config",
+ "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+ "reader_config": {
+  "schema": "component-reader-config/v1",
+  "note": "Machine-readable patterns the Blueprint Reader app (hydrants.py v0.6+) loads at runtime. Python 're' syntax. Changing these changes reader behaviour; every run records this file's sha256 and the library commit.",
+  "hydrant_words": {
+   "regex": "\\bHYDRANTS?\\b|\\bHYD\\b\\.?(?!\\s*(?:RO|DUCT))|\\bF\\.?H\\.?\\b(?=\\s|$)",
+   "flags": [
+    "IGNORECASE"
+   ],
+   "meaning": "a line mentions a hydrant"
+  },
+  "not_hydrant_words": {
+   "regex": "\\bHYD(?:RO)?\\s*DUCTS?\\b|\\bHYDRO(?:VAC|SEED)?\\b|\\bBC\\s+HYDRO\\b",
+   "flags": [
+    "IGNORECASE"
+   ],
+   "meaning": "hydro ducts / hydrovac / BC Hydro are never hydrants (R-HYDRO-NOT-HYDRANT)"
+  },
+  "status_wording": [
+   {
+    "status": "tie_in",
+    "regex": "\\bTIE\\b.{0,12}\\b(?:IN|INTO|TO)\\b.{0,25}\\bEXIST\\w*\\b.{0,15}HYD|\\bCONNECT\\w*\\s+TO\\s+EXIST\\w*.{0,15}HYD|\\bTIE[\\s-]*IN\\s+(?:AT|TO|INTO)\\s+(?:THE\\s+|EXIST\\w*\\.?\\s+|EX\\.?\\s+)?(?:FIRE\\s+)?HYD|\\bTIE\\s+(?:IN\\s+)?EXIST\\w*\\s.{0,30}\\bHYD\\w*\\.?\\s+LEAD\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "call-out wording that means status 'tie_in'; v7 (BR11-03): 'TIE EXISTING ... HYDRANT LEAD TO ...' = hydrant-lead tie-in"
+   },
+   {
+    "status": "relocate",
+    "regex": "\\bRELOCAT\\w*\\b.{0,30}HYD|HYD\\w*.{0,20}\\bRELOCAT\\w*",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "call-out wording that means status 'relocate'"
+   },
+   {
+    "status": "remove",
+    "regex": "\\b(?:REMOVE|DECOMMISSION|ABANDON|SALVAGE|DISPOSE)\\w*\\b.{0,40}\\bHYD|\\bHYD\\w*.{0,20}\\bTO BE (?:REMOVED|ABANDONED|DECOMMISSIONED)",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "call-out wording that means status 'remove'"
+   },
+   {
+    "status": "new",
+    "regex": "\\b(?:INSTALL(?!\\s+INSULATION)|PROPOSED|PROP\\.|PR\\.?|NEW|REPLACE|SUPPLY AND INSTALL)\\s.{0,40}\\bHYD|^\\s*\\d+\\s*-\\s*.*HYDRANT",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "call-out wording that means status 'new'; v9 (BR17-01): 'INSTALL INSULATION AROUND HYDRANT' is work on an existing hydrant, not new"
+   },
+   {
+    "status": "existing",
+    "regex": "\\bEX(?:IST(?:ING)?)?\\.?\\s+(?:FIRE\\s+)?(?:HYD|F\\.?H\\b)|\\bHYDRANT\\s*\\(EXIST|\\b(?:RAISE|LOWER|ADJUST|INSULATE)\\s+(?:THE\\s+)?(?:EX\\w*\\.?\\s+)?(?:FIRE\\s+)?HYD|\\bINSULATION\\s+AROUND\\s+(?:THE\\s+)?(?:EX\\w*\\.?\\s+)?(?:FIRE\\s+)?HYD",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "call-out wording that means status 'existing'; v9 (BR17-01/02): RAISE/LOWER/ADJUST/INSULATE work on a hydrant = existing hydrant with in-scope work"
+   }
+  ],
+  "status_precedence": {
+   "tie_in_exclusive_keep": [
+    "remove"
+   ],
+   "existing_dropped_when_any_of": [
+    "remove",
+    "new",
+    "relocate"
+   ],
+   "beats": [
+    {
+     "winner": "relocate",
+     "loser": "new",
+     "lesson": "BR06-01"
+    },
+    {
+     "winner": "relocate",
+     "loser": "remove",
+     "lesson": "BR17-04: 'REMOVE AND RELOCATE HYDRANT' is one relocate action"
+    }
+   ],
+   "order_note": "statuses are evaluated in status_wording order; tie_in first, then existing is dropped if an action status is present, then each 'beats' pair removes the loser"
+  },
+  "gating": {
+   "general_note_text": {
+    "regex": "^\\s*\\d{1,2}\\s*[.)]\\s|\\bMAY BE\\b|\\bWHERE\\b|\\bALL\\b.*\\bSHALL\\b|\\bSHALL NOT\\b|\\bWRITTEN PERMISSION\\b|\\bNOTIF|\\bRETURN ALL\\b|\\bIN ACCORDANCE\\b|\\bLOCATIONS? TO BE CONFIRMED ON SITE\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "numbered notes / spec phrasing -> mention (R-LEGEND-NOT-INSTANCE / general_note_or_spec)"
+   },
+   "notes_heading": {
+    "regex": "^\\s*(?:[A-Z&/]+\\s+){0,3}(?:NOTES|SPECIFICATIONS?)\\s*:?\\s*$",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "NOTES/SPECIFICATIONS heading gates the column beneath it (BR02-FP-01)"
+   },
+   "spec_rule": {
+    "regex": "\\bALL\\s+(?:NEW\\s+|PROPOSED\\s+|PR\\.?\\s+)?(?:FIRE\\s+)?HYDRANTS\\b|\\bHYDRANTS?\\b.{0,30}\\bAS PER\\b.{0,60}\\bSTANDARDS?\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "project-wide plural hydrant rule -> mention (BR02-FP-01)"
+   },
+   "typical_heading": {
+    "regex": "\\bTYPICAL\\s+(?:CROSS[\\s-]+)?(?:SECTIONS?|DETAILS?)\\b|\\bTYP\\.?\\s+SECTIONS?\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "typical section/detail sheet (BR02-FP-02)"
+   },
+   "site_verb": {
+    "regex": "\\b(?:INSTALL|SUPPLY|REPLACE|RELOCAT\\w*|REMOVE|ABANDON|DECOMMISSION|SALVAGE|TIE|CONNECT\\w*|RAISE|LOWER|ADJUST|INSULATE|INSULATION)\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "site-action verbs that keep a label as an instance on typical/coverage gates; v9: RAISE/LOWER/ADJUST/INSULAT(E|ION) added (BR17-01/02)"
+   },
+   "coverage_note": {
+    "regex": "\\bCOVERAGE\\b|\\bSPACING\\b|\\bRADIUS\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "hydrant coverage/spacing/radius annotation -> mention (BR04-01)"
+   },
+   "profile_fitting": {
+    "regex": "^\\s*(?:HYDRANT|HYD\\.?|F\\.?H\\.?)\\s+TEE\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "profile 'HYDRANT TEE' label corroborates only (R-PROFILE-LABEL-NOT-EXTRA)"
+   },
+   "legend_words": {
+    "regex": "^(?:WATER\\s+\\w+|FIRE HYDRANT(?: LEAD)?|HYDRANT(?: & VALVE ASSEMBLY)?|YARD HYDRANT|AIR VALVE|COUPLING|CAPPED END|WATER METER|WATERMAIN(?: ABD)?|SANITARY .*|STORM .*|GATE VALVE)$",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "legend entry wording (R-LEGEND-NOT-INSTANCE)"
+   },
+   "profile_hydrant_label": {
+    "regex": "\\bHYD(?:RANT)?\\.?\\s+(?:TEE|ASSEMBLY|ASSY|VALVE|LEAD)|\\bHYDRANT\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "hydrant profile label used for station pairing (BR03-02)"
+   },
+   "legend_row_prefix": {
+    "regex": "^\\s*(?:EX\\.?|EXIST\\w*|PR\\.?|PROP(?:OSED)?\\.?|NEW)\\s",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v7 (BR12-01): legend rows by layout: a stacked block of >=6 short rows, most starting EX./PR./PROPOSED -> legend even without a LEGEND heading or with status words"
+   },
+   "hydrant_tag": {
+    "regex": "^\\s*[-–.]?\\s*(?:FIRE\\s+)?(?:HYDRANT|HYD\\.?)\\s*(?:#|NO\\.?\\s*|-)\\s*\\d{1,3}\\s*$",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v7 (BR07-02): tag-only hydrant label ('HYDRANT #1', 'HYD-05') = hydrant id; v7.1 (run04 non-blind p9 '-HYD-06'): a leading dash/dot leader stub is allowed"
+   },
+   "typ_marker": {
+    "regex": "\\(\\s*TYP\\.?\\s*\\)|\\bTYP(?:ICAL)?\\.?\\s*$",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v7 (BR07-02): '(TYP.)' call-out applies to every tagged hydrant on the sheet"
+   },
+   "detail_title": {
+    "regex": "^\\s*(?:INTERSECTION\\s+)?DETAILS?\\b(?!\\s*(?:ON|FOR|SEE)\\b)(?!\\s*$)(?!.*\\bDWG\\b)",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v7 (BR11-01): enlarged intersection-detail sheet title; its instances duplicate plan-sheet instances at the same named streets"
+   },
+   "ocr_seed": {
+    "regex": "\\b(?:FIR|FIRE|HYD\\w*|HYDR\\w*|\\w*DRANT\\w*)\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v7 (BR09-01): partial hydrant word in 150 dpi OCR -> re-OCR that region at 300 dpi"
+   },
+   "general_tie_in": {
+    "regex": "^(?!.*\\b(?:MANHOLE|SEWER|STORM|CURB|ASPHALT|GAS|DITCH\\w*\\s+GRADE)\\b)(?=.*\\bTIE[\\s-]*IN\\b|.*\\bCONNECT\\w*\\s+TO\\s+EXIST).*?\\b(?:TIE[\\s-]*IN|CONNECT\\w*)\\s+(?:TO|INTO|AT|WITH)\\s+(?:THE\\s+)?EXIST\\w*\\s+(?:[^|]{0,40}?)(?:WATER\\s*MAIN|WATERMAIN|WATER\\s*LINE|WATER\\s*SERVICE|W/M\\b|\\d+\\s*(?:mm|Ø)\\s*(?:PVC|AC|DI|CI|HDPE|PE)\\b|TEE\\b)",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v8 (BR13-04): general water-main tie-in call-out ('TIE-IN TO EXISTING 150Ø PVC ...'); a tie-in record, not a hydrant instance; requires a water-pipe noun within the same line run (water main/line/service, <size> PVC/AC/DI, TEE) and no other-utility word (manhole, sewer, storm, curb, asphalt, gas) - v8 non-blind run03/05 false positives"
+   },
+   "spec_list_row": {
+    "regex": "\\b(?:along|at|on)\\s+(?:the\\s+)?(?P<loc>[A-Z][\\w&.'\\- ]{1,50}?)\\s+for\\s+hydrants?\\s*(?:#|no\\.?)\\s*(?P<nums>\\d{1,3}(?:\\s*(?:,|and|&)\\s*\\d{1,3})*)",
+    "flags": [],
+    "meaning": "v8 (BR15-01): specification list row naming a location and hydrant number(s)"
+   },
+   "spec_scope_statement": {
+    "regex": "\\bhydrants?\\s+(?:are|is|shall\\s+be)\\s+to\\s+be\\s+(?P<verb>supplied|installed|replaced|removed|relocated)\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v8 (BR15-01): document scope statement giving the status of listed hydrants"
+   },
+   "existing_abbrev_label": {
+    "regex": "^(?:[-+.!\\s]|-?[O0]-?){0,4}HYD[.!]?(?:[-+.!\\s]|-?[O0]-?){0,4}$",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v9 (BR18-03): a stand-alone survey label 'HYD.' marks an existing hydrant (reported as existing; scope decided by the grader, out-of-scope existing scored separately); a leading/trailing survey symbol '-O-' / '-+-' is allowed; such a label is never a note or a typical-section reference"
+   },
+   "standard_reference": {
+    "regex": "\\b(?:OPSD|OPSS|MMCD|SD|STD\\.?\\s*DWG\\.?)\\s*[-#]?\\s*(\\d[\\d.\\-]*\\d)",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v9 (BR19-01/02): standard-drawing reference used to tie a station-less repeat (profile label / servicing plan) to the stationed plan call-out"
+   }
+  },
+  "base_rules": [
+   "R-HYDRO-NOT-HYDRANT",
+   "R-LEGEND-NOT-INSTANCE",
+   "R-PROFILE-LABEL-NOT-EXTRA",
+   "R-UNRESOLVED-NOT-COUNTED",
+   "R-GENERAL-NOTE-NOT-INSTANCE",
+   "R-TYPICAL-SECTION-NOT-INSTANCE"
+  ],
+  "scope_notes": [
+   {
+    "id": "SCOPE-EXISTING-OUT-OF-WORK",
+    "status": "decided",
+    "decided_by": "Kyle 2026-10-24",
+    "note": "Existing hydrants drawn outside the work (e.g. Run 04 EX HYD-01..03) are reported as 'existing'; whether they count is not decided. The reader does not filter them. DECIDED: counted, scored separately (see SCOPE-EXISTING-OOS-COUNTED-SEPARATELY)."
+   },
+   {
+    "id": "SCOPE-COUNTS-NOT-SUMMED",
+    "status": "active",
+    "note": "Counts are per status and never summed."
+   },
+   {
+    "id": "SCOPE-TIE-IN-PER-ITEM",
+    "status": "active",
+    "note": "v7: tie_in is reported per item (tie_in_items), including hydrant-lead tie-ins of existing hydrants."
+   },
+   {
+    "id": "SCOPE-EXISTING-OOS-COUNTED-SEPARATELY",
+    "status": "active",
+    "decided_by": "Kyle 2026-10-24",
+    "note": "Existing hydrants outside the construction scope count toward hydrant mastery but are scored separately from in-scope work and never as new installation quantities."
+   },
+   {
+    "id": "SCOPE-MAIN-TIE-IN-NOT-HYDRANT",
+    "status": "active",
+    "decided_by": "Kyle 2026-10-24",
+    "note": "Watermain tie-ins not linked to a hydrant are outside hydrant scope. They may be reported as main_tie_in (hydrant_linked=false) but are not hydrant results; tie-in detection is not widened to general watermain work."
+   }
+  ],
+  "fuzzy_vocabulary": {
+   "words": [
+    "HYDRANT",
+    "HYDRANTS",
+    "PROPOSED",
+    "EXISTING",
+    "REMOVE",
+    "INSTALL",
+    "RELOCATE",
+    "REPLACE"
+   ],
+   "max_edit_distance": 1,
+   "min_token_length": 6,
+   "meaning": "v7 (BR08-01): garbled text-layer words (PROPOSLD HYDRANI) corrected with low confidence, only on lines that do not already mention a hydrant"
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "machine-library-manifest/v1",
+ "type": "object",
+ "required": ["schema","generator","library_commit","sources","outputs","counts"],
+ "properties": {
+  "schema": {"const":"machine-library-manifest/v1"},
+  "generator": {"type":"string"},
+  "library_commit": {"type":"string"},
+  "sources": {"type":"array","items":{"type":"object","required":["path","sha256"]}},
+  "outputs": {"type":"array","items":{"type":"object","required":["path","sha256"]}},
+  "counts": {"type":"object"}
+ }
+}

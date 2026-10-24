@@ -1,0 +1,32 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "reading-rule/v2",
+ "title": "reading-rule/v2 (derived from component-rule/v1; hydrants.json stays the source of truth)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["rule_id","code_rule_id","skill","category","recognize","classify_as","required_evidence","correct_examples","incorrect_examples","related_error_ids","limits","implemented_in","regression_tests","rule_version","library_commit","source_sha256","verification_status","verification_evidence","approval"],
+ "properties": {
+  "rule_id": {"type":"string","pattern":"^BR\\d{2}(-FP)?-(\\d{2}|L\\d+)$"},
+  "code_rule_id": {"type":["string","null"]},
+  "skill": {"enum":["hydrant","valve","tee","bend","fitting"]},
+  "category": {"type":"string"},
+  "recognize": {"type":"string","minLength":10},
+  "classify_as": {"type":"string"},
+  "required_evidence": {"type":"array","items":{"type":"string"}},
+  "correct_examples": {"type":"array","items":{"type":"string"}},
+  "incorrect_examples": {"type":"array","items":{"type":"string"}},
+  "incorrect_examples_meaning": {"type":"string"},
+  "related_error_ids": {"type":"array","items":{"type":"string","pattern":"^ERR-R\\d{2}-\\d{2}$"}},
+  "limits": {"type":"array","items":{"type":"string"}},
+  "implemented_in": {"type":["string","null"]},
+  "regression_tests": {"type":"array","items":{"type":"string"}},
+  "origin": {"type":"object"},
+  "rule_version": {"type":"string"},
+  "library_commit": {"type":"string","pattern":"^[0-9a-f]{7,40}$"},
+  "source_sha256": {"type":"string","pattern":"^[0-9a-f]{64}$"},
+  "verification_status": {"enum":["synthetic","nonblind","blind_validated"]},
+  "verification_evidence": {"type":"string"},
+  "approval": {"enum":["proposed","approved","retired"]},
+  "is_known_limitation": {"type":"boolean"}
+ }
+}

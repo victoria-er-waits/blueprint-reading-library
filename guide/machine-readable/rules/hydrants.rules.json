@@ -1,0 +1,1210 @@
+{
+ "schema": "reading-rule/v2",
+ "derived_from": "guide/component-rules/hydrants.json",
+ "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+ "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+ "records": [
+  {
+   "rule_id": "BR02-FP-01",
+   "code_rule_id": "R-GENERAL-NOTE-NOT-INSTANCE",
+   "skill": "hydrant",
+   "category": "gating",
+   "recognize": "General notes and specification text about hydrants are never a physical hydrant instance. A project-wide plural rule (e.g. 'ALL NEW FIRE HYDRANTS ...', 'HYDRANTS ... AS PER ... STANDARDS') or text sitting under a WATERMAIN NOTES / GENERAL NOTES / NOTES: / SPECIFICATIONS heading is logged as a general_note_or_spec mention, not counted.",
+   "classify_as": "mention:general_note_or_spec",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "ALL NEW FIRE HYDRANTS TO BE AS PER CITY OF COQUITLAM STANDARDS",
+    "ALL NEW FIRE HYDRANT ASSEMBLIES ..."
+   ],
+   "incorrect_examples": [
+    "INSTALL NEW FIRE HYDRANT FROM EXISTING 200Ø WATERMAIN"
+   ],
+   "incorrect_examples_meaning": "still a physical 'new' instance",
+   "related_error_ids": [],
+   "limits": [
+    "Notes gating is geometric (x -40..+600 pt, y 0..600 pt below heading): a real site callout directly under a NOTES heading would be suppressed (kept as a mention)."
+   ],
+   "implemented_in": "hydrants.py v0.3 (also in v0.4)",
+   "regression_tests": [
+    "test_br02_fp01_general_note_rule_is_not_a_new_instance",
+    "test_br02_plan_sheet_notes_heading_does_not_swallow_site_callout"
+   ],
+   "origin": {
+    "run": "Blind Run 02",
+    "project": "Coquitlam Cedar Drive 81832",
+    "page": 2
+   },
+   "rule_version": "hydrants.py v0.3 (also in v0.4)",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "blind_validated",
+   "verification_evidence": "real-drawing: general note correctly excluded in Blind Run 03 (Cumberland, v3, GPT-6 graded); Cedar Drive pages themselves not re-run",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR02-FP-02",
+   "code_rule_id": "R-TYPICAL-SECTION-NOT-INSTANCE",
+   "skill": "hydrant",
+   "category": "gating",
+   "recognize": "On a page with TYPICAL SECTION(S) / TYPICAL CROSS SECTION / TYPICAL DETAIL(S) / TYP. SECTION, a hydrant label with no site-action verb (INSTALL, SUPPLY, REPLACE, RELOCATE, REMOVE, ABANDON, DECOMMISSION, SALVAGE, TIE, CONNECT) is an illustration, never a physical instance.",
+   "classify_as": "mention:typical_section_reference",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "Hydrant label inside a TYPICAL SECTIONS illustration with no action verb (e.g. 'PR. HYDRANT')"
+   ],
+   "incorrect_examples": [
+    "INSTALL NEW FIRE HYDRANT ... (plan-sheet callout with action verb)"
+   ],
+   "incorrect_examples_meaning": "still a physical instance",
+   "related_error_ids": [],
+   "limits": [
+    "Page-level: on a mixed plan + typical-section sheet, verb-less plan labels like 'PR. HYDRANT' would be suppressed."
+   ],
+   "implemented_in": "hydrants.py v0.3 (also in v0.4)",
+   "regression_tests": [
+    "test_br02_fp02_typical_section_label_is_not_a_new_instance",
+    "test_br02_unaffected_statuses_on_plan_sheet"
+   ],
+   "origin": {
+    "run": "Blind Run 02",
+    "project": "Coquitlam Cedar Drive 81832",
+    "page": 4
+   },
+   "rule_version": "hydrants.py v0.3 (also in v0.4)",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "synthetic",
+   "verification_evidence": "synthetic-only (no typical-section hydrant case exercised on real drawings yet)",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR03-01",
+   "code_rule_id": "tie_in pattern (hydrants.py v0.4)",
+   "skill": "hydrant",
+   "category": "status_typing",
+   "recognize": "A callout 'TIE IN AT/TO/INTO [EXISTING] HYDRANT' is a tie-in action, not a hydrant body. A tie-in with no hydrant word (main-only tie-in) is not a hydrant tie-in.",
+   "classify_as": "status:tie_in",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "ULVERTSTON AVENUE & FIFTH STREET TIE IN AT HYDRANT"
+   ],
+   "incorrect_examples": [
+    "ULVERTSTON AVENUE & MILL STREET TIE IN",
+    "TIE-IN AT EXISTING TEE"
+   ],
+   "incorrect_examples_meaning": "main tie-ins, not hydrant tie-ins",
+   "related_error_ids": [],
+   "limits": [
+    "'AT HYDRANT' may be a location reference rather than a hydrant connection (Checker's uncertainty)."
+   ],
+   "implemented_in": "hydrants.py v0.4",
+   "regression_tests": [
+    "test_br03_01_tie_in_at_hydrant_title_is_tie_in",
+    "test_br03_01_guard_main_only_tie_ins_are_not_hydrant_tie_ins"
+   ],
+   "origin": {
+    "run": "Blind Run 03",
+    "project": "Cumberland 34277",
+    "page": 8
+   },
+   "rule_version": "hydrants.py v0.4",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND Cumberland diagnostic agrees with Checker; awaiting fresh blind run",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR03-02",
+   "code_rule_id": "_profile_stations (hydrants.py v0.4)",
+   "skill": "hydrant",
+   "category": "station",
+   "recognize": "A hydrant's station comes from a matching profile label with its printed STA (e.g. 'HYDRANT TEE AND VALVE CLUSTER' at STA 2+170.745) before the nearest chainage label. Fall back to nearest chainage only when no matching profile label exists.",
+   "classify_as": "station_kind:profile_label",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "HYDRANT TEE AND VALVE CLUSTER  STA 2+170.745"
+   ],
+   "incorrect_examples": [
+    "Nearest chainage tick '2+200' near the plan callout",
+    "Non-hydrant profile labels"
+   ],
+   "incorrect_examples_meaning": "not used as the hydrant station when a matching profile label exists",
+   "related_error_ids": [],
+   "limits": [
+    "Geometric pairing assumes the STA label sits beside the profile label (<=20 pt).",
+    "One matching profile label per page assumed; multi-hydrant sheets without chainage stay on fallback."
+   ],
+   "implemented_in": "hydrants.py v0.4",
+   "regression_tests": [
+    "test_br03_02_profile_label_station_preferred_over_nearest_chainage",
+    "test_br03_02_guard_falls_back_to_nearest_chainage_without_profile",
+    "test_br03_02_guard_non_hydrant_profile_label_not_used"
+   ],
+   "origin": {
+    "run": "Blind Run 03",
+    "project": "Cumberland 34277",
+    "page": 9
+   },
+   "rule_version": "hydrants.py v0.4",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND Cumberland diagnostic; side effect unchecked: p8 new hydrant now gets STA 2+009.015",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR04-01",
+   "code_rule_id": "R-COVERAGE-NOTE-NOT-INSTANCE (hydrants.py v0.5)",
+   "skill": "hydrant",
+   "category": "gating",
+   "recognize": "A hydrant coverage / spacing / radius annotation (COVERAGE, SPACING or RADIUS in the label or the lines stacked directly below it, with no site-action verb) describes design criteria, not a hydrant. Log it as a mention, never count it.",
+   "classify_as": "mention:hydrant_coverage_or_spacing_note",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "PROPOSED 150m HYDRANT / COVERAGE RADIUS / AT APPROX. 300m SPACING(TYP.)"
+   ],
+   "incorrect_examples": [
+    "INSTALL NEW FIRE HYDRANT / MAINTAIN 1.5m SPACING FROM POLE"
+   ],
+   "incorrect_examples_meaning": "has a site-action verb (INSTALL): still a physical 'new' instance",
+   "related_error_ids": [],
+   "limits": [
+    "Stacked-line context is up to 3 lines directly below and overlapping horizontally.",
+    "A real callout that also says SPACING/RADIUS/COVERAGE without an action verb (e.g. 'PROPOSED HYDRANT, SEE COVERAGE') would be suppressed."
+   ],
+   "implemented_in": "hydrants.py v0.5",
+   "regression_tests": [
+    "test_br04_01_coverage_radius_note_is_not_a_new_hydrant",
+    "test_br04_01_guard_install_callout_near_spacing_word_still_new"
+   ],
+   "origin": {
+    "run": "Blind Run 04",
+    "project": "Run 04 tender (PDF sha256 e21a027c...)",
+    "page": 4
+   },
+   "rule_version": "hydrants.py v0.5",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND re-run of Run 04 (FP gone); not yet blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR04-02",
+   "code_rule_id": "OCR fallback: ocr_trigger + hydrant_ocr.ocr_page_lines (hydrants.py v0.5)",
+   "skill": "hydrant",
+   "category": "symbol",
+   "recognize": "Hydrant labels can be drawn as vector outlines with no text layer. When a page has drawing content but no hydrant word in its text layer (or no text layer at all), read the page with OCR (two orientations, 150 dpi) and send the OCR lines through the same classifier and gates. Mark them provenance=ocr, confidence low. Drop OCR lines that overlap the same text already in the text layer, so nothing is counted twice.",
+   "classify_as": "status:<as classified>; evidence.method=ocr",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "HYD-05 / PROPOSED HYDRANT & VALVE (TYP) / PER MMCD W4 (outlined text on plan sheets C06-C11)"
+   ],
+   "incorrect_examples": [
+    "The same words present in the text layer at the same place"
+   ],
+   "incorrect_examples_meaning": "not read again by OCR (no double count)",
+   "related_error_ids": [],
+   "limits": [
+    "Adds ~20-40 s per triggered page (large sheets); total OCR bounded by TI_HYD_OCR_BUDGET_S (default 900 s).",
+    "Repeated views of the same hydrant on adjacent sheets are not deduplicated unless explicit stations agree.",
+    "OCR misreads (O/0, merged words) can lose a label."
+   ],
+   "implemented_in": "hydrants.py v0.5 + tender_intel/hydrant_ocr.py",
+   "regression_tests": [
+    "test_br05_01_image_only_callout_found_by_ocr",
+    "test_br04_02_dedupe_overlapping_same_text",
+    "test_br04_02_ocr_does_not_double_count_text_layer"
+   ],
+   "origin": {
+    "run": "Blind Run 04",
+    "project": "Run 04 tender (PDF sha256 e21a027c...)",
+    "page": 8
+   },
+   "rule_version": "hydrants.py v0.5 + tender_intel/hydrant_ocr.py",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND re-run of Run 04: callouts now read on p8-p13, but repeat views are counted again and stations are nearest-chainage; needs Checker grading and a blind run",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR05-01",
+   "code_rule_id": "OCR fallback (hydrants.py v0.5)",
+   "skill": "hydrant",
+   "category": "symbol",
+   "recognize": "Same lesson as BR04-02 on a second tender: a plan callout drawn as graphics ('PROPOSED HYDRANT / RESTRAIN PIPE WITHIN 18m') must be read by OCR and typed 'new'. A detail sheet with text-layer hydrant text is not re-read by OCR.",
+   "classify_as": "status:new; evidence.method=ocr",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "PROPOSED HYDRANT / RESTRAIN PIPE WITHIN 18m.",
+    "HYDRANT STA. 1+070 (profile)"
+   ],
+   "incorrect_examples": [
+    "REMOVE TREES/BRUSH AS NEEDED FOR HYDRANT INSTALLATION"
+   ],
+   "incorrect_examples_meaning": "site-prep note, not a hydrant action",
+   "related_error_ids": [],
+   "limits": [
+    "Repeat view on p5 still counted (flag only).",
+    "Vertical profile label not recovered by OCR."
+   ],
+   "implemented_in": "hydrants.py v0.5",
+   "regression_tests": [
+    "test_br05_01_nonblind_run05_crop_vector_label_found",
+    "test_br05_01_image_only_callout_found_by_ocr"
+   ],
+   "origin": {
+    "run": "Blind Run 05",
+    "project": "Run 05 tender (PDF sha256 55263ccb...)",
+    "page": 4
+   },
+   "rule_version": "hydrants.py v0.5",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "NON-BLIND re-run of Run 05: found on p4, but the p5 repeat view is counted too (flagged possible_cross_sheet_duplicate); profile 'HYDRANT STA. 1+070' not read",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR06-01",
+   "code_rule_id": "_norm relocate-beats-new + same-bbox dedupe (hydrants.py v0.5)",
+   "skill": "hydrant",
+   "category": "dedupe",
+   "recognize": "One callout gives one status. If the callout has relocation wording, it is a relocate, even when it also says PROPOSED or NEW. Instances with the same evidence box and status are one instance.",
+   "classify_as": "status:relocate",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "PROPOSED HYDRANT RELOCATION"
+   ],
+   "incorrect_examples": [
+    "RELOCATE EXISTING HYDRANT and a separate INSTALL NEW HYDRANT callout elsewhere"
+   ],
+   "incorrect_examples_meaning": "two callouts: one relocate and one new",
+   "related_error_ids": [],
+   "limits": [
+    "tie_in + remove from one callout is still two statuses (unchanged earlier behaviour)."
+   ],
+   "implemented_in": "hydrants.py v0.5",
+   "regression_tests": [
+    "test_br06_01_proposed_hydrant_relocation_is_one_relocate",
+    "test_br06_01_guard_separate_new_and_relocate_callouts_both_count"
+   ],
+   "origin": {
+    "run": "Blind Run 06",
+    "project": "Run 06 tender (PDF sha256 a6892f07...)",
+    "page": 1
+   },
+   "rule_version": "hydrants.py v0.5",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND re-run of Run 06 ({relocate: 1})",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR07-01",
+   "code_rule_id": "hydrants.py v0.7 (BR07-01)",
+   "skill": "hydrant",
+   "category": "dedupe",
+   "recognize": "The same hydrant across sheets is one instance: same hydrant tag id (station ignored, sheets may use different chainage systems), same call-out text (>=20 chars, compatible station), or a '(TYP.)' call-out already counted by tags. Populate cross_sheet_duplicates.",
+   "classify_as": "dedupe",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "SUPPLY & INSTALL FIRE HYDRANT ASSEMBLY AS PER MMD DWG W4 (TYP.) on C101 and the water plan",
+    "EXISTING HYDRANT PRESERVE AND PROTECT on C2, C4 and C4.1",
+    "HYD-07 on C08 and C11"
+   ],
+   "incorrect_examples": [
+    "two different hydrants with different text on two sheets"
+   ],
+   "related_error_ids": [
+    "ERR-R07-01",
+    "ERR-R10-06",
+    "ERR-R10-07"
+   ],
+   "limits": [
+    "Untagged repeats with different wording and no station are not merged (run04 p8 'EX HYD' may still repeat EX HYD-04)."
+   ],
+   "implemented_in": "hydrants.py v0.7.1",
+   "regression_tests": [
+    "test_err01_run07_typ_callout_on_c101_is_cross_sheet_duplicate",
+    "test_err06_run10_c4_repeat_of_existing_hydrant_deduped",
+    "test_err07_run10_c41_optional_pricing_repeat_deduped",
+    "test_guard_same_callout_repeated_on_two_sheets_is_one",
+    "test_guard_different_hydrants_on_two_sheets_not_deduped",
+    "test_run04_same_hydrant_tag_on_two_sheets_with_different_chainage_is_one"
+   ],
+   "origin": {
+    "run": "Blind Runs 07, 10 (+ run04 non-blind)",
+    "page": "07 p3/p9; 10 p2/p4/p5"
+   },
+   "rule_version": "hydrants.py v0.7.1",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR07-02",
+   "code_rule_id": "hydrants.py v0.7 (BR07-02)",
+   "skill": "hydrant",
+   "category": "count",
+   "recognize": "A '(TYP.)' call-out applies to every tag-only hydrant label ('HYDRANT #1', 'HYD-05') on that sheet; each tag counts once with the call-out's status.",
+   "classify_as": "status:from_typ_callout",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "HYDRANT #1 / HYDRANT #2 + one 'SUPPLY & INSTALL FIRE HYDRANT ASSEMBLY (TYP.)'"
+   ],
+   "incorrect_examples": [
+    "tag with no status call-out on the sheet stays unresolved"
+   ],
+   "related_error_ids": [
+    "ERR-R07-02"
+   ],
+   "limits": [],
+   "implemented_in": "hydrants.py v0.7.1",
+   "regression_tests": [
+    "test_err02_run07_hydrant_tag_1_counted_via_typ_callout"
+   ],
+   "origin": {
+    "run": "Blind Run 07",
+    "page": "9"
+   },
+   "rule_version": "hydrants.py v0.7.1",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR08-01",
+   "code_rule_id": "hydrants.py v0.7 (BR08-01)",
+   "skill": "hydrant",
+   "category": "text",
+   "recognize": "Garbled text-layer words within edit distance 1 of the hydrant/status vocabulary (min length 6) are corrected at low confidence (provenance fuzzy_text_layer), only on lines without a hydrant word.",
+   "classify_as": "low_confidence_instance",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "PROPOSLD HYDRANI"
+   ],
+   "incorrect_examples": [
+    "PROPOSED HYDRAULIC GRADE LINE"
+   ],
+   "related_error_ids": [
+    "ERR-R08-03",
+    "ERR-R08-04"
+   ],
+   "limits": [
+    "Edit distance 1 only."
+   ],
+   "implemented_in": "hydrants.py v0.7.1",
+   "regression_tests": [
+    "test_err03_run08_garbled_proposld_hydrani_tee_counted_low_conf",
+    "test_err04_run08_plan_60396_proposed_hydrani_counted",
+    "test_guard_fuzzy_does_not_turn_hydraulic_into_hydrant",
+    "test_guard_clean_text_not_marked_fuzzy"
+   ],
+   "origin": {
+    "run": "Blind Run 08",
+    "page": "3"
+   },
+   "rule_version": "hydrants.py v0.7.1",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR09-01",
+   "code_rule_id": "hydrants.py v0.7 (BR09-01)",
+   "skill": "hydrant",
+   "category": "ocr",
+   "recognize": "If a page's only hydrant words are legend/notes (no counted instance), OCR the page anyway; partial hydrant words at 150 dpi trigger a 300 dpi re-OCR of that region.",
+   "classify_as": "ocr_fallback",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "FIRE HYDRANT ASSEMBLY drawn as vector text"
+   ],
+   "incorrect_examples": [],
+   "related_error_ids": [
+    "ERR-R09-05",
+    "ERR-R12-14"
+   ],
+   "limits": [
+    "Run09 p5 label is now surfaced but stays UNRESOLVED (no status word on the drawing) - still a miss as a count.",
+    "Run12 H1 counted from the C002 'PROPOSED FIRE HYDRANT' label; the p4 'INSTALL NEW ...' vector text not separately read.",
+    "Adds OCR time (up to 900 s budget per package)."
+   ],
+   "implemented_in": "hydrants.py v0.7.1",
+   "regression_tests": [
+    "test_err05_run09_vector_fire_hydrant_assembly_found_by_region_reocr",
+    "test_err14_run12_new_hydrant_counted_once"
+   ],
+   "origin": {
+    "run": "Blind Runs 09, 12",
+    "page": "09 p5; 12 p4"
+   },
+   "rule_version": "hydrants.py v0.7.1",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR11-01",
+   "code_rule_id": "hydrants.py v0.7 (BR11-01)",
+   "skill": "hydrant",
+   "category": "dedupe",
+   "recognize": "An enlarged intersection-detail sheet (title DETAIL ...) whose street names are a subset of a plan sheet's streets duplicates that plan's instances.",
+   "classify_as": "dedupe",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "detail 10 '6th St & 7th Ave' PROPOSED FIRE HYDRANT REPLACEMENT"
+   ],
+   "incorrect_examples": [
+    "inset frames on the plan sheet itself"
+   ],
+   "related_error_ids": [
+    "ERR-R11-08"
+   ],
+   "limits": [],
+   "implemented_in": "hydrants.py v0.7.1",
+   "regression_tests": [
+    "test_err08_run11_intersection_detail_new_is_duplicate_remove_stays"
+   ],
+   "origin": {
+    "run": "Blind Run 11",
+    "page": "11"
+   },
+   "rule_version": "hydrants.py v0.7.1",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR11-02",
+   "code_rule_id": "hydrants.py v0.7 (BR11-02)",
+   "skill": "hydrant",
+   "category": "station",
+   "recognize": "Rotated multi-line call-outs are stacked into one call-out; instances inside an inset/enlargement frame do not take the main-plan chainage or profile label (station left null rather than wrong).",
+   "classify_as": "station:inset_context",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "REMOVE EXISTING / HYDRANT AND VALVE AND / REPLACE WITH NEW / HYDRANT ASSEMBLY (rotated, in inset)"
+   ],
+   "incorrect_examples": [],
+   "related_error_ids": [
+    "ERR-R11-09",
+    "ERR-R11-10"
+   ],
+   "limits": [
+    "Inset gets no station rather than its own; true inset station reading not implemented."
+   ],
+   "implemented_in": "hydrants.py v0.7.1",
+   "regression_tests": [
+    "test_err09_run11_inset_remove_counted",
+    "test_err10_run11_inset_uses_own_station_context"
+   ],
+   "origin": {
+    "run": "Blind Run 11",
+    "page": "3"
+   },
+   "rule_version": "hydrants.py v0.7.1",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR11-03",
+   "code_rule_id": "hydrants.py v0.7 (BR11-03)",
+   "skill": "hydrant",
+   "category": "status",
+   "recognize": "'TIE EXISTING ... HYDRANT LEAD TO ...' = existing hydrant in scope with a hydrant-lead tie-in; tie_in reported per item in tie_in_items.",
+   "classify_as": "status:existing+tie_in",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "TIE EXISTING 150Ø PVC HYDRANT LEAD TO PROPOSED 250Ø PVC WATER MAIN"
+   ],
+   "incorrect_examples": [],
+   "related_error_ids": [
+    "ERR-R11-11"
+   ],
+   "limits": [],
+   "implemented_in": "hydrants.py v0.7.1",
+   "regression_tests": [
+    "test_err11_run11_hydrant_lead_tie_in_is_existing_in_scope_once",
+    "test_guard_tie_in_reported_per_item"
+   ],
+   "origin": {
+    "run": "Blind Run 11",
+    "page": "7"
+   },
+   "rule_version": "hydrants.py v0.7.1",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR12-01",
+   "code_rule_id": "hydrants.py v0.7 (BR12-01)",
+   "skill": "hydrant",
+   "category": "legend",
+   "recognize": "A stacked block of >=6 short rows most starting EX./PR./PROPOSED is a legend even when rotated and without a LEGEND heading; legend rows are not instances and are not used to suppress real labels as possible duplicates.",
+   "classify_as": "not_instance",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "PR. FIRE HYDRANT & VALVE ASSEMBLY / EX. FIRE HYDRANT & VALVE ASSEMBLY among EX. GAS MAIN, PR. WATERMAIN & VALVE"
+   ],
+   "incorrect_examples": [
+    "a single 'EX. FIRE HYDRANT' label on a plan"
+   ],
+   "related_error_ids": [
+    "ERR-R12-12",
+    "ERR-R12-13",
+    "ERR-R12-15"
+   ],
+   "limits": [
+    "Legends with fewer than 6 rows are not detected by layout."
+   ],
+   "implemented_in": "hydrants.py v0.7.1",
+   "regression_tests": [
+    "test_err12_run12_pr_legend_row_not_new",
+    "test_err13_run12_ex_legend_row_not_existing",
+    "test_err15_run12_four_existing_fire_hydrant_labels",
+    "test_guard_single_ex_label_is_not_a_legend"
+   ],
+   "origin": {
+    "run": "Blind Run 12",
+    "page": "3/4/5"
+   },
+   "rule_version": "hydrants.py v0.7.1",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR13-01",
+   "code_rule_id": "hydrants.py v0.8 (BR13-01)",
+   "skill": "hydrant",
+   "category": "dedupe",
+   "recognize": "Plan and profile sheets with near-identical call-out text (>=85% similar, first 150 normalized chars) at stations within 25 m are one hydrant even without a hydrant number.",
+   "classify_as": "duplicate",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "'FIRE HYDRANT c/w 250x250x150 HFF TEE, THRUST BLOCKS...' p6 and '...HFF THRUST BLOCKS...' p9, both ~0+185"
+   ],
+   "incorrect_examples": [
+    "two different call-outs at the same station"
+   ],
+   "related_error_ids": [
+    "ERR-R13-01",
+    "ERR-R13-02",
+    "ERR-R13-04",
+    "ERR-R13-05"
+   ],
+   "limits": [],
+   "implemented_in": null,
+   "regression_tests": [],
+   "origin": {
+    "run": "Blind Run 13",
+    "page": "6/9"
+   },
+   "rule_version": "hydrants.json 2026-10-24",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR13-02",
+   "code_rule_id": "hydrants.py v0.8 (BR13-02)",
+   "skill": "hydrant",
+   "category": "station",
+   "recognize": "Station = interpolation between adjacent chainage ticks along the alignment at the call-out leader end (fallback: label centre); extrapolate at most half a tick spacing past an end tick; nearest label only when no tick pair fits.",
+   "classify_as": "station",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "leader end at 0+185.7 between 0+100 and 0+200 ticks"
+   ],
+   "incorrect_examples": [
+    "snapping to nearest 0+200 label"
+   ],
+   "related_error_ids": [
+    "ERR-R13-02",
+    "ERR-R13-04",
+    "ERR-R13-05"
+   ],
+   "limits": [],
+   "implemented_in": null,
+   "regression_tests": [],
+   "origin": {
+    "run": "Blind Run 13",
+    "page": "6"
+   },
+   "rule_version": "hydrants.json 2026-10-24",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR13-03",
+   "code_rule_id": "hydrants.py v0.8 (BR13-03)",
+   "skill": "hydrant",
+   "category": "legend",
+   "recognize": "A call-out starting with an action verb (REMOVE, RELOCATE, ...) is not a legend row even if it sits in a stacked short-row block.",
+   "classify_as": "count",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "REMOVE & DISPOSE / EXISTING FIRE HYDRANT"
+   ],
+   "incorrect_examples": [
+    "EX. FIRE HYDRANT legend row"
+   ],
+   "related_error_ids": [
+    "ERR-R13-03"
+   ],
+   "limits": [],
+   "implemented_in": null,
+   "regression_tests": [],
+   "origin": {
+    "run": "Blind Run 13",
+    "page": "2"
+   },
+   "rule_version": "hydrants.json 2026-10-24",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR13-04",
+   "code_rule_id": "hydrants.py v0.8 (BR13-04)",
+   "skill": "hydrant",
+   "category": "tie_in",
+   "recognize": "'TIE-IN TO EXISTING ... WATER MAIN/LINE' call-outs are general tie-in records (tie_in_items kind main_tie_in, hydrant_linked false) deduped across sheets; linked to a hydrant only when the hydrant is on the same call-out.",
+   "classify_as": "tie_in_record",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "TIE-IN TO EXISTING 150 AC WATER MAIN AS PER WATER MAIN TIE-IN DETAIL W2"
+   ],
+   "incorrect_examples": [
+    "SEE WATERMAIN TIE-IN DETAIL W2"
+   ],
+   "related_error_ids": [
+    "ERR-R13-01",
+    "ERR-R13-02",
+    "ERR-R13-04",
+    "ERR-R13-05"
+   ],
+   "limits": [],
+   "implemented_in": null,
+   "regression_tests": [],
+   "origin": {
+    "run": "Blind Run 13",
+    "page": "6/9"
+   },
+   "rule_version": "hydrants.json 2026-10-24",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR15-01",
+   "code_rule_id": "hydrants.py v0.8 (BR15-01)",
+   "skill": "hydrant",
+   "category": "spec_text",
+   "recognize": "Numbered hydrant rows in spec text ('along <location> for hydrant(s) # n[, m and k]') count as instances (low confidence, via spec_numbered_list) only when the document has a scope statement ('hydrants are to be supplied and installed') giving the status; hydrant numbers without location or scope stay general notes.",
+   "classify_as": "count",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "along the TCH for hydrants # 2,3,4 and 5 + 'The hydrants are to be supplied and installed as follows'"
+   ],
+   "incorrect_examples": [
+    "access for hydrants 1, 2, 4, 5 and 10"
+   ],
+   "related_error_ids": [],
+   "limits": [],
+   "implemented_in": null,
+   "regression_tests": [],
+   "origin": {
+    "run": "Blind Run 15",
+    "page": "2-3"
+   },
+   "rule_version": "hydrants.json 2026-10-24",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR15-L1",
+   "code_rule_id": "not implemented (v0.8 known limit)",
+   "skill": "hydrant",
+   "category": "known_limit",
+   "recognize": "KNOWN LIMIT: raster maps with numbered hydrant dots (no text layer for the dots) are not recognised; left unresolved (symbol-recognition backlog).",
+   "classify_as": "unresolved",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [],
+   "incorrect_examples": [],
+   "related_error_ids": [
+    "ERR-R15-06",
+    "ERR-R15-07",
+    "ERR-R15-08"
+   ],
+   "limits": [],
+   "implemented_in": null,
+   "regression_tests": [],
+   "origin": {
+    "run": "Blind Run 15 p5-p7"
+   },
+   "rule_version": "hydrants.json 2026-10-24",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": true
+  },
+  {
+   "rule_id": "BR16-L1",
+   "code_rule_id": "not implemented (v0.8 known limit)",
+   "skill": "hydrant",
+   "category": "known_limit",
+   "recognize": "KNOWN LIMIT: symbol-only hydrants (no text label) on 180-degree rotated sheets are not detected; symbol-recognition backlog.",
+   "classify_as": "unresolved",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [],
+   "incorrect_examples": [],
+   "related_error_ids": [
+    "ERR-R16-09"
+   ],
+   "limits": [],
+   "implemented_in": null,
+   "regression_tests": [],
+   "origin": {
+    "run": "Blind Run 16"
+   },
+   "rule_version": "hydrants.json 2026-10-24",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": true
+  },
+  {
+   "rule_id": "BR17-04",
+   "code_rule_id": "status_precedence.beats relocate>remove",
+   "skill": "hydrant",
+   "category": "status_typing",
+   "recognize": "'REMOVE AND RELOCATE HYDRANT' is one relocate action: relocate beats remove in one call-out.",
+   "classify_as": "status:relocate",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "REMOVE AND RELOCATE HYDRANT 0.3m FROM PROPERTY LINE."
+   ],
+   "incorrect_examples": [
+    "REMOVE AND REPLACE HYDRANT (= remove + new)"
+   ],
+   "related_error_ids": [
+    "ERR-R17-03",
+    "ERR-R17-04"
+   ],
+   "limits": [
+    "Only within one call-out; a separate REMOVE call-out still counts."
+   ],
+   "implemented_in": "hydrants.py v0.9",
+   "regression_tests": [
+    "test_br17_04_remove_and_relocate_is_relocate_only",
+    "test_syn_remove_and_relocate_one_status"
+   ],
+   "origin": {
+    "run": "Blind Run 17",
+    "project": "North Bay Wallace (run17)",
+    "page": 6
+   },
+   "rule_version": "hydrants.py v0.9",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR17-01",
+   "code_rule_id": "existing status_wording + site_verb",
+   "skill": "hydrant",
+   "category": "status_typing",
+   "recognize": "RAISE / LOWER / ADJUST / INSULATE / INSTALL INSULATION AROUND a hydrant = existing hydrant with in-scope work (status existing, work_on_existing=true), never 'new'. Such action call-outs are not legend rows.",
+   "classify_as": "status:existing (work_on_existing)",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "INSTALL INSULATION AROUND HYDRANT AND VALVE BOX PER OPSD 1109.030",
+    "RAISE HYDRANT 0.3m WITH RISER"
+   ],
+   "incorrect_examples": [
+    "ADJUST EXISTING MANHOLES, FIRE HYDRANTS ... (numbered general note)"
+   ],
+   "related_error_ids": [
+    "ERR-R17-01",
+    "ERR-R17-02",
+    "ERR-R17-05"
+   ],
+   "limits": [
+    "Scope (in vs out) is reported via work_on_existing only; grader keeps separate scores."
+   ],
+   "implemented_in": "hydrants.py v0.9",
+   "regression_tests": [
+    "test_br17_01_insulation_around_hydrant_is_existing_work",
+    "test_br17_02_raise_hydrant_under_notes_heading_is_counted"
+   ],
+   "origin": {
+    "run": "Blind Run 17",
+    "project": "North Bay Wallace (run17)",
+    "page": "4-5"
+   },
+   "rule_version": "hydrants.py v0.9",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR17-02",
+   "code_rule_id": "act_leader (hydrants.py v0.9)",
+   "skill": "hydrant",
+   "category": "gating",
+   "recognize": "A short (<=4 line) action-verb hydrant call-out whose hydrant line has a leader is a site call-out even when it sits in the column below a NOTES heading.",
+   "classify_as": "instance",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "RAISE HYDRANT 0.3m WITH RISER (leader to hydrant)"
+   ],
+   "incorrect_examples": [
+    "Numbered note text under CONSTRUCTION NOTES with no leader"
+   ],
+   "related_error_ids": [
+    "ERR-R17-02",
+    "ERR-R17-03",
+    "ERR-R17-04",
+    "ERR-R17-05"
+   ],
+   "limits": [
+    "Needs a vector leader within 8-12 pt of the hydrant line."
+   ],
+   "implemented_in": "hydrants.py v0.9",
+   "regression_tests": [
+    "test_br17_03_second_identical_callout_with_leader_counted",
+    "test_syn_action_callout_with_leader_escapes_notes_heading",
+    "test_syn_guard_note_without_leader_still_gated"
+   ],
+   "origin": {
+    "run": "Blind Run 17",
+    "project": "North Bay Wallace (run17)",
+    "page": "5-6"
+   },
+   "rule_version": "hydrants.py v0.9",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR17-05",
+   "code_rule_id": "_leader_target polyline (v0.9)",
+   "skill": "hydrant",
+   "category": "station",
+   "recognize": "A leader drawn as one multi-segment path whose first vertex sits just outside the text box still gives the station (its far end).",
+   "classify_as": "station_kind:interpolated_chainage",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "RELOCATE EXISTING HYDRANT TO THE PROPERTY LINE (dog-leg leader)"
+   ],
+   "incorrect_examples": [],
+   "related_error_ids": [
+    "ERR-R17-02",
+    "ERR-R17-05"
+   ],
+   "limits": [
+    "Leaders made of separate unconnected paths are still not chained."
+   ],
+   "implemented_in": "hydrants.py v0.9",
+   "regression_tests": [
+    "test_br17_05_station_from_polyline_leader_end"
+   ],
+   "origin": {
+    "run": "Blind Run 17",
+    "project": "North Bay Wallace (run17)",
+    "page": 5
+   },
+   "rule_version": "hydrants.py v0.9",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR18-03",
+   "code_rule_id": "existing_abbrev_label + repeat_sheet_same_position",
+   "skill": "hydrant",
+   "category": "status_typing",
+   "recognize": "A stand-alone survey label 'HYD.' (optionally with a '-O-' / '-+-' symbol) is an existing hydrant; it is never a note or typical-section reference. Repeat sheets that put the same label at the same position (e.g. pavement-marking plans) are duplicates.",
+   "classify_as": "status:existing (via survey_abbrev_label, low confidence)",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "HYD.",
+    "O- HYD.",
+    "-O- HYD."
+   ],
+   "incorrect_examples": [
+    "HYDRO",
+    "HYD. UNION (fitting text)",
+    "TOP OPERATING NUT ON FIRE HYDRANT (benchmark)"
+   ],
+   "related_error_ids": [
+    "ERR-R18-06",
+    "ERR-R18-07",
+    "ERR-R18-08",
+    "ERR-R18-09"
+   ],
+   "limits": [
+    "Vector-outlined labels need OCR; OCR noise like 'HYD.9 a LPD' stays unresolved. p10 two-line OCR box not recovered."
+   ],
+   "implemented_in": "hydrants.py v0.9",
+   "regression_tests": [
+    "test_br18_vector_labels_via_ocr",
+    "test_syn_lone_hyd_label_is_existing",
+    "test_syn_guard_hydro_not_abbrev"
+   ],
+   "origin": {
+    "run": "Blind Run 18",
+    "project": "Mount Forest Main St (run18)",
+    "page": "2-5,10"
+   },
+   "rule_version": "hydrants.py v0.9",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR18-01",
+   "code_rule_id": "scan_page page_deadline (v0.9)",
+   "skill": "hydrant",
+   "category": "gating",
+   "recognize": "OCR time is capped per page (TI_HYD_OCR_PAGE_CAP_S, default 240 s) so one slow page cannot exhaust the whole budget and leave later sheets unread.",
+   "classify_as": "ocr",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "run18 p2 OCR ran 4123 s in the blind run; p3-p10 then skipped"
+   ],
+   "incorrect_examples": [],
+   "related_error_ids": [
+    "ERR-R18-06",
+    "ERR-R18-07",
+    "ERR-R18-08",
+    "ERR-R18-09"
+   ],
+   "limits": [
+    "Root cause of the 4123 s page not reproduced (same page took ~20 s in dev); cap is a guard, not a diagnosis."
+   ],
+   "implemented_in": "hydrants.py v0.9",
+   "regression_tests": [
+    "test_br18_vector_labels_via_ocr"
+   ],
+   "origin": {
+    "run": "Blind Run 18",
+    "project": "Mount Forest Main St (run18)",
+    "page": "2-10"
+   },
+   "rule_version": "hydrants.py v0.9",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR19-01",
+   "code_rule_id": "_cross_sheet stationless_repeat_same_standard_reference",
+   "skill": "hydrant",
+   "category": "dedupe",
+   "recognize": "Station-less hydrant call-outs (profile labels, servicing/grading-plan repeats) citing the same standard drawing (OPSD/OPSS/MMCD/SD) and status as stationed plan call-outs are duplicates, when there are at most two repeats per stationed call-out.",
+   "classify_as": "mention:duplicate",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "PROP. FIRE HYDRANT AS PER OPSD 1105.010 (C300)",
+    "INSTALL FIRE HYDRANT AS PER OPSD 1105.010 (C400 profile)"
+   ],
+   "incorrect_examples": [
+    "two stationed call-outs with the same OPSD reference (both kept)"
+   ],
+   "related_error_ids": [
+    "ERR-R19-10",
+    "ERR-R19-11"
+   ],
+   "limits": [
+    "If every sheet is station-less nothing is deduped; a genuinely separate station-less hydrant citing the same standard would be dropped."
+   ],
+   "implemented_in": "hydrants.py v0.9",
+   "regression_tests": [
+    "test_br19_01_02_stationless_repeats_are_duplicates",
+    "test_syn_guard_two_stationed_same_ref_both_kept"
+   ],
+   "origin": {
+    "run": "Blind Run 19",
+    "project": "Renfrew Eighth St (run19)",
+    "page": "8-9"
+   },
+   "rule_version": "hydrants.py v0.9",
+   "library_commit": "f313c88105750804fd254f8553e0f7f716518a26",
+   "source_sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786",
+   "verification_status": "nonblind",
+   "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
+   "approval": "approved",
+   "is_known_limitation": false
+  }
+ ]
+}

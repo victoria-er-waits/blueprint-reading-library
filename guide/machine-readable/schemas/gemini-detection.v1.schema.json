@@ -1,0 +1,26 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "gemini-detection/v1",
+ "title": "Gemini assistant output: suggestions only, no quantities",
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["library_commit","rulepack_sha256","detections"],
+ "properties": {
+  "library_commit": {"type":"string"},
+  "rulepack_sha256": {"type":"string","pattern":"^[0-9a-f]{64}$"},
+  "detections": {"type":"array","items":{"type":"object","additionalProperties":false,
+   "required":["page","bbox","status","evidence_quote","evidence_type","confidence","rule_ids","uncertainty","item_kind"],
+   "properties":{
+    "page":{"type":"integer","minimum":1},
+    "bbox":{"type":"array","items":{"type":"number"},"minItems":4,"maxItems":4},
+    "station":{"type":["string","null"]},
+    "status":{"enum":["new","existing","remove","relocate","tie_in","existing_out_of_scope","unresolved"]},
+    "evidence_quote":{"type":"string","minLength":1},
+    "evidence_type":{"enum":["vector_text","raster_text","symbol","legend_match"]},
+    "confidence":{"enum":["high","medium","low"]},
+    "rule_ids":{"type":"array","items":{"type":"string"}},
+    "uncertainty":{"type":"string"},
+    "item_kind":{"enum":["physical_item","repeated_reference","general_note"]},
+    "duplicate_of":{"type":["string","null"]}}}}
+ }
+}

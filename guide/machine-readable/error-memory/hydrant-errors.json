@@ -1,0 +1,865 @@
+{
+ "schema": "error-memory/v1",
+ "gemini_policy": "contains graded-run info: never send to Gemini during blind tests",
+ "contains_graded_run_info": true,
+ "records": [
+  {
+   "error_id": "ERR-R07-01",
+   "run": "run07",
+   "reader_version_graded": "v6",
+   "page": "p3 C101",
+   "location": "Harold St, Delany end",
+   "original_mistake": "duplicate",
+   "error_summary": "Duplicate of [key item], which is also counted on p9",
+   "drawing_evidence": "\"SUPPLY & INSTALL FIRE HYDRANT ASSEMBLY AS PER MMD DWG W4 (TYP.)\"",
+   "root_cause": "No dedup between the C101 overview and the p9 water plan",
+   "fix_rule_ids": [
+    "BR07-01"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 1
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R07-02",
+   "run": "run07",
+   "reader_version_graded": "v6",
+   "page": "p9",
+   "location": "Harold St, Ward Ave end",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item] left unresolved",
+   "drawing_evidence": "\"HYDRANT #1\"",
+   "root_cause": "The one \"(TYP.)\" callout covers 2 tags; the tag-only label is not counted",
+   "fix_rule_ids": [
+    "BR07-02"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 2
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R08-03",
+   "run": "run08",
+   "reader_version_graded": "v6",
+   "page": "p3",
+   "location": "87th St / 122nd Ave",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item]",
+   "drawing_evidence": "text layer \"PROPOSLD HYDRANI\" (image: PROPOSED HYDRANT 250Hx250Hx150F TEE)",
+   "root_cause": "Garbled OCR text layer. The OCR fallback doesn't run because the legend \"HYDRANT\" counts as hydrant text",
+   "fix_rule_ids": [
+    "BR08-01"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 3
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R08-04",
+   "run": "run08",
+   "reader_version_graded": "v6",
+   "page": "p3",
+   "location": "Lot 1 Plan 60396",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item]",
+   "drawing_evidence": "\"Plan 60396 PROPOSED HYDRANI\"",
+   "root_cause": "Same as #3",
+   "fix_rule_ids": [
+    "BR08-01"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 4
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R09-05",
+   "run": "run09",
+   "reader_version_graded": "v6",
+   "page": "p5 C02",
+   "location": "66th Ave / 10th St ~0+535",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item]",
+   "drawing_evidence": "\"FIRE HYDRANT ASSEMBLY\" (no text layer)",
+   "root_cause": "Vector/raster label; OCR ran but found no instance",
+   "fix_rule_ids": [
+    "BR09-01"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 5
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R10-06",
+   "run": "run10",
+   "reader_version_graded": "v6",
+   "page": "p4 C4",
+   "location": "Kootenay Ave",
+   "original_mistake": "duplicate",
+   "error_summary": "Duplicate of [key item] (counted on p2)",
+   "drawing_evidence": "\"EXISTING HYDRANT PRESERVE AND PROTECT\"",
+   "root_cause": "Repeated label across C2/C4, no cross-sheet dedup",
+   "fix_rule_ids": [
+    "BR07-01"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 6
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R10-07",
+   "run": "run10",
+   "reader_version_graded": "v6",
+   "page": "p5 C4.1",
+   "location": "Kootenay Ave",
+   "original_mistake": "duplicate",
+   "error_summary": "Duplicate of [key item]",
+   "drawing_evidence": "same",
+   "root_cause": "Same as #6 (C4.1 is the optional-pricing version of C4)",
+   "fix_rule_ids": [
+    "BR07-01"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 7
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R11-08",
+   "run": "run11",
+   "reader_version_graded": "v6",
+   "page": "p11 detail 10",
+   "location": "6th St & 7th Ave",
+   "original_mistake": "duplicate",
+   "error_summary": "Duplicate of [key item]",
+   "drawing_evidence": "\"PROPOSED FIRE HYDRANT REPLACEMENT,\"",
+   "root_cause": "Intersection detail enlarges the plan; no dedup",
+   "fix_rule_ids": [
+    "BR11-01"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 8
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R11-09",
+   "run": "run11",
+   "reader_version_graded": "v6",
+   "page": "p3 inset",
+   "location": "7th Ave & 7th St",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item] removal (left unresolved)",
+   "drawing_evidence": "\"REMOVE EXISTING HYDRANT AND VALVE AND REPLACE WITH NEW HYDRANT ASSEMBLY c/w 200Hx200Hx150F TEE\"",
+   "root_cause": "Text split across rotated lines; \"REMOVE\" status not linked",
+   "fix_rule_ids": [
+    "BR11-02"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 9
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R11-10",
+   "run": "run11",
+   "reader_version_graded": "v6",
+   "page": "p3 inset",
+   "location": "same",
+   "original_mistake": "station_error",
+   "error_summary": "Station error: 0+600 vs key 0+505-0+512 (tol ±25 m) on an unresolved item",
+   "drawing_evidence": "as above",
+   "root_cause": "Took the nearest main-plan tick for an enlarged inset",
+   "fix_rule_ids": [
+    "BR11-02"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 10
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R11-11",
+   "run": "run11",
+   "reader_version_graded": "v6",
+   "page": "p7/p8",
+   "location": "Sparks Dr ~4+050",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item] (existing in scope), left unresolved",
+   "drawing_evidence": "\"TIE EXISTING 150Ø PVC HYDRANT LEAD TO PROPOSED 250Ø PVC WATER MAIN\"",
+   "root_cause": "Hydrant-lead tie-in wording not classified",
+   "fix_rule_ids": [
+    "BR11-03"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 11
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R12-12",
+   "run": "run12",
+   "reader_version_graded": "v6",
+   "page": "p3/p4/p5 legend",
+   "location": "C002/C200/C201 legend",
+   "original_mistake": "false_positive",
+   "error_summary": "3 false positives (new)",
+   "drawing_evidence": "\"PR. FIRE HYDRANT & VALVE ASSEMBLY\"",
+   "root_cause": "Legend rule missed this rotated legend with no LEGEND heading",
+   "fix_rule_ids": [
+    "BR12-01"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 12
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R12-13",
+   "run": "run12",
+   "reader_version_graded": "v6",
+   "page": "p3/p4/p5 legend",
+   "location": "same",
+   "original_mistake": "false_positive",
+   "error_summary": "3 false positives (existing)",
+   "drawing_evidence": "\"EX. FIRE HYDRANT & VALVE ASSEMBLY\"",
+   "root_cause": "Same as #12",
+   "fix_rule_ids": [
+    "BR12-01"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 13
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R12-14",
+   "run": "run12",
+   "reader_version_graded": "v6",
+   "page": "p4 C200",
+   "location": "Clark Ave STA 0+074.54",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item] (C002 \"PROPOSED FIRE HYDRANT\" left unresolved)",
+   "drawing_evidence": "\"INSTALL NEW FIRE HYDRANT AND ASSEMBLY. PROVIDE 2.0m WIDE GRAVEL ACCESS.\"",
+   "root_cause": "Vector text, no text layer",
+   "fix_rule_ids": [
+    "BR09-01"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 14
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R12-15",
+   "run": "run12",
+   "reader_version_graded": "v6",
+   "page": "p3 C002",
+   "location": "Fourth/Fifth/Sixth St",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item] out of scope",
+   "drawing_evidence": "\"EXISTING FIRE HYDRANT\" (×4)",
+   "root_cause": "Suppressed as \"possible same\" as the false-positive legend hit",
+   "fix_rule_ids": [
+    "BR12-01"
+   ],
+   "fix_link_method": "regression_test_name",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-07-12.md)",
+   "source": {
+    "file": "confirmed-errors-07-12.md",
+    "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec",
+    "row": 15
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R13-01",
+   "run": "run13",
+   "reader_version_graded": "v7",
+   "page": "p9 C202",
+   "location": "Riverside Ave ~0+183",
+   "original_mistake": "duplicate",
+   "error_summary": "Duplicate of [key item] (also counted on p6 C105)",
+   "drawing_evidence": "\"PROPOSED FIRE HYDRANT TO BE TERMINAL CITY 20-P AS PER DoS DWG W-3\"",
+   "root_cause": "No dedup between plan and plan/profile sheets",
+   "fix_rule_ids": [
+    "BR13-01",
+    "BR13-04"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-13-16.md)",
+   "source": {
+    "file": "confirmed-errors-13-16.md",
+    "sha256": "e8f34e4a97fb93b5a7e8a96a4bf9453c49dfc04799cbdba4229e7a1b1184c258",
+    "row": 1
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R13-02",
+   "run": "run13",
+   "reader_version_graded": "v7",
+   "page": "p6, p9",
+   "location": "same",
+   "original_mistake": "station_error",
+   "error_summary": "Station error: app 0+200.0, drawing ≈0+183 (key ±6)",
+   "drawing_evidence": "same",
+   "root_cause": "Snapped to the 0+200 tick label instead of measuring (ticks every 100 m, 5.67 pt/m)",
+   "fix_rule_ids": [
+    "BR13-01",
+    "BR13-02",
+    "BR13-04"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-13-16.md)",
+   "source": {
+    "file": "confirmed-errors-13-16.md",
+    "sha256": "e8f34e4a97fb93b5a7e8a96a4bf9453c49dfc04799cbdba4229e7a1b1184c258",
+    "row": 2
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R13-03",
+   "run": "run13",
+   "reader_version_graded": "v7",
+   "page": "p2 C101",
+   "location": "Riverside Ave south side ~0+215",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item] removal, filed as legend_block_by_layout",
+   "drawing_evidence": "\"REMOVE & DISPOSE EXISTING FIRE HYDRANT\"",
+   "root_cause": "Layout-based legend rule caught a plan callout (legend is at x≈2253, callout at x≈1165)",
+   "fix_rule_ids": [
+    "BR13-03"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-13-16.md)",
+   "source": {
+    "file": "confirmed-errors-13-16.md",
+    "sha256": "e8f34e4a97fb93b5a7e8a96a4bf9453c49dfc04799cbdba4229e7a1b1184c258",
+    "row": 3
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R13-04",
+   "run": "run13",
+   "reader_version_graded": "v7",
+   "page": "p6 C105 / p9 C202",
+   "location": "Kappel St 0+000",
+   "original_mistake": "tie_in_miss",
+   "error_summary": "Tie-in [key item] missed (tie_in_items empty)",
+   "drawing_evidence": "\"TIE-IN TO EXISTING 150Ø PVC AS PER WATER MAIN TIE-IN DETAIL W1, THIS SHEET\"",
+   "root_cause": "Tie-in extractor did not fire on the text layer",
+   "fix_rule_ids": [
+    "BR13-01",
+    "BR13-02",
+    "BR13-04"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-13-16.md)",
+   "source": {
+    "file": "confirmed-errors-13-16.md",
+    "sha256": "e8f34e4a97fb93b5a7e8a96a4bf9453c49dfc04799cbdba4229e7a1b1184c258",
+    "row": 4
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R13-05",
+   "run": "run13",
+   "reader_version_graded": "v7",
+   "page": "p6 C105 / p9 C202",
+   "location": "Martin St 0+345",
+   "original_mistake": "tie_in_miss",
+   "error_summary": "Tie-in [key item] missed",
+   "drawing_evidence": "\"TIE-IN TO EXISTING 150Ø AC WATER MAIN AS PER WATER MAIN TIE-IN DETAIL W2, THIS SHEET\"",
+   "root_cause": "Same as #4",
+   "fix_rule_ids": [
+    "BR13-01",
+    "BR13-02",
+    "BR13-04"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-13-16.md)",
+   "source": {
+    "file": "confirmed-errors-13-16.md",
+    "sha256": "e8f34e4a97fb93b5a7e8a96a4bf9453c49dfc04799cbdba4229e7a1b1184c258",
+    "row": 5
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R15-06",
+   "run": "run15",
+   "reader_version_graded": "v7",
+   "page": "p5 (raster map)",
+   "location": "Kinlock Rd & TCH",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item]",
+   "drawing_evidence": "map \"Hydrants 1-7 (Kinlock Rd & TCH)\", 7 numbered yellow dots, legend \"Additional Hydrants\"",
+   "root_cause": "Raster map; numbered dots not counted. Text list on p2/p3 (\"for hydrant # 1\", \"hydrants # 2 ... 5\", \"# 6\", \"# 7\") filed as general notes",
+   "fix_rule_ids": [
+    "BR15-L1"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "confirmed_unfixed",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-13-16.md)",
+   "source": {
+    "file": "confirmed-errors-13-16.md",
+    "sha256": "e8f34e4a97fb93b5a7e8a96a4bf9453c49dfc04799cbdba4229e7a1b1184c258",
+    "row": 6
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R15-07",
+   "run": "run15",
+   "reader_version_graded": "v7",
+   "page": "p6",
+   "location": "Stratford Rd",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item]",
+   "drawing_evidence": "\"Hydrant 8 (Stratford Rd)\", 1 dot",
+   "root_cause": "Same as #6",
+   "fix_rule_ids": [
+    "BR15-L1"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "confirmed_unfixed",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-13-16.md)",
+   "source": {
+    "file": "confirmed-errors-13-16.md",
+    "sha256": "e8f34e4a97fb93b5a7e8a96a4bf9453c49dfc04799cbdba4229e7a1b1184c258",
+    "row": 7
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R15-08",
+   "run": "run15",
+   "reader_version_graded": "v7",
+   "page": "p7",
+   "location": "Ducks Landing & Squire Lane",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item], [key item]",
+   "drawing_evidence": "\"Hydrants 9 & 10 (Ducks Landing & Squire Lane)\", 2 dots",
+   "root_cause": "Same as #6",
+   "fix_rule_ids": [
+    "BR15-L1"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "confirmed_unfixed",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-13-16.md)",
+   "source": {
+    "file": "confirmed-errors-13-16.md",
+    "sha256": "e8f34e4a97fb93b5a7e8a96a4bf9453c49dfc04799cbdba4229e7a1b1184c258",
+    "row": 8
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R16-09",
+   "run": "run16",
+   "reader_version_graded": "v7",
+   "page": "SE-25-200 (p1, rotated 180°)",
+   "location": "Aikins St near Sutherland, ~1+07",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item], existing out of scope",
+   "drawing_evidence": "(symbol only; legend \"HYDRANT\" ⌖)",
+   "root_cause": "Symbol-only hydrant; no legend-symbol match emitted",
+   "fix_rule_ids": [
+    "BR16-L1"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "confirmed_unfixed",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-13-16.md)",
+   "source": {
+    "file": "confirmed-errors-13-16.md",
+    "sha256": "e8f34e4a97fb93b5a7e8a96a4bf9453c49dfc04799cbdba4229e7a1b1184c258",
+    "row": 9
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R17-01",
+   "run": "run17",
+   "reader_version_graded": "v8",
+   "page": "p4",
+   "location": "Wallace 7+163",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item] (existing in scope)",
+   "drawing_evidence": "\"INSTALL INSULATION AROUND HYDRANT AND VALVE BOX PER OPSD 1109.030\"",
+   "root_cause": "Only symbol candidates, never resolved",
+   "fix_rule_ids": [
+    "BR17-01"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-17-19.md)",
+   "source": {
+    "file": "confirmed-errors-17-19.md",
+    "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca",
+    "row": 1
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R17-02",
+   "run": "run17",
+   "reader_version_graded": "v8",
+   "page": "p5",
+   "location": "Wallace 7+409",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item], filed as general note",
+   "drawing_evidence": "\"RAISE HYDRANT 0.3m WITH RISER\"",
+   "root_cause": "Short action callout treated as a note",
+   "fix_rule_ids": [
+    "BR17-01",
+    "BR17-02",
+    "BR17-05"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-17-19.md)",
+   "source": {
+    "file": "confirmed-errors-17-19.md",
+    "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca",
+    "row": 2
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R17-03",
+   "run": "run17",
+   "reader_version_graded": "v8",
+   "page": "p6",
+   "location": "Wallace ≈7+629",
+   "original_mistake": "miss",
+   "error_summary": "Miss: [key item], filed as general note",
+   "drawing_evidence": "\"REMOVE AND RELOCATE HYDRANT 0.3m FROM PROPERTY LINE. RAISE HYDRANT 0.3m WITH RISER.\" (2nd copy, x≈1857)",
+   "root_cause": "Identical text to the [key item] callout; second copy suppressed",
+   "fix_rule_ids": [
+    "BR17-02",
+    "BR17-04"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-17-19.md)",
+   "source": {
+    "file": "confirmed-errors-17-19.md",
+    "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca",
+    "row": 3
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R17-04",
+   "run": "run17",
+   "reader_version_graded": "v8",
+   "page": "p6",
+   "location": "Wallace ≈7+538",
+   "original_mistake": "duplicate",
+   "error_summary": "Duplicate: [key item] emitted as both relocate and remove",
+   "drawing_evidence": "same callout (x≈722)",
+   "root_cause": "One callout produced two statuses (seen before in run 06)",
+   "fix_rule_ids": [
+    "BR17-02",
+    "BR17-04"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-17-19.md)",
+   "source": {
+    "file": "confirmed-errors-17-19.md",
+    "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca",
+    "row": 4
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R17-05",
+   "run": "run17",
+   "reader_version_graded": "v8",
+   "page": "p5",
+   "location": "Wallace ≈7+288",
+   "original_mistake": "station_error",
+   "error_summary": "Station error: app 7+302.7, drawing ≈7+288 (key ±6)",
+   "drawing_evidence": "\"RELOCATE EXISTING HYDRANT TO THE PROPERTY LINE. CONTRACTOR TO COORDINATE WORK ON LIVE WATER…\"",
+   "root_cause": "Station taken from text box, not leader end",
+   "fix_rule_ids": [
+    "BR17-01",
+    "BR17-02",
+    "BR17-05"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-17-19.md)",
+   "source": {
+    "file": "confirmed-errors-17-19.md",
+    "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca",
+    "row": 5
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R18-06",
+   "run": "run18",
+   "reader_version_graded": "v8",
+   "page": "p4 top strip",
+   "location": "Main St ≈1+725, by HOUSE #279",
+   "original_mistake": "miss",
+   "error_summary": "Miss: new + remove",
+   "drawing_evidence": "\"REMOVE AND REPLACE HYDRANT, VALVE AND BOX AND 150mm LEAD WITH INSULATION FROM EXISTING MAIN TEE TO NEW HYDRANT AS SPECIFIED…\"",
+   "root_cause": "Vector-outline text; OCR did not pick it up",
+   "fix_rule_ids": [
+    "BR18-01",
+    "BR18-03"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-17-19.md)",
+   "source": {
+    "file": "confirmed-errors-17-19.md",
+    "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca",
+    "row": 6
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R18-07",
+   "run": "run18",
+   "reader_version_graded": "v8",
+   "page": "p4 bottom strip",
+   "location": "Main St ≈1+950, by HOUSE #361",
+   "original_mistake": "miss",
+   "error_summary": "Miss: new + remove",
+   "drawing_evidence": "same wording",
+   "root_cause": "Same as #6",
+   "fix_rule_ids": [
+    "BR18-01",
+    "BR18-03"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-17-19.md)",
+   "source": {
+    "file": "confirmed-errors-17-19.md",
+    "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca",
+    "row": 7
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R18-08",
+   "run": "run18",
+   "reader_version_graded": "v8",
+   "page": "p2-p5, p10",
+   "location": "Main St / Durham / King",
+   "original_mistake": "miss",
+   "error_summary": "Miss: all 11 existing out-of-scope hydrants (3 on p2 left unresolved)",
+   "drawing_evidence": "\"HYD.\" (×11)",
+   "root_cause": "Vector labels; OCR hits not promoted",
+   "fix_rule_ids": [
+    "BR18-01",
+    "BR18-03"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-17-19.md)",
+   "source": {
+    "file": "confirmed-errors-17-19.md",
+    "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca",
+    "row": 8
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R18-09",
+   "run": "run18",
+   "reader_version_graded": "v8",
+   "page": "p5",
+   "location": "Durham St 0+081",
+   "original_mistake": "tie_in_miss",
+   "error_summary": "Tie-ins: 3 missed (tie_in_items empty)",
+   "drawing_evidence": "\"AND CONNECT TO EX 250mm PVC WATERMAIN\" / \"CONNECT TO EXISTING 200mm WATERMAIN\" / connect to ex 100",
+   "root_cause": "Vector text",
+   "fix_rule_ids": [
+    "BR18-01",
+    "BR18-03"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "out_of_scope",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-17-19.md)",
+   "source": {
+    "file": "confirmed-errors-17-19.md",
+    "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca",
+    "row": 9
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests",
+   "scope_note": "Checker addendum 2026-10-24: Durham St tie-ins are not hydrant-linked; scope watermain_tie_in (future fittings skill)"
+  },
+  {
+   "error_id": "ERR-R19-10",
+   "run": "run19",
+   "reader_version_graded": "v8",
+   "page": "p8 C300",
+   "location": "Eighth St",
+   "original_mistake": "duplicate",
+   "error_summary": "2 duplicates of [key item]/[key item]",
+   "drawing_evidence": "\"PROP. FIRE HYDRANT AS PER OPSD 1105.010\" (×2)",
+   "root_cause": "No dedup between C300 and C400",
+   "fix_rule_ids": [
+    "BR19-01"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-17-19.md)",
+   "source": {
+    "file": "confirmed-errors-17-19.md",
+    "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca",
+    "row": 10
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  },
+  {
+   "error_id": "ERR-R19-11",
+   "run": "run19",
+   "reader_version_graded": "v8",
+   "page": "p9 C400 profile",
+   "location": "Eighth St",
+   "original_mistake": "duplicate",
+   "error_summary": "2 duplicates of [key item]/[key item]",
+   "drawing_evidence": "\"INSTALL FIRE HYDRANT AS PER OPSD 1105.010\" (×2)",
+   "root_cause": "Profile labels not suppressed (R-PROFILE-LABEL-NOT-EXTRA did not fire)",
+   "fix_rule_ids": [
+    "BR19-01"
+   ],
+   "fix_link_method": "run_and_page_match",
+   "validation_status": "fixed_nonblind",
+   "confirmed_by": "Blueprint Checker (confirmed-errors-17-19.md)",
+   "source": {
+    "file": "confirmed-errors-17-19.md",
+    "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca",
+    "row": 11
+   },
+   "contains_graded_run_info": true,
+   "gemini_policy": "contains graded-run info: never send to Gemini during blind tests"
+  }
+ ]
+}
