@@ -70,3 +70,5 @@ External (not hosted, no licence stated): NCDOT Plan Reading Course SSC 030, htt
 ## Notes for AI readers
 - Cite answers as book_id + PDF page range. Older US manuals use imperial units and US practice, so don't treat them as current Canadian/BC code.
 - This is reference material, not engineering approval or code certification.
+
+- [Blueprint Reader Master Manual](guide/blueprint-reader-master-manual.md): master manual (HTML version: guide/blueprint-reader-master-manual.html)
