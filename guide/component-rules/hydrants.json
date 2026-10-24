@@ -823,11 +823,11 @@
     "meaning": "v7 (BR12-01): legend rows by layout: a stacked block of >=6 short rows, most starting EX./PR./PROPOSED -> legend even without a LEGEND heading or with status words"
    },
    "hydrant_tag": {
-    "regex": "^\\s*(?:FIRE\\s+)?(?:HYDRANT|HYD\\.?)\\s*(?:#|NO\\.?\\s*|-)\\s*\\d{1,3}\\s*$",
+    "regex": "^\\s*[-–.]?\\s*(?:FIRE\\s+)?(?:HYDRANT|HYD\\.?)\\s*(?:#|NO\\.?\\s*|-)\\s*\\d{1,3}\\s*$",
     "flags": [
      "IGNORECASE"
     ],
-    "meaning": "v7 (BR07-02): tag-only hydrant label ('HYDRANT #1', 'HYD-05') = hydrant id"
+    "meaning": "v7 (BR07-02): tag-only hydrant label ('HYDRANT #1', 'HYD-05') = hydrant id; v7.1 (run04 non-blind p9 '-HYD-06'): a leading dash/dot leader stub is allowed"
    },
    "typ_marker": {
     "regex": "\\(\\s*TYP\\.?\\s*\\)|\\bTYP(?:ICAL)?\\.?\\s*$",
