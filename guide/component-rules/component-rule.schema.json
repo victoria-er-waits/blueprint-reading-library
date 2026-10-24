@@ -111,6 +111,50 @@
      }
     }
    }
+  },
+  "reader_config": {
+   "type": "object",
+   "description": "Optional. Machine patterns the Blueprint Reader app loads at runtime (v0.6+). Python regex. Required keys when present.",
+   "required": [
+    "schema",
+    "hydrant_words",
+    "not_hydrant_words",
+    "status_wording",
+    "status_precedence",
+    "gating",
+    "base_rules",
+    "scope_notes"
+   ],
+   "properties": {
+    "schema": {
+     "const": "component-reader-config/v1"
+    },
+    "status_wording": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "status",
+       "regex",
+       "flags"
+      ]
+     }
+    },
+    "gating": {
+     "type": "object",
+     "required": [
+      "general_note_text",
+      "notes_heading",
+      "spec_rule",
+      "typical_heading",
+      "site_verb",
+      "coverage_note",
+      "profile_fitting",
+      "legend_words",
+      "profile_hydrant_label"
+     ]
+    }
+   }
   }
  }
 }

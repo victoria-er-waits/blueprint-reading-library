@@ -207,7 +207,7 @@
    ],
    "implemented_in": {
     "reader_version": "hydrants.py v0.5",
-    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip (sha256 in CHANGE-NOTE / delivery report)",
+    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip sha256 d17fe85fef6cc423d39310c20b3244fac4cba08401deb6a79cc69e8d65ae0080",
     "tests": [
      "test_br04_01_coverage_radius_note_is_not_a_new_hydrant",
      "test_br04_01_guard_install_callout_near_spacing_word_still_new"
@@ -250,7 +250,7 @@
    ],
    "implemented_in": {
     "reader_version": "hydrants.py v0.5 + tender_intel/hydrant_ocr.py",
-    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip (sha256 in CHANGE-NOTE / delivery report)",
+    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip sha256 d17fe85fef6cc423d39310c20b3244fac4cba08401deb6a79cc69e8d65ae0080",
     "tests": [
      "test_br05_01_image_only_callout_found_by_ocr",
      "test_br04_02_dedupe_overlapping_same_text",
@@ -296,7 +296,7 @@
    ],
    "implemented_in": {
     "reader_version": "hydrants.py v0.5",
-    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip (sha256 in CHANGE-NOTE / delivery report)",
+    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip sha256 d17fe85fef6cc423d39310c20b3244fac4cba08401deb6a79cc69e8d65ae0080",
     "tests": [
      "test_br05_01_nonblind_run05_crop_vector_label_found (NON-BLIND crop fixture)",
      "test_br05_01_image_only_callout_found_by_ocr"
@@ -339,7 +339,7 @@
    ],
    "implemented_in": {
     "reader_version": "hydrants.py v0.5",
-    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip (sha256 in CHANGE-NOTE / delivery report)",
+    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip sha256 d17fe85fef6cc423d39310c20b3244fac4cba08401deb6a79cc69e8d65ae0080",
     "tests": [
      "test_br06_01_proposed_hydrant_relocation_is_one_relocate",
      "test_br06_01_guard_separate_new_and_relocate_callouts_both_count"
@@ -355,5 +355,169 @@
     "tie_in + remove from one callout is still two statuses (unchanged earlier behaviour)."
    ]
   }
- ]
+ ],
+ "reader_config": {
+  "schema": "component-reader-config/v1",
+  "note": "Machine-readable patterns the Blueprint Reader app (hydrants.py v0.6+) loads at runtime. Python 're' syntax. Changing these changes reader behaviour; every run records this file's sha256 and the library commit.",
+  "hydrant_words": {
+   "regex": "\\bHYDRANTS?\\b|\\bHYD\\b\\.?(?!\\s*(?:RO|DUCT))|\\bF\\.?H\\.?\\b(?=\\s|$)",
+   "flags": [
+    "IGNORECASE"
+   ],
+   "meaning": "a line mentions a hydrant"
+  },
+  "not_hydrant_words": {
+   "regex": "\\bHYD(?:RO)?\\s*DUCTS?\\b|\\bHYDRO(?:VAC|SEED)?\\b|\\bBC\\s+HYDRO\\b",
+   "flags": [
+    "IGNORECASE"
+   ],
+   "meaning": "hydro ducts / hydrovac / BC Hydro are never hydrants (R-HYDRO-NOT-HYDRANT)"
+  },
+  "status_wording": [
+   {
+    "status": "tie_in",
+    "regex": "\\bTIE\\b.{0,12}\\b(?:IN|INTO|TO)\\b.{0,25}\\bEXIST\\w*\\b.{0,15}HYD|\\bCONNECT\\w*\\s+TO\\s+EXIST\\w*.{0,15}HYD|\\bTIE[\\s-]*IN\\s+(?:AT|TO|INTO)\\s+(?:THE\\s+|EXIST\\w*\\.?\\s+|EX\\.?\\s+)?(?:FIRE\\s+)?HYD",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "call-out wording that means status 'tie_in'"
+   },
+   {
+    "status": "relocate",
+    "regex": "\\bRELOCAT\\w*\\b.{0,30}HYD|HYD\\w*.{0,20}\\bRELOCAT\\w*",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "call-out wording that means status 'relocate'"
+   },
+   {
+    "status": "remove",
+    "regex": "\\b(?:REMOVE|DECOMMISSION|ABANDON|SALVAGE|DISPOSE)\\w*\\b.{0,40}\\bHYD|\\bHYD\\w*.{0,20}\\bTO BE (?:REMOVED|ABANDONED|DECOMMISSIONED)",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "call-out wording that means status 'remove'"
+   },
+   {
+    "status": "new",
+    "regex": "\\b(?:INSTALL|PROPOSED|PROP\\.|PR\\.?|NEW|REPLACE|SUPPLY AND INSTALL)\\s.{0,40}\\bHYD|^\\s*\\d+\\s*-\\s*.*HYDRANT",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "call-out wording that means status 'new'"
+   },
+   {
+    "status": "existing",
+    "regex": "\\bEX(?:IST(?:ING)?)?\\.?\\s+(?:FIRE\\s+)?(?:HYD|F\\.?H\\b)|\\bHYDRANT\\s*\\(EXIST",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "call-out wording that means status 'existing'"
+   }
+  ],
+  "status_precedence": {
+   "tie_in_exclusive_keep": [
+    "remove"
+   ],
+   "existing_dropped_when_any_of": [
+    "remove",
+    "new",
+    "relocate"
+   ],
+   "beats": [
+    {
+     "winner": "relocate",
+     "loser": "new",
+     "lesson": "BR06-01"
+    }
+   ],
+   "order_note": "statuses are evaluated in status_wording order; tie_in first, then existing is dropped if an action status is present, then each 'beats' pair removes the loser"
+  },
+  "gating": {
+   "general_note_text": {
+    "regex": "^\\s*\\d{1,2}\\s*[.)]\\s|\\bMAY BE\\b|\\bWHERE\\b|\\bALL\\b.*\\bSHALL\\b|\\bSHALL NOT\\b|\\bWRITTEN PERMISSION\\b|\\bNOTIF|\\bRETURN ALL\\b|\\bIN ACCORDANCE\\b|\\bLOCATIONS? TO BE CONFIRMED ON SITE\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "numbered notes / spec phrasing -> mention (R-LEGEND-NOT-INSTANCE / general_note_or_spec)"
+   },
+   "notes_heading": {
+    "regex": "^\\s*(?:[A-Z&/]+\\s+){0,3}(?:NOTES|SPECIFICATIONS?)\\s*:?\\s*$",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "NOTES/SPECIFICATIONS heading gates the column beneath it (BR02-FP-01)"
+   },
+   "spec_rule": {
+    "regex": "\\bALL\\s+(?:NEW\\s+|PROPOSED\\s+|PR\\.?\\s+)?(?:FIRE\\s+)?HYDRANTS\\b|\\bHYDRANTS?\\b.{0,30}\\bAS PER\\b.{0,60}\\bSTANDARDS?\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "project-wide plural hydrant rule -> mention (BR02-FP-01)"
+   },
+   "typical_heading": {
+    "regex": "\\bTYPICAL\\s+(?:CROSS[\\s-]+)?(?:SECTIONS?|DETAILS?)\\b|\\bTYP\\.?\\s+SECTIONS?\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "typical section/detail sheet (BR02-FP-02)"
+   },
+   "site_verb": {
+    "regex": "\\b(?:INSTALL|SUPPLY|REPLACE|RELOCAT\\w*|REMOVE|ABANDON|DECOMMISSION|SALVAGE|TIE|CONNECT\\w*)\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "site-action verbs that keep a label as an instance on typical/coverage gates"
+   },
+   "coverage_note": {
+    "regex": "\\bCOVERAGE\\b|\\bSPACING\\b|\\bRADIUS\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "hydrant coverage/spacing/radius annotation -> mention (BR04-01)"
+   },
+   "profile_fitting": {
+    "regex": "^\\s*(?:HYDRANT|HYD\\.?|F\\.?H\\.?)\\s+TEE\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "profile 'HYDRANT TEE' label corroborates only (R-PROFILE-LABEL-NOT-EXTRA)"
+   },
+   "legend_words": {
+    "regex": "^(?:WATER\\s+\\w+|FIRE HYDRANT(?: LEAD)?|HYDRANT(?: & VALVE ASSEMBLY)?|YARD HYDRANT|AIR VALVE|COUPLING|CAPPED END|WATER METER|WATERMAIN(?: ABD)?|SANITARY .*|STORM .*|GATE VALVE)$",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "legend entry wording (R-LEGEND-NOT-INSTANCE)"
+   },
+   "profile_hydrant_label": {
+    "regex": "\\bHYD(?:RANT)?\\.?\\s+(?:TEE|ASSEMBLY|ASSY|VALVE|LEAD)|\\bHYDRANT\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "hydrant profile label used for station pairing (BR03-02)"
+   }
+  },
+  "base_rules": [
+   "R-HYDRO-NOT-HYDRANT",
+   "R-LEGEND-NOT-INSTANCE",
+   "R-PROFILE-LABEL-NOT-EXTRA",
+   "R-UNRESOLVED-NOT-COUNTED",
+   "R-GENERAL-NOTE-NOT-INSTANCE",
+   "R-TYPICAL-SECTION-NOT-INSTANCE"
+  ],
+  "scope_notes": [
+   {
+    "id": "SCOPE-EXISTING-OUT-OF-WORK",
+    "status": "undecided",
+    "decided_by": "Kyle (pending)",
+    "note": "Existing hydrants drawn outside the work (e.g. Run 04 EX HYD-01..03) are reported as 'existing'; whether they count is not decided. The reader does not filter them."
+   },
+   {
+    "id": "SCOPE-COUNTS-NOT-SUMMED",
+    "status": "active",
+    "note": "Counts are per status and never summed."
+   }
+  ]
+ }
 }
