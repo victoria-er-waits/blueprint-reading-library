@@ -180,6 +180,180 @@
     "Geometric pairing assumes the STA label sits beside the profile label (<=20 pt).",
     "One matching profile label per page assumed; multi-hydrant sheets without chainage stay on fallback."
    ]
+  },
+  {
+   "id": "BR04-01",
+   "code_rule_id": "R-COVERAGE-NOTE-NOT-INSTANCE (hydrants.py v0.5)",
+   "component": "hydrant",
+   "category": "gating",
+   "rule": "A hydrant coverage / spacing / radius annotation (COVERAGE, SPACING or RADIUS in the label or the lines stacked directly below it, with no site-action verb) describes design criteria, not a hydrant. Log it as a mention, never count it.",
+   "classify_as": "mention:hydrant_coverage_or_spacing_note",
+   "positive_examples": [
+    "PROPOSED 150m HYDRANT / COVERAGE RADIUS / AT APPROX. 300m SPACING(TYP.)"
+   ],
+   "negative_examples": [
+    "INSTALL NEW FIRE HYDRANT / MAINTAIN 1.5m SPACING FROM POLE"
+   ],
+   "negative_examples_meaning": "has a site-action verb (INSTALL): still a physical 'new' instance",
+   "why": {
+    "run": "Blind Run 04",
+    "project": "Run 04 tender (PDF sha256 e21a027c...)",
+    "page": 4,
+    "error": "false positive: C03 hydrant-coverage annotation counted as a new hydrant"
+   },
+   "evidence_sources": [
+    "Blind Run 04 grading.json (Blueprint Checker), PDF sha256 e21a027c5a2cb39a3f4671ee34b457f7b226ae3efba22aa658851effa1459a12",
+    "Kyle authorization 2026-10-24 (overnight autonomous hydrant fixing)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.5",
+    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip (sha256 in CHANGE-NOTE / delivery report)",
+    "tests": [
+     "test_br04_01_coverage_radius_note_is_not_a_new_hydrant",
+     "test_br04_01_guard_install_callout_near_spacing_word_still_new"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "synthetic tests + NON-BLIND re-run of Run 04 (FP gone); not yet blind-validated"
+   },
+   "limits": [
+    "Stacked-line context is up to 3 lines directly below and overlapping horizontally.",
+    "A real callout that also says SPACING/RADIUS/COVERAGE without an action verb (e.g. 'PROPOSED HYDRANT, SEE COVERAGE') would be suppressed."
+   ]
+  },
+  {
+   "id": "BR04-02",
+   "code_rule_id": "OCR fallback: ocr_trigger + hydrant_ocr.ocr_page_lines (hydrants.py v0.5)",
+   "component": "hydrant",
+   "category": "symbol",
+   "rule": "Hydrant labels can be drawn as vector outlines with no text layer. When a page has drawing content but no hydrant word in its text layer (or no text layer at all), read the page with OCR (two orientations, 150 dpi) and send the OCR lines through the same classifier and gates. Mark them provenance=ocr, confidence low. Drop OCR lines that overlap the same text already in the text layer, so nothing is counted twice.",
+   "classify_as": "status:<as classified>; evidence.method=ocr",
+   "positive_examples": [
+    "HYD-05 / PROPOSED HYDRANT & VALVE (TYP) / PER MMCD W4 (outlined text on plan sheets C06-C11)"
+   ],
+   "negative_examples": [
+    "The same words present in the text layer at the same place"
+   ],
+   "negative_examples_meaning": "not read again by OCR (no double count)",
+   "why": {
+    "run": "Blind Run 04",
+    "project": "Run 04 tender (PDF sha256 e21a027c...)",
+    "page": 8,
+    "error": "missed HYD-05..HYD-08: plan-sheet labels on p8-p13 are vector graphics with no text layer"
+   },
+   "evidence_sources": [
+    "Blind Run 04 grading.json (Blueprint Checker), PDF sha256 e21a027c5a2cb39a3f4671ee34b457f7b226ae3efba22aa658851effa1459a12",
+    "Kyle authorization 2026-10-24 (overnight autonomous hydrant fixing)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.5 + tender_intel/hydrant_ocr.py",
+    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip (sha256 in CHANGE-NOTE / delivery report)",
+    "tests": [
+     "test_br05_01_image_only_callout_found_by_ocr",
+     "test_br04_02_dedupe_overlapping_same_text",
+     "test_br04_02_ocr_does_not_double_count_text_layer"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "synthetic tests + NON-BLIND re-run of Run 04: callouts now read on p8-p13, but repeat views are counted again and stations are nearest-chainage; needs Checker grading and a blind run"
+   },
+   "limits": [
+    "Adds ~20-40 s per triggered page (large sheets); total OCR bounded by TI_HYD_OCR_BUDGET_S (default 900 s).",
+    "Repeated views of the same hydrant on adjacent sheets are not deduplicated unless explicit stations agree.",
+    "OCR misreads (O/0, merged words) can lose a label."
+   ]
+  },
+  {
+   "id": "BR05-01",
+   "code_rule_id": "OCR fallback (hydrants.py v0.5)",
+   "component": "hydrant",
+   "category": "symbol",
+   "rule": "Same lesson as BR04-02 on a second tender: a plan callout drawn as graphics ('PROPOSED HYDRANT / RESTRAIN PIPE WITHIN 18m') must be read by OCR and typed 'new'. A detail sheet with text-layer hydrant text is not re-read by OCR.",
+   "classify_as": "status:new; evidence.method=ocr",
+   "positive_examples": [
+    "PROPOSED HYDRANT / RESTRAIN PIPE WITHIN 18m.",
+    "HYDRANT STA. 1+070 (profile)"
+   ],
+   "negative_examples": [
+    "REMOVE TREES/BRUSH AS NEEDED FOR HYDRANT INSTALLATION"
+   ],
+   "negative_examples_meaning": "site-prep note, not a hydrant action",
+   "why": {
+    "run": "Blind Run 05",
+    "project": "Run 05 tender (PDF sha256 55263ccb...)",
+    "page": 4,
+    "error": "missed the only new hydrant: plan and profile labels are vector graphics"
+   },
+   "evidence_sources": [
+    "Blind Run 05 grading.json (Blueprint Checker), PDF sha256 55263ccbdccc07c7bd1a18784241aabd973392c9931c098dc15c99d3bccdb7aa",
+    "Kyle authorization 2026-10-24 (overnight autonomous hydrant fixing)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.5",
+    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip (sha256 in CHANGE-NOTE / delivery report)",
+    "tests": [
+     "test_br05_01_nonblind_run05_crop_vector_label_found (NON-BLIND crop fixture)",
+     "test_br05_01_image_only_callout_found_by_ocr"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "NON-BLIND re-run of Run 05: found on p4, but the p5 repeat view is counted too (flagged possible_cross_sheet_duplicate); profile 'HYDRANT STA. 1+070' not read"
+   },
+   "limits": [
+    "Repeat view on p5 still counted (flag only).",
+    "Vertical profile label not recovered by OCR."
+   ]
+  },
+  {
+   "id": "BR06-01",
+   "code_rule_id": "_norm relocate-beats-new + same-bbox dedupe (hydrants.py v0.5)",
+   "component": "hydrant",
+   "category": "dedupe",
+   "rule": "One callout gives one status. If the callout has relocation wording, it is a relocate, even when it also says PROPOSED or NEW. Instances with the same evidence box and status are one instance.",
+   "classify_as": "status:relocate",
+   "positive_examples": [
+    "PROPOSED HYDRANT RELOCATION"
+   ],
+   "negative_examples": [
+    "RELOCATE EXISTING HYDRANT and a separate INSTALL NEW HYDRANT callout elsewhere"
+   ],
+   "negative_examples_meaning": "two callouts: one relocate and one new",
+   "why": {
+    "run": "Blind Run 06",
+    "project": "Run 06 tender (PDF sha256 a6892f07...)",
+    "page": 1,
+    "error": "one callout emitted as both relocate and new (same bbox)"
+   },
+   "evidence_sources": [
+    "Blind Run 06 grading.json (Blueprint Checker), PDF sha256 a6892f079a96b904d2be6533e7fa13e805455c51512d0dffbacee69f71f9ab80",
+    "Kyle authorization 2026-10-24 (overnight autonomous hydrant fixing)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.5",
+    "package": "combined-blueprint-reader-dev-v5-2026-10-24.zip (sha256 in CHANGE-NOTE / delivery report)",
+    "tests": [
+     "test_br06_01_proposed_hydrant_relocation_is_one_relocate",
+     "test_br06_01_guard_separate_new_and_relocate_callouts_both_count"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "synthetic tests + NON-BLIND re-run of Run 06 ({relocate: 1})"
+   },
+   "limits": [
+    "tie_in + remove from one callout is still two statuses (unchanged earlier behaviour)."
+   ]
   }
  ]
 }

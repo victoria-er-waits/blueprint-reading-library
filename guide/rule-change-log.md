@@ -54,3 +54,13 @@ New AI-readable store `guide/component-rules/` (schema `component-rule.schema.js
 
 ## 2026-10-24: Added Blueprint Reader Master Manual
 Added guide/blueprint-reader-master-manual.html (sha256 05485ec8...eb95, supplied by Kyle; ChatGPT could not commit it) plus a plain-text .md copy for AI readers and an llms.txt pointer. Local only, not pushed.
+
+## Component rules: hydrants v0.5 (2026-10-24)
+Status: synthetic tests + NON-BLIND re-runs of Runs 04-06 only; not blind-validated.
+
+| Date | Id | Component | Change | Reader | Origin |
+|---|---|---|---|---|---|
+| 2026-10-24 | BR04-01 | hydrant | coverage/spacing/radius annotations are mentions | hydrants.py v0.5 | Blind Run 04 p4 (Checker) |
+| 2026-10-24 | BR04-02 | hydrant | OCR fallback for labels drawn as graphics (no text layer), deduped against text layer | hydrants.py v0.5 | Blind Run 04 p8-p13 (Checker) |
+| 2026-10-24 | BR05-01 | hydrant | same OCR fallback, second tender | hydrants.py v0.5 | Blind Run 05 p4-p5 (Checker) |
+| 2026-10-24 | BR06-01 | hydrant | one callout = one status; relocate beats new | hydrants.py v0.5 | Blind Run 06 p1 (Checker) |
