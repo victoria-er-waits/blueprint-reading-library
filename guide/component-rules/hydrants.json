@@ -1005,11 +1005,11 @@
     "meaning": "v7 (BR09-01): partial hydrant word in 150 dpi OCR -> re-OCR that region at 300 dpi"
    },
    "general_tie_in": {
-    "regex": "\\bTIE[\\s-]*IN\\s+(?:TO|INTO|AT|WITH)\\s+(?:THE\\s+)?EXIST\\w*\\b|\\bCONNECT\\w*\\s+TO\\s+EXIST\\w*\\s+(?:\\S+\\s+){0,6}?(?:WATER\\s*MAIN|WATERMAIN|MAIN|LINE|SERVICE)\\b",
+    "regex": "^(?!.*\\b(?:MANHOLE|SEWER|STORM|CURB|ASPHALT|GAS|DITCH\\w*\\s+GRADE)\\b)(?=.*\\bTIE[\\s-]*IN\\b|.*\\bCONNECT\\w*\\s+TO\\s+EXIST).*?\\b(?:TIE[\\s-]*IN|CONNECT\\w*)\\s+(?:TO|INTO|AT|WITH)\\s+(?:THE\\s+)?EXIST\\w*\\s+(?:[^|]{0,40}?)(?:WATER\\s*MAIN|WATERMAIN|WATER\\s*LINE|WATER\\s*SERVICE|W/M\\b|\\d+\\s*(?:mm|Ø)\\s*(?:PVC|AC|DI|CI|HDPE|PE)\\b|TEE\\b)",
     "flags": [
      "IGNORECASE"
     ],
-    "meaning": "v8 (BR13-04): general water-main tie-in call-out ('TIE-IN TO EXISTING 150Ø PVC ...'); a tie-in record, not a hydrant instance"
+    "meaning": "v8 (BR13-04): general water-main tie-in call-out ('TIE-IN TO EXISTING 150Ø PVC ...'); a tie-in record, not a hydrant instance; requires a water-pipe noun within the same line run (water main/line/service, <size> PVC/AC/DI, TEE) and no other-utility word (manhole, sewer, storm, curb, asphalt, gas) - v8 non-blind run03/05 false positives"
    },
    "spec_list_row": {
     "regex": "\\b(?:along|at|on)\\s+(?:the\\s+)?(?P<loc>[A-Z][\\w&.'\\- ]{1,50}?)\\s+for\\s+hydrants?\\s*(?:#|no\\.?)\\s*(?P<nums>\\d{1,3}(?:\\s*(?:,|and|&)\\s*\\d{1,3})*)",
