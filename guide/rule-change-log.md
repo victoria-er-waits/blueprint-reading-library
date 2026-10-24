@@ -134,3 +134,7 @@ Package: combined-blueprint-reader-dev-v10-2026-10-24.zip (sha256 recorded in th
 | 2026-10-24 | BR17-03 | hydrant | rule record added retroactively (code + test shipped in v9) | Checker review |
 
 Error memory: all 20 Checker-reviewed error->rule links are exact (method checker_reviewed_exact; run/page matching removed); ERR-R13-04, ERR-R13-05, ERR-R18-09 out_of_scope (main tie-ins not linked to a hydrant). A literal test asserts every link both ways. Run 20/21 confirmed-errors files use a different table layout and are not yet parsed into error memory (rules cite them directly).
+
+### hydrants v0.10 package record (2026-10-24)
+Package: combined-blueprint-reader-dev-v10-2026-10-24.zip sha256 66a7ed37cd7741e7f4378137e8f3063ea71574dcec386168076d80139ae11d83 (rules pinned at 9269a65, hydrants.json sha256 4259484...12d8). Frozen for unseen blind tests.
+Non-blind re-run deltas vs v9: run21 6/6 new HYDRANT TEE (was 0/6), 0 trap-table/legend/detail counts; run20 4 new + 4 remove (was 2 + 2), HR3 no longer merged into HR1. Runs 07-19 unchanged. NON-BLIND only, not independent validation.
