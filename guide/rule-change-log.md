@@ -152,3 +152,7 @@ Package: combined-blueprint-reader-dev-v11-2026-10-24.zip (sha256 recorded in th
 | 2026-10-24 | BR23-01 | hydrant | station from the call-out block's own leader (black before grey fitting-list leaders; curved polyline nearest the label); same-row bracketing ticks beat mixed pairs | Run 23 p3; run21 HN4/HN6 re-check |
 
 Error memory: parser reads the run20/21 5-column layout (run from title, ranges expanded, non-error '-' rows skipped) and the run22-23 7-column layout without a heading; scoreboards ignored. 19 new records ERR-R20-01..R23-06 linked by developer TEST_LINKS (method regression_test_name; not yet Checker-reviewed). The 20 Checker links are unchanged and still asserted literally.
+
+### hydrants v0.11 package record (2026-10-24)
+Package: combined-blueprint-reader-dev-v11-2026-10-24.zip sha256 2321f5355adb708f0794b681c5d88a007a17c4af723e3178743aa27f65577fda (rules at 8f364bc, hydrants.json sha256 de0bfb8...cab3).
+Non-blind re-run deltas vs v10 (runs 07-23; 22-23 NON-BLIND): counts and statuses unchanged except run22 (3 existing + 1 detail-title new -> 3 new on p33; legend HYD not counted). Station changes: run23 1+099 -> 1+115.7; run21 HN4 3.4 -> 19.4, HN6 148.9 -> 182.9; run17 one relocate 7630.1 -> 7629.9; run18 four stations changed/filled (unverified, keys sealed). Open: Checker's no-leader -> UNRESOLVED rule conflicts with existing guard tests; held for Kyle. NON-BLIND only, not independent validation.
