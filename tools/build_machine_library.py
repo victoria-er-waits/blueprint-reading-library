@@ -88,6 +88,9 @@ def convert_rules(doc, commit, src_sha):
             "verification_evidence": ve,
             "approval": "approved",
             "is_known_limitation": r["category"] == "known_limit",
+            **({"name": r["name"]} if r.get("name") else {}),
+            **({"machine_readable": r["machine_readable"]} if r.get("machine_readable") else {}),
+            **({"why_label_centre_unreliable": r["why_label_centre_unreliable"]} if r.get("why_label_centre_unreliable") else {}),
         })
     return recs
 
@@ -170,9 +173,9 @@ TEST_LINKS = {
     "ERR-R20-01": ["BR20-01"], "ERR-R20-02": ["BR20-02"], "ERR-R20-03": ["BR20-03"], "ERR-R20-04": ["BR20-01"],
     "ERR-R20-05": ["BR20-L1"], "ERR-R20-06": ["BR20-L1"], "ERR-R20-07": ["BR20-L1"],
     "ERR-R21-01": ["BR21-01"], "ERR-R21-02": ["BR21-01", "BR21-02"], "ERR-R21-03": ["BR21-01"],
-    "ERR-R21-04": ["BR21-01", "BR23-01"], "ERR-R21-05": ["BR21-01"], "ERR-R21-06": ["BR21-01", "BR23-01"],
+    "ERR-R21-04": ["BR21-01", "BR23-01", "BR23-02"], "ERR-R21-05": ["BR21-01"], "ERR-R21-06": ["BR21-01", "BR23-01", "BR23-02"],
     "ERR-R22-01": ["BR22-01"], "ERR-R22-02": ["BR22-01"], "ERR-R22-03": ["BR22-03"], "ERR-R22-04": ["BR22-04"],
-    "ERR-R22-05": ["BR22-02"], "ERR-R23-06": ["BR23-01"],
+    "ERR-R22-05": ["BR22-02"], "ERR-R23-06": ["BR23-01", "BR23-02"],
 }
 
 # Root causes for runs 20-23 (5-column tables have no cause column; 22-23 'Evidence' is drawing evidence).
@@ -189,7 +192,7 @@ ROOT_CAUSES = {
     "ERR-R22-03": "Legend abbreviation on a rotated sheet not recognised as a legend entry",
     "ERR-R22-04": "Detail-sheet title read as a hydrant call-out",
     "ERR-R22-05": "Multi-line call-out with leader from an inner line; no status word, so left unresolved",
-    "ERR-R23-06": "Station measured at the call-out text anchor (block x1228-1471) instead of the leader end at the tee (Checker); v10 fallback also picked a grey fitting-list leader",
+    "ERR-R23-06": "Station measured at the call-out text anchor (block x1228-1471) instead of the leader end at the tee (Checker); v10 fallback also picked a grey fitting-list leader. Fix: STATION-HIERARCHY (label centre never an anchor)",
 }
 
 # Watermain tie-ins not linked to a hydrant: out of hydrant scope (Kyle, 2026-10-24).

@@ -135,6 +135,18 @@
   },
   "is_known_limitation": {
    "type": "boolean"
+  },
+  "name": {
+   "type": "string",
+   "description": "optional human name of a cross-cutting rule (e.g. STATION-HIERARCHY)"
+  },
+  "machine_readable": {
+   "type": "object",
+   "description": "optional structured parameters a loader (e.g. Gemini via the approved library) can apply directly"
+  },
+  "why_label_centre_unreliable": {
+   "type": "string",
+   "description": "optional rationale for a station rule"
   }
  }
 }

@@ -227,3 +227,13 @@ def test_runs22_23_every_error_recorded_with_cause_fix_tests_status(tmp_path):
         assert e["root_cause"] == B.ROOT_CAUSES[e["error_id"]] and e["fix_rule_ids"]
         assert all(tests[x] for x in e["fix_rule_ids"])
         assert e["validation_status"] == "fixed_nonblind_validated"   # non-blind until a blind pass
+
+
+def test_station_hierarchy_rule_machine_readable_and_linked():
+    rules = {r["rule_id"]: r for r in json.load(open(os.path.join(OUT, "rules/hydrants.rules.json")))["records"]}
+    sh = rules["BR23-02"]
+    assert sh["name"] == "STATION-HIERARCHY" and [l["level"] for l in sh["machine_readable"]["levels"]] == ["L1", "L2", "L3", "L4"]
+    assert "call-out text box centre" in sh["machine_readable"]["never_anchor"] and sh["machine_readable"]["tolerance_m"] == 5
+    assert sh["why_label_centre_unreliable"] and sh["regression_tests"]
+    e = {x["error_id"]: x for x in json.load(open(os.path.join(OUT, "error-memory/hydrant-errors.json")))["records"]}
+    assert "BR23-02" in e["ERR-R23-06"]["applicable_rule_ids"]
