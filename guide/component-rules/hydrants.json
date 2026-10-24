@@ -354,6 +354,324 @@
    "limits": [
     "tie_in + remove from one callout is still two statuses (unchanged earlier behaviour)."
    ]
+  },
+  {
+   "id": "BR07-01",
+   "code_rule_id": "hydrants.py v0.7 (BR07-01)",
+   "component": "hydrant",
+   "category": "dedupe",
+   "rule": "The same hydrant across sheets is one instance: same hydrant tag id (station ignored, sheets may use different chainage systems), same call-out text (>=20 chars, compatible station), or a '(TYP.)' call-out already counted by tags. Populate cross_sheet_duplicates.",
+   "classify_as": "dedupe",
+   "positive_examples": [
+    "SUPPLY & INSTALL FIRE HYDRANT ASSEMBLY AS PER MMD DWG W4 (TYP.) on C101 and the water plan",
+    "EXISTING HYDRANT PRESERVE AND PROTECT on C2, C4 and C4.1",
+    "HYD-07 on C08 and C11"
+   ],
+   "negative_examples": [
+    "two different hydrants with different text on two sheets"
+   ],
+   "why": {
+    "run": "Blind Runs 07, 10 (+ run04 non-blind)",
+    "page": "07 p3/p9; 10 p2/p4/p5",
+    "error": "same hydrant counted on several sheets; cross_sheet_duplicates empty"
+   },
+   "evidence_sources": [
+    "Blind Runs 07, 10 (+ run04 non-blind) grading.json + /workspace/blind-runs/confirmed-errors-07-12.md (Blueprint Checker)",
+    "Kyle authorization 2026-10-24 (overnight autonomous development)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.7.1",
+    "package": "combined-blueprint-reader-dev-v7-2026-10-24.zip (sha256 in guide/rule-change-log.md)",
+    "tests": [
+     "test_err01_run07_typ_callout_on_c101_is_cross_sheet_duplicate",
+     "test_err06_run10_c4_repeat_of_existing_hydrant_deduped",
+     "test_err07_run10_c41_optional_pricing_repeat_deduped",
+     "test_guard_same_callout_repeated_on_two_sheets_is_one",
+     "test_guard_different_hydrants_on_two_sheets_not_deduped",
+     "test_run04_same_hydrant_tag_on_two_sheets_with_different_chainage_is_one"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)"
+   },
+   "limits": [
+    "Untagged repeats with different wording and no station are not merged (run04 p8 'EX HYD' may still repeat EX HYD-04)."
+   ]
+  },
+  {
+   "id": "BR07-02",
+   "code_rule_id": "hydrants.py v0.7 (BR07-02)",
+   "component": "hydrant",
+   "category": "count",
+   "rule": "A '(TYP.)' call-out applies to every tag-only hydrant label ('HYDRANT #1', 'HYD-05') on that sheet; each tag counts once with the call-out's status.",
+   "classify_as": "status:from_typ_callout",
+   "positive_examples": [
+    "HYDRANT #1 / HYDRANT #2 + one 'SUPPLY & INSTALL FIRE HYDRANT ASSEMBLY (TYP.)'"
+   ],
+   "negative_examples": [
+    "tag with no status call-out on the sheet stays unresolved"
+   ],
+   "why": {
+    "run": "Blind Run 07",
+    "page": "9",
+    "error": "HYDRANT #1 left unresolved"
+   },
+   "evidence_sources": [
+    "Blind Run 07 grading.json + /workspace/blind-runs/confirmed-errors-07-12.md (Blueprint Checker)",
+    "Kyle authorization 2026-10-24 (overnight autonomous development)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.7.1",
+    "package": "combined-blueprint-reader-dev-v7-2026-10-24.zip (sha256 in guide/rule-change-log.md)",
+    "tests": [
+     "test_err02_run07_hydrant_tag_1_counted_via_typ_callout"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)"
+   },
+   "limits": []
+  },
+  {
+   "id": "BR08-01",
+   "code_rule_id": "hydrants.py v0.7 (BR08-01)",
+   "component": "hydrant",
+   "category": "text",
+   "rule": "Garbled text-layer words within edit distance 1 of the hydrant/status vocabulary (min length 6) are corrected at low confidence (provenance fuzzy_text_layer), only on lines without a hydrant word.",
+   "classify_as": "low_confidence_instance",
+   "positive_examples": [
+    "PROPOSLD HYDRANI"
+   ],
+   "negative_examples": [
+    "PROPOSED HYDRAULIC GRADE LINE"
+   ],
+   "why": {
+    "run": "Blind Run 08",
+    "page": "3",
+    "error": "both hydrants missed (garbled scan text layer)"
+   },
+   "evidence_sources": [
+    "Blind Run 08 grading.json + /workspace/blind-runs/confirmed-errors-07-12.md (Blueprint Checker)",
+    "Kyle authorization 2026-10-24 (overnight autonomous development)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.7.1",
+    "package": "combined-blueprint-reader-dev-v7-2026-10-24.zip (sha256 in guide/rule-change-log.md)",
+    "tests": [
+     "test_err03_run08_garbled_proposld_hydrani_tee_counted_low_conf",
+     "test_err04_run08_plan_60396_proposed_hydrani_counted",
+     "test_guard_fuzzy_does_not_turn_hydraulic_into_hydrant",
+     "test_guard_clean_text_not_marked_fuzzy"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)"
+   },
+   "limits": [
+    "Edit distance 1 only."
+   ]
+  },
+  {
+   "id": "BR09-01",
+   "code_rule_id": "hydrants.py v0.7 (BR09-01)",
+   "component": "hydrant",
+   "category": "ocr",
+   "rule": "If a page's only hydrant words are legend/notes (no counted instance), OCR the page anyway; partial hydrant words at 150 dpi trigger a 300 dpi re-OCR of that region.",
+   "classify_as": "ocr_fallback",
+   "positive_examples": [
+    "FIRE HYDRANT ASSEMBLY drawn as vector text"
+   ],
+   "negative_examples": [],
+   "why": {
+    "run": "Blind Runs 09, 12",
+    "page": "09 p5; 12 p4",
+    "error": "vector-text hydrant labels missed"
+   },
+   "evidence_sources": [
+    "Blind Runs 09, 12 grading.json + /workspace/blind-runs/confirmed-errors-07-12.md (Blueprint Checker)",
+    "Kyle authorization 2026-10-24 (overnight autonomous development)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.7.1",
+    "package": "combined-blueprint-reader-dev-v7-2026-10-24.zip (sha256 in guide/rule-change-log.md)",
+    "tests": [
+     "test_err05_run09_vector_fire_hydrant_assembly_found_by_region_reocr",
+     "test_err14_run12_new_hydrant_counted_once"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)"
+   },
+   "limits": [
+    "Run09 p5 label is now surfaced but stays UNRESOLVED (no status word on the drawing) - still a miss as a count.",
+    "Run12 H1 counted from the C002 'PROPOSED FIRE HYDRANT' label; the p4 'INSTALL NEW ...' vector text not separately read.",
+    "Adds OCR time (up to 900 s budget per package)."
+   ]
+  },
+  {
+   "id": "BR11-01",
+   "code_rule_id": "hydrants.py v0.7 (BR11-01)",
+   "component": "hydrant",
+   "category": "dedupe",
+   "rule": "An enlarged intersection-detail sheet (title DETAIL ...) whose street names are a subset of a plan sheet's streets duplicates that plan's instances.",
+   "classify_as": "dedupe",
+   "positive_examples": [
+    "detail 10 '6th St & 7th Ave' PROPOSED FIRE HYDRANT REPLACEMENT"
+   ],
+   "negative_examples": [
+    "inset frames on the plan sheet itself"
+   ],
+   "why": {
+    "run": "Blind Run 11",
+    "page": "11",
+    "error": "detail counted as a second new hydrant"
+   },
+   "evidence_sources": [
+    "Blind Run 11 grading.json + /workspace/blind-runs/confirmed-errors-07-12.md (Blueprint Checker)",
+    "Kyle authorization 2026-10-24 (overnight autonomous development)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.7.1",
+    "package": "combined-blueprint-reader-dev-v7-2026-10-24.zip (sha256 in guide/rule-change-log.md)",
+    "tests": [
+     "test_err08_run11_intersection_detail_new_is_duplicate_remove_stays"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)"
+   },
+   "limits": []
+  },
+  {
+   "id": "BR11-02",
+   "code_rule_id": "hydrants.py v0.7 (BR11-02)",
+   "component": "hydrant",
+   "category": "station",
+   "rule": "Rotated multi-line call-outs are stacked into one call-out; instances inside an inset/enlargement frame do not take the main-plan chainage or profile label (station left null rather than wrong).",
+   "classify_as": "station:inset_context",
+   "positive_examples": [
+    "REMOVE EXISTING / HYDRANT AND VALVE AND / REPLACE WITH NEW / HYDRANT ASSEMBLY (rotated, in inset)"
+   ],
+   "negative_examples": [],
+   "why": {
+    "run": "Blind Run 11",
+    "page": "3",
+    "error": "removal left unresolved; inset given 0+600 vs 0+505-0+512"
+   },
+   "evidence_sources": [
+    "Blind Run 11 grading.json + /workspace/blind-runs/confirmed-errors-07-12.md (Blueprint Checker)",
+    "Kyle authorization 2026-10-24 (overnight autonomous development)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.7.1",
+    "package": "combined-blueprint-reader-dev-v7-2026-10-24.zip (sha256 in guide/rule-change-log.md)",
+    "tests": [
+     "test_err09_run11_inset_remove_counted",
+     "test_err10_run11_inset_uses_own_station_context"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)"
+   },
+   "limits": [
+    "Inset gets no station rather than its own; true inset station reading not implemented."
+   ]
+  },
+  {
+   "id": "BR11-03",
+   "code_rule_id": "hydrants.py v0.7 (BR11-03)",
+   "component": "hydrant",
+   "category": "status",
+   "rule": "'TIE EXISTING ... HYDRANT LEAD TO ...' = existing hydrant in scope with a hydrant-lead tie-in; tie_in reported per item in tie_in_items.",
+   "classify_as": "status:existing+tie_in",
+   "positive_examples": [
+    "TIE EXISTING 150Ø PVC HYDRANT LEAD TO PROPOSED 250Ø PVC WATER MAIN"
+   ],
+   "negative_examples": [],
+   "why": {
+    "run": "Blind Run 11",
+    "page": "7",
+    "error": "HX2 left unresolved"
+   },
+   "evidence_sources": [
+    "Blind Run 11 grading.json + /workspace/blind-runs/confirmed-errors-07-12.md (Blueprint Checker)",
+    "Kyle authorization 2026-10-24 (overnight autonomous development)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.7.1",
+    "package": "combined-blueprint-reader-dev-v7-2026-10-24.zip (sha256 in guide/rule-change-log.md)",
+    "tests": [
+     "test_err11_run11_hydrant_lead_tie_in_is_existing_in_scope_once",
+     "test_guard_tie_in_reported_per_item"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)"
+   },
+   "limits": []
+  },
+  {
+   "id": "BR12-01",
+   "code_rule_id": "hydrants.py v0.7 (BR12-01)",
+   "component": "hydrant",
+   "category": "legend",
+   "rule": "A stacked block of >=6 short rows most starting EX./PR./PROPOSED is a legend even when rotated and without a LEGEND heading; legend rows are not instances and are not used to suppress real labels as possible duplicates.",
+   "classify_as": "not_instance",
+   "positive_examples": [
+    "PR. FIRE HYDRANT & VALVE ASSEMBLY / EX. FIRE HYDRANT & VALVE ASSEMBLY among EX. GAS MAIN, PR. WATERMAIN & VALVE"
+   ],
+   "negative_examples": [
+    "a single 'EX. FIRE HYDRANT' label on a plan"
+   ],
+   "why": {
+    "run": "Blind Run 12",
+    "page": "3/4/5",
+    "error": "6 legend false positives; 4 real EXISTING FIRE HYDRANT labels dropped"
+   },
+   "evidence_sources": [
+    "Blind Run 12 grading.json + /workspace/blind-runs/confirmed-errors-07-12.md (Blueprint Checker)",
+    "Kyle authorization 2026-10-24 (overnight autonomous development)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.7.1",
+    "package": "combined-blueprint-reader-dev-v7-2026-10-24.zip (sha256 in guide/rule-change-log.md)",
+    "tests": [
+     "test_err12_run12_pr_legend_row_not_new",
+     "test_err13_run12_ex_legend_row_not_existing",
+     "test_err15_run12_four_existing_fire_hydrant_labels",
+     "test_guard_single_ex_label_is_not_a_legend"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)"
+   },
+   "limits": [
+    "Legends with fewer than 6 rows are not detected by layout."
+   ]
   }
  ],
  "reader_config": {
@@ -376,11 +694,11 @@
   "status_wording": [
    {
     "status": "tie_in",
-    "regex": "\\bTIE\\b.{0,12}\\b(?:IN|INTO|TO)\\b.{0,25}\\bEXIST\\w*\\b.{0,15}HYD|\\bCONNECT\\w*\\s+TO\\s+EXIST\\w*.{0,15}HYD|\\bTIE[\\s-]*IN\\s+(?:AT|TO|INTO)\\s+(?:THE\\s+|EXIST\\w*\\.?\\s+|EX\\.?\\s+)?(?:FIRE\\s+)?HYD",
+    "regex": "\\bTIE\\b.{0,12}\\b(?:IN|INTO|TO)\\b.{0,25}\\bEXIST\\w*\\b.{0,15}HYD|\\bCONNECT\\w*\\s+TO\\s+EXIST\\w*.{0,15}HYD|\\bTIE[\\s-]*IN\\s+(?:AT|TO|INTO)\\s+(?:THE\\s+|EXIST\\w*\\.?\\s+|EX\\.?\\s+)?(?:FIRE\\s+)?HYD|\\bTIE\\s+(?:IN\\s+)?EXIST\\w*\\s.{0,30}\\bHYD\\w*\\.?\\s+LEAD\\b",
     "flags": [
      "IGNORECASE"
     ],
-    "meaning": "call-out wording that means status 'tie_in'"
+    "meaning": "call-out wording that means status 'tie_in'; v7 (BR11-03): 'TIE EXISTING ... HYDRANT LEAD TO ...' = hydrant-lead tie-in"
    },
    {
     "status": "relocate",
@@ -496,6 +814,41 @@
      "IGNORECASE"
     ],
     "meaning": "hydrant profile label used for station pairing (BR03-02)"
+   },
+   "legend_row_prefix": {
+    "regex": "^\\s*(?:EX\\.?|EXIST\\w*|PR\\.?|PROP(?:OSED)?\\.?|NEW)\\s",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v7 (BR12-01): legend rows by layout: a stacked block of >=6 short rows, most starting EX./PR./PROPOSED -> legend even without a LEGEND heading or with status words"
+   },
+   "hydrant_tag": {
+    "regex": "^\\s*(?:FIRE\\s+)?(?:HYDRANT|HYD\\.?)\\s*(?:#|NO\\.?\\s*|-)\\s*\\d{1,3}\\s*$",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v7 (BR07-02): tag-only hydrant label ('HYDRANT #1', 'HYD-05') = hydrant id"
+   },
+   "typ_marker": {
+    "regex": "\\(\\s*TYP\\.?\\s*\\)|\\bTYP(?:ICAL)?\\.?\\s*$",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v7 (BR07-02): '(TYP.)' call-out applies to every tagged hydrant on the sheet"
+   },
+   "detail_title": {
+    "regex": "^\\s*(?:INTERSECTION\\s+)?DETAILS?\\b(?!\\s*(?:ON|FOR|SEE)\\b)(?!\\s*$)(?!.*\\bDWG\\b)",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v7 (BR11-01): enlarged intersection-detail sheet title; its instances duplicate plan-sheet instances at the same named streets"
+   },
+   "ocr_seed": {
+    "regex": "\\b(?:FIR|FIRE|HYD\\w*|HYDR\\w*|\\w*DRANT\\w*)\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v7 (BR09-01): partial hydrant word in 150 dpi OCR -> re-OCR that region at 300 dpi"
    }
   },
   "base_rules": [
@@ -517,7 +870,27 @@
     "id": "SCOPE-COUNTS-NOT-SUMMED",
     "status": "active",
     "note": "Counts are per status and never summed."
+   },
+   {
+    "id": "SCOPE-TIE-IN-PER-ITEM",
+    "status": "active",
+    "note": "v7: tie_in is reported per item (tie_in_items), including hydrant-lead tie-ins of existing hydrants."
    }
-  ]
+  ],
+  "fuzzy_vocabulary": {
+   "words": [
+    "HYDRANT",
+    "HYDRANTS",
+    "PROPOSED",
+    "EXISTING",
+    "REMOVE",
+    "INSTALL",
+    "RELOCATE",
+    "REPLACE"
+   ],
+   "max_edit_distance": 1,
+   "min_token_length": 6,
+   "meaning": "v7 (BR08-01): garbled text-layer words (PROPOSLD HYDRANI) corrected with low confidence, only on lines that do not already mention a hydrant"
+  }
  }
 }
