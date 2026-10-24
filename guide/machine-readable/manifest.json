@@ -6,22 +6,22 @@
  "sources": [
   {
    "path": "guide/component-rules/hydrants.json",
-   "sha256": "425948495a9566d793cfdef625bddbb1d0d09114105c6f1f151f3f594c9112d8"
+   "sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3"
   }
  ],
  "error_sources_note": "Checker confirmed-errors tables and run grading hashes are recorded only in the private evidence manifest",
  "outputs": [
   {
    "path": "error-memory/hydrant-errors.json",
-   "sha256": "09c7461cbf75ee29b0523ca1f308977c610daabdff94f2e72925354d07e30852"
+   "sha256": "842e679f64c2befb8c295197289a67293e4d5fbc52b58b9b0d4635a7c6693e76"
   },
   {
    "path": "rules/hydrants.reader-config.json",
-   "sha256": "8ade98c23dc09e9e5a203c2ec71f319e7431f79fb54c1693adabe9800c2be534"
+   "sha256": "6d4e687d0c3451cd495149c9373a2fdfaa3c16212c790fac2f19f9395cb637de"
   },
   {
    "path": "rules/hydrants.rules.json",
-   "sha256": "1ff6e06d93097c534e36ce7396686c0001cb1c4b19316887319873f342db309d"
+   "sha256": "883467ac6deb3d11f170f06e0cd72681138e2fea4e52e93c76e0112224a338e3"
   },
   {
    "path": "schemas/error-memory.private.v1.schema.json",
@@ -45,16 +45,16 @@
   }
  ],
  "counts": {
-  "rules": 37,
+  "rules": 42,
   "rules_by_verification": {
    "blind_validated": 1,
-   "nonblind_validated": 34,
+   "nonblind_validated": 39,
    "synthetic_only": 2
   },
-  "errors": 35,
+  "errors": 54,
   "errors_by_status": {
-   "confirmed_unfixed": 3,
-   "fixed_nonblind_validated": 29,
+   "confirmed_unfixed": 6,
+   "fixed_nonblind_validated": 45,
    "out_of_scope": 3
   }
  }

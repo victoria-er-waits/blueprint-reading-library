@@ -99,6 +99,8 @@ def mistake(err):
     e = err.lower()
     if e.startswith("tie-in"): return "tie_in_miss"
     if e.startswith("miss"): return "miss"
+    if e.startswith("abstention"): return "miss"  # real hydrant left unresolved (not counted)
+    if e.startswith("fp") or e.startswith("false positive"): return "false_positive"
     if "false positive" in e: return "false_positive"
     if "duplicate" in e: return "duplicate"
     if e.startswith("station"): return "station_error"
@@ -106,17 +108,47 @@ def mistake(err):
     raise ValueError(f"unknown error type: {err}")
 
 
+RANGE = re.compile(r"^(\d+)\s*[-\u2013]\s*(\d+)$")
+
+
 def parse_confirmed(path):
-    rows, in_table = [], False
+    """Read Checker confirmed-error tables. Layouts:
+    - 7 columns '# | Run | Page | Location | Exact drawing wording | Error | Evidence' (runs 13-19 under
+      '## Confirmed app errors'; runs 22-23 with no heading);
+    - 5 columns '# | Item | Page[ / location] | Error | Drawing evidence' (runs 20-21), run number from the
+      '# Run NN' title. Ranges '5-7' expand to one row each; '-' rows (non-errors) are skipped.
+    Returns 7-tuples (num, run, page, location, wording, error, evidence)."""
+    rows, heading, title_run, hdr = [], None, None, None
     for line in open(path, encoding="utf-8"):
-        if line.startswith("## "):
-            in_table = line.strip() == "## Confirmed app errors"
+        s = line.strip()
+        if s.startswith("# "):
+            m = re.match(r"#\s*Runs?\s+(\d+)", s)
+            title_run = m.group(1) if m else None
             continue
-        m = ROW.match(line.strip()) if in_table else None
-        if m:
-            cells = [c.strip() for c in line.strip().strip("|").split("|")]
-            if len(cells) == 7:
-                rows.append(cells)
+        if s.startswith("## "):
+            heading = s
+            continue
+        if not s.startswith("|"):
+            continue
+        cells = [c.strip() for c in s.strip("|").split("|")]
+        if not cells[0] or set(cells[0]) <= set("-: "):
+            continue
+        if not (cells[0].isdigit() or RANGE.match(cells[0]) or cells[0] in ("\u2013", "-")):
+            hdr = cells  # a table header row; only '#'-headed error tables are read
+            continue
+        if not hdr or hdr[0] != "#":
+            continue
+        if heading not in (None, "## Confirmed app errors"):
+            continue
+        rng = RANGE.match(cells[0])
+        nums = [cells[0]] if cells[0].isdigit() else [str(i) for i in range(int(rng.group(1)), int(rng.group(2)) + 1)] if rng else []
+        for n in nums:
+            if len(cells) == 7 and cells[1].isdigit():
+                rows.append([n] + cells[1:])
+            elif len(cells) == 5 and title_run:
+                item, pageloc, err, ev = cells[1:]
+                page = pageloc.split(",")[0].split(" ")[0]
+                rows.append([n, title_run, page, pageloc, ev, err, item])
     return rows
 
 
@@ -133,6 +165,33 @@ CHECKER_LINKS = {
     "ERR-R18-09": [],
     "ERR-R19-10": ["BR19-01"], "ERR-R19-11": ["BR19-01"],
 }
+# Runs 20-23 (v0.10/v0.11): developer links via each rule's regression tests; not yet Checker-reviewed.
+TEST_LINKS = {
+    "ERR-R20-01": ["BR20-01"], "ERR-R20-02": ["BR20-02"], "ERR-R20-03": ["BR20-03"], "ERR-R20-04": ["BR20-01"],
+    "ERR-R20-05": ["BR20-L1"], "ERR-R20-06": ["BR20-L1"], "ERR-R20-07": ["BR20-L1"],
+    "ERR-R21-01": ["BR21-01"], "ERR-R21-02": ["BR21-01", "BR21-02"], "ERR-R21-03": ["BR21-01"],
+    "ERR-R21-04": ["BR21-01", "BR23-01"], "ERR-R21-05": ["BR21-01"], "ERR-R21-06": ["BR21-01", "BR23-01"],
+    "ERR-R22-01": ["BR22-01"], "ERR-R22-02": ["BR22-01"], "ERR-R22-03": ["BR22-03"], "ERR-R22-04": ["BR22-04"],
+    "ERR-R22-05": ["BR22-02"], "ERR-R23-06": ["BR23-01"],
+}
+
+# Root causes for runs 20-23 (5-column tables have no cause column; 22-23 'Evidence' is drawing evidence).
+ROOT_CAUSES = {
+    "ERR-R20-01": "Assembly call-out without the word NEW was not typed new", "ERR-R20-02": "Cross-sheet dedupe merged on identical text alone",
+    "ERR-R20-03": "Vector-only call-out had no text layer", "ERR-R20-04": "Call-out split over a matchline reported twice as unresolved",
+    "ERR-R20-05": "Symbol-only hydrant with no text legend", "ERR-R20-06": "Symbol-only hydrant with no text legend",
+    "ERR-R20-07": "Symbol-only hydrant with no text legend",
+    "ERR-R21-01": "'HYDRANT TEE' plan label not recognised as a hydrant", "ERR-R21-02": "'HYDRANT TEE' not recognised; station from a mixed tick pair",
+    "ERR-R21-03": "'HYDRANT TEE' plan label not recognised as a hydrant", "ERR-R21-04": "'HYDRANT TEE' not recognised; v11 re-check: station used a mixed plan/profile tick pair (not the text-anchor cause)",
+    "ERR-R21-05": "'HYDRANT TEE' plan label not recognised as a hydrant", "ERR-R21-06": "'HYDRANT TEE' not recognised; v11 re-check: a polyline at the label's far end was taken instead of the curved leader (leader-choice, not text anchor)",
+    "ERR-R22-01": "Status-less symbol tag defaulted to existing; package scope (supply and install new hydrants) not used",
+    "ERR-R22-02": "Status-less symbol tag defaulted to existing; package scope not used",
+    "ERR-R22-03": "Legend abbreviation on a rotated sheet not recognised as a legend entry",
+    "ERR-R22-04": "Detail-sheet title read as a hydrant call-out",
+    "ERR-R22-05": "Multi-line call-out with leader from an inner line; no status word, so left unresolved",
+    "ERR-R23-06": "Station measured at the call-out text anchor (block x1228-1471) instead of the leader end at the tee (Checker); v10 fallback also picked a grey fitting-list leader",
+}
+
 # Watermain tie-ins not linked to a hydrant: out of hydrant scope (Kyle, 2026-10-24).
 OUT_OF_SCOPE = {"ERR-R13-04", "ERR-R13-05", "ERR-R18-09"}
 OOS_NOTE = "Not hydrant-linked watermain tie-in: out of hydrant scope (Kyle 2026-10-24; Checker error-memory review)"
@@ -162,6 +221,10 @@ def build_errors(errors_dir, rules):
                 missing = set(CHECKER_LINKS[eid]) - known
                 if missing:
                     sys.exit(f"refusing: {eid} links unknown rules {sorted(missing)}")
+            elif eid in TEST_LINKS:
+                linked, how = set(TEST_LINKS[eid]) & known, "regression_test_name"
+                if set(TEST_LINKS[eid]) - known:
+                    sys.exit(f"refusing: {eid} links unknown rules {sorted(set(TEST_LINKS[eid]) - known)}")
             else:
                 linked = by_test.get((rn, n))
                 how = "regression_test_name" if linked else "none"
@@ -182,7 +245,7 @@ def build_errors(errors_dir, rules):
                 "original_mistake": mistake(err),
                 "error_summary": redact_keys(err),
                 "drawing_evidence": redact_keys(wording),
-                "root_cause": redact_keys(cause),
+                "root_cause": redact_keys(ROOT_CAUSES.get(eid, cause)),
                 "fix_rule_ids": linked, "fix_link_method": how,
                 "validation_status": vstat,
                 "confirmed_by": "Blueprint Checker (" + os.path.basename(path) + ")",

@@ -138,3 +138,17 @@ Error memory: all 20 Checker-reviewed error->rule links are exact (method checke
 ### hydrants v0.10 package record (2026-10-24)
 Package: combined-blueprint-reader-dev-v10-2026-10-24.zip sha256 66a7ed37cd7741e7f4378137e8f3063ea71574dcec386168076d80139ae11d83 (rules pinned at 9269a65, hydrants.json sha256 4259484...12d8). Frozen for unseen blind tests.
 Non-blind re-run deltas vs v9: run21 6/6 new HYDRANT TEE (was 0/6), 0 trap-table/legend/detail counts; run20 4 new + 4 remove (was 2 + 2), HR3 no longer merged into HR1. Runs 07-19 unchanged. NON-BLIND only, not independent validation.
+
+## Component rules: hydrants v0.11 (2026-10-24)
+Status: fixes for Checker-confirmed errors from blind runs 22-23 (graded on v10). Validated only by regression tests on NON-BLIND extracts and NON-BLIND re-runs of Runs 07-23 (22-23 are no longer blind for this code); not independently validated.
+Package: combined-blueprint-reader-dev-v11-2026-10-24.zip (sha256 recorded in the follow-up entry below once packaged).
+
+| Date | Id | Component | Change | Origin |
+|---|---|---|---|---|
+| 2026-10-24 | BR22-01 | hydrant | 'HYD' tag + status-less hydrant call-out = new when package scope says 'supply and install new ... hydrant(s)' (gating key project_scope_new_hydrants); no scope -> not promoted | Run 22 p33 (scope p28) |
+| 2026-10-24 | BR22-02 | hydrant | multi-line status-less call-out with a block leader resolves (new, medium) under that scope; no leader -> unresolved | Run 22 p33 HN1 |
+| 2026-10-24 | BR22-03 | hydrant | legend 'HYD' / 'FIRE HYDRANT' pair near a LEGEND heading never counted (any rotation) | Run 22 p33 |
+| 2026-10-24 | BR22-04 | hydrant | detail/standard titles 'INSTALLATION/SECURING/BONDING ... OF ... HYDRANT' never counted; page treated as detail (gating key detail_sheet_title) | Run 22 p39 |
+| 2026-10-24 | BR23-01 | hydrant | station from the call-out block's own leader (black before grey fitting-list leaders; curved polyline nearest the label); same-row bracketing ticks beat mixed pairs | Run 23 p3; run21 HN4/HN6 re-check |
+
+Error memory: parser reads the run20/21 5-column layout (run from title, ranges expanded, non-error '-' rows skipped) and the run22-23 7-column layout without a heading; scoreboards ignored. 19 new records ERR-R20-01..R23-06 linked by developer TEST_LINKS (method regression_test_name; not yet Checker-reviewed). The 20 Checker links are unchanged and still asserted literally.

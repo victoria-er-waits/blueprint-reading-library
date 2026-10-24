@@ -222,6 +222,20 @@
      "IGNORECASE"
     ],
     "meaning": "v0.10 (BR20-01): 'TEE & GATE VALVE w/FIRE HYDRANT' / 'TEE w/ FIRE HYDRANT' plan call-out = new hydrant assembly"
+   },
+   "detail_sheet_title": {
+    "regex": "^\\s*(?:[A-Z0-9]+(?:-[A-Z0-9]+)*-\\s*)?(?:INSTALLATION|SECURING|BONDING(?:\\s*&\\s*\\w+(?:\\s+\\w+)?)?|ANCHORING|RESTRAINT|THRUST\\s+BLOCK\\w*)\\s+OF\\b.{0,40}\\bHYDRANTS?\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "detail/standard drawing title ('[DWG-NO-] INSTALLATION OF FIRE HYDRANT') -> never a site hydrant; marks a detail sheet (BR22-04)"
+   },
+   "project_scope_new_hydrants": {
+    "regex": "\\bSUPPLY\\s+(?:AND|&)\\s+INSTALL\\w*\\s+NEW\\b[^.;]{0,120}?\\bHYDRANTS?\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "project scope statement that new hydrants are supplied; lets status-less plan call-outs tied to a hydrant symbol resolve to new (BR22-01/05)"
    }
   },
   "base_rules": [

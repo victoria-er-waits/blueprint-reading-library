@@ -48,7 +48,7 @@ def test_every_rule_converted_with_honest_verification():
 
 def test_public_error_records_are_learning_only():
     recs = load("error-memory/hydrant-errors.json")["records"]
-    assert len(recs) == 35
+    assert len(recs) == 54  # runs 07-19 (35) + run20 (7) + run21 (6) + runs 22-23 (6)
     allowed = {"error_id","skill","original_mistake","mistake_description","root_cause","correct_interpretation",
                "applicable_rule_ids","rule_link_method","implemented_fix","regression_test_ids","validation_status","known_limitations"}
     for e in recs:
@@ -188,3 +188,42 @@ def test_all_20_checker_links_exact_literal():
         for eid in r.get("related_error_ids", []):
             if eid in CHECKER_REVIEW_EXPECTED:
                 assert rid in CHECKER_REVIEW_EXPECTED[eid], (rid, eid)
+
+
+def test_parse_confirmed_all_layouts():
+    import glob
+    got = {}
+    for f in glob.glob("/workspace/blind-runs/confirmed-errors-*.md"):
+        for r in B.parse_confirmed(f):
+            got.setdefault(r[1], []).append(r[0])
+    # 5-column run20/21 (run from title, ranges expanded, '-' non-error row skipped); 7-column 22-23 without heading
+    assert got["20"] == ["1", "2", "3", "4", "5", "6", "7"] and got["21"] == ["1", "2", "3", "4", "5", "6"]
+    assert got["22"] == ["1", "2", "3", "4", "5"] and got["23"] == ["6"]
+    assert all(len(v) == len(set(v)) for v in got.values())
+
+
+def test_parse_confirmed_ignores_scoreboards(tmp_path):
+    f = tmp_path / "confirmed-errors-99.md"
+    f.write_text("# Run 99 (app v1): confirmed errors\n| # | Item | Page | Error | Drawing evidence |\n|---|---|---|---|---|\n"
+                 "| 1 | HN1 | p2, x | Miss | \"FIRE HYDRANT\" |\n| \u2013 | traps | p3 | Not real | legend |\n\n"
+                 "| Run | P | R | St | Clean |\n|---|---|---|---|---|\n| 99 | 1/1 | 0/1 | n/a | No |\n")
+    assert B.parse_confirmed(str(f)) == [["1", "99", "p2", "p2, x", "\"FIRE HYDRANT\"", "Miss", "HN1"]]
+
+
+def test_runs20_23_links_exact():
+    e = {x["error_id"]: x for x in json.load(open(os.path.join(OUT, "error-memory/hydrant-errors.json")))["records"]}
+    for eid, want in B.TEST_LINKS.items():
+        assert e[eid]["applicable_rule_ids"] == sorted(want), eid
+    assert e["ERR-R22-04"]["original_mistake"] == "false_positive" and e["ERR-R23-06"]["original_mistake"] == "station_error"
+
+
+def test_runs22_23_every_error_recorded_with_cause_fix_tests_status(tmp_path):
+    rules = B.convert_rules(json.load(open(SRC)), "c670c66", "0" * 64)
+    errs, _ = B.build_errors("/workspace/blind-runs", rules)
+    r = [e for e in errs if e["run"] in ("run22", "run23")]
+    assert sorted(e["error_id"] for e in r) == ["ERR-R22-01", "ERR-R22-02", "ERR-R22-03", "ERR-R22-04", "ERR-R22-05", "ERR-R23-06"]
+    tests = {x["rule_id"]: x["regression_tests"] for x in rules}
+    for e in r:
+        assert e["root_cause"] == B.ROOT_CAUSES[e["error_id"]] and e["fix_rule_ids"]
+        assert all(tests[x] for x in e["fix_rule_ids"])
+        assert e["validation_status"] == "fixed_nonblind_validated"   # non-blind until a blind pass

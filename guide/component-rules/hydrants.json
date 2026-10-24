@@ -1300,7 +1300,7 @@
     "reader_version": "hydrants.py v0.10",
     "package": "combined-blueprint-reader-dev-v10-2026-10-24.zip (sha256 in rule-change-log)",
     "tests": [
-     "test_br20_02_identical_text_different_location_not_merged",
+     "test_br20_02_identical_text_different_place_not_merged",
      "test_br20_02_synthetic_far_apart_kept",
      "test_br20_02_synthetic_repeat_sheet_same_spot_merged"
     ]
@@ -1369,6 +1369,199 @@
     "/workspace/blind-runs/confirmed-errors-20.md + confirmed-errors-21.md (Blueprint Checker)"
    ],
    "validation": "not implemented; legend_signatures empty for run20"
+  },
+  {
+   "id": "BR22-01",
+   "code_rule_id": "scan(project_scope) + scope promotion: symbol_tag_with_callout_project_scope",
+   "component": "hydrant",
+   "category": "status_inference",
+   "rule": "A plan 'HYD' symbol tag paired with a status-less hydrant call-out (e.g. 'HYDRANT WITH INSULATED SAMPLING POINT') is NEW when the package scope states 'supply and install new ... fire hydrant(s)' (gating key project_scope_new_hydrants). Without such a scope statement the tag is not promoted.",
+   "classify_as": "new",
+   "positive_examples": [
+    "'HYD' + 'HYDRANT WITH INSULATED SAMPLING POINT' on a plan sheet, scope 'Supply and install new 6\" watermain, fire hydrant(s)'"
+   ],
+   "negative_examples": [
+    "same tag with no scope statement in the package",
+    "call-out with an explicit EXISTING/REMOVE word"
+   ],
+   "why": {
+    "run": "Blind Run 22",
+    "page": "33 (scope p28)",
+    "error": "HN2/HN3 reported existing; they are new"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-22-23.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.11",
+    "package": "combined-blueprint-reader-dev-v11-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br22_01_tagged_hydrants_new_with_project_scope",
+     "test_br22_01_without_scope_statement_tag_is_not_promoted"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated."
+   },
+   "limits": [
+    "Scope promotion is medium confidence; a package mixing kept and new hydrants with the same call-out wording would be over-promoted."
+   ]
+  },
+  {
+   "id": "BR22-02",
+   "code_rule_id": "_box_leader_target + callout_leader_project_scope",
+   "component": "hydrant",
+   "category": "positive_pattern",
+   "rule": "A multi-line status-less hydrant call-out whose leader (from any line of the block) leaves the block toward a symbol resolves to NEW under a 'supply and install new ... hydrants' scope, instead of staying unresolved. No leader -> stays unresolved.",
+   "classify_as": "new",
+   "positive_examples": [
+    "3-line 'HYDRANT WITH INSULATED SAMPLING POINT LOCATED 3'-4\" SOUTH OF HYDRANT' with leader from line 2"
+   ],
+   "negative_examples": [
+    "same call-out with no leader"
+   ],
+   "why": {
+    "run": "Blind Run 22",
+    "page": "33",
+    "error": "HN1 left unresolved"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-22-23.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.11",
+    "package": "combined-blueprint-reader-dev-v11-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br22_02_callout_with_leader_resolves_to_new",
+     "test_br22_02_callout_without_leader_stays_unresolved"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated."
+   },
+   "limits": [
+    "Requires the scope statement; otherwise unresolved."
+   ]
+  },
+  {
+   "id": "BR22-03",
+   "code_rule_id": "legend_symbol_pair mention",
+   "component": "hydrant",
+   "category": "negative_pattern",
+   "rule": "A one-line 'HYD' abbreviation or 'FIRE HYDRANT' description paired with its counterpart within 90 pt near a LEGEND heading (within 300 pt) is a legend entry and never counted, at any sheet rotation.",
+   "classify_as": "not_counted",
+   "positive_examples": [
+    "LEGEND: ... 'HYD' symbol / 'FIRE HYDRANT'"
+   ],
+   "negative_examples": [],
+   "why": {
+    "run": "Blind Run 22",
+    "page": "33",
+    "error": "legend HYD counted as existing"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-22-23.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.11",
+    "package": "combined-blueprint-reader-dev-v11-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br22_03_legend_hyd_not_counted"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated."
+   },
+   "limits": []
+  },
+  {
+   "id": "BR22-04",
+   "code_rule_id": "detail_sheet_title gating key -> detail_sheet_title mention / dt_page",
+   "component": "hydrant",
+   "category": "negative_pattern",
+   "rule": "Detail or standard-drawing titles such as 'INSTALLATION OF FIRE HYDRANT', 'SECURING ...', 'BONDING & CATHODIC PROTECTION OF HYDRANT' (optionally prefixed by a drawing number) are never site hydrants, and mark the page as a detail sheet.",
+   "classify_as": "not_counted",
+   "positive_examples": [
+    "'239401-MECH-301- INSTALLATION OF FIRE HYDRANT'"
+   ],
+   "negative_examples": [
+    "'INSTALL NEW FIRE HYDRANT' (a real call-out)"
+   ],
+   "why": {
+    "run": "Blind Run 22",
+    "page": "39",
+    "error": "detail title counted as new"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-22-23.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.11",
+    "package": "combined-blueprint-reader-dev-v11-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br22_04_detail_sheet_title_not_counted",
+     "test_br22_04_synthetic_titles"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated."
+   },
+   "limits": []
+  },
+  {
+   "id": "BR23-01",
+   "code_rule_id": "_box_leader_target (black first) + _interp_station same-row ticks + _leader_target polyline gap",
+   "component": "hydrant",
+   "category": "station_rule",
+   "rule": "Station is read where the call-out block's own leader ends: prefer a pure-black leader leaving the block over grey fitting-list leaders; for curved polylines prefer the one starting nearest the label; interpolate between the bracketing ticks of the same alignment row (same direction) nearest the symbol, never a mixed plan/profile pair. If a leader reaches the symbol but no bracketing tick pair exists, the station is emitted as UNRESOLVED (no nearest-label guess).",
+   "classify_as": "station",
+   "positive_examples": [
+    "run23 tee x~1535 between 1+100 (x~1352) and 1+120 (x~1581) -> ~1+116"
+   ],
+   "negative_examples": [
+    "grey fitting-list leader",
+    "tick pair joining two streets"
+   ],
+   "why": {
+    "run": "Blind Run 23 (+ run21 HN4/HN6 re-check)",
+    "page": "3",
+    "error": "station 1+099 vs drawing ~1+116"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-22-23.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.11",
+    "package": "combined-blueprint-reader-dev-v11-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br23_01_station_from_block_leader",
+     "test_br23_01_same_row_ticks_beat_mixed_pairs_and_curved_leader",
+     "test_station_unresolved_without_bracketing_ticks",
+     "test_station_interpolated_with_bracketing_ticks",
+     "test_run23_station_point_is_leader_end_not_text"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated."
+   },
+   "limits": [
+    "Leader colour heuristic: packages drawing hydrant leaders in grey fall back to longest leader."
+   ]
   }
  ],
  "reader_config": {
@@ -1591,6 +1784,20 @@
      "IGNORECASE"
     ],
     "meaning": "v0.10 (BR20-01): 'TEE & GATE VALVE w/FIRE HYDRANT' / 'TEE w/ FIRE HYDRANT' plan call-out = new hydrant assembly"
+   },
+   "detail_sheet_title": {
+    "regex": "^\\s*(?:[A-Z0-9]+(?:-[A-Z0-9]+)*-\\s*)?(?:INSTALLATION|SECURING|BONDING(?:\\s*&\\s*\\w+(?:\\s+\\w+)?)?|ANCHORING|RESTRAINT|THRUST\\s+BLOCK\\w*)\\s+OF\\b.{0,40}\\bHYDRANTS?\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "detail/standard drawing title ('[DWG-NO-] INSTALLATION OF FIRE HYDRANT') -> never a site hydrant; marks a detail sheet (BR22-04)"
+   },
+   "project_scope_new_hydrants": {
+    "regex": "\\bSUPPLY\\s+(?:AND|&)\\s+INSTALL\\w*\\s+NEW\\b[^.;]{0,120}?\\bHYDRANTS?\\b",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "project scope statement that new hydrants are supplied; lets status-less plan call-outs tied to a hydrant symbol resolve to new (BR22-01/05)"
    }
   },
   "base_rules": [

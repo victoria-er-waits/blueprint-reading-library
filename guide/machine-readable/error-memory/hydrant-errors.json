@@ -703,6 +703,441 @@
    "known_limitations": [
     "If every sheet is station-less nothing is deduped; a genuinely separate station-less hydrant citing the same standard would be dropped."
    ]
+  },
+  {
+   "error_id": "ERR-R20-01",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Assembly call-out without the word NEW was not typed new",
+   "correct_interpretation": "BR20-01: classify as new.",
+   "applicable_rule_ids": [
+    "BR20-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.10",
+   "regression_test_ids": [
+    "test_br20_01_tee_gate_valve_with_hydrant_counted_across_matchlines",
+    "test_br20_01_tee_w_hydrant_without_new_word"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "Matchline pairing needs station-less instances near opposite sheet ends; otherwise they stay separate."
+   ]
+  },
+  {
+   "error_id": "ERR-R20-02",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Cross-sheet dedupe merged on identical text alone",
+   "correct_interpretation": "BR20-02: classify as separate instance (not duplicate).",
+   "applicable_rule_ids": [
+    "BR20-02"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.10",
+   "regression_test_ids": [
+    "test_br20_02_identical_text_different_place_not_merged",
+    "test_br20_02_synthetic_far_apart_kept",
+    "test_br20_02_synthetic_repeat_sheet_same_spot_merged"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "Rows without a bbox (spec rows) keep the v0.9 text-based behaviour."
+   ]
+  },
+  {
+   "error_id": "ERR-R20-03",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Vector-only call-out had no text layer",
+   "correct_interpretation": "BR20-03: classify as remove (low confidence).",
+   "applicable_rule_ids": [
+    "BR20-03"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.10",
+   "regression_test_ids": [
+    "test_br20_03_vector_only_remove_callout_ocr"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "Needs OCR enabled (TI_HYD_OCR=1) and OCR budget; grey-glyph count is a weak signal."
+   ]
+  },
+  {
+   "error_id": "ERR-R20-04",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Call-out split over a matchline reported twice as unresolved",
+   "correct_interpretation": "BR20-01: classify as new.",
+   "applicable_rule_ids": [
+    "BR20-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.10",
+   "regression_test_ids": [
+    "test_br20_01_tee_gate_valve_with_hydrant_counted_across_matchlines",
+    "test_br20_01_tee_w_hydrant_without_new_word"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "Matchline pairing needs station-less instances near opposite sheet ends; otherwise they stay separate."
+   ]
+  },
+  {
+   "error_id": "ERR-R20-05",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Symbol-only hydrant with no text legend",
+   "correct_interpretation": "Known limitation: report as unresolved for human review (BR20-L1).",
+   "applicable_rule_ids": [
+    "BR20-L1"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": null,
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": []
+  },
+  {
+   "error_id": "ERR-R20-06",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Symbol-only hydrant with no text legend",
+   "correct_interpretation": "Known limitation: report as unresolved for human review (BR20-L1).",
+   "applicable_rule_ids": [
+    "BR20-L1"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": null,
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": []
+  },
+  {
+   "error_id": "ERR-R20-07",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Symbol-only hydrant with no text legend",
+   "correct_interpretation": "Known limitation: report as unresolved for human review (BR20-L1).",
+   "applicable_rule_ids": [
+    "BR20-L1"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": null,
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": []
+  },
+  {
+   "error_id": "ERR-R21-01",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "'HYDRANT TEE' plan label not recognised as a hydrant",
+   "correct_interpretation": "BR21-01: classify as new.",
+   "applicable_rule_ids": [
+    "BR21-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.10",
+   "regression_test_ids": [
+    "test_br21_01_bare_hydrant_tee_without_symbol_not_counted",
+    "test_br21_01_detail_sheet_hydrant_tee_not_counted",
+    "test_br21_01_hydrant_tee_labels_counted_once_each",
+    "test_br21_01_lone_hydrant_tee_counts_and_doubled_copy_is_one",
+    "test_br21_01_profile_label_still_corroborates_when_plan_callout_counted",
+    "test_br21_01_real_hydrant_tees_have_leader_to_symbol",
+    "test_br21_01_traps_storm_table_and_detail_sheet_not_counted",
+    "test_br21_storm_table_hydrant_2_6_trap_excluded"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "A 'HYDRANT TEE' label on a page that already has another counted new call-out is treated as corroboration only."
+   ]
+  },
+  {
+   "error_id": "ERR-R21-02",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "'HYDRANT TEE' not recognised; station from a mixed tick pair",
+   "correct_interpretation": "BR21-01: classify as new. BR21-02: classify as station.",
+   "applicable_rule_ids": [
+    "BR21-01",
+    "BR21-02"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.10",
+   "regression_test_ids": [
+    "test_br21_01_bare_hydrant_tee_without_symbol_not_counted",
+    "test_br21_01_detail_sheet_hydrant_tee_not_counted",
+    "test_br21_01_hydrant_tee_labels_counted_once_each",
+    "test_br21_01_lone_hydrant_tee_counts_and_doubled_copy_is_one",
+    "test_br21_01_profile_label_still_corroborates_when_plan_callout_counted",
+    "test_br21_01_real_hydrant_tees_have_leader_to_symbol",
+    "test_br21_01_traps_storm_table_and_detail_sheet_not_counted",
+    "test_br21_02_stations_use_ticks_of_one_alignment",
+    "test_br21_storm_table_hydrant_2_6_trap_excluded"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "A 'HYDRANT TEE' label on a page that already has another counted new call-out is treated as corroboration only.",
+    "Non-blind rerun: run21 HN6 still ~20 m off the expected; stations remain approximate."
+   ]
+  },
+  {
+   "error_id": "ERR-R21-03",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "'HYDRANT TEE' plan label not recognised as a hydrant",
+   "correct_interpretation": "BR21-01: classify as new.",
+   "applicable_rule_ids": [
+    "BR21-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.10",
+   "regression_test_ids": [
+    "test_br21_01_bare_hydrant_tee_without_symbol_not_counted",
+    "test_br21_01_detail_sheet_hydrant_tee_not_counted",
+    "test_br21_01_hydrant_tee_labels_counted_once_each",
+    "test_br21_01_lone_hydrant_tee_counts_and_doubled_copy_is_one",
+    "test_br21_01_profile_label_still_corroborates_when_plan_callout_counted",
+    "test_br21_01_real_hydrant_tees_have_leader_to_symbol",
+    "test_br21_01_traps_storm_table_and_detail_sheet_not_counted",
+    "test_br21_storm_table_hydrant_2_6_trap_excluded"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "A 'HYDRANT TEE' label on a page that already has another counted new call-out is treated as corroboration only."
+   ]
+  },
+  {
+   "error_id": "ERR-R21-04",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "'HYDRANT TEE' not recognised; v11 re-check: station used a mixed plan/profile tick pair (not the text-anchor cause)",
+   "correct_interpretation": "BR21-01: classify as new. BR23-01: classify as station.",
+   "applicable_rule_ids": [
+    "BR21-01",
+    "BR23-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.10; hydrants.py v0.11",
+   "regression_test_ids": [
+    "test_br21_01_bare_hydrant_tee_without_symbol_not_counted",
+    "test_br21_01_detail_sheet_hydrant_tee_not_counted",
+    "test_br21_01_hydrant_tee_labels_counted_once_each",
+    "test_br21_01_lone_hydrant_tee_counts_and_doubled_copy_is_one",
+    "test_br21_01_profile_label_still_corroborates_when_plan_callout_counted",
+    "test_br21_01_real_hydrant_tees_have_leader_to_symbol",
+    "test_br21_01_traps_storm_table_and_detail_sheet_not_counted",
+    "test_br21_storm_table_hydrant_2_6_trap_excluded",
+    "test_br23_01_same_row_ticks_beat_mixed_pairs_and_curved_leader",
+    "test_br23_01_station_from_block_leader",
+    "test_run23_station_point_is_leader_end_not_text",
+    "test_station_interpolated_with_bracketing_ticks",
+    "test_station_unresolved_without_bracketing_ticks"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "A 'HYDRANT TEE' label on a page that already has another counted new call-out is treated as corroboration only.",
+    "Leader colour heuristic: packages drawing hydrant leaders in grey fall back to longest leader."
+   ]
+  },
+  {
+   "error_id": "ERR-R21-05",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "'HYDRANT TEE' plan label not recognised as a hydrant",
+   "correct_interpretation": "BR21-01: classify as new.",
+   "applicable_rule_ids": [
+    "BR21-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.10",
+   "regression_test_ids": [
+    "test_br21_01_bare_hydrant_tee_without_symbol_not_counted",
+    "test_br21_01_detail_sheet_hydrant_tee_not_counted",
+    "test_br21_01_hydrant_tee_labels_counted_once_each",
+    "test_br21_01_lone_hydrant_tee_counts_and_doubled_copy_is_one",
+    "test_br21_01_profile_label_still_corroborates_when_plan_callout_counted",
+    "test_br21_01_real_hydrant_tees_have_leader_to_symbol",
+    "test_br21_01_traps_storm_table_and_detail_sheet_not_counted",
+    "test_br21_storm_table_hydrant_2_6_trap_excluded"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "A 'HYDRANT TEE' label on a page that already has another counted new call-out is treated as corroboration only."
+   ]
+  },
+  {
+   "error_id": "ERR-R21-06",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "'HYDRANT TEE' not recognised; v11 re-check: a polyline at the label's far end was taken instead of the curved leader (leader-choice, not text anchor)",
+   "correct_interpretation": "BR21-01: classify as new. BR23-01: classify as station.",
+   "applicable_rule_ids": [
+    "BR21-01",
+    "BR23-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.10; hydrants.py v0.11",
+   "regression_test_ids": [
+    "test_br21_01_bare_hydrant_tee_without_symbol_not_counted",
+    "test_br21_01_detail_sheet_hydrant_tee_not_counted",
+    "test_br21_01_hydrant_tee_labels_counted_once_each",
+    "test_br21_01_lone_hydrant_tee_counts_and_doubled_copy_is_one",
+    "test_br21_01_profile_label_still_corroborates_when_plan_callout_counted",
+    "test_br21_01_real_hydrant_tees_have_leader_to_symbol",
+    "test_br21_01_traps_storm_table_and_detail_sheet_not_counted",
+    "test_br21_storm_table_hydrant_2_6_trap_excluded",
+    "test_br23_01_same_row_ticks_beat_mixed_pairs_and_curved_leader",
+    "test_br23_01_station_from_block_leader",
+    "test_run23_station_point_is_leader_end_not_text",
+    "test_station_interpolated_with_bracketing_ticks",
+    "test_station_unresolved_without_bracketing_ticks"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "A 'HYDRANT TEE' label on a page that already has another counted new call-out is treated as corroboration only.",
+    "Leader colour heuristic: packages drawing hydrant leaders in grey fall back to longest leader."
+   ]
+  },
+  {
+   "error_id": "ERR-R22-01",
+   "skill": "hydrant",
+   "original_mistake": "wrong_status",
+   "mistake_description": "Gave a hydrant the wrong status",
+   "root_cause": "Status-less symbol tag defaulted to existing; package scope (supply and install new hydrants) not used",
+   "correct_interpretation": "BR22-01: classify as new.",
+   "applicable_rule_ids": [
+    "BR22-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.11",
+   "regression_test_ids": [
+    "test_br22_01_tagged_hydrants_new_with_project_scope",
+    "test_br22_01_without_scope_statement_tag_is_not_promoted"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "Scope promotion is medium confidence; a package mixing kept and new hydrants with the same call-out wording would be over-promoted."
+   ]
+  },
+  {
+   "error_id": "ERR-R22-02",
+   "skill": "hydrant",
+   "original_mistake": "wrong_status",
+   "mistake_description": "Gave a hydrant the wrong status",
+   "root_cause": "Status-less symbol tag defaulted to existing; package scope not used",
+   "correct_interpretation": "BR22-01: classify as new.",
+   "applicable_rule_ids": [
+    "BR22-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.11",
+   "regression_test_ids": [
+    "test_br22_01_tagged_hydrants_new_with_project_scope",
+    "test_br22_01_without_scope_statement_tag_is_not_promoted"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "Scope promotion is medium confidence; a package mixing kept and new hydrants with the same call-out wording would be over-promoted."
+   ]
+  },
+  {
+   "error_id": "ERR-R22-03",
+   "skill": "hydrant",
+   "original_mistake": "false_positive",
+   "mistake_description": "Counted a non-instance (legend, note or label) as a hydrant",
+   "root_cause": "Legend abbreviation on a rotated sheet not recognised as a legend entry",
+   "correct_interpretation": "BR22-03: classify as not_counted.",
+   "applicable_rule_ids": [
+    "BR22-03"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.11",
+   "regression_test_ids": [
+    "test_br22_03_legend_hyd_not_counted"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": []
+  },
+  {
+   "error_id": "ERR-R22-04",
+   "skill": "hydrant",
+   "original_mistake": "false_positive",
+   "mistake_description": "Counted a non-instance (legend, note or label) as a hydrant",
+   "root_cause": "Detail-sheet title read as a hydrant call-out",
+   "correct_interpretation": "BR22-04: classify as not_counted.",
+   "applicable_rule_ids": [
+    "BR22-04"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.11",
+   "regression_test_ids": [
+    "test_br22_04_detail_sheet_title_not_counted",
+    "test_br22_04_synthetic_titles"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": []
+  },
+  {
+   "error_id": "ERR-R22-05",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Multi-line call-out with leader from an inner line; no status word, so left unresolved",
+   "correct_interpretation": "BR22-02: classify as new.",
+   "applicable_rule_ids": [
+    "BR22-02"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.11",
+   "regression_test_ids": [
+    "test_br22_02_callout_with_leader_resolves_to_new",
+    "test_br22_02_callout_without_leader_stays_unresolved"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "Requires the scope statement; otherwise unresolved."
+   ]
+  },
+  {
+   "error_id": "ERR-R23-06",
+   "skill": "hydrant",
+   "original_mistake": "station_error",
+   "mistake_description": "Reported a station that does not match the drawing position of the hydrant",
+   "root_cause": "Station measured at the call-out text anchor (block x1228-1471) instead of the leader end at the tee (Checker); v10 fallback also picked a grey fitting-list leader",
+   "correct_interpretation": "BR23-01: classify as station.",
+   "applicable_rule_ids": [
+    "BR23-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.11",
+   "regression_test_ids": [
+    "test_br23_01_same_row_ticks_beat_mixed_pairs_and_curved_leader",
+    "test_br23_01_station_from_block_leader",
+    "test_run23_station_point_is_leader_end_not_text",
+    "test_station_interpolated_with_bracketing_ticks",
+    "test_station_unresolved_without_bracketing_ticks"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "Leader colour heuristic: packages drawing hydrant leaders in grey fall back to longest leader."
+   ]
   }
  ]
 }
