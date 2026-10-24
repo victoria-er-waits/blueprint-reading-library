@@ -926,14 +926,19 @@
    "original_mistake": "miss",
    "mistake_description": "Missed a hydrant item that the drawing shows",
    "root_cause": "'HYDRANT TEE' not recognised; v11 re-check: station used a mixed plan/profile tick pair (not the text-anchor cause)",
-   "correct_interpretation": "BR21-01: classify as new. BR23-01: classify as station.",
+   "correct_interpretation": "BR21-01: classify as new. BR23-01: classify as station. BR23-02: classify as station_kind:interpolated_chainage|explicit|profile_label|UNRESOLVED.",
    "applicable_rule_ids": [
     "BR21-01",
-    "BR23-01"
+    "BR23-01",
+    "BR23-02"
    ],
    "rule_link_method": "regression_test_name",
    "implemented_fix": "hydrants.py v0.10; hydrants.py v0.11",
    "regression_test_ids": [
+    "test_arc_length_projection_on_curved_alignment",
+    "test_br03_02_guard_falls_back_to_nearest_chainage_without_profile",
+    "test_br03_02_guard_non_hydrant_profile_label_not_used",
+    "test_br03_02_profile_label_station_preferred_over_nearest_chainage",
     "test_br21_01_bare_hydrant_tee_without_symbol_not_counted",
     "test_br21_01_detail_sheet_hydrant_tee_not_counted",
     "test_br21_01_hydrant_tee_labels_counted_once_each",
@@ -944,9 +949,17 @@
     "test_br21_storm_table_hydrant_2_6_trap_excluded",
     "test_br23_01_same_row_ticks_beat_mixed_pairs_and_curved_leader",
     "test_br23_01_station_from_block_leader",
+    "test_east_hants_stations_evidence_based",
+    "test_l1_leader_end_on_pipe_is_physical",
+    "test_l2_leader_end_records_full_evidence",
+    "test_l3_unique_symbol_vs_l4_with_rival",
+    "test_l4_label_centre_never_stationed_but_detection_and_status_kept",
     "test_run23_station_point_is_leader_end_not_text",
     "test_station_interpolated_with_bracketing_ticks",
-    "test_station_unresolved_without_bracketing_ticks"
+    "test_station_unresolved_without_bracketing_ticks",
+    "test_straight_alignment_keeps_chord_method",
+    "test_tofino_station_at_tee_not_text",
+    "test_v8_guard_interpolation_between_ticks"
    ],
    "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
@@ -987,14 +1000,19 @@
    "original_mistake": "miss",
    "mistake_description": "Missed a hydrant item that the drawing shows",
    "root_cause": "'HYDRANT TEE' not recognised; v11 re-check: a polyline at the label's far end was taken instead of the curved leader (leader-choice, not text anchor)",
-   "correct_interpretation": "BR21-01: classify as new. BR23-01: classify as station.",
+   "correct_interpretation": "BR21-01: classify as new. BR23-01: classify as station. BR23-02: classify as station_kind:interpolated_chainage|explicit|profile_label|UNRESOLVED.",
    "applicable_rule_ids": [
     "BR21-01",
-    "BR23-01"
+    "BR23-01",
+    "BR23-02"
    ],
    "rule_link_method": "regression_test_name",
    "implemented_fix": "hydrants.py v0.10; hydrants.py v0.11",
    "regression_test_ids": [
+    "test_arc_length_projection_on_curved_alignment",
+    "test_br03_02_guard_falls_back_to_nearest_chainage_without_profile",
+    "test_br03_02_guard_non_hydrant_profile_label_not_used",
+    "test_br03_02_profile_label_station_preferred_over_nearest_chainage",
     "test_br21_01_bare_hydrant_tee_without_symbol_not_counted",
     "test_br21_01_detail_sheet_hydrant_tee_not_counted",
     "test_br21_01_hydrant_tee_labels_counted_once_each",
@@ -1005,9 +1023,17 @@
     "test_br21_storm_table_hydrant_2_6_trap_excluded",
     "test_br23_01_same_row_ticks_beat_mixed_pairs_and_curved_leader",
     "test_br23_01_station_from_block_leader",
+    "test_east_hants_stations_evidence_based",
+    "test_l1_leader_end_on_pipe_is_physical",
+    "test_l2_leader_end_records_full_evidence",
+    "test_l3_unique_symbol_vs_l4_with_rival",
+    "test_l4_label_centre_never_stationed_but_detection_and_status_kept",
     "test_run23_station_point_is_leader_end_not_text",
     "test_station_interpolated_with_bracketing_ticks",
-    "test_station_unresolved_without_bracketing_ticks"
+    "test_station_unresolved_without_bracketing_ticks",
+    "test_straight_alignment_keeps_chord_method",
+    "test_tofino_station_at_tee_not_text",
+    "test_v8_guard_interpolation_between_ticks"
    ],
    "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
@@ -1120,19 +1146,32 @@
    "skill": "hydrant",
    "original_mistake": "station_error",
    "mistake_description": "Reported a station that does not match the drawing position of the hydrant",
-   "root_cause": "Station measured at the call-out text anchor (block x1228-1471) instead of the leader end at the tee (Checker); v10 fallback also picked a grey fitting-list leader",
-   "correct_interpretation": "BR23-01: classify as station.",
+   "root_cause": "Station measured at the call-out text anchor (block x1228-1471) instead of the leader end at the tee (Checker); v10 fallback also picked a grey fitting-list leader. Fix: STATION-HIERARCHY (label centre never an anchor)",
+   "correct_interpretation": "BR23-01: classify as station. BR23-02: classify as station_kind:interpolated_chainage|explicit|profile_label|UNRESOLVED.",
    "applicable_rule_ids": [
-    "BR23-01"
+    "BR23-01",
+    "BR23-02"
    ],
    "rule_link_method": "regression_test_name",
    "implemented_fix": "hydrants.py v0.11",
    "regression_test_ids": [
+    "test_arc_length_projection_on_curved_alignment",
+    "test_br03_02_guard_falls_back_to_nearest_chainage_without_profile",
+    "test_br03_02_guard_non_hydrant_profile_label_not_used",
+    "test_br03_02_profile_label_station_preferred_over_nearest_chainage",
     "test_br23_01_same_row_ticks_beat_mixed_pairs_and_curved_leader",
     "test_br23_01_station_from_block_leader",
+    "test_east_hants_stations_evidence_based",
+    "test_l1_leader_end_on_pipe_is_physical",
+    "test_l2_leader_end_records_full_evidence",
+    "test_l3_unique_symbol_vs_l4_with_rival",
+    "test_l4_label_centre_never_stationed_but_detection_and_status_kept",
     "test_run23_station_point_is_leader_end_not_text",
     "test_station_interpolated_with_bracketing_ticks",
-    "test_station_unresolved_without_bracketing_ticks"
+    "test_station_unresolved_without_bracketing_ticks",
+    "test_straight_alignment_keeps_chord_method",
+    "test_tofino_station_at_tee_not_text",
+    "test_v8_guard_interpolation_between_ticks"
    ],
    "validation_status": "fixed_nonblind_validated",
    "known_limitations": [

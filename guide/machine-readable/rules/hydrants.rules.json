@@ -1,8 +1,8 @@
 {
  "schema": "reading-rule/v2",
  "derived_from": "guide/component-rules/hydrants.json",
- "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
- "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+ "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+ "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
  "records": [
   {
    "rule_id": "BR02-FP-01",
@@ -38,8 +38,8 @@
     "page": 2
    },
    "rule_version": "hydrants.py v0.3 (also in v0.4)",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "blind_validated",
    "verification_evidence": "real-drawing: general note correctly excluded in Blind Run 03 (Cumberland, v3, GPT-6 graded); Cedar Drive pages themselves not re-run",
    "approval": "approved",
@@ -78,8 +78,8 @@
     "page": 4
    },
    "rule_version": "hydrants.py v0.3 (also in v0.4)",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "synthetic_only",
    "verification_evidence": "synthetic-only (no typical-section hydrant case exercised on real drawings yet)",
    "approval": "approved",
@@ -119,8 +119,8 @@
     "page": 8
    },
    "rule_version": "hydrants.py v0.4",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND Cumberland diagnostic agrees with Checker; awaiting fresh blind run",
    "approval": "approved",
@@ -162,8 +162,8 @@
     "page": 9
    },
    "rule_version": "hydrants.py v0.4",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND Cumberland diagnostic; side effect unchecked: p8 new hydrant now gets STA 2+009.015",
    "approval": "approved",
@@ -203,8 +203,8 @@
     "page": 4
    },
    "rule_version": "hydrants.py v0.5",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND re-run of Run 04 (FP gone); not yet blind-validated",
    "approval": "approved",
@@ -246,8 +246,8 @@
     "page": 8
    },
    "rule_version": "hydrants.py v0.5 + tender_intel/hydrant_ocr.py",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND re-run of Run 04: callouts now read on p8-p13, but repeat views are counted again and stations are nearest-chainage; needs Checker grading and a blind run",
    "approval": "approved",
@@ -288,8 +288,8 @@
     "page": 4
    },
    "rule_version": "hydrants.py v0.5",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "NON-BLIND re-run of Run 05: found on p4, but the p5 repeat view is counted too (flagged possible_cross_sheet_duplicate); profile 'HYDRANT STA. 1+070' not read",
    "approval": "approved",
@@ -328,8 +328,8 @@
     "page": 1
    },
    "rule_version": "hydrants.py v0.5",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND re-run of Run 06 ({relocate: 1})",
    "approval": "approved",
@@ -376,8 +376,8 @@
     "page": "07 p3/p9; 10 p2/p4/p5"
    },
    "rule_version": "hydrants.py v0.7.1",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
    "approval": "approved",
@@ -413,8 +413,8 @@
     "page": "9"
    },
    "rule_version": "hydrants.py v0.7.1",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
    "approval": "approved",
@@ -456,8 +456,8 @@
     "page": "3"
    },
    "rule_version": "hydrants.py v0.7.1",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
    "approval": "approved",
@@ -497,8 +497,8 @@
     "page": "09 p5; 12 p4"
    },
    "rule_version": "hydrants.py v0.7.1",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
    "approval": "approved",
@@ -534,8 +534,8 @@
     "page": "11"
    },
    "rule_version": "hydrants.py v0.7.1",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
    "approval": "approved",
@@ -573,8 +573,8 @@
     "page": "3"
    },
    "rule_version": "hydrants.py v0.7.1",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
    "approval": "approved",
@@ -609,8 +609,8 @@
     "page": "7"
    },
    "rule_version": "hydrants.py v0.7.1",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
    "approval": "approved",
@@ -653,8 +653,8 @@
     "page": "3/4/5"
    },
    "rule_version": "hydrants.py v0.7.1",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "regression test on NON-BLIND page extract + NON-BLIND full re-run (not yet independently blind-validated)",
    "approval": "approved",
@@ -688,8 +688,8 @@
     "page": "6/9"
    },
    "rule_version": "hydrants.json 2026-10-24",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
    "approval": "approved",
@@ -723,8 +723,8 @@
     "page": "6"
    },
    "rule_version": "hydrants.json 2026-10-24",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
    "approval": "approved",
@@ -758,8 +758,8 @@
     "page": "2"
    },
    "rule_version": "hydrants.json 2026-10-24",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
    "approval": "approved",
@@ -791,8 +791,8 @@
     "page": "6/9"
    },
    "rule_version": "hydrants.json 2026-10-24",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
    "approval": "approved",
@@ -826,8 +826,8 @@
     "page": "2-3"
    },
    "rule_version": "hydrants.json 2026-10-24",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
    "approval": "approved",
@@ -858,8 +858,8 @@
     "run": "Blind Run 15 p5-p7"
    },
    "rule_version": "hydrants.json 2026-10-24",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
    "approval": "approved",
@@ -888,8 +888,8 @@
     "run": "Blind Run 16"
    },
    "rule_version": "hydrants.json 2026-10-24",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated",
    "approval": "approved",
@@ -929,8 +929,8 @@
     "page": 6
    },
    "rule_version": "hydrants.py v0.9",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
    "approval": "approved",
@@ -972,8 +972,8 @@
     "page": "4-5"
    },
    "rule_version": "hydrants.py v0.9",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
    "approval": "approved",
@@ -1014,8 +1014,8 @@
     "page": "5-6"
    },
    "rule_version": "hydrants.py v0.9",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
    "approval": "approved",
@@ -1054,8 +1054,8 @@
     "page": "6"
    },
    "rule_version": "hydrants.py v0.9",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated. Rule record written retroactively in v10 (code shipped in v9).",
    "approval": "approved",
@@ -1092,8 +1092,8 @@
     "page": 5
    },
    "rule_version": "hydrants.py v0.9",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
    "approval": "approved",
@@ -1138,8 +1138,8 @@
     "page": "2-5,10"
    },
    "rule_version": "hydrants.py v0.9",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
    "approval": "approved",
@@ -1178,8 +1178,8 @@
     "page": "2-10"
    },
    "rule_version": "hydrants.py v0.9",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
    "approval": "approved",
@@ -1221,8 +1221,8 @@
     "page": "8-9"
    },
    "rule_version": "hydrants.py v0.9",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated",
    "approval": "approved",
@@ -1276,8 +1276,8 @@
     "page": "5-7"
    },
    "rule_version": "hydrants.py v0.10",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated.",
    "approval": "approved",
@@ -1315,8 +1315,8 @@
     "page": "6"
    },
    "rule_version": "hydrants.py v0.10",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated.",
    "approval": "approved",
@@ -1357,8 +1357,8 @@
     "page": "2-4"
    },
    "rule_version": "hydrants.py v0.10",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated.",
    "approval": "approved",
@@ -1398,8 +1398,8 @@
     "page": "6/7"
    },
    "rule_version": "hydrants.py v0.10",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated.",
    "approval": "approved",
@@ -1437,8 +1437,8 @@
     "page": "7"
    },
    "rule_version": "hydrants.py v0.10",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated.",
    "approval": "approved",
@@ -1470,8 +1470,8 @@
     "page": "2,4,5"
    },
    "rule_version": "hydrants.json 2026-10-24",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "synthetic_only",
    "verification_evidence": "not implemented; legend_signatures empty for run20",
    "approval": "approved",
@@ -1512,8 +1512,8 @@
     "page": "33 (scope p28)"
    },
    "rule_version": "hydrants.py v0.11",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated.",
    "approval": "approved",
@@ -1552,8 +1552,8 @@
     "page": "33"
    },
    "rule_version": "hydrants.py v0.11",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated.",
    "approval": "approved",
@@ -1587,8 +1587,8 @@
     "page": "33"
    },
    "rule_version": "hydrants.py v0.11",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated.",
    "approval": "approved",
@@ -1625,8 +1625,8 @@
     "page": "39"
    },
    "rule_version": "hydrants.py v0.11",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated.",
    "approval": "approved",
@@ -1671,12 +1671,135 @@
     "page": "3"
    },
    "rule_version": "hydrants.py v0.11",
-   "library_commit": "8f364bce3095d717c5a7bf3dfdbf71bd488ca9c4",
-   "source_sha256": "de0bfb8aa5e2b6adfb1cb4070b7ab759c39b2a8eff60e4caa7168a4ad144cab3",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
    "verification_status": "nonblind_validated",
    "verification_evidence": "real-drawing NON-BLIND re-run of the graded package only; not blind-validated.",
    "approval": "approved",
    "is_known_limitation": false
+  },
+  {
+   "rule_id": "BR23-02",
+   "code_rule_id": "hydrants._finalize_station + _locate_station/_arc_station/_on_pipe (v0.11 Option C)",
+   "skill": "hydrant",
+   "category": "station_rule",
+   "recognize": "A hydrant station is evidence-based or UNRESOLVED. L1: the hydrant symbol, tee or connection on pipe geometry of the correct alignment (leader end lies on a drawn pipe segment), measured between verified bracketing chainage ticks of that alignment. L2: a leader endpoint, or an explicit station label tied to the hydrant (station in the call-out text, or a hydrant profile label). L3 (no leader): a uniquely identifiable symbol with no competing hydrant candidate nearby; proximity alone is never enough and with several candidates nothing is guessed. L4: UNRESOLVED; detection and status are kept when independently supported. The centre of a call-out text box is never a station anchor. Curved alignments use arc-length projection along the alignment polyline; straight ones the chord projection.",
+   "classify_as": "station_kind:interpolated_chainage|explicit|profile_label|UNRESOLVED",
+   "required_evidence": [
+    "verbatim drawing text or described symbol",
+    "page + bbox on full-page coordinates"
+   ],
+   "correct_examples": [
+    "run23 p3 leader end at the tee x~1535 between 1+100/1+120 -> ~1+116",
+    "run21 HYDRANT TEE leaders to the tee"
+   ],
+   "incorrect_examples": [
+    "floating 'PROPOSED FIRE HYDRANT' text between ticks with no leader/symbol -> UNRESOLVED",
+    "non-hydrant profile label 'TIE-IN AT EXISTING TEE STA ...' never used"
+   ],
+   "related_error_ids": [
+    "ERR-R21-04",
+    "ERR-R21-06",
+    "ERR-R23-06"
+   ],
+   "limits": [],
+   "implemented_in": "hydrants.py v0.11",
+   "regression_tests": [
+    "test_l1_leader_end_on_pipe_is_physical",
+    "test_l2_leader_end_records_full_evidence",
+    "test_l4_label_centre_never_stationed_but_detection_and_status_kept",
+    "test_l3_unique_symbol_vs_l4_with_rival",
+    "test_arc_length_projection_on_curved_alignment",
+    "test_straight_alignment_keeps_chord_method",
+    "test_east_hants_stations_evidence_based",
+    "test_tofino_station_at_tee_not_text",
+    "test_v8_guard_interpolation_between_ticks",
+    "test_br03_02_guard_falls_back_to_nearest_chainage_without_profile",
+    "test_br03_02_guard_non_hydrant_profile_label_not_used",
+    "test_br03_02_profile_label_station_preferred_over_nearest_chainage",
+    "test_station_unresolved_without_bracketing_ticks"
+   ],
+   "origin": {
+    "run": "Blind Run 23 (Checker root cause) + Kyle/GPT-6 Option C",
+    "page": "3"
+   },
+   "rule_version": "hydrants.py v0.11",
+   "library_commit": "4cb3ec0939807de2464238560818cddc6450615e",
+   "source_sha256": "9b66ce0983db69552fb04ade14733b9f7b4704166a09c8fda53dda5fa21e0bb9",
+   "verification_status": "nonblind_validated",
+   "verification_evidence": "real-drawing NON-BLIND re-run of graded packages only; not blind-validated.",
+   "approval": "approved",
+   "is_known_limitation": false,
+   "name": "STATION-HIERARCHY",
+   "machine_readable": {
+    "levels": [
+     {
+      "level": "L1",
+      "anchor_types": [
+       "leader_end_on_pipe_tee_or_connection"
+      ],
+      "confidence": "high"
+     },
+     {
+      "level": "L2",
+      "anchor_types": [
+       "leader_end",
+       "explicit_station_in_callout_text",
+       "hydrant_profile_station_label"
+      ],
+      "confidence": "medium"
+     },
+     {
+      "level": "L3",
+      "anchor_types": [
+       "unique_symbol_body"
+      ],
+      "confidence": "low",
+      "requires": [
+       "no other hydrant candidate within 150 pt"
+      ]
+     },
+     {
+      "level": "L4",
+      "anchor_types": [
+       null
+      ],
+      "confidence": "none",
+      "emit": "station=null, station_kind=UNRESOLVED"
+     }
+    ],
+    "never_anchor": [
+     "call-out text box centre",
+     "nearest chainage label to the text"
+    ],
+    "evidence_record_fields": [
+     "page",
+     "sheet",
+     "physical_location",
+     "anchor_level",
+     "anchor_type",
+     "alignment",
+     "ticks_used",
+     "method",
+     "result",
+     "confidence",
+     "limitations",
+     "unresolved_conditions",
+     "rule_ids",
+     "rejected_station"
+    ],
+    "methods": [
+     "linear_projection_between_ticks",
+     "arc_length_projection"
+    ],
+    "tick_rules": [
+     "bracketing pair of one alignment row (same reading direction) beats mixed pairs",
+     "extrapolate at most half a tick spacing past an end tick"
+    ],
+    "tolerance_m": 5,
+    "applies_after": "dedupe and counting (quantities, statuses and dedupe unchanged)"
+   },
+   "why_label_centre_unreliable": "Call-out text is placed wherever there is room on the sheet, often 50-300 pt from the hydrant; on Tofino run23 the text block (x1228-1471) sat around 1+100 while the tee was at x~1535 (1+116.9), a 17 m error against a ±5 m standard. Stations taken from the text position measure the label, not the hydrant."
   }
  ]
 }
