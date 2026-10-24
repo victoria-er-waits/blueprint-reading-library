@@ -15,10 +15,10 @@ Status: draft for Kyle's review. Nothing here calls an API or changes the reader
 1. Include rules with `approval == "approved"`.
    - Known limitations (`is_known_limitation`) go into a separate `limitations` list, as "say UNRESOLVED", not as detection rules.
 2. Include reader_config vocabulary: hydrant_words, not_hydrant_words, status_wording, status_precedence and abbreviations.
-3. Error Memory:
-   - `--mode blind`: **excluded entirely.** Every record is flagged `contains graded-run info: never send to Gemini during blind tests`.
-   - Otherwise: include only `drawing_evidence`, `root_cause` and `fix_rule_ids` for records with a status in {fixed_synthetic, fixed_nonblind, blind_validated}. Never include `error_summary`, `location` or `source`.
-4. Never read anything under `blind-runs/` (sealed-keys, grading.json, confirmed-errors) at build time. Error Memory comes only via the committed, redacted JSON.
+3. Error Memory: only the **public** learning records (`error-memory-public/v1`), in every mode. They hold no station, key-derived or grading values. Private full-detail records live outside the repo and are never readable by the builder.
+4. The input allowlist is exact: the four public paths above, read with `git show <commit>:<path>`. Any other path is refused, including `blind-runs/`, `sealed-keys`, `grading.json`, `confirmed-errors`, `private-evidence` and any absolute path.
+
+Implemented locally (not deployed) in `/workspace/blueprint-gemini-assistant/` on the operator's box.
 
 ## Output
 - `rulepack-<commit12>-<skill>-<mode>.json`, with canonical JSON (sorted keys, UTF-8, no timestamps), plus `.sha256`.

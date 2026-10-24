@@ -1,0 +1,139 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "error-memory-private/v1",
+ "title": "error-memory-private/v1: full Checker-confirmed record. PRIVATE ONLY (never in the public repo or rule packs)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "error_id",
+  "run",
+  "page",
+  "location",
+  "original_mistake",
+  "drawing_evidence",
+  "root_cause",
+  "fix_rule_ids",
+  "fix_link_method",
+  "validation_status",
+  "confirmed_by",
+  "source",
+  "contains_graded_run_info",
+  "gemini_policy"
+ ],
+ "properties": {
+  "error_id": {
+   "type": "string",
+   "pattern": "^ERR-R\\d{2}-\\d{2}$"
+  },
+  "run": {
+   "type": "string",
+   "pattern": "^run\\d{2}$"
+  },
+  "reader_version_graded": {
+   "type": "string"
+  },
+  "page": {
+   "type": "string"
+  },
+  "location": {
+   "type": "string"
+  },
+  "original_mistake": {
+   "enum": [
+    "miss",
+    "false_positive",
+    "duplicate",
+    "wrong_status",
+    "station_error",
+    "tie_in_miss"
+   ]
+  },
+  "error_summary": {
+   "type": "string"
+  },
+  "drawing_evidence": {
+   "type": "string"
+  },
+  "root_cause": {
+   "type": "string"
+  },
+  "fix_rule_ids": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "fix_link_method": {
+   "enum": [
+    "regression_test_name",
+    "run_and_page_match",
+    "none"
+   ]
+  },
+  "validation_status": {
+   "enum": [
+    "confirmed_unfixed",
+    "fixed_synthetic_only",
+    "fixed_nonblind_validated",
+    "blind_validated",
+    "disputed",
+    "out_of_scope"
+   ]
+  },
+  "scope_note": {
+   "type": "string"
+  },
+  "confirmed_by": {
+   "type": "string"
+  },
+  "source": {
+   "type": "object",
+   "required": [
+    "file",
+    "sha256",
+    "row"
+   ],
+   "properties": {
+    "file": {
+     "type": "string"
+    },
+    "sha256": {
+     "type": "string"
+    },
+    "row": {
+     "type": "integer"
+    }
+   }
+  },
+  "contains_graded_run_info": {
+   "const": true
+  },
+  "gemini_policy": {
+   "const": "contains graded-run info: never send to Gemini during blind tests"
+  }
+ },
+ "not": {
+  "anyOf": [
+   {
+    "properties": {
+     "drawing_evidence": {
+      "pattern": "\\b(H|HX|HE|R|TI|DTI)\\d+\\b"
+     }
+    },
+    "required": [
+     "drawing_evidence"
+    ]
+   },
+   {
+    "properties": {
+     "error_summary": {
+      "pattern": "\\b(H|HX|HE|R|TI|DTI)\\d+\\b"
+     }
+    },
+    "required": [
+     "error_summary"
+    ]
+   }
+  ]
+ }
+}

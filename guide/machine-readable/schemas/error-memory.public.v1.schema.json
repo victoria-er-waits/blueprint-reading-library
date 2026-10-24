@@ -1,0 +1,129 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "error-memory-public/v1",
+ "title": "error-memory-public/v1: learning-only record (no key-derived values, stations, counts, P/R or grading evidence)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "error_id",
+  "skill",
+  "original_mistake",
+  "mistake_description",
+  "root_cause",
+  "correct_interpretation",
+  "applicable_rule_ids",
+  "rule_link_method",
+  "implemented_fix",
+  "regression_test_ids",
+  "validation_status",
+  "known_limitations"
+ ],
+ "properties": {
+  "error_id": {
+   "type": "string",
+   "pattern": "^ERR-R\\d{2}-\\d{2}$"
+  },
+  "skill": {
+   "enum": [
+    "hydrant",
+    "valve",
+    "tee",
+    "bend",
+    "fitting"
+   ]
+  },
+  "original_mistake": {
+   "enum": [
+    "miss",
+    "false_positive",
+    "duplicate",
+    "wrong_status",
+    "station_error",
+    "tie_in_miss"
+   ]
+  },
+  "mistake_description": {
+   "type": "string"
+  },
+  "root_cause": {
+   "type": "string"
+  },
+  "correct_interpretation": {
+   "type": "string"
+  },
+  "applicable_rule_ids": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "rule_link_method": {
+   "enum": [
+    "regression_test_name",
+    "run_and_page_match_needs_checker_review",
+    "none"
+   ]
+  },
+  "implemented_fix": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "regression_test_ids": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "validation_status": {
+   "enum": [
+    "confirmed_unfixed",
+    "fixed_synthetic_only",
+    "fixed_nonblind_validated",
+    "blind_validated",
+    "out_of_scope"
+   ]
+  },
+  "known_limitations": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ },
+ "not": {
+  "anyOf": [
+   {
+    "properties": {
+     "mistake_description": {
+      "pattern": "(?i)(\\bkey\\b|\\[key item\\]|\\d+\\+\\d{2,3}|\\b[PR]\\s?[01]\\.\\d|precision|recall|grading)"
+     }
+    },
+    "required": [
+     "mistake_description"
+    ]
+   },
+   {
+    "properties": {
+     "root_cause": {
+      "pattern": "(?i)(\\bkey\\b|\\[key item\\]|\\d+\\+\\d{2,3}|\\b[PR]\\s?[01]\\.\\d|precision|recall|grading)"
+     }
+    },
+    "required": [
+     "root_cause"
+    ]
+   },
+   {
+    "properties": {
+     "correct_interpretation": {
+      "pattern": "(?i)(\\bkey\\b|\\[key item\\]|\\d+\\+\\d{2,3}|\\b[PR]\\s?[01]\\.\\d|precision|recall|grading)"
+     }
+    },
+    "required": [
+     "correct_interpretation"
+    ]
+   }
+  ]
+ }
+}

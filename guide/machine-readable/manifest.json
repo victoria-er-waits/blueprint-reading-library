@@ -7,113 +7,13 @@
   {
    "path": "guide/component-rules/hydrants.json",
    "sha256": "e77ede54b0d00a2ede312ee8ebfe84792965a31cd28d8351fc889de1aafba786"
-  },
-  {
-   "path": "confirmed-errors-07-12.md",
-   "sha256": "5dea89730654a9bf6b4585890c46d2e979970c6f20233de7f704e5d13d91beec"
-  },
-  {
-   "path": "confirmed-errors-13-16.md",
-   "sha256": "e8f34e4a97fb93b5a7e8a96a4bf9453c49dfc04799cbdba4229e7a1b1184c258"
-  },
-  {
-   "path": "confirmed-errors-17-19.md",
-   "sha256": "24b9f90cba820f56705f35814814cacd0046a9676febbccd5778a4344bb3f4ca"
-  },
-  {
-   "path": "confirmed-errors-20.md",
-   "sha256": "24a0fa077966d96d1ab6e6cbd5d6ce9cc37166cabab0d2deadffb4f03a44b95e"
-  },
-  {
-   "path": "run03/grading.json",
-   "sha256": "6075c1a2326a392f52b8e4e656eff9cb71309393ea3ccd0127bf48cf907d1ae0",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run04/grading.json",
-   "sha256": "41650410467d70871a2714bef84e0fae524e39f2e3a197a1a6e8af35f5492cbf",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run05/grading.json",
-   "sha256": "cde1fab01a7e7e5a953007b2d18c27f6165bd257ffebf811e9102e9cbcff82c9",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run06/grading.json",
-   "sha256": "10b074dc9ea0ca2531b473e95539cc047db3900d0717c945e117dec330dbbc0b",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run07/grading.json",
-   "sha256": "edb2f286630785fe80dc9f9d61f2d68a4d91aa279b19fd6face274729cd6e0db",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run08/grading.json",
-   "sha256": "d51fec1ef451bd39d6a7fff3f5ca656afd732ebfcd29b17a4915049f90c610f1",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run09/grading.json",
-   "sha256": "0f55d10343b42ebd0c41a97a83480268bb3b9f4545a47052005ccabf701825bf",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run10/grading.json",
-   "sha256": "c88cca04f4daae3cce893811f98b665f9ced56e93f61302c333f8748e988991e",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run11/grading.json",
-   "sha256": "f7e82e268e1005d73f4b267964d99f3d4f322e39c44917703293ccbff5213136",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run12/grading.json",
-   "sha256": "4c5a5eeac0c8550c8bb59ceb543af4441fa2d9714e5f73fcf3802bb57c296742",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run13/grading.json",
-   "sha256": "30b672f9ab000e39eba3b11ce637304710c385d27027a2fe4caa1e0c21a612d8",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run15/grading.json",
-   "sha256": "070a897a241f4f2862f0c474d4217d332d1bb10db34069800a427a085ed3104f",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run16/grading.json",
-   "sha256": "2f49f83ee2af353bdf4056b5147edb75232a215ffb95c032f8c702c0e4c06aec",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run17/grading.json",
-   "sha256": "750b7a3c0cda5b2ef2b3bfc23d0a3cab4b7bf75ec44aa6d1ecc16754b6fcfe8a",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run18/grading.json",
-   "sha256": "9b05bad1486f99547c2c2cb317be7fb3502f55de12a672843291828acb201545",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run19/grading.json",
-   "sha256": "1ffe9986bb9e0d37e387997579e07252eb7ac360cde1e057c331c55dc7e8641f",
-   "use": "hash only; contents not copied"
-  },
-  {
-   "path": "run20/grading.json",
-   "sha256": "0927a49ec40cabac9367d7ae8694760fb6003a9ee2f0080329c76d20777233b3",
-   "use": "hash only; contents not copied"
   }
  ],
+ "error_sources_note": "Checker confirmed-errors tables and run grading hashes are recorded only in the private evidence manifest",
  "outputs": [
   {
    "path": "error-memory/hydrant-errors.json",
-   "sha256": "c42cca0b8f4f2f0f551cbae89d054f221b7d0e75576b7c482b258b876de8a91d"
+   "sha256": "a1c562ac5e735f3de071ee144ff4c8418aa042998e032e388f6fa4611a2e8287"
   },
   {
    "path": "rules/hydrants.reader-config.json",
@@ -121,11 +21,15 @@
   },
   {
    "path": "rules/hydrants.rules.json",
-   "sha256": "49cbcf326e6a1d752e7a8c8d2c3962496848b01be28c04e3d4a6572d83cddbc5"
+   "sha256": "b9a052e4025d5a68dd2a8d5a4d1d63ed6f3b8b478618a57f38b49ce7a2768879"
   },
   {
-   "path": "schemas/error-memory.v1.schema.json",
-   "sha256": "d013caf92389d15a59ab26776e9718e25fbcb842d4723c5941844d739396e8d9"
+   "path": "schemas/error-memory.private.v1.schema.json",
+   "sha256": "02f25059374cc06364b8a9123ca5bc7f4be6deb9a67f614f84098cf895f903ba"
+  },
+  {
+   "path": "schemas/error-memory.public.v1.schema.json",
+   "sha256": "0adae8f23dbc426177e038fb8718b8fc73b1271473dc352ee731d796828ed87d"
   },
   {
    "path": "schemas/gemini-detection.v1.schema.json",
@@ -137,20 +41,20 @@
   },
   {
    "path": "schemas/reading-rule.v2.schema.json",
-   "sha256": "12a1635dbe06d5bcb8eaaf0f41dd275ccbc289316050b32a4f6e675a1d8561f4"
+   "sha256": "051b89a226df84b40f9550f1f2382931899c69894b88ebb10ce2ab5f33399d72"
   }
  ],
  "counts": {
   "rules": 30,
   "rules_by_verification": {
    "blind_validated": 1,
-   "nonblind": 28,
-   "synthetic": 1
+   "nonblind_validated": 28,
+   "synthetic_only": 1
   },
   "errors": 35,
   "errors_by_status": {
    "confirmed_unfixed": 4,
-   "fixed_nonblind": 30,
+   "fixed_nonblind_validated": 30,
    "out_of_scope": 1
   }
  }
