@@ -94,3 +94,23 @@ Package: combined-blueprint-reader-dev-v8-2026-10-24.zip sha256 181ae2e39b80151e
 | 2026-10-24 | BR15-L1 / BR16-L1 | limits | raster-map dots and symbol-only hydrants on rotated sheets remain unsupported | Runs 15, 16 |
 
 Non-blind re-run deltas vs v7: run13 H2 found (remove), H1 single-counted at 0+185, 3 unique tie-ins; run15 10/10 hydrants from the spec list; run03 +1 ungraded main tie-in (existing tee 2+259); run11 hydrant-lead tie-in now cross-sheet deduped. Runs 04-12 hydrant instances unchanged; run16 still misses the symbol-only hydrant.
+
+## Component rules: hydrants v0.9 (2026-10-24)
+Status: fixes for Checker-confirmed errors from blind runs 17-19. Validated only by regression tests on NON-BLIND extracts and NON-BLIND re-runs of Runs 07-19 (17-19 are no longer blind for this code); not independently validated.
+Package: combined-blueprint-reader-dev-v9-2026-10-24.zip (sha256 recorded in the follow-up entry below once packaged).
+
+| Date | Id | Component | Change | Origin |
+|---|---|---|---|---|
+| 2026-10-24 | BR17-04 | hydrant | 'REMOVE AND RELOCATE' = relocate only (relocate beats remove) | Run 17 |
+| 2026-10-24 | BR17-01 | hydrant | action-verb hydrant call-outs with a leader are not general notes | Run 17 |
+| 2026-10-24 | BR17-02 | hydrant | RAISE/LOWER/ADJUST/INSULATE existing hydrant = existing (work on existing); INSTALL INSULATION is not new | Run 17 |
+| 2026-10-24 | BR17-05 | hydrant | stations from multi-segment leader end vertices | Run 17 |
+| 2026-10-24 | BR18-01 | hydrant | vector-only call-outs on rotated plan sheets via polyline leaders | Run 18 p4 |
+| 2026-10-24 | BR18-03 | hydrant | lone 'HYD.' survey labels = existing (low confidence); repeat sheets deduped by position; per-page OCR cap (TI_HYD_OCR_PAGE_CAP_S, default 240 s) | Run 18 |
+| 2026-10-24 | BR19-01 | hydrant | repeat-sheet duplicates suppressed (same status + position, or same standard-drawing reference without a station) | Run 19 C300 p8 / C400 p9 |
+
+Scope rules (Kyle, 2026-10-24):
+- SCOPE-EXISTING-OOS-COUNTED-SEPARATELY: out-of-scope existing hydrants are counted, but scored separately from in-scope work.
+- SCOPE-MAIN-TIE-IN-NOT-HYDRANT: watermain tie-ins not linked to a hydrant are outside hydrant scope. Tie-in detection is not widened to general watermain work; run18 Durham St tie-ins deprioritized.
+
+Known open: run18 p10 HYD label; run17 p7 survey hydrant; root cause of run18 4123 s OCR page (capped, not reproduced); symbol-only and raster hydrants.

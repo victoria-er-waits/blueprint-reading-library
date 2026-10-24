@@ -826,6 +826,288 @@
     "Kyle authorization 2026-10-24 (overnight autonomous development)"
    ],
    "validation": "non-blind regression tests + non-blind re-runs 03-16; not blind-validated"
+  },
+  {
+   "id": "BR17-04",
+   "code_rule_id": "status_precedence.beats relocate>remove",
+   "component": "hydrant",
+   "category": "status_typing",
+   "rule": "'REMOVE AND RELOCATE HYDRANT' is one relocate action: relocate beats remove in one call-out.",
+   "classify_as": "status:relocate",
+   "positive_examples": [
+    "REMOVE AND RELOCATE HYDRANT 0.3m FROM PROPERTY LINE."
+   ],
+   "negative_examples": [
+    "REMOVE AND REPLACE HYDRANT (= remove + new)"
+   ],
+   "why": {
+    "run": "Blind Run 17",
+    "project": "North Bay Wallace (run17)",
+    "page": 6,
+    "error": "one call-out emitted as both relocate and remove"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-17-19.md + blindrun17/grading.json (Blueprint Checker, v8 blind grading 2026-10-24)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.9",
+    "package": "combined-blueprint-reader-dev-v9-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br17_04_remove_and_relocate_is_relocate_only",
+     "test_syn_remove_and_relocate_one_status"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated"
+   },
+   "limits": [
+    "Only within one call-out; a separate REMOVE call-out still counts."
+   ]
+  },
+  {
+   "id": "BR17-01",
+   "code_rule_id": "existing status_wording + site_verb",
+   "component": "hydrant",
+   "category": "status_typing",
+   "rule": "RAISE / LOWER / ADJUST / INSULATE / INSTALL INSULATION AROUND a hydrant = existing hydrant with in-scope work (status existing, work_on_existing=true), never 'new'. Such action call-outs are not legend rows.",
+   "classify_as": "status:existing (work_on_existing)",
+   "positive_examples": [
+    "INSTALL INSULATION AROUND HYDRANT AND VALVE BOX PER OPSD 1109.030",
+    "RAISE HYDRANT 0.3m WITH RISER"
+   ],
+   "negative_examples": [
+    "ADJUST EXISTING MANHOLES, FIRE HYDRANTS ... (numbered general note)"
+   ],
+   "why": {
+    "run": "Blind Run 17",
+    "project": "North Bay Wallace (run17)",
+    "page": "4-5",
+    "error": "missed: filed as legend entry / general note"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-17-19.md + blindrun17/grading.json (Blueprint Checker, v8 blind grading 2026-10-24)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.9",
+    "package": "combined-blueprint-reader-dev-v9-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br17_01_insulation_around_hydrant_is_existing_work",
+     "test_br17_02_raise_hydrant_under_notes_heading_is_counted"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated"
+   },
+   "limits": [
+    "Scope (in vs out) is reported via work_on_existing only; grader keeps separate scores."
+   ]
+  },
+  {
+   "id": "BR17-02",
+   "code_rule_id": "act_leader (hydrants.py v0.9)",
+   "component": "hydrant",
+   "category": "gating",
+   "rule": "A short (<=4 line) action-verb hydrant call-out whose hydrant line has a leader is a site call-out even when it sits in the column below a NOTES heading.",
+   "classify_as": "instance",
+   "positive_examples": [
+    "RAISE HYDRANT 0.3m WITH RISER (leader to hydrant)"
+   ],
+   "negative_examples": [
+    "Numbered note text under CONSTRUCTION NOTES with no leader"
+   ],
+   "why": {
+    "run": "Blind Run 17",
+    "project": "North Bay Wallace (run17)",
+    "page": "5-6",
+    "error": "call-outs filed as general_note_or_spec; second identical call-out suppressed"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-17-19.md + blindrun17/grading.json (Blueprint Checker, v8 blind grading 2026-10-24)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.9",
+    "package": "combined-blueprint-reader-dev-v9-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br17_03_second_identical_callout_with_leader_counted",
+     "test_syn_action_callout_with_leader_escapes_notes_heading",
+     "test_syn_guard_note_without_leader_still_gated"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated"
+   },
+   "limits": [
+    "Needs a vector leader within 8-12 pt of the hydrant line."
+   ]
+  },
+  {
+   "id": "BR17-05",
+   "code_rule_id": "_leader_target polyline (v0.9)",
+   "component": "hydrant",
+   "category": "station",
+   "rule": "A leader drawn as one multi-segment path whose first vertex sits just outside the text box still gives the station (its far end).",
+   "classify_as": "station_kind:interpolated_chainage",
+   "positive_examples": [
+    "RELOCATE EXISTING HYDRANT TO THE PROPERTY LINE (dog-leg leader)"
+   ],
+   "negative_examples": [],
+   "why": {
+    "run": "Blind Run 17",
+    "project": "North Bay Wallace (run17)",
+    "page": 5,
+    "error": "station from label centre (7+302.7) instead of leader end (~7+288)"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-17-19.md + blindrun17/grading.json (Blueprint Checker, v8 blind grading 2026-10-24)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.9",
+    "package": "combined-blueprint-reader-dev-v9-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br17_05_station_from_polyline_leader_end"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated"
+   },
+   "limits": [
+    "Leaders made of separate unconnected paths are still not chained."
+   ]
+  },
+  {
+   "id": "BR18-03",
+   "code_rule_id": "existing_abbrev_label + repeat_sheet_same_position",
+   "component": "hydrant",
+   "category": "status_typing",
+   "rule": "A stand-alone survey label 'HYD.' (optionally with a '-O-' / '-+-' symbol) is an existing hydrant; it is never a note or typical-section reference. Repeat sheets that put the same label at the same position (e.g. pavement-marking plans) are duplicates.",
+   "classify_as": "status:existing (via survey_abbrev_label, low confidence)",
+   "positive_examples": [
+    "HYD.",
+    "O- HYD.",
+    "-O- HYD."
+   ],
+   "negative_examples": [
+    "HYDRO",
+    "HYD. UNION (fitting text)",
+    "TOP OPERATING NUT ON FIRE HYDRANT (benchmark)"
+   ],
+   "why": {
+    "run": "Blind Run 18",
+    "project": "Mount Forest Main St (run18)",
+    "page": "2-5,10",
+    "error": "all 11 existing HYD. labels missed (3 left unresolved)"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-17-19.md + blindrun18/grading.json (Blueprint Checker, v8 blind grading 2026-10-24)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.9",
+    "package": "combined-blueprint-reader-dev-v9-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br18_vector_labels_via_ocr",
+     "test_syn_lone_hyd_label_is_existing",
+     "test_syn_guard_hydro_not_abbrev"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated"
+   },
+   "limits": [
+    "Vector-outlined labels need OCR; OCR noise like 'HYD.9 a LPD' stays unresolved. p10 two-line OCR box not recovered."
+   ]
+  },
+  {
+   "id": "BR18-01",
+   "code_rule_id": "scan_page page_deadline (v0.9)",
+   "component": "hydrant",
+   "category": "gating",
+   "rule": "OCR time is capped per page (TI_HYD_OCR_PAGE_CAP_S, default 240 s) so one slow page cannot exhaust the whole budget and leave later sheets unread.",
+   "classify_as": "ocr",
+   "positive_examples": [
+    "run18 p2 OCR ran 4123 s in the blind run; p3-p10 then skipped"
+   ],
+   "negative_examples": [],
+   "why": {
+    "run": "Blind Run 18",
+    "project": "Mount Forest Main St (run18)",
+    "page": "2-10",
+    "error": "vector-outline 'REMOVE AND REPLACE HYDRANT...' labels on p4 never OCR'd (budget exhausted)"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-17-19.md + blindrun18/grading.json (Blueprint Checker, v8 blind grading 2026-10-24)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.9",
+    "package": "combined-blueprint-reader-dev-v9-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br18_vector_labels_via_ocr"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated"
+   },
+   "limits": [
+    "Root cause of the 4123 s page not reproduced (same page took ~20 s in dev); cap is a guard, not a diagnosis."
+   ]
+  },
+  {
+   "id": "BR19-01",
+   "code_rule_id": "_cross_sheet stationless_repeat_same_standard_reference",
+   "component": "hydrant",
+   "category": "dedupe",
+   "rule": "Station-less hydrant call-outs (profile labels, servicing/grading-plan repeats) citing the same standard drawing (OPSD/OPSS/MMCD/SD) and status as stationed plan call-outs are duplicates, when there are at most two repeats per stationed call-out.",
+   "classify_as": "mention:duplicate",
+   "positive_examples": [
+    "PROP. FIRE HYDRANT AS PER OPSD 1105.010 (C300)",
+    "INSTALL FIRE HYDRANT AS PER OPSD 1105.010 (C400 profile)"
+   ],
+   "negative_examples": [
+    "two stationed call-outs with the same OPSD reference (both kept)"
+   ],
+   "why": {
+    "run": "Blind Run 19",
+    "project": "Renfrew Eighth St (run19)",
+    "page": "8-9",
+    "error": "4 duplicate new hydrants"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/confirmed-errors-17-19.md + blindrun19/grading.json (Blueprint Checker, v8 blind grading 2026-10-24)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.9",
+    "package": "combined-blueprint-reader-dev-v9-2026-10-24.zip (sha256 in rule-change-log)",
+    "tests": [
+     "test_br19_01_02_stationless_repeats_are_duplicates",
+     "test_syn_guard_two_stationed_same_ref_both_kept"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "synthetic tests + NON-BLIND re-run of the graded package only; not blind-validated"
+   },
+   "limits": [
+    "If every sheet is station-less nothing is deduped; a genuinely separate station-less hydrant citing the same standard would be dropped."
+   ]
   }
  ],
  "reader_config": {
@@ -872,19 +1154,19 @@
    },
    {
     "status": "new",
-    "regex": "\\b(?:INSTALL|PROPOSED|PROP\\.|PR\\.?|NEW|REPLACE|SUPPLY AND INSTALL)\\s.{0,40}\\bHYD|^\\s*\\d+\\s*-\\s*.*HYDRANT",
+    "regex": "\\b(?:INSTALL(?!\\s+INSULATION)|PROPOSED|PROP\\.|PR\\.?|NEW|REPLACE|SUPPLY AND INSTALL)\\s.{0,40}\\bHYD|^\\s*\\d+\\s*-\\s*.*HYDRANT",
     "flags": [
      "IGNORECASE"
     ],
-    "meaning": "call-out wording that means status 'new'"
+    "meaning": "call-out wording that means status 'new'; v9 (BR17-01): 'INSTALL INSULATION AROUND HYDRANT' is work on an existing hydrant, not new"
    },
    {
     "status": "existing",
-    "regex": "\\bEX(?:IST(?:ING)?)?\\.?\\s+(?:FIRE\\s+)?(?:HYD|F\\.?H\\b)|\\bHYDRANT\\s*\\(EXIST",
+    "regex": "\\bEX(?:IST(?:ING)?)?\\.?\\s+(?:FIRE\\s+)?(?:HYD|F\\.?H\\b)|\\bHYDRANT\\s*\\(EXIST|\\b(?:RAISE|LOWER|ADJUST|INSULATE)\\s+(?:THE\\s+)?(?:EX\\w*\\.?\\s+)?(?:FIRE\\s+)?HYD|\\bINSULATION\\s+AROUND\\s+(?:THE\\s+)?(?:EX\\w*\\.?\\s+)?(?:FIRE\\s+)?HYD",
     "flags": [
      "IGNORECASE"
     ],
-    "meaning": "call-out wording that means status 'existing'"
+    "meaning": "call-out wording that means status 'existing'; v9 (BR17-01/02): RAISE/LOWER/ADJUST/INSULATE work on a hydrant = existing hydrant with in-scope work"
    }
   ],
   "status_precedence": {
@@ -901,6 +1183,11 @@
      "winner": "relocate",
      "loser": "new",
      "lesson": "BR06-01"
+    },
+    {
+     "winner": "relocate",
+     "loser": "remove",
+     "lesson": "BR17-04: 'REMOVE AND RELOCATE HYDRANT' is one relocate action"
     }
    ],
    "order_note": "statuses are evaluated in status_wording order; tie_in first, then existing is dropped if an action status is present, then each 'beats' pair removes the loser"
@@ -935,11 +1222,11 @@
     "meaning": "typical section/detail sheet (BR02-FP-02)"
    },
    "site_verb": {
-    "regex": "\\b(?:INSTALL|SUPPLY|REPLACE|RELOCAT\\w*|REMOVE|ABANDON|DECOMMISSION|SALVAGE|TIE|CONNECT\\w*)\\b",
+    "regex": "\\b(?:INSTALL|SUPPLY|REPLACE|RELOCAT\\w*|REMOVE|ABANDON|DECOMMISSION|SALVAGE|TIE|CONNECT\\w*|RAISE|LOWER|ADJUST|INSULATE|INSULATION)\\b",
     "flags": [
      "IGNORECASE"
     ],
-    "meaning": "site-action verbs that keep a label as an instance on typical/coverage gates"
+    "meaning": "site-action verbs that keep a label as an instance on typical/coverage gates; v9: RAISE/LOWER/ADJUST/INSULAT(E|ION) added (BR17-01/02)"
    },
    "coverage_note": {
     "regex": "\\bCOVERAGE\\b|\\bSPACING\\b|\\bRADIUS\\b",
@@ -1022,6 +1309,20 @@
      "IGNORECASE"
     ],
     "meaning": "v8 (BR15-01): document scope statement giving the status of listed hydrants"
+   },
+   "existing_abbrev_label": {
+    "regex": "^(?:[-+.!\\s]|-?[O0]-?){0,4}HYD[.!]?(?:[-+.!\\s]|-?[O0]-?){0,4}$",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v9 (BR18-03): a stand-alone survey label 'HYD.' marks an existing hydrant (reported as existing; scope decided by the grader, out-of-scope existing scored separately); a leading/trailing survey symbol '-O-' / '-+-' is allowed; such a label is never a note or a typical-section reference"
+   },
+   "standard_reference": {
+    "regex": "\\b(?:OPSD|OPSS|MMCD|SD|STD\\.?\\s*DWG\\.?)\\s*[-#]?\\s*(\\d[\\d.\\-]*\\d)",
+    "flags": [
+     "IGNORECASE"
+    ],
+    "meaning": "v9 (BR19-01/02): standard-drawing reference used to tie a station-less repeat (profile label / servicing plan) to the stationed plan call-out"
    }
   },
   "base_rules": [
@@ -1035,9 +1336,9 @@
   "scope_notes": [
    {
     "id": "SCOPE-EXISTING-OUT-OF-WORK",
-    "status": "undecided",
-    "decided_by": "Kyle (pending)",
-    "note": "Existing hydrants drawn outside the work (e.g. Run 04 EX HYD-01..03) are reported as 'existing'; whether they count is not decided. The reader does not filter them."
+    "status": "decided",
+    "decided_by": "Kyle 2026-10-24",
+    "note": "Existing hydrants drawn outside the work (e.g. Run 04 EX HYD-01..03) are reported as 'existing'; whether they count is not decided. The reader does not filter them. DECIDED: counted, scored separately (see SCOPE-EXISTING-OOS-COUNTED-SEPARATELY)."
    },
    {
     "id": "SCOPE-COUNTS-NOT-SUMMED",
@@ -1048,6 +1349,18 @@
     "id": "SCOPE-TIE-IN-PER-ITEM",
     "status": "active",
     "note": "v7: tie_in is reported per item (tie_in_items), including hydrant-lead tie-ins of existing hydrants."
+   },
+   {
+    "id": "SCOPE-EXISTING-OOS-COUNTED-SEPARATELY",
+    "status": "active",
+    "decided_by": "Kyle 2026-10-24",
+    "note": "Existing hydrants outside the construction scope count toward hydrant mastery but are scored separately from in-scope work and never as new installation quantities."
+   },
+   {
+    "id": "SCOPE-MAIN-TIE-IN-NOT-HYDRANT",
+    "status": "active",
+    "decided_by": "Kyle 2026-10-24",
+    "note": "Watermain tie-ins not linked to a hydrant are outside hydrant scope. They may be reported as main_tie_in (hydrant_linked=false) but are not hydrant results; tie-in detection is not widened to general watermain work."
    }
   ],
   "fuzzy_vocabulary": {
