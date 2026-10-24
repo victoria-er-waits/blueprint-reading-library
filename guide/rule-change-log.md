@@ -64,3 +64,18 @@ Status: synthetic tests + NON-BLIND re-runs of Runs 04-06 only; not blind-valida
 | 2026-10-24 | BR04-02 | hydrant | OCR fallback for labels drawn as graphics (no text layer), deduped against text layer | hydrants.py v0.5 | Blind Run 04 p8-p13 (Checker) |
 | 2026-10-24 | BR05-01 | hydrant | same OCR fallback, second tender | hydrants.py v0.5 | Blind Run 05 p4-p5 (Checker) |
 | 2026-10-24 | BR06-01 | hydrant | one callout = one status; relocate beats new | hydrants.py v0.5 | Blind Run 06 p1 (Checker) |
+
+## Component rules: hydrants v0.7.1 (2026-10-24)
+Status: regression tests on NON-BLIND extracts + NON-BLIND re-runs of Runs 03-12; not blind-validated yet.
+Package: combined-blueprint-reader-dev-v7-2026-10-24.zip sha256 408f8aa3568d728c26b66d02b01ac7afedf97ec625f76abbb05eb7564692283d (rules pinned at 2bc4301, hydrants.json sha256 cb33b04a...07fa).
+
+| Date | Id | Component | Change | Origin |
+|---|---|---|---|---|
+| 2026-10-24 | BR07-01 | hydrant | cross-sheet dedupe (id, call-out text, TYP, detail); cross_sheet_duplicates populated | Runs 07, 10, (04 non-blind) |
+| 2026-10-24 | BR07-02 | hydrant | (TYP.) call-out counts tag-only labels on the sheet | Run 07 |
+| 2026-10-24 | BR08-01 | hydrant | fuzzy garbled text layer, low confidence | Run 08 |
+| 2026-10-24 | BR09-01 | hydrant | OCR when hydrant words are legend/notes only; 300 dpi region re-OCR | Runs 09, 12 (09 only surfaced as unresolved) |
+| 2026-10-24 | BR11-01 | hydrant | intersection detail = duplicate of plan | Run 11 |
+| 2026-10-24 | BR11-02 | hydrant | rotated multi-line call-outs; insets take no main-plan station | Run 11 |
+| 2026-10-24 | BR11-03 | hydrant | hydrant-lead tie-in = existing in scope; tie_in_items per item | Run 11 |
+| 2026-10-24 | BR12-01 | hydrant | legend blocks by layout (rotated, no heading) | Run 12 |
