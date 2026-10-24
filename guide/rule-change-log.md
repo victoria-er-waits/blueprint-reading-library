@@ -51,3 +51,6 @@ New AI-readable store `guide/component-rules/` (schema `component-rule.schema.js
 | 2026-10-23 | BR02-FP-02 | hydrant | verb-less labels in typical sections/details never a physical instance | hydrants.py v0.3 | Blind Run 02 Cedar Drive p4 (GPT-6) |
 | 2026-10-24 | BR03-01 | hydrant | 'TIE IN AT HYDRANT' = tie-in; main-only tie-ins are not hydrant tie-ins | hydrants.py v0.4 | Blind Run 03 Cumberland p8/p9 (Checker) |
 | 2026-10-24 | BR03-02 | hydrant | station from matching profile label before nearest chainage | hydrants.py v0.4 | Blind Run 03 Cumberland p9 (Checker) |
+
+## 2026-10-24: Added Blueprint Reader Master Manual
+Added guide/blueprint-reader-master-manual.html (sha256 05485ec8...eb95, supplied by Kyle; ChatGPT could not commit it) plus a plain-text .md copy for AI readers and an llms.txt pointer. Local only, not pushed.
