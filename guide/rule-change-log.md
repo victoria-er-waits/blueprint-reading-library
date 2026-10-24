@@ -162,3 +162,22 @@ BR23-02 STATION-HIERARCHY (approved by Kyle + GPT-6): L1 symbol/tee/connection o
 Old tests: 3 synthetic label-centre tests -> UNRESOLVED (originals kept as strict xfail), 1 explicit hydrant profile label kept (L2). See engine TEST_CHANGES.md.
 Package: combined-blueprint-reader-dev-v11c-2026-10-24.zip sha256 3f56e3c2031d0a9d5664b93e0d1f7560b11cbb35c3dabf2022bd2cf7fecab769 (rules at 4cb3ec0, hydrants.json sha256 9b66ce09...0bb9). Earlier v11 zip 2321f535 kept unchanged.
 Non-blind re-runs 07-23 vs pre-Option-C v11: counts/statuses identical; only change run18 p2 'HYD.' (OCR, existing) 1346.7 -> UNRESOLVED (label-centre station rejected). Tofino 1+115.7 L2 leader end (drawing ~1+116.9, within 5 m); East Hants 6/6 stations (L1 x2, L2 x4); Rosslyn 3 new p33, no legend/detail-title counts. NON-BLIND only, not independent validation.
+
+## Component rules: hydrants v0.12 dev (2026-10-24) — NOT frozen, no package
+Status: fixes for Checker-confirmed errors from blind runs 24 and 26 (graded on v11c) plus run26 adjudication ADJ-1. Validated only by regression tests on NON-BLIND extracts and NON-BLIND re-runs (24/26 are no longer blind for this code).
+
+| Date | Id | Component | Change | Origin |
+|---|---|---|---|---|
+| 2026-10-24 | BR24-01 | hydrant | tick pairs must be adjacent on one row; scale check vs modal station interval | Run 24 p3 HN1 |
+| 2026-10-24 | BR26-01 | hydrant | split chainage labels ('1   120' + '+') merged | Run 26 (all stations missing) |
+| 2026-10-24 | BR26-02 | hydrant | status-less assembly call-out (>=2 fittings) with leader = new | Run 26 FH-1 |
+| 2026-10-24 | BR26-03 | hydrant | FH-n tag at leader end gives id; same-tag call-outs on a sheet = one hydrant | Run 26 |
+| 2026-10-24 | BR26-04/05 | hydrant | hydrant only in a secondary sentence / subordinate clause = mention | Run 26 p3/p4 |
+| 2026-10-24 | BR26-06 | hydrant | tagged site detail on a detail page counts once | Run 26 FH-RIV |
+| 2026-10-24 | BR26-07 | hydrant | tapping sleeve = fitting tie-in, never a hydrant (TS-RIV is a fitting-detection failure, not in hydrant scores) | Run 26 TS-RIV |
+| 2026-10-24 | BR26-08 | hydrant | cross-sheet merge needs matching leader ends; anchored same-status within 5 m = one | Run 26 EXH-2 |
+| 2026-10-24 | BR26-09 | hydrant | competing-alignment tick pairs -> station UNRESOLVED | Run 26 EXH-2 side street |
+| 2026-10-24 | BR26-10 | hydrant | tagged package: untagged new call-out reaching no tag -> unresolved | Run 26 p3 |
+| 2026-10-24 | BR26-11 | hydrant | composite new/remove note: per-leader ownership; circle-with-rays existing symbol -> removal; tag -> new; neither -> unresolved | Run 26 ADJ-1 (~1+139) |
+
+Error memory: 10 records ERR-R24-01, ERR-R26-01..09 (ERR-R26-09 = ADJ-1) via builder GRADED_ROWS (developer links by regression test; not yet Checker-reviewed). Edward St 'FH' (ADJ-2) is ambiguous: documented as a physical existing hydrant, excluded from scoring; no record.

@@ -48,7 +48,7 @@ def test_every_rule_converted_with_honest_verification():
 
 def test_public_error_records_are_learning_only():
     recs = load("error-memory/hydrant-errors.json")["records"]
-    assert len(recs) == 54  # runs 07-19 (35) + run20 (7) + run21 (6) + runs 22-23 (6)
+    assert len(recs) == 64  # runs 07-19 (35) + run20 (7) + run21 (6) + runs 22-23 (6) + run24 (1) + run26 (9 incl. ADJ-1)
     allowed = {"error_id","skill","original_mistake","mistake_description","root_cause","correct_interpretation",
                "applicable_rule_ids","rule_link_method","implemented_fix","regression_test_ids","validation_status","known_limitations"}
     for e in recs:
@@ -237,3 +237,12 @@ def test_station_hierarchy_rule_machine_readable_and_linked():
     assert sh["why_label_centre_unreliable"] and sh["regression_tests"]
     e = {x["error_id"]: x for x in json.load(open(os.path.join(OUT, "error-memory/hydrant-errors.json")))["records"]}
     assert "BR23-02" in e["ERR-R23-06"]["applicable_rule_ids"]
+
+
+def test_runs_24_26_error_records_linked():
+    recs = {e["error_id"]: e for e in load("error-memory/hydrant-errors.json")["records"]}
+    assert recs["ERR-R24-01"]["applicable_rule_ids"] == ["BR24-01"]
+    assert recs["ERR-R26-09"]["applicable_rule_ids"] == ["BR26-11"] and recs["ERR-R26-09"]["original_mistake"] == "miss"
+    assert recs["ERR-R26-08"]["original_mistake"] == "tie_in_miss"   # TS-RIV: fitting failure, not a hydrant miss
+    for i in range(1, 10):
+        assert recs[f"ERR-R26-{i:02d}"]["validation_status"] == "fixed_nonblind_validated"

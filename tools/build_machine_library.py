@@ -195,6 +195,31 @@ ROOT_CAUSES = {
     "ERR-R23-06": "Station measured at the call-out text anchor (block x1228-1471) instead of the leader end at the tee (Checker); v10 fallback also picked a grey fitting-list leader. Fix: STATION-HIERARCHY (label centre never an anchor)",
 }
 
+# Runs 24/26 (graded on v11c): (run, row, page, location, drawing evidence, error, root cause, rule links, source file)
+_G24, _G26, _A26 = "run24/grading-report.md", "run26/grading-report.md", "run26/adjudication.md"
+GRADED_ROWS = [
+    (24, 1, "3", "HN1 Esquimalt Rd", "plan ticks on two rows; hydrant tee east of the 10+240 tick", "Station error",
+     "Interpolated across a cross-row tick pair (top row end tick to bottom row) instead of the adjacent same-row pair", ["BR24-01"], _G24),
+    (26, 1, "5", "FH-1 assembly", "HYDRANT, GATE VALVE, LEAD, TEE call-out with FH-1 tag", "Miss (unresolved)",
+     "Status-less assembly call-out had no status word; FH-n tag at the leader end not read; split chainage labels unreadable", ["BR26-01", "BR26-02", "BR26-03"], _G26),
+    (26, 2, "12", "FH-RIV site detail", "Riverside Drive hydrant detail tagged FH-5", "Miss (mention only)",
+     "Detail page gate treated the tagged site detail as a typical detail", ["BR26-06"], _G26),
+    (26, 3, "7", "EXH-2 island by matchline", "identical removal text, different leader end", "Miss: dropped as duplicate",
+     "Cross-sheet dedupe merged identical text without checking leader ends; station then taken from a side-street alignment", ["BR26-08", "BR26-09"], _G26),
+    (26, 4, "3", "DAYLIGHT note to FH-2", "DAYLIGHT ... PRIOR TO NEW HYDRANT INSTALLATION", "Duplicate",
+     "Hydrant in a subordinate clause of another activity counted as an instance", ["BR26-05"], _G26),
+    (26, 5, "3", "DAYLIGHT note to FH-4", "DAYLIGHT ... PRIOR TO NEW HYDRANT INSTALLATION", "Duplicate",
+     "Hydrant in a subordinate clause of another activity counted as an instance", ["BR26-05", "BR26-10"], _G26),
+    (26, 6, "4", "EXH-1 repeat on next sheet", "removal note leader to blue hydrant symbol", "Cross-sheet duplicate",
+     "Hydrant only in a secondary sentence; repeat not merged", ["BR26-04", "BR26-08"], _G26),
+    (26, 7, "4", "valve removal note", "REMOVE AND DISPOSE OF ... VALVES ... EXISTING HYDRANTS TO BE REMOVED", "FP",
+     "Hydrant only in a secondary sentence of a valve-removal note; leaders end at valves", ["BR26-04"], _G26),
+    (26, 8, "12", "TS-RIV tapping sleeve", "250x150x250 TAPPING SLEEVE AND VALVE", "Tie-in missed",
+     "Fitting-detection failure (Kyle): tapping sleeve is a separate fitting, not a hydrant; not in hydrant scores", ["BR26-07"], _G26),
+    (26, 9, "3", "ADJ-1 existing hydrant beside FH-1 (also drawn p4, p5)", "circle-with-rays symbol reached by one leader of a composite new/remove note", "Miss",
+     "Composite NEW HYDRANT / EXISTING HYDRANTS TO BE REMOVED note sat under a NOTES heading and its leader was on a non-first line, so it was filed as a general note; no per-leader ownership; existing-hydrant symbol (circle with rays) not recognised", ["BR26-11"], _A26),
+]
+
 # Watermain tie-ins not linked to a hydrant: out of hydrant scope (Kyle, 2026-10-24).
 OUT_OF_SCOPE = {"ERR-R13-04", "ERR-R13-05", "ERR-R18-09"}
 OOS_NOTE = "Not hydrant-linked watermain tie-in: out of hydrant scope (Kyle 2026-10-24; Checker error-memory review)"
@@ -260,6 +285,27 @@ def build_errors(errors_dir, rules):
                 rec["validation_status"] = "out_of_scope"
                 rec["scope_note"] = OOS_NOTE
             recs.append(rec)
+    # v0.12: runs 24/26 Checker grading reports + run26 adjudication (7-column '# | Item | ...' tables are not parsed;
+    # rows transcribed here by the developer, linked by regression test names; not yet Checker-reviewed as links).
+    for (rn, n, page, loc, wording, err, cause, links, src) in GRADED_ROWS:
+        path = os.path.join(errors_dir, src)
+        if not os.path.exists(path):
+            continue
+        known = {r["rule_id"] for r in rules}
+        if set(links) - known:
+            sys.exit(f"refusing: ERR-R{rn:02d}-{n:02d} links unknown rules {sorted(set(links) - known)}")
+        fsha = sha256_file(path)
+        if not any(x["path"] == src for x in sources):
+            sources.append({"path": src, "sha256": fsha})
+        statuses = {r["rule_id"]: r["verification_status"] for r in rules}
+        vstat = "fixed_nonblind_validated" if any(statuses[x] in ("nonblind_validated", "blind_validated") for x in links) else ("fixed_synthetic_only" if links else "confirmed_unfixed")
+        rec = {"error_id": f"ERR-R{rn:02d}-{n:02d}", "run": f"run{rn:02d}", "reader_version_graded": "v11c",
+               "page": page, "location": redact_keys(loc), "original_mistake": mistake(err), "error_summary": redact_keys(err),
+               "drawing_evidence": redact_keys(wording), "root_cause": redact_keys(cause), "fix_rule_ids": sorted(links),
+               "fix_link_method": "regression_test_name", "validation_status": vstat,
+               "confirmed_by": "Blueprint Checker (" + src + ")", "source": {"file": src, "sha256": fsha, "row": n},
+               "contains_graded_run_info": True, "gemini_policy": GEMINI_POLICY}
+        recs.append(rec)
     # grading.json: provenance hash only, never content
     for g in sorted(glob.glob(os.path.join(errors_dir, "run*/grading.json"))):
         sources.append({"path": os.path.relpath(g, errors_dir), "sha256": sha256_file(g), "use": "hash only; contents not copied"})

@@ -1689,6 +1689,446 @@
     "Tie-in items keep their v0.10 station logic (not hydrant stations)."
    ],
    "name": "STATION-HIERARCHY"
+  },
+  {
+   "id": "BR24-01",
+   "code_rule_id": "_interp_station: adjacency + modal-gap scale check",
+   "component": "hydrant",
+   "category": "station_rule",
+   "rule": "A tick pair used for interpolation must be adjacent on one alignment row: reject a pair when a tick of an intermediate station lies nearer to either end than the chord, and reject pairs wider than the modal consecutive station interval whose pt-per-metre scale differs by more than 5% from the median nearest-neighbour scale.",
+   "classify_as": "station",
+   "positive_examples": [
+    "run24 p3 10+240 -> 10+260 same row"
+   ],
+   "negative_examples": [
+    "run24 p3 cross-row pair 10+140 (top row) -> 10+240 (bottom row)"
+   ],
+   "why": {
+    "run": "Blind Run 24",
+    "page": "3",
+    "error": "station error ~27 m"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run24/grading-report.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_01_run24_hn1_station_from_adjacent_ticks"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": [
+    "Needs at least three ticks on a row to estimate the scale."
+   ]
+  },
+  {
+   "id": "BR26-01",
+   "code_rule_id": "_merge_split_chainage",
+   "component": "hydrant",
+   "category": "station_rule",
+   "rule": "Chainage tick labels drawn as split text objects ('1   120' plus a separate '+') are merged into one label before tick matching.",
+   "classify_as": "station",
+   "positive_examples": [
+    "run26 plan ticks '1   120' + '+'"
+   ],
+   "negative_examples": [
+    "dimension text '1 120' without a '+' object within one character height"
+   ],
+   "why": {
+    "run": "Blind Run 26",
+    "page": "3-8",
+    "error": "no stations (all ticks unreadable)"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run26/grading-report.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_26_fixes.py::test_br26_01_split_chainage_label_merged"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": []
+  },
+  {
+   "id": "BR26-02",
+   "code_rule_id": "_assembly",
+   "component": "hydrant",
+   "category": "classification_rule",
+   "rule": "A status-less call-out listing a hydrant with at least two distinct assembly fittings (gate valve, lead, tee, restraints) whose leader reaches the drawing is a new hydrant assembly on a plan sheet (not on detail/typical pages).",
+   "classify_as": "status:new",
+   "positive_examples": [
+    "'HYDRANT, 150Ø GATE VALVE, LEAD, 250X150X250 TEE C/W JOINT RESTRAINTS'"
+   ],
+   "negative_examples": [
+    "'HYDRANT LEAD' alone"
+   ],
+   "why": {
+    "run": "Blind Run 26",
+    "page": "5",
+    "error": "FH-1 miss"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run26/grading-report.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_26_fixes.py::test_br26_02_03_assembly_callouts_counted_with_tags",
+     "test_br24_26_fixes.py::test_br26_02_assembly_needs_two_fittings"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": []
+  },
+  {
+   "id": "BR26-03",
+   "code_rule_id": "PROJ_TAG/_tags/_tag_at + same-page tag dedupe",
+   "component": "hydrant",
+   "category": "identity_rule",
+   "rule": "A project hydrant tag (FH-n, HYD-n, H-n) within 60 pt of a call-out's leader end gives that hydrant's id; two call-outs on a sheet whose leaders reach the same tag are one hydrant. Several distinct tags in range -> no id (no guessing).",
+   "classify_as": "hydrant_id",
+   "positive_examples": [
+    "FH-1..FH-4 tags at leader ends"
+   ],
+   "negative_examples": [
+    "two different tags within 60 pt of one leader end"
+   ],
+   "why": {
+    "run": "Blind Run 26",
+    "page": "3-8",
+    "error": "duplicates / identity"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run26/grading-report.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_26_fixes.py::test_br26_02_03_assembly_callouts_counted_with_tags"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": []
+  },
+  {
+   "id": "BR26-04",
+   "code_rule_id": "_secondary_hydrant (secondary sentence)",
+   "component": "hydrant",
+   "category": "classification_rule",
+   "rule": "When the call-out's main subject is another component (valves, watermain) and hydrants appear only in a later sentence ('... EXISTING HYDRANTS TO BE REMOVED'), it is a mention unless its leader reaches a hydrant tag.",
+   "classify_as": "mention",
+   "positive_examples": [
+    "p4 'REMOVE AND DISPOSE OF EXISTING ... VALVES ... EXISTING HYDRANTS TO BE REMOVED' -> mention"
+   ],
+   "negative_examples": [],
+   "why": {
+    "run": "Blind Run 26",
+    "page": "4",
+    "error": "FP + cross-sheet duplicate"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run26/grading-report.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_26_fixes.py::test_br26_04_05_secondary_and_subordinate_mentions"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": []
+  },
+  {
+   "id": "BR26-05",
+   "code_rule_id": "_secondary_hydrant (subordinate clause)",
+   "component": "hydrant",
+   "category": "classification_rule",
+   "rule": "A hydrant named only in a subordinate clause of another activity ('DAYLIGHT ... PRIOR TO NEW HYDRANT INSTALLATION', 'ADJUST NEW HYDRANT LEAD') is a mention.",
+   "classify_as": "mention",
+   "positive_examples": [
+    "DAYLIGHT notes run26 p3"
+   ],
+   "negative_examples": [],
+   "why": {
+    "run": "Blind Run 26",
+    "page": "3",
+    "error": "duplicates of FH-2/FH-4"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run26/grading-report.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_26_fixes.py::test_br26_04_05_secondary_and_subordinate_mentions"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": []
+  },
+  {
+   "id": "BR26-06",
+   "code_rule_id": "site_det exemption at typical-page gate",
+   "component": "hydrant",
+   "category": "classification_rule",
+   "rule": "On a detail/typical page, a hydrant assembly call-out whose leader reaches a project hydrant tag is a site detail of that tagged hydrant and counts (once) as new; it has no station when the detail is not to scale.",
+   "classify_as": "status:new",
+   "positive_examples": [
+    "run26 p12 Riverside Drive hydrant detail tagged FH-5"
+   ],
+   "negative_examples": [
+    "untagged typical hydrant detail"
+   ],
+   "why": {
+    "run": "Blind Run 26",
+    "page": "12",
+    "error": "FH-RIV miss"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run26/grading-report.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_26_fixes.py::test_br26_06_07_site_detail_hydrant_and_tapping_sleeve_is_fitting"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": [
+    "No station from non-scale details."
+   ]
+  },
+  {
+   "id": "BR26-07",
+   "code_rule_id": "TAP_SLEEVE -> general_tie_ins hydrant_linked",
+   "component": "hydrant",
+   "category": "tie_in_rule",
+   "rule": "A tapping sleeve and valve call-out is a watermain fitting/tie-in, never a hydrant; it is hydrant-linked when a counted new hydrant is within 300 pt. Missing it is a fitting-detection failure, not a hydrant miss (Kyle).",
+   "classify_as": "tie_in",
+   "positive_examples": [
+    "run26 p12 '250x150x250 TAPPING SLEEVE AND VALVE'"
+   ],
+   "negative_examples": [],
+   "why": {
+    "run": "Blind Run 26",
+    "page": "12",
+    "error": "TS-RIV fitting not detected"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run26/grading-report.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_26_fixes.py::test_br26_06_07_site_detail_hydrant_and_tapping_sleeve_is_fitting"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": [
+    "Fitting detection is outside hydrant P/R."
+   ]
+  },
+  {
+   "id": "BR26-08",
+   "code_rule_id": "_cross_sheet compat leader guard + 5 m location dedupe",
+   "component": "hydrant",
+   "category": "dedupe_rule",
+   "rule": "Cross-sheet merge of identical call-out text requires the leaders to reach the same place: repeat-base merges need leader ends within 40 pt; adjacent-sheet merges need ends in the opposite outer 30% overlap zones. Same-status items with anchored stations within 5 m are one hydrant.",
+   "classify_as": "dedupe",
+   "positive_examples": [
+    "run26 p3/p6 EXH-1 at 1+198/1+199 merged"
+   ],
+   "negative_examples": [
+    "run26 p6/p7 identical removal text, different leader ends (EXH-2 kept)"
+   ],
+   "why": {
+    "run": "Blind Run 26",
+    "page": "7",
+    "error": "EXH-2 dropped as duplicate"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run26/grading-report.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_26_fixes.py::test_br26_08_09_exh2_kept_without_side_street_station"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": []
+  },
+  {
+   "id": "BR26-09",
+   "code_rule_id": "_interp_station competing-alignment guard",
+   "component": "hydrant",
+   "category": "station_rule",
+   "rule": "If another tick pair of comparable perpendicular distance (< 2x best) gives a station more than two spans away, the alignment is ambiguous and the station is UNRESOLVED.",
+   "classify_as": "station_kind:UNRESOLVED",
+   "positive_examples": [],
+   "negative_examples": [
+    "run26 p7 EXH-2 side-street 2+901.7"
+   ],
+   "why": {
+    "run": "Blind Run 26",
+    "page": "7",
+    "error": "station from side street"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run26/grading-report.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_26_fixes.py::test_br26_08_09_exh2_kept_without_side_street_station"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": [
+    "May abstain where two alignments run close and parallel."
+   ]
+  },
+  {
+   "id": "BR26-10",
+   "code_rule_id": "scan(): tagged-package demotion",
+   "component": "hydrant",
+   "category": "classification_rule",
+   "rule": "In a package whose new hydrants are tagged at the symbol, an untagged new-status call-out on a tagged sheet whose leader reaches no tag is unresolved (kept, not counted).",
+   "classify_as": "status:unresolved",
+   "positive_examples": [],
+   "negative_examples": [
+    "p3 untagged generic NEW HYDRANT notes"
+   ],
+   "why": {
+    "run": "Blind Run 26",
+    "page": "3",
+    "error": "duplicates"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run26/grading-report.md (Blueprint Checker)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_26_fixes.py::test_br26_02_03_assembly_callouts_counted_with_tags"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": []
+  },
+  {
+   "id": "BR26-11",
+   "code_rule_id": "COMPOSITE_RM + _leader_ends + _rayed_circle_at",
+   "component": "hydrant",
+   "category": "ownership_rule",
+   "rule": "A composite note 'NEW HYDRANT ... EXISTING HYDRANT(S) TO BE REMOVED' with leaders is a site call-out even below a NOTES heading; each distinct leader end is owned separately: an end at a stroked circle-with-rays (the legend/survey 'FH' existing-hydrant symbol) is an existing removal; else an end at a project tag is that new hydrant; else unresolved. A streetlight (solid ellipse or 'L' circle) is never the existing-hydrant symbol. The same symbol on overlapping sheets without a call-out adds nothing (one physical removal).",
+   "classify_as": "status:remove|new|unresolved",
+   "positive_examples": [
+    "run26 p3 leader (912,622) -> circle-with-rays [912.8,628.8,922.3,638.3] ~1+139 -> one removal",
+    "p3 leader (1259,646) -> existing hydrant EXH-1"
+   ],
+   "negative_examples": [
+    "leader end on neither tag nor symbol (p3 (1963,1218)) -> unresolved"
+   ],
+   "why": {
+    "run": "Blind Run 26 adjudication ADJ-1",
+    "page": "3",
+    "error": "existing removal ~1+139 missed"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run26/grading-report.md (Blueprint Checker)",
+    "/workspace/blind-runs/run26/adjudication.md (Blueprint Checker, ADJ-1 confirmed)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12 (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br24_26_fixes.py::test_br26_11_adj1_existing_removal_reported_once",
+     "test_br24_26_fixes.py::test_br26_11_composite_note_leader_ownership",
+     "test_br24_26_fixes.py::test_br26_11_total_run26_counts",
+     "test_br24_26_fixes.py::test_br26_11_rayed_circle_vs_solid_streetlight",
+     "test_br24_26_fixes.py::test_br26_11_composite_regex"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "Blueprint Checker"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+   },
+   "limits": [
+    "Symbol test is vector-only (7-13 pt unfilled circle + >=3 short diagonal rays); raster or differently drawn legends fall to tag/unresolved.",
+    "Removal is only counted when a call-out leader reaches the symbol; uncalled-out existing symbols are not counted (Edward St FH: documented, excluded from scoring)."
+   ]
   }
  ],
  "reader_config": {

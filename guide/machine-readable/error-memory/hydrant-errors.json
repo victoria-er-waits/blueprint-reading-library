@@ -1177,6 +1177,210 @@
    "known_limitations": [
     "Leader colour heuristic: packages drawing hydrant leaders in grey fall back to longest leader."
    ]
+  },
+  {
+   "error_id": "ERR-R24-01",
+   "skill": "hydrant",
+   "original_mistake": "station_error",
+   "mistake_description": "Reported a station that does not match the drawing position of the hydrant",
+   "root_cause": "Interpolated across a cross-row tick pair (top row end tick to bottom row) instead of the adjacent same-row pair",
+   "correct_interpretation": "BR24-01: classify as station.",
+   "applicable_rule_ids": [
+    "BR24-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.12 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br24_01_run24_hn1_station_from_adjacent_ticks"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "Needs at least three ticks on a row to estimate the scale."
+   ]
+  },
+  {
+   "error_id": "ERR-R26-01",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Status-less assembly call-out had no status word; FH-n tag at the leader end not read; split chainage labels unreadable",
+   "correct_interpretation": "BR26-01: classify as station. BR26-02: classify as status:new. BR26-03: classify as hydrant_id.",
+   "applicable_rule_ids": [
+    "BR26-01",
+    "BR26-02",
+    "BR26-03"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.12 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br24_26_fixes.py::test_br26_01_split_chainage_label_merged",
+    "test_br24_26_fixes.py::test_br26_02_03_assembly_callouts_counted_with_tags",
+    "test_br24_26_fixes.py::test_br26_02_assembly_needs_two_fittings"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": []
+  },
+  {
+   "error_id": "ERR-R26-02",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Detail page gate treated the tagged site detail as a typical detail",
+   "correct_interpretation": "BR26-06: classify as status:new.",
+   "applicable_rule_ids": [
+    "BR26-06"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.12 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br24_26_fixes.py::test_br26_06_07_site_detail_hydrant_and_tapping_sleeve_is_fitting"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "No station from non-scale details."
+   ]
+  },
+  {
+   "error_id": "ERR-R26-03",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Cross-sheet dedupe merged identical text without checking leader ends; station then taken from a side-street alignment",
+   "correct_interpretation": "BR26-08: classify as dedupe. BR26-09: classify as station_kind:UNRESOLVED.",
+   "applicable_rule_ids": [
+    "BR26-08",
+    "BR26-09"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.12 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br24_26_fixes.py::test_br26_08_09_exh2_kept_without_side_street_station"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "May abstain where two alignments run close and parallel."
+   ]
+  },
+  {
+   "error_id": "ERR-R26-04",
+   "skill": "hydrant",
+   "original_mistake": "duplicate",
+   "mistake_description": "Counted the same physical hydrant more than once",
+   "root_cause": "Hydrant in a subordinate clause of another activity counted as an instance",
+   "correct_interpretation": "BR26-05: classify as mention.",
+   "applicable_rule_ids": [
+    "BR26-05"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.12 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br24_26_fixes.py::test_br26_04_05_secondary_and_subordinate_mentions"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": []
+  },
+  {
+   "error_id": "ERR-R26-05",
+   "skill": "hydrant",
+   "original_mistake": "duplicate",
+   "mistake_description": "Counted the same physical hydrant more than once",
+   "root_cause": "Hydrant in a subordinate clause of another activity counted as an instance",
+   "correct_interpretation": "BR26-05: classify as mention. BR26-10: classify as status:unresolved.",
+   "applicable_rule_ids": [
+    "BR26-05",
+    "BR26-10"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.12 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br24_26_fixes.py::test_br26_02_03_assembly_callouts_counted_with_tags",
+    "test_br24_26_fixes.py::test_br26_04_05_secondary_and_subordinate_mentions"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": []
+  },
+  {
+   "error_id": "ERR-R26-06",
+   "skill": "hydrant",
+   "original_mistake": "duplicate",
+   "mistake_description": "Counted the same physical hydrant more than once",
+   "root_cause": "Hydrant only in a secondary sentence; repeat not merged",
+   "correct_interpretation": "BR26-04: classify as mention. BR26-08: classify as dedupe.",
+   "applicable_rule_ids": [
+    "BR26-04",
+    "BR26-08"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.12 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br24_26_fixes.py::test_br26_04_05_secondary_and_subordinate_mentions",
+    "test_br24_26_fixes.py::test_br26_08_09_exh2_kept_without_side_street_station"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": []
+  },
+  {
+   "error_id": "ERR-R26-07",
+   "skill": "hydrant",
+   "original_mistake": "false_positive",
+   "mistake_description": "Counted a non-instance (legend, note or label) as a hydrant",
+   "root_cause": "Hydrant only in a secondary sentence of a valve-removal note; leaders end at valves",
+   "correct_interpretation": "BR26-04: classify as mention.",
+   "applicable_rule_ids": [
+    "BR26-04"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.12 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br24_26_fixes.py::test_br26_04_05_secondary_and_subordinate_mentions"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": []
+  },
+  {
+   "error_id": "ERR-R26-08",
+   "skill": "hydrant",
+   "original_mistake": "tie_in_miss",
+   "mistake_description": "Missed a watermain tie-in",
+   "root_cause": "Fitting-detection failure (Kyle): tapping sleeve is a separate fitting, not a hydrant; not in hydrant scores",
+   "correct_interpretation": "BR26-07: classify as tie_in.",
+   "applicable_rule_ids": [
+    "BR26-07"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.12 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br24_26_fixes.py::test_br26_06_07_site_detail_hydrant_and_tapping_sleeve_is_fitting"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "Fitting detection is outside hydrant P/R."
+   ]
+  },
+  {
+   "error_id": "ERR-R26-09",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "Composite NEW HYDRANT / EXISTING HYDRANTS TO BE REMOVED note sat under a NOTES heading and its leader was on a non-first line, so it was filed as a general note; no per-leader ownership; existing-hydrant symbol (circle with rays) not recognised",
+   "correct_interpretation": "BR26-11: classify as status:remove|new|unresolved.",
+   "applicable_rule_ids": [
+    "BR26-11"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.12 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br24_26_fixes.py::test_br26_11_adj1_existing_removal_reported_once",
+    "test_br24_26_fixes.py::test_br26_11_composite_note_leader_ownership",
+    "test_br24_26_fixes.py::test_br26_11_composite_regex",
+    "test_br24_26_fixes.py::test_br26_11_rayed_circle_vs_solid_streetlight",
+    "test_br24_26_fixes.py::test_br26_11_total_run26_counts"
+   ],
+   "validation_status": "fixed_nonblind_validated",
+   "known_limitations": [
+    "Removal is only counted when a call-out leader reaches the symbol; uncalled-out existing symbols are not counted (Edward St FH: documented, excluded from scoring).",
+    "Symbol test is vector-only (7-13 pt unfilled circle + >=3 short diagonal rays); raster or differently drawn legends fall to tag/unresolved."
+   ]
   }
  ]
 }
