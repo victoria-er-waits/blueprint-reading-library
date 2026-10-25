@@ -1,7 +1,7 @@
 {
  "schema": "machine-library-manifest/v1",
  "generator": "tools/build_machine_library.py",
- "library_commit": "bab78bca44a93cc4a8c9246fe703fbae3c4dcac4",
+ "library_commit": "4543780cb3b8986a76507e60f56e21e542da9364",
  "source_of_truth": "guide/component-rules/hydrants.json",
  "sources": [
   {
@@ -17,11 +17,11 @@
   },
   {
    "path": "rules/hydrants.reader-config.json",
-   "sha256": "22fb6dbd30dfefb9bdaf04c7e52da17493f7e9468a459a1d2f2b2a79890d3fba"
+   "sha256": "fc96962ad9518f00f3c3c0e934a5f7e27d1c91fad7a937c3afce019f6e62d59d"
   },
   {
    "path": "rules/hydrants.rules.json",
-   "sha256": "79e124b7b9ed1f2cc43c815f82cca5fc8a7e2af343eec0ac5c801fa51741fb4e"
+   "sha256": "a40d3c79d5c5bf0b2da55801a276dfbc7038522ef0700a91f988a2302156ec9a"
   },
   {
    "path": "schemas/error-memory.private.v1.schema.json",
