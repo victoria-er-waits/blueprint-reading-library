@@ -6,14 +6,14 @@
  "sources": [
   {
    "path": "guide/component-rules/hydrants.json",
-   "sha256": "9acf790f1b5fa33ba4e2b09a2150b869015539a243b678263bc84f2ccfcba5d0"
+   "sha256": "e33118d97bef87ab019e69af890b73fe622a96fa7ddfbfd864bb0b076c8b5c46"
   }
  ],
  "error_sources_note": "Checker confirmed-errors tables and run grading hashes are recorded only in the private evidence manifest",
  "outputs": [
   {
    "path": "error-memory/hydrant-errors.json",
-   "sha256": "ad75d0a0166956fa1e4f90bd0384c101645c9012358895e31fab9cf8eee1f82f"
+   "sha256": "15602a3dceb43ed33f451f5f41428edb922b37f70196f608a5540fa41890109b"
   },
   {
    "path": "rules/hydrants.reader-config.json",
@@ -21,7 +21,7 @@
   },
   {
    "path": "rules/hydrants.rules.json",
-   "sha256": "2839cd3c5b4173b080e0a40d5784b9b6c37399fb3732e2a964420980e00df826"
+   "sha256": "9fabd9984dbc69d16bc9d9551bf466ab17d0e91e4e1bebe53c76f80937b39263"
   },
   {
    "path": "schemas/error-memory.private.v1.schema.json",
@@ -48,13 +48,13 @@
   "rules": 68,
   "rules_by_verification": {
    "blind_validated": 1,
-   "nonblind_validated": 59,
-   "synthetic_only": 8
+   "nonblind_validated": 62,
+   "synthetic_only": 5
   },
   "errors": 74,
   "errors_by_status": {
-   "confirmed_unfixed": 17,
-   "fixed_nonblind_validated": 54,
+   "confirmed_unfixed": 12,
+   "fixed_nonblind_validated": 59,
    "out_of_scope": 3
   }
  }

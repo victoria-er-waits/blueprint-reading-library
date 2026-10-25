@@ -1497,9 +1497,14 @@
     "BR28-03"
    ],
    "rule_link_method": "regression_test_name",
-   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
-   "regression_test_ids": [],
-   "validation_status": "confirmed_unfixed",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen); hydrants.py v0.13 (dev, not frozen) - planned",
+   "regression_test_ids": [
+    "test_br28_03_printed_station_accepted_when_leader_agrees",
+    "test_br28_03_printed_station_conflict_is_unresolved_with_reason",
+    "test_br28_03_tick_row_consensus_drops_misread_label",
+    "test_err_r28_p6_fh8_misprinted_station_rejected"
+   ],
+   "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
     "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
    ]
@@ -1515,9 +1520,13 @@
     "BR28-01"
    ],
    "rule_link_method": "regression_test_name",
-   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
-   "regression_test_ids": [],
-   "validation_status": "confirmed_unfixed",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br28_01_install_regex_tolerates_ocr_spacing",
+    "test_br28_01_split_salvage_and_install_one_site",
+    "test_err_r28_p3_combined_callouts_split_and_verified"
+   ],
+   "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
     "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
    ]
@@ -1534,9 +1543,15 @@
     "BR28-02"
    ],
    "rule_link_method": "regression_test_name",
-   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
-   "regression_test_ids": [],
-   "validation_status": "confirmed_unfixed",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br28_01_install_regex_tolerates_ocr_spacing",
+    "test_br28_01_split_salvage_and_install_one_site",
+    "test_br28_02_install_only_callout_is_new",
+    "test_err_r28_p3_combined_callouts_split_and_verified",
+    "test_err_r28_p4_fh4_install_only_counted_new"
+   ],
+   "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
     "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
    ]
@@ -1553,9 +1568,17 @@
     "BR28-03"
    ],
    "rule_link_method": "regression_test_name",
-   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
-   "regression_test_ids": [],
-   "validation_status": "confirmed_unfixed",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br28_01_install_regex_tolerates_ocr_spacing",
+    "test_br28_01_split_salvage_and_install_one_site",
+    "test_br28_03_printed_station_accepted_when_leader_agrees",
+    "test_br28_03_printed_station_conflict_is_unresolved_with_reason",
+    "test_br28_03_tick_row_consensus_drops_misread_label",
+    "test_err_r28_p3_combined_callouts_split_and_verified",
+    "test_err_r28_p6_fh8_misprinted_station_rejected"
+   ],
+   "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
     "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
    ]
@@ -1571,9 +1594,14 @@
     "BR28-03"
    ],
    "rule_link_method": "regression_test_name",
-   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
-   "regression_test_ids": [],
-   "validation_status": "confirmed_unfixed",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen)",
+   "regression_test_ids": [
+    "test_br28_03_printed_station_accepted_when_leader_agrees",
+    "test_br28_03_printed_station_conflict_is_unresolved_with_reason",
+    "test_br28_03_tick_row_consensus_drops_misread_label",
+    "test_err_r28_p6_fh8_misprinted_station_rejected"
+   ],
+   "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
     "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
    ]

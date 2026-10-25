@@ -2570,9 +2570,13 @@
    ],
    "component": "hydrant",
    "implemented_in": {
-    "reader_version": "hydrants.py v0.13 (dev, not frozen) - planned",
+    "reader_version": "hydrants.py v0.13 (dev, not frozen)",
     "package": "combined-reader-dev-v13 (dev copy; no ZIP)",
-    "tests": []
+    "tests": [
+     "test_br28_01_install_regex_tolerates_ocr_spacing",
+     "test_br28_01_split_salvage_and_install_one_site",
+     "test_err_r28_p3_combined_callouts_split_and_verified"
+    ]
    },
    "status": {
     "proposal": "developer-proposed (v13 dev)",
@@ -2582,7 +2586,7 @@
      "Blueprint Checker grading report (error confirmed); the rule itself is developer-proposed and NOT yet validated by Checker"
     ],
     "grader_confirmed": false,
-    "fix_validation": "not yet validated (v13 dev, planned)"
+    "fix_validation": "synthetic tests + NON-BLIND run28 page-extract fixtures (development evidence only; v13 dev); not blind-validated."
    },
    "limits": [
     "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
@@ -2610,9 +2614,12 @@
    ],
    "component": "hydrant",
    "implemented_in": {
-    "reader_version": "hydrants.py v0.13 (dev, not frozen) - planned",
+    "reader_version": "hydrants.py v0.13 (dev, not frozen)",
     "package": "combined-reader-dev-v13 (dev copy; no ZIP)",
-    "tests": []
+    "tests": [
+     "test_br28_02_install_only_callout_is_new",
+     "test_err_r28_p4_fh4_install_only_counted_new"
+    ]
    },
    "status": {
     "proposal": "developer-proposed (v13 dev)",
@@ -2622,7 +2629,7 @@
      "Blueprint Checker grading report (error confirmed); the rule itself is developer-proposed and NOT yet validated by Checker"
     ],
     "grader_confirmed": false,
-    "fix_validation": "not yet validated (v13 dev, planned)"
+    "fix_validation": "synthetic tests + NON-BLIND run28 page-extract fixtures (development evidence only; v13 dev); not blind-validated."
    },
    "limits": [
     "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
@@ -2652,9 +2659,14 @@
    ],
    "component": "hydrant",
    "implemented_in": {
-    "reader_version": "hydrants.py v0.13 (dev, not frozen) - planned",
+    "reader_version": "hydrants.py v0.13 (dev, not frozen)",
     "package": "combined-reader-dev-v13 (dev copy; no ZIP)",
-    "tests": []
+    "tests": [
+     "test_br28_03_printed_station_accepted_when_leader_agrees",
+     "test_br28_03_printed_station_conflict_is_unresolved_with_reason",
+     "test_br28_03_tick_row_consensus_drops_misread_label",
+     "test_err_r28_p6_fh8_misprinted_station_rejected"
+    ]
    },
    "status": {
     "proposal": "developer-proposed (v13 dev)",
@@ -2664,7 +2676,7 @@
      "Blueprint Checker grading report (error confirmed); the rule itself is developer-proposed and NOT yet validated by Checker"
     ],
     "grader_confirmed": false,
-    "fix_validation": "not yet validated (v13 dev, planned)"
+    "fix_validation": "synthetic tests + NON-BLIND run28 page-extract fixtures (development evidence only; v13 dev); not blind-validated."
    },
    "limits": [
     "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
