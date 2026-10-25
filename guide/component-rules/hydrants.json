@@ -2168,6 +2168,160 @@
    "limits": [
     "No alignment ids; a cross-street pair at a matchline with similar chainage could still merge."
    ]
+  },
+  {
+   "id": "BR13-07",
+   "code_rule_id": "_cross_sheet.same_drawn_callout",
+   "component": "hydrant",
+   "category": "dedup_rule",
+   "rule": "Plan + profile (or shifted repeat) sheets: a similar call-out whose station was lost on one copy merges only when the call-out-to-leader vector is identical (±25 pt) and centres are within 150 pt. (Renumbered from colliding v0.12c 'BR13-04'.)",
+   "classify_as": "duplicate",
+   "positive_examples": [
+    "run13 H1 p6 plan + p9 profile -> one new hydrant"
+   ],
+   "negative_examples": [
+    "same wording with a different leader vector -> separate"
+   ],
+   "why": {
+    "run": "v12 non-blind run13",
+    "page": "6/9",
+    "error": "p9 copy lost its station so the BR13-01 station merge no longer fired"
+   },
+   "evidence_sources": [
+    "/workspace/combined-reader-dev-v12 (developer NON-BLIND diff vs v11c; graded package)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12d (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br13_16_fixes.py::test_err01_run13_h1_plan_and_profile_sheets_are_one"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "developer (non-blind regression vs v11c on a graded package)"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run only; not blind-validated."
+   },
+   "limits": [
+    "Needs a leader end on both copies."
+   ]
+  },
+  {
+   "id": "BR20-06",
+   "code_rule_id": "_cross_sheet.matchline_overlap",
+   "component": "hydrant",
+   "category": "dedup_rule",
+   "rule": "Matchline pair with wording equal except sizes merges ONLY when both leaders resolve to the same physical hydrant: leader ends in opposite outer 30% overlap zones AND the same cross-axis position (±40 pt), stations within 5 m if both present. Same wording + edge proximity alone never merges. (Renumbered from colliding v0.12c 'BR20-04'.)",
+   "classify_as": "duplicate",
+   "positive_examples": [
+    "run20 p7/p8 'NEW 250/200 TEE & GATE VALVE w/FIRE HYDRANT' at the same x -> one"
+   ],
+   "negative_examples": [
+    "run26 EXH-2 class: same wording, leaders to different hydrants -> two"
+   ],
+   "why": {
+    "run": "v12 non-blind run20 + run26",
+    "page": "7/8",
+    "error": "v0.12c branch merged on edge proximity without leader ownership"
+   },
+   "evidence_sources": [
+    "/workspace/combined-reader-dev-v12 (developer NON-BLIND diff vs v11c; graded package)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12d (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br12b_nonblind_regressions.py::test_br13_03_same_text_different_leader_not_merged",
+     "test_br12d_rules.py::test_br20_06_same_position_across_matchline_merged",
+     "test_br12d_rules.py::test_br20_06_edge_proximity_alone_not_merged"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "developer (non-blind regression vs v11c on a graded package)"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run only; not blind-validated."
+   },
+   "limits": [
+    "Position test only, no symbol identity; assumes sheets aligned across the matchline."
+   ]
+  },
+  {
+   "id": "BR26-12",
+   "code_rule_id": "_cross_sheet.anchored",
+   "component": "hydrant",
+   "category": "dedup_rule",
+   "rule": "An anchored 5 m station match also merges when both copies have the same signed perpendicular pipe offset (±2 m, |offset|≥1 m) measured on plausible tick pairs (2-25 pt/m).",
+   "classify_as": "duplicate",
+   "positive_examples": [
+    "run26 EXH-1 p3/p6 -> one removal"
+   ],
+   "negative_examples": [
+    "other-street hydrants with similar chainage but different offsets -> separate"
+   ],
+   "why": {
+    "run": "v12 non-blind run26",
+    "page": "3/6",
+    "error": "BR21-03 un-merged EXH-1 p3/p6"
+   },
+   "evidence_sources": [
+    "/workspace/combined-reader-dev-v12 (developer NON-BLIND diff vs v11c; graded package)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12d (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "full non-blind rerun (run26)"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "developer (non-blind regression vs v11c on a graded package)"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run only; not blind-validated."
+   },
+   "limits": [
+    "Offset needs a valid tick pair on both copies."
+   ]
+  },
+  {
+   "id": "BR17-06",
+   "code_rule_id": "stations.extrapolate",
+   "component": "hydrant",
+   "category": "station_rule",
+   "rule": "A straight row of >= 4 evenly scaled ticks may extrapolate one full spacing beyond the last tick (sheet edge cuts the next label); never further.",
+   "classify_as": "station",
+   "positive_examples": [
+    "run17 p2 relocate H2 7+287"
+   ],
+   "negative_examples": [
+    "rows with < 4 ticks or uneven spacing -> abstain"
+   ],
+   "why": {
+    "run": "v12 non-blind run17",
+    "page": "2",
+    "error": "station abstained where the next tick label was cut by the sheet edge"
+   },
+   "evidence_sources": [
+    "/workspace/combined-reader-dev-v12 (developer NON-BLIND diff vs v11c; graded package)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12d (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br17_19*.py (suite)"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "developer (non-blind regression vs v11c on a graded package)"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run only; not blind-validated."
+   },
+   "limits": [
+    "One spacing only; curved rows not supported."
+   ]
   }
  ],
  "reader_config": {

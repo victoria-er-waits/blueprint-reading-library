@@ -184,3 +184,7 @@ Error memory: 10 records ERR-R24-01, ERR-R26-01..09 (ERR-R26-09 = ADJ-1) via bui
 | 2026-10-24 | BR13-02 | hydrant | 'FH GATE VALVE' only -> not a hydrant assembly | v12 non-blind run13 p6 |
 | 2026-10-24 | BR13-03 | hydrant | shifted repeat sheet: same call-out-to-leader vector -> one hydrant | v12 non-blind run13 p6/p9 |
 | 2026-10-24 | BR21-03 | hydrant | 5 m station dedup only across adjacent sheets in the overlap zone (chainage restarts per street) | v12 non-blind run21 |
+| 2026-10-24 | BR13-07 | hydrant | Plan + profile (or shifted repeat) sheets: a similar call-out whose station was lost on one copy merges only w | v12 non-blind run13 |
+| 2026-10-24 | BR20-06 | hydrant | Matchline pair with wording equal except sizes merges ONLY when both leaders resolve to the same physical hydr | v12 non-blind run20 + run26 |
+| 2026-10-24 | BR26-12 | hydrant | An anchored 5 m station match also merges when both copies have the same signed perpendicular pipe offset (±2  | v12 non-blind run26 |
+| 2026-10-24 | BR17-06 | hydrant | A straight row of >= 4 evenly scaled ticks may extrapolate one full spacing beyond the last tick (sheet edge c | v12 non-blind run17 |
