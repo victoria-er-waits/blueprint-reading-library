@@ -1394,6 +1394,189 @@
     "Removal is only counted when a call-out leader reaches the symbol; uncalled-out existing symbols are not counted (Edward St FH: documented, excluded from scoring).",
     "Symbol test is vector-only (7-13 pt unfilled circle + >=3 short diagonal rays); raster or differently drawn legends fall to tag/unresolved."
    ]
+  },
+  {
+   "error_id": "ERR-R27-01",
+   "skill": "hydrant",
+   "original_mistake": "false_positive",
+   "mistake_description": "Counted a non-instance (legend, note or label) as a hydrant",
+   "root_cause": "CONFIRMED: legend row counted as a new hydrant. DEVELOPER HYPOTHESIS: rotated legend column far from its LEGEND heading was not recognised as a legend",
+   "correct_interpretation": "BR27-01: classify as mention:legend_entry.",
+   "applicable_rule_ids": [
+    "BR27-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "error_id": "ERR-R27-02",
+   "skill": "hydrant",
+   "original_mistake": "false_positive",
+   "mistake_description": "Counted a non-instance (legend, note or label) as a hydrant",
+   "root_cause": "CONFIRMED: legend symbol label counted as an existing hydrant (survey 'HYD' label rule)",
+   "correct_interpretation": "BR27-01: classify as mention:legend_entry.",
+   "applicable_rule_ids": [
+    "BR27-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "error_id": "ERR-R27-03",
+   "skill": "hydrant",
+   "original_mistake": "false_positive",
+   "mistake_description": "Counted a non-instance (legend, note or label) as a hydrant",
+   "root_cause": "CONFIRMED: legend row counted as an existing hydrant",
+   "correct_interpretation": "BR27-01: classify as mention:legend_entry.",
+   "applicable_rule_ids": [
+    "BR27-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "error_id": "ERR-R27-04",
+   "skill": "hydrant",
+   "original_mistake": "false_positive",
+   "mistake_description": "Counted a non-instance (legend, note or label) as a hydrant",
+   "root_cause": "CONFIRMED: specification note counted as a new hydrant",
+   "correct_interpretation": "BR27-01: classify as mention:legend_entry.",
+   "applicable_rule_ids": [
+    "BR27-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "error_id": "ERR-R27-05",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "CONFIRMED: the data-table record was left unresolved, so the new hydrant was not counted and had no station. The two sheet copies are one item",
+   "correct_interpretation": "BR27-02: classify as status:new.",
+   "applicable_rule_ids": [
+    "BR27-02"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "error_id": "ERR-R27-06",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "CONFIRMED: existing hydrant left unresolved on all three sheets. Checker: the adjacent printed chainage belongs to the alignment-point triangle, not the hydrant",
+   "correct_interpretation": "BR27-03: classify as status:existing. BR28-03: classify as station:verified_printed.",
+   "applicable_rule_ids": [
+    "BR27-03",
+    "BR28-03"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "error_id": "ERR-R28-01",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "CONFIRMED: the combined call-outs got remove status only; the install action (a new hydrant at the same site) was dropped",
+   "correct_interpretation": "BR28-01: classify as status:remove+new.",
+   "applicable_rule_ids": [
+    "BR28-01"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "error_id": "ERR-R28-02",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "CONFIRMED: new hydrant demoted to a side mention",
+   "correct_interpretation": "BR28-01: classify as status:remove+new. BR28-02: classify as status:new.",
+   "applicable_rule_ids": [
+    "BR28-01",
+    "BR28-02"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "error_id": "ERR-R28-03",
+   "skill": "hydrant",
+   "original_mistake": "miss",
+   "mistake_description": "Missed a hydrant item that the drawing shows",
+   "root_cause": "CONFIRMED: install-only call-outs left unresolved; the matchline repeat is one item. Checker: one call-out prints a station ~333 m from its leader end (misprint)",
+   "correct_interpretation": "BR28-01: classify as status:remove+new. BR28-03: classify as station:verified_printed.",
+   "applicable_rule_ids": [
+    "BR28-01",
+    "BR28-03"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "error_id": "ERR-R28-04",
+   "skill": "hydrant",
+   "original_mistake": "station_error",
+   "mistake_description": "Reported a station that does not match the drawing position of the hydrant",
+   "root_cause": "CONFIRMED: all five removal stations left unresolved although printed and matching the tees. DEVELOPER HYPOTHESIS: Option C rejected the printed station as a label-centre/nearest-label station",
+   "correct_interpretation": "BR28-03: classify as station:verified_printed.",
+   "applicable_rule_ids": [
+    "BR28-03"
+   ],
+   "rule_link_method": "regression_test_name",
+   "implemented_fix": "hydrants.py v0.13 (dev, not frozen) - planned",
+   "regression_test_ids": [],
+   "validation_status": "confirmed_unfixed",
+   "known_limitations": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
   }
  ]
 }

@@ -1,27 +1,27 @@
 {
  "schema": "machine-library-manifest/v1",
  "generator": "tools/build_machine_library.py",
- "library_commit": "57b9cb0755abf54f602d8ee9399fd9a9937013fb",
+ "library_commit": "e50916952cff80e785429c64fb1cf2e2fdf0ad94",
  "source_of_truth": "guide/component-rules/hydrants.json",
  "sources": [
   {
    "path": "guide/component-rules/hydrants.json",
-   "sha256": "a63c8915f50891a0625d4dbe71e94171cdf179c9545db19520f6e4c52a2af916"
+   "sha256": "9acf790f1b5fa33ba4e2b09a2150b869015539a243b678263bc84f2ccfcba5d0"
   }
  ],
  "error_sources_note": "Checker confirmed-errors tables and run grading hashes are recorded only in the private evidence manifest",
  "outputs": [
   {
    "path": "error-memory/hydrant-errors.json",
-   "sha256": "efb7e5b28f550d636cc2764758e5a7ac4a20d74590c7d24f32acbc84c80a5216"
+   "sha256": "ad75d0a0166956fa1e4f90bd0384c101645c9012358895e31fab9cf8eee1f82f"
   },
   {
    "path": "rules/hydrants.reader-config.json",
-   "sha256": "520c756f941783d9cdd1b7e3e68e87f9a2f242165e314b43cf77ca3151f25dba"
+   "sha256": "c75c53499fe847fb6475b2bf8ffa33608282fb4065d9a4d92ac64fdb4685273b"
   },
   {
    "path": "rules/hydrants.rules.json",
-   "sha256": "100fbf2310009b8b6b68523f265e5e4e13c1b5c79587af4b19cd7f61f0e55752"
+   "sha256": "2839cd3c5b4173b080e0a40d5784b9b6c37399fb3732e2a964420980e00df826"
   },
   {
    "path": "schemas/error-memory.private.v1.schema.json",
@@ -41,19 +41,19 @@
   },
   {
    "path": "schemas/reading-rule.v2.schema.json",
-   "sha256": "9f6683b41cc2753d6b20aa02d3c1b9d299c86d61ba7d4a7e4c843321d583a009"
+   "sha256": "d64c6fed6af386db49ecb725f9b652b0e07b708e0be370618ab50ae5d8d4a1ac"
   }
  ],
  "counts": {
-  "rules": 62,
+  "rules": 68,
   "rules_by_verification": {
    "blind_validated": 1,
    "nonblind_validated": 59,
-   "synthetic_only": 2
+   "synthetic_only": 8
   },
-  "errors": 64,
+  "errors": 74,
   "errors_by_status": {
-   "confirmed_unfixed": 7,
+   "confirmed_unfixed": 17,
    "fixed_nonblind_validated": 54,
    "out_of_scope": 3
   }

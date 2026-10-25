@@ -48,7 +48,7 @@ def test_every_rule_converted_with_honest_verification():
 
 def test_public_error_records_are_learning_only():
     recs = load("error-memory/hydrant-errors.json")["records"]
-    assert len(recs) == 64  # runs 07-19 (35) + run20 (7) + run21 (6) + runs 22-23 (6) + run24 (1) + run26 (9 incl. ADJ-1)
+    assert len(recs) == 74  # runs 07-19 (35) + run20 (7) + run21 (6) + runs 22-23 (6) + run24 (1) + run26 (9 incl. ADJ-1) + v13: run27 (6) + run28 (4)
     allowed = {"error_id","skill","original_mistake","mistake_description","root_cause","correct_interpretation",
                "applicable_rule_ids","rule_link_method","implemented_fix","regression_test_ids","validation_status","known_limitations"}
     for e in recs:
@@ -315,3 +315,31 @@ def test_v12f_no_key_ids_in_any_library_file():
                 bad.append((p, f"{tok} x{c} (allowed {allow.get(tok, 0)})"))
     assert n > 50, n
     assert not bad, bad
+
+
+V13_RULES = ["BR27-01", "BR27-02", "BR27-03", "BR28-01", "BR28-02", "BR28-03"]
+
+
+def test_v13_new_rules_developer_proposed_with_real_grader_confirmed_field():
+    """Checker follow-up (a): new rules show their unvalidated status in the pack's FIELDS, not only in limit text."""
+    recs = {r["rule_id"]: r for r in load("rules/hydrants.rules.json")["records"]}
+    for rid in V13_RULES:
+        r = recs[rid]
+        assert r["approval"] == "proposed", rid
+        assert r["grader_confirmed"] is False, rid
+        assert r["verification_status"] != "blind_validated", rid
+        assert "developer-proposed" in r.get("proposal", ""), rid
+    assert all("grader_confirmed" in r for r in recs.values())
+
+
+def test_v13_error_records_runs27_28():
+    pub = {e["error_id"]: e for e in load("error-memory/hydrant-errors.json")["records"]}
+    want = {"ERR-R27-0%d" % i for i in range(1, 7)} | {"ERR-R28-0%d" % i for i in range(1, 5)}
+    assert want <= set(pub)
+    for eid in want:
+        assert pub[eid]["applicable_rule_ids"] and set(pub[eid]["applicable_rule_ids"]) <= set(V13_RULES), eid
+    assert [pub["ERR-R27-0%d" % i]["original_mistake"] for i in range(1, 5)] == ["false_positive"] * 4
+    assert pub["ERR-R28-04"]["original_mistake"] == "station_error"
+    blob = open(os.path.join(OUT, "error-memory/hydrant-errors.json"), encoding="utf-8").read()
+    for bad in ("9A", "EXH-SW", "EXH-SE", "FH-4", "FH-7", "FH-8"):
+        assert bad not in blob, bad

@@ -340,6 +340,8 @@ def build_errors(errors_dir, rules):
         statuses = {r["rule_id"]: r["verification_status"] for r in rules}
         vstat = "fixed_nonblind_validated" if any(statuses[x] in ("nonblind_validated", "blind_validated") for x in links) else ("fixed_synthetic_only" if links else "confirmed_unfixed")
         vstat = VALIDATION_OVERRIDES.get(f"ERR-R{rn:02d}-{n:02d}", vstat)
+        impl = {r["rule_id"]: r["implemented_in"] or "" for r in rules}
+        if links and all("planned" in impl[x] for x in links): vstat = "confirmed_unfixed"   # v13: fix not implemented yet
         rec = {"error_id": f"ERR-R{rn:02d}-{n:02d}", "run": f"run{rn:02d}", "reader_version_graded": GRADED_VERSION.get(rn, "v11c"),
                "page": page, "location": redact_keys(loc), "original_mistake": mistake(err), "error_summary": redact_keys(err),
                "drawing_evidence": redact_keys(wording), "root_cause": redact_keys(cause), "fix_rule_ids": sorted(links),
