@@ -173,18 +173,34 @@ Status: fixes for Checker-confirmed errors from blind runs 24 and 26 (graded on 
 | 2026-10-24 | BR26-02 | hydrant | status-less assembly call-out (>=2 fittings) with leader = new | Run 26 FH-1 |
 | 2026-10-24 | BR26-03 | hydrant | FH-n tag at leader end gives id; same-tag call-outs on a sheet = one hydrant | Run 26 |
 | 2026-10-24 | BR26-04/05 | hydrant | hydrant only in a secondary sentence / subordinate clause = mention | Run 26 p3/p4 |
-| 2026-10-24 | BR26-06 | hydrant | tagged site detail on a detail page counts once | Run 26 FH-RIV |
-| 2026-10-24 | BR26-07 | hydrant | tapping sleeve = fitting tie-in, never a hydrant (TS-RIV is a fitting-detection failure, not in hydrant scores) | Run 26 TS-RIV |
-| 2026-10-24 | BR26-08 | hydrant | cross-sheet merge needs matching leader ends; anchored same-status within 5 m = one | Run 26 EXH-2 |
-| 2026-10-24 | BR26-09 | hydrant | competing-alignment tick pairs -> station UNRESOLVED | Run 26 EXH-2 side street |
+| 2026-10-24 | BR26-06 | hydrant | tagged site detail on a detail page counts once | Run 26 Riverside Drive detail (tag FH-5) |
+| 2026-10-24 | BR26-07 | hydrant | tapping sleeve = fitting tie-in, never a hydrant (the p12 tapping sleeve is a fitting-detection failure, not in hydrant scores) | Run 26 p12 tapping sleeve |
+| 2026-10-24 | BR26-08 | hydrant | cross-sheet merge needs matching leader ends; anchored same-status within 5 m = one | Run 26 p7 island removal |
+| 2026-10-24 | BR26-09 | hydrant | competing-alignment tick pairs -> station UNRESOLVED | v12 dev run26 p7 (developer finding; never in a graded output) |
 | 2026-10-24 | BR26-10 | hydrant | tagged package: untagged new call-out reaching no tag -> unresolved | Run 26 p3 |
-| 2026-10-24 | BR26-11 | hydrant | composite new/remove note: per-leader ownership; circle-with-rays existing symbol -> removal; tag -> new; neither -> unresolved | Run 26 ADJ-1 (~1+139) |
+| 2026-10-24 | BR26-11 | hydrant | composite new/remove note: per-leader ownership; circle-with-rays existing symbol -> removal; tag -> new; neither -> unresolved | Run 26 adjudication (~1+139 existing hydrant) |
 
-Error memory: 10 records ERR-R24-01, ERR-R26-01..09 (ERR-R26-09 = ADJ-1) via builder GRADED_ROWS (developer links by regression test; not yet Checker-reviewed). Edward St 'FH' (ADJ-2) is ambiguous: documented as a physical existing hydrant, excluded from scoring; no record.
-| 2026-10-24 | BR13-02 | hydrant | 'FH GATE VALVE' only -> not a hydrant assembly | v12 non-blind run13 p6 |
-| 2026-10-24 | BR13-03 | hydrant | shifted repeat sheet: same call-out-to-leader vector -> one hydrant | v12 non-blind run13 p6/p9 |
+Error memory: 10 records ERR-R24-01, ERR-R26-01..09 (ERR-R26-09 = adjudicated ~1+139 removal) via builder GRADED_ROWS (developer links by regression test; not yet Checker-reviewed). Edward St 'FH' is ambiguous: documented as a physical existing hydrant, excluded from scoring; no record.
+| 2026-10-24 | ~~BR13-02~~ -> BR13-08 | hydrant | 'FH GATE VALVE' only -> not a hydrant assembly (renumbered v12e: collided with BR13-02 station interpolation) | v12 non-blind run13 p6 |
+| 2026-10-24 | ~~BR13-03~~ -> BR13-09 | hydrant | shifted repeat sheet: same call-out-to-leader vector -> one hydrant (renumbered v12e: collided with BR13-03 action-verb not legend) | v12 non-blind run13 p6/p9 |
 | 2026-10-24 | BR21-03 | hydrant | 5 m station dedup only across adjacent sheets in the overlap zone (chainage restarts per street) | v12 non-blind run21 |
 | 2026-10-24 | BR13-07 | hydrant | Plan + profile (or shifted repeat) sheets: a similar call-out whose station was lost on one copy merges only w | v12 non-blind run13 |
 | 2026-10-24 | BR20-06 | hydrant | Matchline pair with wording equal except sizes merges ONLY when both leaders resolve to the same physical hydr | v12 non-blind run20 + run26 |
 | 2026-10-24 | BR26-12 | hydrant | An anchored 5 m station match also merges when both copies have the same signed perpendicular pipe offset (±2  | v12 non-blind run26 |
 | 2026-10-24 | BR17-06 | hydrant | A straight row of >= 4 evenly scaled ticks may extrapolate one full spacing beyond the last tick (sheet edge c | v12 non-blind run17 |
+
+## v0.12e (2026-10-24): corrections from Blueprint Checker's v12 Error Memory review
+
+| Date | Rule / record | Change |
+|---|---|---|
+| 2026-10-24 | BR13-08, BR13-09 | New ids with full rule bodies for the v0.12b 'BR13-02'/'BR13-03' change-log rows that collided with existing ids. Original BR13-02 (station interpolation) and BR13-03 (action-verb not legend) and their ERR-R13 links are unchanged. |
+| 2026-10-24 | BR13-07, BR17-06, BR20-06, BR21-03, BR26-09, BR26-12, BR13-08, BR13-09 | Labelled as developer findings from NON-BLIND reruns of graded packages, not grader-confirmed. No run13/17/20/21 error records were created. |
+| 2026-10-24 | ERR-R26-08 | original_mistake tie_in_miss -> fitting_detection_failure (schemas extended). |
+| 2026-10-24 | ERR-R24-01, ERR-R26-09 | Root causes split into CONFIRMED part and DEVELOPER HYPOTHESIS. |
+| 2026-10-24 | ERR-R26-03, BR26-09 | 2+901.7 side-street station is a v12 dev-run value, not the graded run; BR26-09 no longer claims Checker confirmation; ERR-R26-03 no longer links BR26-09. |
+| 2026-10-24 | ERR-R26-06 | Cause = missed cross-sheet merge (p4 leader reaches the hydrant); linked BR26-08/BR26-12 (not BR26-04); validation confirmed_unfixed: v12 count is correct only via BR26-04 suppression (strict-xfail test). |
+| 2026-10-24 | BR21-03 | Positive example corrected (p3/p4 are not matchline-adjacent; the confirmed run26 duplicate was p4<->p6). |
+| 2026-10-24 | BR17-06, BR26-02/04/05/11/12, BR13-09 | Regression tests replaced/added so each fails on v11c hydrants.py and passes on v12 (tests/test_v12e_review_fixes.py). |
+| 2026-10-24 | rules file | Answer-key item ids and the run17 key station removed; drawing descriptions / reader- or Checker-measured values used. |
+
+Pending adjudication (NOT an error record, no rule): run26 tagged hydrant FH-3. Checker measured the tee at 1+372.9 from the drawing (profile label ~1+373); the v12 reader gives 1374.3. A possible answer-key discrepancy is pending Checker/Kyle adjudication.

@@ -101,6 +101,7 @@ ROW = re.compile(r"^\|\s*(\d+)\s*\|(.*)\|\s*$")
 def mistake(err):
     e = err.lower()
     if e.startswith("tie-in"): return "tie_in_miss"
+    if e.startswith("fitting"): return "fitting_detection_failure"
     if e.startswith("miss"): return "miss"
     if e.startswith("abstention"): return "miss"  # real hydrant left unresolved (not counted)
     if e.startswith("fp") or e.startswith("false positive"): return "false_positive"
@@ -198,27 +199,38 @@ ROOT_CAUSES = {
 # Runs 24/26 (graded on v11c): (run, row, page, location, drawing evidence, error, root cause, rule links, source file)
 _G24, _G26, _A26 = "run24/grading-report.md", "run26/grading-report.md", "run26/adjudication.md"
 GRADED_ROWS = [
-    (24, 1, "3", "HN1 Esquimalt Rd", "plan ticks on two rows; hydrant tee east of the 10+240 tick", "Station error",
-     "Interpolated across a cross-row tick pair (top row end tick to bottom row) instead of the adjacent same-row pair", ["BR24-01"], _G24),
-    (26, 1, "5", "FH-1 assembly", "HYDRANT, GATE VALVE, LEAD, TEE call-out with FH-1 tag", "Miss (unresolved)",
-     "Status-less assembly call-out had no status word; FH-n tag at the leader end not read; split chainage labels unreadable", ["BR26-01", "BR26-02", "BR26-03"], _G26),
-    (26, 2, "12", "FH-RIV site detail", "Riverside Drive hydrant detail tagged FH-5", "Miss (mention only)",
+    # v12e (Checker v12 review): root_cause states only what Checker confirmed; developer diagnoses are prefixed
+    # "DEVELOPER HYPOTHESIS (not Checker-confirmed)". Locations use drawing descriptions, never answer-key item ids.
+    (24, 1, "3", "hydrant on Esquimalt Rd (plan, two tick rows)", "plan ticks on two rows; hydrant tee east of the 10+240 tick", "Station error",
+     "CONFIRMED: station error, app 10+222.6 vs drawing ~10+250 (~27 m). DEVELOPER HYPOTHESIS (not Checker-confirmed): "
+     "interpolated across a cross-row tick pair (top-row end tick to bottom row) instead of the adjacent same-row pair", ["BR24-01"], _G24),
+    (26, 1, "5", "assembly call-out tagged FH-1", "HYDRANT, GATE VALVE, LEAD, TEE call-out with FH-1 tag", "Miss (unresolved)",
+     "CONFIRMED: status-less assembly call-out left unresolved (abstained) although its leader reaches the FH-1 tag. "
+     "SEPARATE NOTE (stations, not the miss): split chainage labels were unreadable, so no station could be given", ["BR26-01", "BR26-02", "BR26-03"], _G26),
+    (26, 2, "12", "Riverside Drive site detail (tag FH-5)", "Riverside Drive hydrant detail tagged FH-5", "Miss (mention only)",
      "Detail page gate treated the tagged site detail as a typical detail", ["BR26-06"], _G26),
-    (26, 3, "7", "EXH-2 island by matchline", "identical removal text, different leader end", "Miss: dropped as duplicate",
-     "Cross-sheet dedupe merged identical text without checking leader ends; station then taken from a side-street alignment", ["BR26-08", "BR26-09"], _G26),
+    (26, 3, "7", "removal at the triangular island by the matchline", "identical removal text, different leader end", "Miss: dropped as duplicate",
+     "CONFIRMED: cross-sheet dedupe merged identical removal text without checking that the leaders end at different hydrants. "
+     "(The graded v11c output had no station for this item.)", ["BR26-08"], _G26),
     (26, 4, "3", "DAYLIGHT note to FH-2", "DAYLIGHT ... PRIOR TO NEW HYDRANT INSTALLATION", "Duplicate",
      "Hydrant in a subordinate clause of another activity counted as an instance", ["BR26-05"], _G26),
     (26, 5, "3", "DAYLIGHT note to FH-4", "DAYLIGHT ... PRIOR TO NEW HYDRANT INSTALLATION", "Duplicate",
-     "Hydrant in a subordinate clause of another activity counted as an instance", ["BR26-05", "BR26-10"], _G26),
-    (26, 6, "4", "EXH-1 repeat on next sheet", "removal note leader to blue hydrant symbol", "Cross-sheet duplicate",
-     "Hydrant only in a secondary sentence; repeat not merged", ["BR26-04", "BR26-08"], _G26),
+     "Hydrant in a subordinate clause of another activity counted as an instance (BR26-10 link is developer-proposed, not Checker-confirmed)", ["BR26-05", "BR26-10"], _G26),
+    (26, 6, "4", "p4 removal note reaching the existing hydrant also called out on p3/p6", "removal note leader to blue hydrant symbol", "Cross-sheet duplicate",
+     "CONFIRMED: missed cross-sheet merge. The p4 leader does reach the existing-hydrant symbol, so it is a genuine reference to the "
+     "same removal that was not merged with the p6 copy. v12 STATUS: count correct only because BR26-04 suppresses the p4 note as a "
+     "secondary-sentence mention; the merge itself is not implemented (p4 has no chainage; strict-xfail test)", ["BR26-08", "BR26-12"], _G26),
     (26, 7, "4", "valve removal note", "REMOVE AND DISPOSE OF ... VALVES ... EXISTING HYDRANTS TO BE REMOVED", "FP",
      "Hydrant only in a secondary sentence of a valve-removal note; leaders end at valves", ["BR26-04"], _G26),
-    (26, 8, "12", "TS-RIV tapping sleeve", "250x150x250 TAPPING SLEEVE AND VALVE", "Tie-in missed",
-     "Fitting-detection failure (Kyle): tapping sleeve is a separate fitting, not a hydrant; not in hydrant scores", ["BR26-07"], _G26),
-    (26, 9, "3", "ADJ-1 existing hydrant beside FH-1 (also drawn p4, p5)", "circle-with-rays symbol reached by one leader of a composite new/remove note", "Miss",
-     "Composite NEW HYDRANT / EXISTING HYDRANTS TO BE REMOVED note sat under a NOTES heading and its leader was on a non-first line, so it was filed as a general note; no per-leader ownership; existing-hydrant symbol (circle with rays) not recognised", ["BR26-11"], _A26),
+    (26, 8, "12", "tapping sleeve and valve beside the Riverside Drive hydrant", "250x150x250 TAPPING SLEEVE AND VALVE", "Fitting detection failure",
+     "Fitting-detection failure (Kyle): tapping sleeve is a separate fitting, not a hydrant; excluded from hydrant scores", ["BR26-07"], _G26),
+    (26, 9, "3", "existing hydrant ~1+139 beside FH-1 (adjudicated; also drawn p4, p5)", "circle-with-rays symbol reached by one leader of a composite new/remove note", "Miss",
+     "CONFIRMED (adjudication): the composite NEW HYDRANT / EXISTING HYDRANTS TO BE REMOVED note was filed as a general-note mention and "
+     "the existing hydrant was not counted. DEVELOPER HYPOTHESIS (not Checker-confirmed): it sat under a NOTES heading with its leader on a "
+     "non-first line, there was no per-leader ownership, and the circle-with-rays symbol was not recognised", ["BR26-11"], _A26),
 ]
+# v12e: per-record validation overrides (Checker v12 review)
+VALIDATION_OVERRIDES = {"ERR-R26-06": "confirmed_unfixed"}   # count correct by suppression (BR26-04), merge not implemented
 
 # Watermain tie-ins not linked to a hydrant: out of hydrant scope (Kyle, 2026-10-24).
 OUT_OF_SCOPE = {"ERR-R13-04", "ERR-R13-05", "ERR-R18-09"}
@@ -299,6 +311,7 @@ def build_errors(errors_dir, rules):
             sources.append({"path": src, "sha256": fsha})
         statuses = {r["rule_id"]: r["verification_status"] for r in rules}
         vstat = "fixed_nonblind_validated" if any(statuses[x] in ("nonblind_validated", "blind_validated") for x in links) else ("fixed_synthetic_only" if links else "confirmed_unfixed")
+        vstat = VALIDATION_OVERRIDES.get(f"ERR-R{rn:02d}-{n:02d}", vstat)
         rec = {"error_id": f"ERR-R{rn:02d}-{n:02d}", "run": f"run{rn:02d}", "reader_version_graded": "v11c",
                "page": page, "location": redact_keys(loc), "original_mistake": mistake(err), "error_summary": redact_keys(err),
                "drawing_evidence": redact_keys(wording), "root_cause": redact_keys(cause), "fix_rule_ids": sorted(links),
@@ -319,6 +332,7 @@ GENERIC = {
     "station_error": "Reported a station that does not match the drawing position of the {skill}",
     "wrong_status": "Gave a {skill} the wrong status",
     "tie_in_miss": "Missed a watermain tie-in",
+    "fitting_detection_failure": "Missed a watermain fitting (not a {skill}; excluded from {skill} scores)",
 }
 STATION = re.compile(r"(?:STA\.?\s*)?\d+\+\d{2,3}(?:\.\d+)?(?:\s*[-–]\s*\d+\+\d{2,3}(?:\.\d+)?)?", re.I)
 # Leak patterns for anything public (error records and Gemini rule packs).

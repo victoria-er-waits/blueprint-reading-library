@@ -243,6 +243,21 @@ def test_runs_24_26_error_records_linked():
     recs = {e["error_id"]: e for e in load("error-memory/hydrant-errors.json")["records"]}
     assert recs["ERR-R24-01"]["applicable_rule_ids"] == ["BR24-01"]
     assert recs["ERR-R26-09"]["applicable_rule_ids"] == ["BR26-11"] and recs["ERR-R26-09"]["original_mistake"] == "miss"
-    assert recs["ERR-R26-08"]["original_mistake"] == "tie_in_miss"   # TS-RIV: fitting failure, not a hydrant miss
-    for i in range(1, 10):
+    assert recs["ERR-R26-08"]["original_mistake"] == "fitting_detection_failure"   # v12e: tapping sleeve = fitting failure, not a hydrant miss
+    assert recs["ERR-R26-06"]["applicable_rule_ids"] == ["BR26-08", "BR26-12"] and recs["ERR-R26-06"]["validation_status"] == "confirmed_unfixed"
+    assert recs["ERR-R26-03"]["applicable_rule_ids"] == ["BR26-08"]
+    for i in (1, 2, 3, 4, 5, 7, 8, 9):
         assert recs[f"ERR-R26-{i:02d}"]["validation_status"] == "fixed_nonblind_validated"
+
+
+def test_v12e_review_corrections():
+    rules = {r["rule_id"]: r for r in load("rules/hydrants.rules.json")["records"]}
+    blob = json.dumps(load("rules/hydrants.rules.json"))
+    for k in ("EXH-1", "EXH-2", "FH-RIV", "TS-RIV", "ADJ-1", "7+287"):
+        assert k not in blob, k
+    assert {"BR13-08", "BR13-09"} <= set(rules)
+    assert "interpolation" in rules["BR13-02"]["recognize"] and "legend" in rules["BR13-03"]["recognize"]   # originals untouched
+    raw = json.load(open(os.path.join(os.path.dirname(OUT), "component-rules/hydrants.json")))
+    st = {r["id"]: r.get("status", {}) for r in raw["rules"]}
+    for rid in ("BR13-07", "BR13-08", "BR13-09", "BR17-06", "BR20-06", "BR21-03", "BR26-09", "BR26-12"):
+        assert st[rid].get("grader_confirmed") is False, rid

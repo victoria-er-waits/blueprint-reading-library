@@ -39,7 +39,8 @@
     "duplicate",
     "wrong_status",
     "station_error",
-    "tie_in_miss"
+    "tie_in_miss",
+    "fitting_detection_failure"
    ]
   },
   "mistake_description": {
