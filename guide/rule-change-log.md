@@ -93,7 +93,7 @@ Package: combined-blueprint-reader-dev-v8-2026-10-24.zip sha256 181ae2e39b80151e
 | 2026-10-24 | BR15-01 | hydrant | numbered spec-list rows + scope statement count hydrants | Run 15 |
 | 2026-10-24 | BR15-L1 / BR16-L1 | limits | raster-map dots and symbol-only hydrants on rotated sheets remain unsupported | Runs 15, 16 |
 
-Non-blind re-run deltas vs v7: run13 H2 found (remove), H1 single-counted at 0+185, 3 unique tie-ins; run15 10/10 hydrants from the spec list; run03 +1 ungraded main tie-in (existing tee 2+259); run11 hydrant-lead tie-in now cross-sheet deduped. Runs 04-12 hydrant instances unchanged; run16 still misses the symbol-only hydrant.
+Non-blind re-run deltas vs v7: run13 H2 found (remove), hybrid-h1 single-counted at 0+185, 3 unique tie-ins; run15 10/10 hydrants from the spec list; run03 +1 ungraded main tie-in (existing tee 2+259); run11 hydrant-lead tie-in now cross-sheet deduped. Runs 04-12 hydrant instances unchanged; run16 still misses the symbol-only hydrant.
 
 ## Component rules: hydrants v0.9 (2026-10-24)
 Status: fixes for Checker-confirmed errors from blind runs 17-19. Validated only by regression tests on NON-BLIND extracts and NON-BLIND re-runs of Runs 07-19 (17-19 are no longer blind for this code); not independently validated.
@@ -216,3 +216,8 @@ Pending adjudication (NOT an error record, no rule): run26 tagged hydrant FH-3. 
 - New rules BR27-01 (legend/symbol-definition rows + standard-note sentence never physical), BR27-02 (appurtenance data-table rows are candidates, deduped), BR27-03 (survey 'WV | HYD' pair = existing), BR28-01 (multi-action call-out split: remove + new at one site), BR28-02 (tee/assembly + install action is an instance, not a side mention), BR28-03 (printed station accepted only if it agrees <= 5 m with the leader-end measurement; else UNRESOLVED with conflict).
 - All six are DEVELOPER-PROPOSED: approval 'proposed', grader_confirmed false (Checker follow-up a). Machine pack now carries a grader_confirmed field for every rule (null = not recorded for pre-v13 rules).
 - Error records ERR-R27-01..06 and ERR-R28-01..04 from Checker's run27/run28 grading reports (reader_version_graded v12). Locations use drawing descriptions, never answer-key item ids.
+
+## 2026-10-25 ADR-0001 "AI reads, code checks" (Kyle, 10:21 PDT)
+- Supersedes the 2026-10-24 "code engine does all reading" ruling. Dev version hybrid-h1 (not frozen).
+- Root causes RC1–RC6 and validation status: guide/decisions/ADR-0001-ai-reads-code-checks.md; Error Memory: guide/machine-readable/error-memory/architecture-errors.json (ERR-ARCH-01..07).
+- No hydrant rule changed; generated hydrant packs untouched.

@@ -1,0 +1,13 @@
+{
+ "schema": "architecture-error-memory/v0 (hand-written, not generated; outside the hydrant rule build)",
+ "decision": "guide/decisions/ADR-0001-ai-reads-code-checks.md",
+ "records": [
+  {"error_id": "ERR-ARCH-01", "root_cause": "Reading model removed; deterministic engine became sole reader (RC1)", "fix": "hybrid-h1 AI reading layer", "validation_status": "implemented_dev_partially_tested (cached AI output on two seen packages)"},
+  {"error_id": "ERR-ARCH-02", "root_cause": "Drawing-specific rule patches per blind run (RC2)", "fix": "Generic validator checks instead of per-convention rules", "validation_status": "policy_adopted"},
+  {"error_id": "ERR-ARCH-03", "root_cause": "No takeoff layer outside hydrants (RC3)", "fix": "AI records cover all component types; validator is type-agnostic", "validation_status": "implemented_not_tested (full-scope AI read pending daily cap)"},
+  {"error_id": "ERR-ARCH-04", "root_cause": "Evidence gate rejected every quote on scanned sheets (RC4)", "fix": "Quote check against OCR lines with fuzzy cluster matching", "validation_status": "fixed_nonblind_validated (scanned package: quotes accepted)"},
+  {"error_id": "ERR-ARCH-05", "root_cause": "Printed stations copied or refused; no conflict path (RC5)", "fix": "Measured-at-leader station; conflict -> measured + flag; label position may only confirm, never replace", "validation_status": "unit_tested; real-drawing coverage pending AI leader targets"},
+  {"error_id": "ERR-ARCH-06", "root_cause": "Incomparable scores across methods and test strictness (RC6)", "fix": "Three separate score tables (AI-only, code-only, hybrid)", "validation_status": "policy_adopted"},
+  {"error_id": "ERR-ARCH-07", "root_cause": "AI batch script kept sending after server-overload errors and spent the remaining daily requests", "fix": "Stop the batch after the first failure of any kind", "validation_status": "fixed (script), not yet exercised"}
+ ]
+}
