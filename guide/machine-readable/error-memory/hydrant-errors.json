@@ -1299,7 +1299,9 @@
     "test_v12e_review_fixes.py::test_br26_05_scan_p3_daylight_notes_not_counted"
    ],
    "validation_status": "fixed_nonblind_validated",
-   "known_limitations": []
+   "known_limitations": [
+    "UNTESTED: developer-proposed; no regression test discriminates this rule (the listed test covers tagged assembly call-outs, not this demotion). Treat as unvalidated."
+   ]
   },
   {
    "error_id": "ERR-R26-06",
@@ -1343,7 +1345,9 @@
    ],
    "validation_status": "fixed_nonblind_validated",
    "known_limitations": [
-    "KNOWN LIMIT (Checker v12 review): the 'unless its leader reaches a hydrant tag' exception does not cover the existing-hydrant symbol (circle with rays). A secondary-sentence removal note whose leader DOES reach that symbol is suppressed as a mention instead of being kept and merged with the same removal on other sheets (run26 p4 reference to the removal also called out on p3/p6). Count is correct on run26 only because the other copies are counted; strict-xfail test test_v12e_review_fixes.py::test_br26_12_p4_reference_merged_with_p6_removal."
+    "GENERAL MISS RISK (Checker v12e re-review): this rule suppresses ANY call-out that starts with a site verb (REMOVE/RELOCATE/INSTALL...), has no hydrant word in its first sentence, and mentions hydrants only in a later sentence ('HYDRANTS' / 'ALL ... HYDRANT'), unless its leader reaches a project tag. Existing hydrants never carry project tags, so on any drawing a removal note whose leader points at the ONLY drawn copy of an existing hydrant would be silently missed; likewise an untagged 'INSTALL ... NEW HYDRANTS' note without FH-n tags. Run26 counts are correct only because other copies are counted elsewhere.",
+    "KNOWN LIMIT (Checker v12 review): the 'unless its leader reaches a hydrant tag' exception does not cover the existing-hydrant symbol (circle with rays). A secondary-sentence removal note whose leader DOES reach that symbol is suppressed as a mention instead of being kept and merged with the same removal on other sheets (run26 p4 reference to the removal also called out on p3/p6). Count is correct on run26 only because the other copies are counted; strict-xfail test test_v12e_review_fixes.py::test_br26_12_p4_reference_merged_with_p6_removal.",
+    "PROPOSED FUTURE FIX (NOT IMPLEMENTED; Checker suggestion): exempt leaders that end on the existing-hydrant circle-with-rays symbol (detectable via BR26-11) or any hydrant symbol; the p4 note would then surface as an unmerged duplicate, exposing the BR26-12 merge gap instead of hiding it. No engine code change in v12e."
    ]
   },
   {
@@ -1352,7 +1356,7 @@
    "original_mistake": "fitting_detection_failure",
    "mistake_description": "Missed a watermain fitting (not a hydrant; excluded from hydrant scores)",
    "root_cause": "Fitting-detection failure (Kyle): tapping sleeve is a separate fitting, not a hydrant; excluded from hydrant scores",
-   "correct_interpretation": "BR26-07: classify as tie_in.",
+   "correct_interpretation": "Fitting-detection failure: a separate watermain fitting, not a hydrant; excluded from hydrant scores (BR26-07).",
    "applicable_rule_ids": [
     "BR26-07"
    ],

@@ -277,7 +277,7 @@ _OLD_KEY_ID = _re.compile(r"\bH[NR]?\d+\b")
 _OLD_ALLOW = {
     "guide/component-rules/hydrants.json": {"H1": 3, "H10": 1, "H2": 1, "HN1": 3, "HN2": 3, "HN3": 1, "HN4": 1, "HN6": 3, "HR1": 1, "HR3": 1, "HR4": 1},
     "guide/machine-readable/error-memory/hydrant-errors.json": {"HN6": 1},
-    "guide/machine-readable/rules/hydrants.rules.json": {"H1": 2, "HN4": 1, "HN6": 2},
+    "guide/machine-readable/rules/hydrants.rules.json": {"H1": 1, "HN4": 1, "HN6": 2},
     "guide/rule-change-log.md": {"H1": 1, "H2": 1, "HN1": 2, "HN4": 2, "HN6": 2, "HR1": 3, "HR2": 1, "HR3": 1},
 }
 # Third-party reference manuals (public source texts, not answer keys): their H-codes
