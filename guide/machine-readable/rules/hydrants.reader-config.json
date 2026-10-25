@@ -1,7 +1,7 @@
 {
  "schema": "reader-config/v1 (verbatim copy)",
  "derived_from": "guide/component-rules/hydrants.json#reader_config",
- "library_commit": "c695ea8101b1bb8951b542c99d43d5cae83202df",
+ "library_commit": "bfd7e471b07b09bb3533387c2f13e5ef410d7e38",
  "reader_config": {
   "schema": "component-reader-config/v1",
   "note": "Machine-readable patterns the Blueprint Reader app (hydrants.py v0.6+) loads at runtime. Python 're' syntax. Changing these changes reader behaviour; every run records this file's sha256 and the library commit.",
