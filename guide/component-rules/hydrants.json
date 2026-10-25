@@ -2129,6 +2129,45 @@
     "Symbol test is vector-only (7-13 pt unfilled circle + >=3 short diagonal rays); raster or differently drawn legends fall to tag/unresolved.",
     "Removal is only counted when a call-out leader reaches the symbol; uncalled-out existing symbols are not counted (Edward St FH: documented, excluded from scoring)."
    ]
+  },
+  {
+   "id": "BR21-03",
+   "code_rule_id": "_cross_sheet.anchored",
+   "component": "hydrant",
+   "category": "dedup_rule",
+   "rule": "Chainage restarts per street. A same-status, evidence-anchored station match within 5 m merges only across ADJACENT sheets with both leader ends in the shared overlap zone (opposite outer 30%); otherwise it is a different hydrant.",
+   "classify_as": "duplicate",
+   "positive_examples": [
+    "EXH-1 at a matchline on run26 p3/p4 -> one removal"
+   ],
+   "negative_examples": [
+    "run21 Street H 0+096/0+183 (p7) vs Street D 0+099 (p5) / Street I 0+179 (p6) -> four hydrants"
+   ],
+   "why": {
+    "run": "v12 non-blind run21",
+    "page": "7",
+    "error": "v0.12 location dedup merged hydrants on different streets with similar chainage"
+   },
+   "evidence_sources": [
+    "/workspace/combined-reader-dev-v12/nonblind-v12 (developer NON-BLIND diff vs v11c; graded package)"
+   ],
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.12b (dev, not frozen)",
+    "package": "combined-reader-dev-v12 (dev copy; no ZIP)",
+    "tests": [
+     "test_br12b_nonblind_regressions.py::test_br21_03_station_match_other_street_not_merged",
+     "test_br12b_nonblind_regressions.py::test_br21_03_matchline_station_match_still_merged"
+    ]
+   },
+   "status": {
+    "error_confirmed_by": [
+     "developer (non-blind regression vs v11c on a graded package)"
+    ],
+    "fix_validation": "real-drawing NON-BLIND re-run only; not blind-validated."
+   },
+   "limits": [
+    "No alignment ids; a cross-street pair at a matchline with similar chainage could still merge."
+   ]
   }
  ],
  "reader_config": {

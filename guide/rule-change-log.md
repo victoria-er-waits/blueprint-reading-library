@@ -181,3 +181,6 @@ Status: fixes for Checker-confirmed errors from blind runs 24 and 26 (graded on 
 | 2026-10-24 | BR26-11 | hydrant | composite new/remove note: per-leader ownership; circle-with-rays existing symbol -> removal; tag -> new; neither -> unresolved | Run 26 ADJ-1 (~1+139) |
 
 Error memory: 10 records ERR-R24-01, ERR-R26-01..09 (ERR-R26-09 = ADJ-1) via builder GRADED_ROWS (developer links by regression test; not yet Checker-reviewed). Edward St 'FH' (ADJ-2) is ambiguous: documented as a physical existing hydrant, excluded from scoring; no record.
+| 2026-10-24 | BR13-02 | hydrant | 'FH GATE VALVE' only -> not a hydrant assembly | v12 non-blind run13 p6 |
+| 2026-10-24 | BR13-03 | hydrant | shifted repeat sheet: same call-out-to-leader vector -> one hydrant | v12 non-blind run13 p6/p9 |
+| 2026-10-24 | BR21-03 | hydrant | 5 m station dedup only across adjacent sheets in the overlap zone (chainage restarts per street) | v12 non-blind run21 |
