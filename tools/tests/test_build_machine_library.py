@@ -261,3 +261,57 @@ def test_v12e_review_corrections():
     st = {r["id"]: r.get("status", {}) for r in raw["rules"]}
     for rid in ("BR13-07", "BR13-08", "BR13-09", "BR17-06", "BR20-06", "BR21-03", "BR26-09", "BR26-12"):
         assert st[rid].get("grader_confirmed") is False, rid
+
+
+# --- v12f leak guard (Checker v12e re-review fix 1): scan EVERY tracked library text file ---
+import re as _re
+import subprocess as _sp
+
+_REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+# Answer-key item-ID patterns. v12-era IDs are zero-tolerance everywhere.
+_V12_KEY_ID = _re.compile(r"\b(EXH-\d+|FH-RIV|TS-RIV|ADJ-\d+|KE\d+)\b|7\+287")
+_OLD_KEY_ID = _re.compile(r"\bH[NR]?\d+\b")
+# TODO(clean-up after v12): pre-v12 HN/HR/H key IDs in older rules/records/log rows (all from
+# commits before 04a6868). Explicit allowlist of exact token counts per file so any NEW
+# occurrence fails. Remove entries as the older text is rewritten with drawing descriptions.
+_OLD_ALLOW = {
+    "guide/component-rules/hydrants.json": {"H1": 3, "H10": 1, "H2": 1, "HN1": 3, "HN2": 3, "HN3": 1, "HN4": 1, "HN6": 3, "HR1": 1, "HR3": 1, "HR4": 1},
+    "guide/machine-readable/error-memory/hydrant-errors.json": {"HN6": 1},
+    "guide/machine-readable/rules/hydrants.rules.json": {"H1": 2, "HN4": 1, "HN6": 2},
+    "guide/rule-change-log.md": {"H1": 1, "H2": 1, "HN1": 2, "HN4": 2, "HN6": 2, "HR1": 3, "HR2": 1, "HR3": 1},
+}
+# Third-party reference manuals (public source texts, not answer keys): their H-codes
+# (USACE layer codes, NAVEDTRA figure codes) are not key IDs.
+_THIRD_PARTY_PREFIXES = ("text/", "pdf/")
+_SELF = "tools/tests/test_build_machine_library.py"
+
+
+def _library_text_files():
+    out = _sp.run(["git", "ls-files"], cwd=_REPO, capture_output=True, text=True, check=True).stdout.split()
+    for p in out:
+        if p == _SELF or p.endswith((".pyc", ".png", ".jpg", ".jpeg", ".gif", ".pdf", ".webp")):
+            continue
+        try:
+            yield p, open(os.path.join(_REPO, p), encoding="utf-8").read()
+        except (UnicodeDecodeError, FileNotFoundError):
+            continue
+
+
+def test_v12f_no_key_ids_in_any_library_file():
+    bad = []
+    n = 0
+    for p, s in _library_text_files():
+        n += 1
+        for m in _V12_KEY_ID.finditer(s):
+            bad.append((p, m.group(0)))
+        if p.startswith(_THIRD_PARTY_PREFIXES):
+            continue
+        counts = {}
+        for m in _OLD_KEY_ID.finditer(s):
+            counts[m.group(0)] = counts.get(m.group(0), 0) + 1
+        allow = _OLD_ALLOW.get(p, {})
+        for tok, c in counts.items():
+            if c > allow.get(tok, 0):
+                bad.append((p, f"{tok} x{c} (allowed {allow.get(tok, 0)})"))
+    assert n > 50, n
+    assert not bad, bad

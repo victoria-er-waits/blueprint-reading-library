@@ -164,11 +164,11 @@ Package: combined-blueprint-reader-dev-v11c-2026-10-24.zip sha256 3f56e3c2031d0a
 Non-blind re-runs 07-23 vs pre-Option-C v11: counts/statuses identical; only change run18 p2 'HYD.' (OCR, existing) 1346.7 -> UNRESOLVED (label-centre station rejected). Tofino 1+115.7 L2 leader end (drawing ~1+116.9, within 5 m); East Hants 6/6 stations (L1 x2, L2 x4); Rosslyn 3 new p33, no legend/detail-title counts. NON-BLIND only, not independent validation.
 
 ## Component rules: hydrants v0.12 dev (2026-10-24) — NOT frozen, no package
-Status: fixes for Checker-confirmed errors from blind runs 24 and 26 (graded on v11c) plus run26 adjudication ADJ-1. Validated only by regression tests on NON-BLIND extracts and NON-BLIND re-runs (24/26 are no longer blind for this code).
+Status: fixes for Checker-confirmed errors from blind runs 24 and 26 (graded on v11c) plus the run26 adjudication (existing hydrant removal near 1+139 beside FH-1). Validated only by regression tests on NON-BLIND extracts and NON-BLIND re-runs (24/26 are no longer blind for this code).
 
 | Date | Id | Component | Change | Origin |
 |---|---|---|---|---|
-| 2026-10-24 | BR24-01 | hydrant | tick pairs must be adjacent on one row; scale check vs modal station interval | Run 24 p3 HN1 |
+| 2026-10-24 | BR24-01 | hydrant | tick pairs must be adjacent on one row; scale check vs modal station interval | Run 24 p3 new hydrant near 10+250 (station row ticks) |
 | 2026-10-24 | BR26-01 | hydrant | split chainage labels ('1   120' + '+') merged | Run 26 (all stations missing) |
 | 2026-10-24 | BR26-02 | hydrant | status-less assembly call-out (>=2 fittings) with leader = new | Run 26 FH-1 |
 | 2026-10-24 | BR26-03 | hydrant | FH-n tag at leader end gives id; same-tag call-outs on a sheet = one hydrant | Run 26 |
@@ -204,3 +204,10 @@ Error memory: 10 records ERR-R24-01, ERR-R26-01..09 (ERR-R26-09 = adjudicated ~1
 | 2026-10-24 | rules file | Answer-key item ids and the run17 key station removed; drawing descriptions / reader- or Checker-measured values used. |
 
 Pending adjudication (NOT an error record, no rule): run26 tagged hydrant FH-3. Checker measured the tee at 1+372.9 from the drawing (profile label ~1+373); the v12 reader gives 1374.3. A possible answer-key discrepancy is pending Checker/Kyle adjudication.
+
+## 2026-10-24 v12f (Checker re-review fixes; docs/tests only, no engine change)
+- Removed key item IDs from this log and BR13-07 example (replaced with drawing descriptions).
+- BR26-04 limits: general miss risk stated; circle-with-rays exemption recorded as PROPOSED, NOT implemented.
+- BR26-10: developer-proposed, not Checker-confirmed; marked untested.
+- ERR-R26-08 correct_interpretation: fitting-detection failure.
+- Leak-guard test widened to scan every library file for key-ID patterns.

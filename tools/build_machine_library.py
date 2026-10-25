@@ -365,6 +365,8 @@ def make_public(full, rules):
         lims = [r for r in rr if r["is_known_limitation"]]
         if e["validation_status"] == "out_of_scope":
             interp = "Out of hydrant scope: watermain tie-ins not linked to a hydrant are not hydrant items."
+        elif e["original_mistake"] == "fitting_detection_failure":
+            interp = "Fitting-detection failure: a separate watermain fitting, not a hydrant; excluded from hydrant scores (" + ", ".join(r["rule_id"] for r in fixes) + ")."
         elif fixes:
             interp = " ".join(f"{r['rule_id']}: classify as {r['classify_as']}." for r in fixes)
         elif lims:

@@ -1874,7 +1874,9 @@
     "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
    },
    "limits": [
-    "KNOWN LIMIT (Checker v12 review): the 'unless its leader reaches a hydrant tag' exception does not cover the existing-hydrant symbol (circle with rays). A secondary-sentence removal note whose leader DOES reach that symbol is suppressed as a mention instead of being kept and merged with the same removal on other sheets (run26 p4 reference to the removal also called out on p3/p6). Count is correct on run26 only because the other copies are counted; strict-xfail test test_v12e_review_fixes.py::test_br26_12_p4_reference_merged_with_p6_removal."
+    "KNOWN LIMIT (Checker v12 review): the 'unless its leader reaches a hydrant tag' exception does not cover the existing-hydrant symbol (circle with rays). A secondary-sentence removal note whose leader DOES reach that symbol is suppressed as a mention instead of being kept and merged with the same removal on other sheets (run26 p4 reference to the removal also called out on p3/p6). Count is correct on run26 only because the other copies are counted; strict-xfail test test_v12e_review_fixes.py::test_br26_12_p4_reference_merged_with_p6_removal.",
+    "GENERAL MISS RISK (Checker v12e re-review): this rule suppresses ANY call-out that starts with a site verb (REMOVE/RELOCATE/INSTALL...), has no hydrant word in its first sentence, and mentions hydrants only in a later sentence ('HYDRANTS' / 'ALL ... HYDRANT'), unless its leader reaches a project tag. Existing hydrants never carry project tags, so on any drawing a removal note whose leader points at the ONLY drawn copy of an existing hydrant would be silently missed; likewise an untagged 'INSTALL ... NEW HYDRANTS' note without FH-n tags. Run26 counts are correct only because other copies are counted elsewhere.",
+    "PROPOSED FUTURE FIX (NOT IMPLEMENTED; Checker suggestion): exempt leaders that end on the existing-hydrant circle-with-rays symbol (detectable via BR26-11) or any hydrant symbol; the p4 note would then surface as an unmerged duplicate, exposing the BR26-12 merge gap instead of hiding it. No engine code change in v12e."
    ]
   },
   {
@@ -2088,11 +2090,14 @@
    },
    "status": {
     "error_confirmed_by": [
-     "Blueprint Checker"
+     "developer finding (developer-proposed link to ERR-R26-05; not confirmed by Blueprint Checker)"
     ],
-    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated."
+    "fix_validation": "real-drawing NON-BLIND re-run of the graded package only (v12 dev); not blind-validated.",
+    "grader_confirmed": false
    },
-   "limits": []
+   "limits": [
+    "UNTESTED: developer-proposed; no regression test discriminates this rule (the listed test covers tagged assembly call-outs, not this demotion). Treat as unvalidated."
+   ]
   },
   {
    "id": "BR26-11",
@@ -2188,7 +2193,7 @@
    "rule": "Plan + profile (or shifted repeat) sheets: a similar call-out whose station was lost on one copy merges only when the call-out-to-leader vector is identical (±25 pt) and centres are within 150 pt. (Renumbered from colliding v0.12c 'BR13-04'.)",
    "classify_as": "duplicate",
    "positive_examples": [
-    "run13 H1 p6 plan + p9 profile -> one new hydrant"
+    "run13 new hydrant shown on p6 plan + p9 profile (same call-out-to-leader vector, station lost on the profile copy) -> one new hydrant"
    ],
    "negative_examples": [
     "same wording with a different leader vector -> separate"
