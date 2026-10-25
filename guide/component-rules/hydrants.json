@@ -2,7 +2,7 @@
  "schema": "component-rule/v1",
  "schema_file": "component-rule.schema.json",
  "component": "hydrant",
- "updated": "2026-10-24",
+ "updated": "2026-10-25",
  "note": "Lessons from Blueprint Reader blind runs. Sealed answer keys are never included.",
  "rules": [
   {
@@ -2423,6 +2423,251 @@
    },
    "limits": [
     "Assumes the repeat sheet is a pure translation of the base (no scale/rotation)."
+   ]
+  },
+  {
+   "id": "BR27-01",
+   "code_rule_id": "scan_page legend/symbol-definition column + standard-note sentence",
+   "category": "classification_rule",
+   "rule": "A legend or symbol-definition row is never a physical item, at any rotation and without a LEGEND heading nearby: a column of >= 4 short, digit-free rows sharing one start edge whose rows mostly begin with a status word (PROPOSED/EXISTING/NEW) and name different components ('PROPOSED HYDRANT SET', 'EXISTING WATER MAIN AND VALVE'). Short symbol labels drawn as legend samples beside that column ('HYD', 'WV', 'TEE') are legend labels. A general-note sentence 'THE CONTRACTOR SHALL INSTALL HYDRANTS AS PER <standard>' without a leader is a specification note, not an instance.",
+   "classify_as": "mention:legend_entry",
+   "positive_examples": [
+    "legend column 'PROPOSED HYDRANT SET' / 'EXISTING HYDRANT SET' with sample-symbol label 'HYD' (standard notes and legend sheet)",
+    "note 'THE CONTRACTOR SHALL INSTALL HYDRANTS AS PER OPSD 1105.010.'"
+   ],
+   "negative_examples": [
+    "a short action call-out with a leader to a symbol on a plan sheet ('PROPOSED HYDRANT' + leader) stays a call-out"
+   ],
+   "why": {
+    "run": "Blind Run 27",
+    "page": "2",
+    "error": "4 false positives from the legend / notes sheet"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run27/grading-report.md (Blueprint Checker)"
+   ],
+   "component": "hydrant",
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.13 (dev, not frozen) - planned",
+    "package": "combined-reader-dev-v13 (dev copy; no ZIP)",
+    "tests": []
+   },
+   "status": {
+    "proposal": "developer-proposed (v13 dev)",
+    "developer_proposed": true,
+    "approval": "proposed",
+    "error_confirmed_by": [
+     "Blueprint Checker grading report (error confirmed); the rule itself is developer-proposed and NOT yet validated by Checker"
+    ],
+    "grader_confirmed": false,
+    "fix_validation": "not yet validated (v13 dev, planned)"
+   },
+   "limits": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "id": "BR27-02",
+   "code_rule_id": "scan_page appurtenance data-table rows",
+   "category": "classification_rule",
+   "rule": "A project data / appurtenance table row that names a hydrant with an item number and a station ('<no> ABOVE GROUND HYDRANT <sta>') is a physical-item candidate (status new unless the row says otherwise); its station comes from the row. Identical table rows on two sheets are one item; a table row and a plan call-out of the same item (same status, station within 5 m) are one item.",
+   "classify_as": "status:new",
+   "positive_examples": [
+    "plan/profile appurtenance table row 'ABOVE GROUND HYDRANT' with its station, repeated on two consecutive sheets -> one new hydrant"
+   ],
+   "negative_examples": [
+    "legend / symbol-definition rows (BR27-01)",
+    "table header rows without a station"
+   ],
+   "why": {
+    "run": "Blind Run 27",
+    "page": "4-5",
+    "error": "new hydrant listed only in the appurtenance data table left unresolved"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run27/grading-report.md (Blueprint Checker)"
+   ],
+   "component": "hydrant",
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.13 (dev, not frozen) - planned",
+    "package": "combined-reader-dev-v13 (dev copy; no ZIP)",
+    "tests": []
+   },
+   "status": {
+    "proposal": "developer-proposed (v13 dev)",
+    "developer_proposed": true,
+    "approval": "proposed",
+    "error_confirmed_by": [
+     "Blueprint Checker grading report (error confirmed); the rule itself is developer-proposed and NOT yet validated by Checker"
+    ],
+    "grader_confirmed": false,
+    "fix_validation": "not yet validated (v13 dev, planned)"
+   },
+   "limits": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "id": "BR27-03",
+   "code_rule_id": "scan_page survey 'WV | HYD' pair",
+   "category": "classification_rule",
+   "rule": "A survey symbol label pair where 'HYD' is stacked with another survey abbreviation ('WV | HYD') on a plan sheet labels an existing hydrant (status existing, low confidence), like a lone 'HYD' survey label. An adjacent chainage label of an alignment point (triangle) is not the hydrant's station.",
+   "classify_as": "status:existing",
+   "positive_examples": [
+    "'WV | HYD' survey labels beside an existing hydrant, repeated on three sheets -> one existing hydrant"
+   ],
+   "negative_examples": [
+    "benchmark notes 'TOP OF LARGE ARM OF HYD' (abstain)",
+    "legend sample labels (BR27-01)"
+   ],
+   "why": {
+    "run": "Blind Run 27",
+    "page": "3/4/6",
+    "error": "existing hydrant labelled 'WV | HYD' left unresolved on all three sheets"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run27/grading-report.md (Blueprint Checker)"
+   ],
+   "component": "hydrant",
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.13 (dev, not frozen) - planned",
+    "package": "combined-reader-dev-v13 (dev copy; no ZIP)",
+    "tests": []
+   },
+   "status": {
+    "proposal": "developer-proposed (v13 dev)",
+    "developer_proposed": true,
+    "approval": "proposed",
+    "error_confirmed_by": [
+     "Blueprint Checker grading report (error confirmed); the rule itself is developer-proposed and NOT yet validated by Checker"
+    ],
+    "grader_confirmed": false,
+    "fix_validation": "not yet validated (v13 dev, planned)"
+   },
+   "limits": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "id": "BR28-01",
+   "code_rule_id": "scan_page multi-action call-out split",
+   "category": "classification_rule",
+   "rule": "A call-out naming two construction actions on hydrants is split into separate actions: 'Salvage Existing Hydrant' (remove) AND 'Hydrant to be installed after AC main is Abandoned' (new). Both actions are counted, each once; they share one site (same tee / leader / station) and the association is recorded (site_id), never as a duplicate of each other. An install-only call-out ('Hydrant to be installed ...') is a new hydrant.",
+   "classify_as": "status:remove+new",
+   "positive_examples": [
+    "'1+010.07 | 300mm x 150mm Hydrant Tee and Assembly | ... | Salvage Existing Hydrant | Hydrant to be installed after AC main is Abandoned.' -> 1 remove + 1 new at one site"
+   ],
+   "negative_examples": [
+    "'... PRIOR TO NEW HYDRANT INSTALLATION' subordinate clause (BR26-05) is not an install action"
+   ],
+   "why": {
+    "run": "Blind Run 28",
+    "page": "3-6",
+    "error": "install action of the combined salvage/install call-outs dropped; install-only call-outs left unresolved"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run28/grading-report.md (Blueprint Checker)"
+   ],
+   "component": "hydrant",
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.13 (dev, not frozen) - planned",
+    "package": "combined-reader-dev-v13 (dev copy; no ZIP)",
+    "tests": []
+   },
+   "status": {
+    "proposal": "developer-proposed (v13 dev)",
+    "developer_proposed": true,
+    "approval": "proposed",
+    "error_confirmed_by": [
+     "Blueprint Checker grading report (error confirmed); the rule itself is developer-proposed and NOT yet validated by Checker"
+    ],
+    "grader_confirmed": false,
+    "fix_validation": "not yet validated (v13 dev, planned)"
+   },
+   "limits": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "id": "BR28-02",
+   "code_rule_id": "scan_page hydrant tee & assembly call-out with install action",
+   "category": "classification_rule",
+   "rule": "A call-out that combines a hydrant tee/assembly fitting list with an install action ('Hydrant to be installed ...') is an instance, not a profile-fitting side mention, and is not demoted as 'possibly the same' as a different counted call-out nearby.",
+   "classify_as": "status:new",
+   "positive_examples": [
+    "p4 call-out at the 1+427.0 tee: hydrant tee and assembly + 'Hydrant to be installed after AC main is Abandoned' -> new"
+   ],
+   "negative_examples": [
+    "a bare profile label 'HYDRANT TEE AND ASSEMBLY' beside a counted plan call-out stays corroborating (R-PROFILE-LABEL-NOT-EXTRA)"
+   ],
+   "why": {
+    "run": "Blind Run 28",
+    "page": "4",
+    "error": "new hydrant demoted to a side mention"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run28/grading-report.md (Blueprint Checker)"
+   ],
+   "component": "hydrant",
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.13 (dev, not frozen) - planned",
+    "package": "combined-reader-dev-v13 (dev copy; no ZIP)",
+    "tests": []
+   },
+   "status": {
+    "proposal": "developer-proposed (v13 dev)",
+    "developer_proposed": true,
+    "approval": "proposed",
+    "error_confirmed_by": [
+     "Blueprint Checker grading report (error confirmed); the rule itself is developer-proposed and NOT yet validated by Checker"
+    ],
+    "grader_confirmed": false,
+    "fix_validation": "not yet validated (v13 dev, planned)"
+   },
+   "limits": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
+   ]
+  },
+  {
+   "id": "BR28-03",
+   "code_rule_id": "_verify_printed_station",
+   "category": "station_rule",
+   "rule": "A station printed in the hydrant's own call-out ('1+010.07 | ... Hydrant Tee ...') is accepted only when it agrees within 5 m with the station measured at the call-out's leader end (tee/symbol) along the bracketing chainage ticks of the same alignment. Disagreement > 5 m -> UNRESOLVED with a conflict reason (printed vs measured). No measurement possible -> UNRESOLVED (printed value kept as provenance only). A chainage label of an alignment point (triangle / curve point) is never the hydrant's printed station.",
+   "classify_as": "station:verified_printed",
+   "positive_examples": [
+    "printed 1+010.07, leader end at the tee between the 1+000 and 1+020 ticks -> accepted"
+   ],
+   "negative_examples": [
+    "printed 1+498.38 on a call-out whose leader measures ~1+831 (misprint) -> UNRESOLVED, conflict",
+    "'0+994.38' alignment-point label beside a survey 'WV | HYD' label -> not a hydrant station"
+   ],
+   "why": {
+    "run": "Blind Run 28 / Blind Run 27",
+    "page": "3-6 / 4",
+    "error": "all 5 printed removal stations left unresolved; misprinted station must not be copied"
+   },
+   "evidence_sources": [
+    "/workspace/blind-runs/run28/grading-report.md (Blueprint Checker)",
+    "/workspace/blind-runs/run27/grading-report.md (Blueprint Checker)"
+   ],
+   "component": "hydrant",
+   "implemented_in": {
+    "reader_version": "hydrants.py v0.13 (dev, not frozen) - planned",
+    "package": "combined-reader-dev-v13 (dev copy; no ZIP)",
+    "tests": []
+   },
+   "status": {
+    "proposal": "developer-proposed (v13 dev)",
+    "developer_proposed": true,
+    "approval": "proposed",
+    "error_confirmed_by": [
+     "Blueprint Checker grading report (error confirmed); the rule itself is developer-proposed and NOT yet validated by Checker"
+    ],
+    "grader_confirmed": false,
+    "fix_validation": "not yet validated (v13 dev, planned)"
+   },
+   "limits": [
+    "DEVELOPER-PROPOSED: not validated by Blueprint Checker; derived from two graded blind runs (now seen drawings)."
    ]
   }
  ],

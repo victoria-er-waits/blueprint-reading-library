@@ -211,3 +211,8 @@ Pending adjudication (NOT an error record, no rule): run26 tagged hydrant FH-3. 
 - BR26-10: developer-proposed, not Checker-confirmed; marked untested.
 - ERR-R26-08 correct_interpretation: fitting-detection failure.
 - Leak-guard test widened to scan every library file for key-ID patterns.
+
+## 2026-10-25 v13 dev step 1 (Error Memory for blind runs 27/28; graded on frozen v12)
+- New rules BR27-01 (legend/symbol-definition rows + standard-note sentence never physical), BR27-02 (appurtenance data-table rows are candidates, deduped), BR27-03 (survey 'WV | HYD' pair = existing), BR28-01 (multi-action call-out split: remove + new at one site), BR28-02 (tee/assembly + install action is an instance, not a side mention), BR28-03 (printed station accepted only if it agrees <= 5 m with the leader-end measurement; else UNRESOLVED with conflict).
+- All six are DEVELOPER-PROPOSED: approval 'proposed', grader_confirmed false (Checker follow-up a). Machine pack now carries a grader_confirmed field for every rule (null = not recorded for pre-v13 rules).
+- Error records ERR-R27-01..06 and ERR-R28-01..04 from Checker's run27/run28 grading reports (reader_version_graded v12). Locations use drawing descriptions, never answer-key item ids.

@@ -86,7 +86,11 @@ def convert_rules(doc, commit, src_sha):
             "source_sha256": src_sha,
             "verification_status": vs,
             "verification_evidence": ve,
-            "approval": "approved",
+            # v13 (Checker follow-up a): developer-proposed rules are 'proposed' until Checker validates them, and every
+            # rule carries a real grader_confirmed field (True/False as recorded; None = not recorded for pre-v13 rules)
+            "approval": "proposed" if (r.get("status") or {}).get("developer_proposed") else "approved",
+            "grader_confirmed": (r.get("status") or {}).get("grader_confirmed"),
+            **({"proposal": r["status"]["proposal"]} if (r.get("status") or {}).get("proposal") else {}),
             "is_known_limitation": r["category"] == "known_limit",
             **({"name": r["name"]} if r.get("name") else {}),
             **({"machine_readable": r["machine_readable"]} if r.get("machine_readable") else {}),
@@ -107,7 +111,7 @@ def mistake(err):
     if e.startswith("fp") or e.startswith("false positive"): return "false_positive"
     if "false positive" in e: return "false_positive"
     if "duplicate" in e: return "duplicate"
-    if e.startswith("station"): return "station_error"
+    if e.startswith("station"): return "station_error"   # includes 'Station not given (unresolved)' (coverage miss)
     if "wrong status" in e: return "wrong_status"
     raise ValueError(f"unknown error type: {err}")
 
@@ -198,6 +202,8 @@ ROOT_CAUSES = {
 
 # Runs 24/26 (graded on v11c): (run, row, page, location, drawing evidence, error, root cause, rule links, source file)
 _G24, _G26, _A26 = "run24/grading-report.md", "run26/grading-report.md", "run26/adjudication.md"
+_G27, _G28 = "run27/grading-report.md", "run28/grading-report.md"
+GRADED_VERSION = {27: "v12", 28: "v12"}   # runs 27/28 were graded on frozen v12; earlier GRADED_ROWS on v11c
 GRADED_ROWS = [
     # v12e (Checker v12 review): root_cause states only what Checker confirmed; developer diagnoses are prefixed
     # "DEVELOPER HYPOTHESIS (not Checker-confirmed)". Locations use drawing descriptions, never answer-key item ids.
@@ -228,6 +234,28 @@ GRADED_ROWS = [
      "CONFIRMED (adjudication): the composite NEW HYDRANT / EXISTING HYDRANTS TO BE REMOVED note was filed as a general-note mention and "
      "the existing hydrant was not counted. DEVELOPER HYPOTHESIS (not Checker-confirmed): it sat under a NOTES heading with its leader on a "
      "non-first line, there was no per-leader ownership, and the circle-with-rays symbol was not recognised", ["BR26-11"], _A26),
+    # v13: runs 27/28 (graded on frozen v12; Checker grading reports). Root causes state only what Checker confirmed;
+    # developer diagnoses are prefixed DEVELOPER HYPOTHESIS. Rule links are developer-proposed (rules not yet Checker-validated).
+    (27, 1, "2", "legend row 'PROPOSED HYDRANT SET' (standard notes and legend sheet)", "legend / symbol-definition row", "FP",
+     "CONFIRMED: legend row counted as a new hydrant. DEVELOPER HYPOTHESIS: rotated legend column far from its LEGEND heading was not recognised as a legend", ["BR27-01"], _G27),
+    (27, 2, "2", "legend sample-symbol label 'HYD'", "short symbol label drawn in the legend", "FP",
+     "CONFIRMED: legend symbol label counted as an existing hydrant (survey 'HYD' label rule)", ["BR27-01"], _G27),
+    (27, 3, "2", "legend row 'EXISTING HYDRANT SET'", "legend / symbol-definition row", "FP",
+     "CONFIRMED: legend row counted as an existing hydrant", ["BR27-01"], _G27),
+    (27, 4, "2", "water-main general note citing the hydrant standard drawing", "THE CONTRACTOR SHALL INSTALL HYDRANTS AS PER OPSD 1105.010.", "FP",
+     "CONFIRMED: specification note counted as a new hydrant", ["BR27-01"], _G27),
+    (27, 5, "4-5", "appurtenance data table (plan/profile sheets), row ABOVE GROUND HYDRANT", "table row naming an above-ground hydrant with its station; same table on two sheets", "Miss (unresolved)",
+     "CONFIRMED: the data-table record was left unresolved, so the new hydrant was not counted and had no station. The two sheet copies are one item", ["BR27-02"], _G27),
+    (27, 6, "3/4/6", "survey label pair 'WV | HYD' (existing hydrant near the west end)", "'WV | HYD' survey labels; adjacent alignment-point chainage label", "Miss (unresolved)",
+     "CONFIRMED: existing hydrant left unresolved on all three sheets. Checker: the adjacent printed chainage belongs to the alignment-point triangle, not the hydrant", ["BR27-03", "BR28-03"], _G27),
+    (28, 1, "3-5", "combined salvage / install call-outs at five hydrant tees", "Salvage Existing Hydrant / Hydrant to be installed after AC main is Abandoned", "Miss",
+     "CONFIRMED: the combined call-outs got remove status only; the install action (a new hydrant at the same site) was dropped", ["BR28-01"], _G28),
+    (28, 2, "4", "hydrant tee and assembly call-out with an install action (new only)", "Hydrant Tee and Assembly ... Hydrant to be installed after AC main is Abandoned", "Miss (mention only)",
+     "CONFIRMED: new hydrant demoted to a side mention", ["BR28-02", "BR28-01"], _G28),
+    (28, 3, "5-6", "install-only call-outs near the C3/C4 matchline and at the north end (location to be confirmed on site)", "Hydrant to be installed after AC main is Abandoned. Location to be confirmed on site", "Miss (unresolved)",
+     "CONFIRMED: install-only call-outs left unresolved; the matchline repeat is one item. Checker: one call-out prints a station ~333 m from its leader end (misprint)", ["BR28-01", "BR28-03"], _G28),
+    (28, 4, "3-5", "printed stations of the five removal call-outs", "station printed as the first line of each call-out; leader to the tee", "Station not given (unresolved)",
+     "CONFIRMED: all five removal stations left unresolved although printed and matching the tees. DEVELOPER HYPOTHESIS: Option C rejected the printed station as a label-centre/nearest-label station", ["BR28-03"], _G28),
 ]
 # v12e: per-record validation overrides (Checker v12 review)
 VALIDATION_OVERRIDES = {"ERR-R26-06": "confirmed_unfixed"}   # count correct by suppression (BR26-04), merge not implemented
@@ -312,7 +340,7 @@ def build_errors(errors_dir, rules):
         statuses = {r["rule_id"]: r["verification_status"] for r in rules}
         vstat = "fixed_nonblind_validated" if any(statuses[x] in ("nonblind_validated", "blind_validated") for x in links) else ("fixed_synthetic_only" if links else "confirmed_unfixed")
         vstat = VALIDATION_OVERRIDES.get(f"ERR-R{rn:02d}-{n:02d}", vstat)
-        rec = {"error_id": f"ERR-R{rn:02d}-{n:02d}", "run": f"run{rn:02d}", "reader_version_graded": "v11c",
+        rec = {"error_id": f"ERR-R{rn:02d}-{n:02d}", "run": f"run{rn:02d}", "reader_version_graded": GRADED_VERSION.get(rn, "v11c"),
                "page": page, "location": redact_keys(loc), "original_mistake": mistake(err), "error_summary": redact_keys(err),
                "drawing_evidence": redact_keys(wording), "root_cause": redact_keys(cause), "fix_rule_ids": sorted(links),
                "fix_link_method": "regression_test_name", "validation_status": vstat,

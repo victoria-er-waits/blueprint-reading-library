@@ -23,7 +23,8 @@
   "source_sha256",
   "verification_status",
   "verification_evidence",
-  "approval"
+  "approval",
+  "grader_confirmed"
  ],
  "properties": {
   "rule_id": {
@@ -147,6 +148,16 @@
   "why_label_centre_unreliable": {
    "type": "string",
    "description": "optional rationale for a station rule"
+  },
+  "grader_confirmed": {
+   "type": [
+    "boolean",
+    "null"
+   ],
+   "description": "v13: true only when Blueprint Checker validated this rule; false = recorded as not grader-confirmed; null = not recorded (pre-v13 rule)"
+  },
+  "proposal": {
+   "type": "string"
   }
  }
 }
